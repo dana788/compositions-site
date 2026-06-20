@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Privacy Policy | Compositions™</title>
+<meta name="description" content="How Compositions™ collects, uses, and protects information submitted through this website.">
+<link rel="canonical" href="https://compositions.netlify.app/privacy">
+<meta property="og:title" content="Privacy Policy | Compositions™">
+<meta property="og:description" content="How Compositions™ collects, uses, and protects information submitted through this website.">
+<meta property="og:image" content="https://compositions.netlify.app/assets/og-image.png">
+<meta property="og:url" content="https://compositions.netlify.app/privacy">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Compositions™">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="assets/logo-square-color.png">
+<link rel="apple-touch-icon" href="assets/logo-square-color.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --teal: #16768C; --teal-dark: #144E73; --teal-light: #A3D2D8; --gold: #D4AF37;
+  --charcoal: #2C2C2C; --charcoal-mid: #383838; --off-white: #F8F8F8; --white: #FFFFFF;
+  --text: #1A1A1A; --text-sec: #666666; --border: #E0E0E0;
+  --font-display:'Oswald', sans-serif; --font-body:'Poppins', sans-serif;
+  --radius: 6px; --max-width: 1100px; --section-pad: 96px 24px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: var(--font-body); color: var(--text); background: var(--white); -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+h1, h2, h3 { font-family: var(--font-display); margin: 0; }
+p { margin: 0; }
+ul { margin: 0; padding: 0; }
+button { font-family: var(--font-body); cursor: pointer; }
+:focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; }
+.wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+section { padding: var(--section-pad); }
+.bg-charcoal-mid { background: var(--charcoal-mid); }
+.bg-white { background: var(--white); }
+.eyebrow { display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal-light); margin-bottom: 20px; }
+.eyebrow::before { content: ""; display: inline-block; width: 40px; height: 2px; background: var(--teal); }
+.btn { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.03em; padding: 14px 28px; border-radius: 4px; border: 2px solid transparent; transition: background 0.2s ease, transform 0.2s ease; }
+.btn-teal { background: var(--teal); color: var(--white); }
+.btn-teal:hover { background: var(--teal-dark); transform: translateY(-1px); }
+/* NAV */
+.site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; transition: background 0.25s ease, box-shadow 0.25s ease, padding 0.25s ease; background: var(--white); box-shadow: 0 2px 14px rgba(0,0,0,0.08); }
+.logo-mark { display: flex; align-items: center; gap: 10px; }
+.logo-mark svg { width: 30px; height: 30px; flex-shrink: 0; }
+.logo-mark .logo-text { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; letter-spacing: 0.04em; color: var(--text); }
+.nav-links { display: flex; align-items: center; gap: 32px; }
+.nav-link { position: relative; font-weight: 600; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text); padding-bottom: 6px; }
+.nav-link::after { content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 2px; background: var(--teal); transition: width 0.2s ease; }
+.nav-link:hover::after { width: 100%; }
+.nav-cta { margin-left: 8px; }
+.hamburger { display: none; background: none; border: none; width: 32px; height: 32px; position: relative; z-index: 210; }
+.hamburger span { display: block; position: absolute; left: 4px; right: 4px; height: 2px; background: var(--text); transition: all 0.25s ease; }
+.hamburger span:nth-child(1) { top: 9px; } .hamburger span:nth-child(2) { top: 16px; } .hamburger span:nth-child(3) { top: 23px; }
+.hamburger.open span:nth-child(1) { top: 16px; transform: rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { top: 16px; transform: rotate(-45deg); }
+.mobile-menu { position: fixed; inset: 0; background: var(--white); z-index: 199; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 32px; transform: translateY(-100%); opacity: 0; visibility: hidden; transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease; }
+.mobile-menu.open { transform: translateY(0); opacity: 1; visibility: visible; }
+.mobile-menu a { font-size: 1rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text); }
+.back-to-top { position: fixed; right: 24px; bottom: 24px; width: 44px; height: 44px; background: var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s, background 0.2s; cursor: pointer; border: none; z-index: 99; }
+.back-to-top.visible { opacity: 1; visibility: visible; }
+.back-to-top:hover { background: var(--teal-dark); }
+/* LEGAL HEADER */
+.legal-header { padding: 160px 24px 64px; }
+.legal-header h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); color: var(--white); }
+.legal-header .updated { color: var(--teal-light); font-size: 0.85rem; margin-top: 12px; display: block; }
+/* LEGAL BODY */
+.legal-body { max-width: 760px; margin: 0 auto; }
+.legal-body h2 { font-size: 1.1rem; font-weight: 600; color: var(--charcoal); margin-top: 36px; margin-bottom: 12px; font-family: var(--font-body); }
+.legal-body h2:first-child { margin-top: 0; }
+.legal-body p { color: #555; line-height: 1.8; font-size: 0.98rem; margin-bottom: 16px; }
+/* FOOTER */
+footer { background: var(--charcoal); padding: 64px 24px 32px; }
+.footer-inner { max-width: var(--max-width); margin: 0 auto; }
+.footer-logo { margin-bottom: 40px; }
+.footer-logo .logo-text { color: var(--white); font-size: 1.1rem; }
+.footer-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,0.12); }
+.footer-cols h4 { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 16px; font-family: var(--font-body); font-weight: 600; }
+.footer-cols ul { display: flex; flex-direction: column; gap: 10px; }
+.footer-cols a { color: rgba(255,255,255,0.5); font-size: 0.9rem; transition: color 0.2s ease; }
+.footer-cols a:hover { color: var(--white); }
+.footer-bottom { padding-top: 24px; color: rgba(255,255,255,0.5); font-size: 0.75rem; }
+@media (max-width: 900px) { .footer-cols { grid-template-columns: 1fr; } }
+@media (max-width: 768px) {
+  :root { --section-pad: 64px 20px; }
+  .nav-links { display: none; }
+  .hamburger { display: block; }
+}
+
+.logo-mark img { height: 30px; width: auto; display: block; }
+.footer-logo img { height: 26px; width: auto; }
+</style>
+</head>
+<body>
+
+<nav class="site-nav" id="siteNav">
+  <a href="index.html" class="logo-mark" aria-label="Compositions home">
+    <img src="assets/compositions-accent-horizontal.png" alt="Compositions" />
+  </a>
+  <div class="nav-links">
+    <a href="work.html" class="nav-link">Work</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="insights.html" class="nav-link">Insights</a>
+    <a href="index.html#inquire" class="btn btn-teal nav-cta">Inquire</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="work.html">Work</a>
+  <a href="about.html">About</a>
+  <a href="insights.html">Insights</a>
+  <a href="index.html#inquire" class="btn btn-teal">Inquire</a>
+</div>
+
+<main>
+<section class="legal-header bg-charcoal-mid">
+  <div class="wrap">
+    <p class="eyebrow">Legal</p>
+    <h1>Privacy Policy</h1>
+    <span class="updated">Last updated: June 2026</span>
+  </div>
+</section>
+<section class="bg-white">
+  <div class="wrap legal-body">
+
+    <h2>Information We Collect</h2>
+    <p>When you submit an inquiry form, we collect your name, title, organization name, and email address. We use this information solely to respond to your inquiry.</p>
+    <h2>How We Use Your Information</h2>
+    <p>Your information is used to respond to your inquiry and, if you have opted in, to notify you of new published content. Your information is not sold, shared, or used for any other purpose.</p>
+    <h2>Cookies</h2>
+    <p>This website does not use tracking cookies or third-party analytics tools that identify individual visitors.</p>
+    <h2>Contact</h2>
+    <p>Questions regarding this policy may be directed to hello@compositionsadvisory.com.</p>
+
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <a href="index.html" class="logo-mark" aria-label="Compositions home">
+        <img src="assets/compositions-offwhite-horizontal.png" alt="Compositions" />
+      </a>
+    </div>
+    <div class="footer-cols">
+      <div><h4>Company</h4><ul><li><a href="work.html">Work</a></li><li><a href="about.html">About</a></li><li><a href="insights.html">Insights</a></li><li><a href="index.html#inquire">Inquire</a></li></ul></div>
+      <div><h4>Connect</h4><ul><li><a href="https://www.linkedin.com/in/danamiddletonkc/" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="privacy.html">Privacy</a></li><li><a href="disclaimer.html">Disclaimer</a></li><li><a href="terms.html">Terms</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">Compositions&trade; | Coherent by design. Credible over time. | &copy; 2026 Compositions&trade;. All rights reserved.</div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+
+<script>
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => { backToTop.classList.toggle('visible', window.scrollY > 400); });
+backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  const open = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open', open);
+  hamburger.setAttribute('aria-expanded', open);
+});
+mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  mobileMenu.classList.remove('open'); hamburger.classList.remove('open'); hamburger.setAttribute('aria-expanded', false);
+}));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="alternate icon" href="assets/logo-square-color.png">
+<link rel="apple-touch-icon" href="assets/logo-square-color.png">
+<title>10 Signals Field Guide™ | Compositions™</title>
+<meta name="description" content="Ten observable signals that your structural conditions and your organizational communications have separated. Download the free field guide and see what the pattern is costing you.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://compositions.netlify.app/field-guide.html">
+<meta property="og:title" content="10 Signals Field Guide™ | Compositions™">
+<meta property="og:description" content="Ten observable signals that your structural conditions and your organizational communications have separated. Download the free field guide.">
+<meta property="og:url" content="https://compositions.netlify.app/field-guide.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://compositions.netlify.app/assets/og-image.png">
+<meta property="og:site_name" content="Compositions™">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="10 Signals Field Guide™ | Compositions™">
+<meta name="twitter:description" content="Ten observable signals that your structural conditions and your organizational communications have separated.">
+<meta name="twitter:image" content="https://compositions.netlify.app/assets/og-image.png">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+a { text-decoration: none; color: inherit; }
+
+:root {
+  --teal: #16768C;
+  --teal-dark: #144E73;
+  --teal-light: #A3D2D8;
+  --gold: #D4AF37;
+  --charcoal: #2C2C2C;
+  --off-white: #F8F8F8;
+  --white: #ffffff;
+  --border: #E2E8EC;
+  --active-bg: #EBF6F8;
+  --active-border: #16768C;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--off-white);
+  color: var(--charcoal);
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* ════════════════════════════════════
+   EMAIL GATE
+════════════════════════════════════ */
+#gateScreen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--charcoal);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+  overflow-y: auto;
+}
+
+.gate-inner {
+  width: 100%;
+  max-width: 540px;
+  position: relative;
+  z-index: 1;
+}
+
+.gate-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 48px;
+}
+
+.nine-square-gate {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+  width: 36px;
+  height: 36px;
+}
+.nine-square-gate span { background: rgba(255,255,255,0.2); border-radius: 1px; }
+.nine-square-gate span.accent { background: var(--teal); }
+
+.gate-brand {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.gate-eyebrow {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--teal-light);
+  margin-bottom: 16px;
+}
+
+.gate-rule {
+  width: 40px;
+  height: 3px;
+  background: var(--gold);
+  margin-bottom: 24px;
+}
+
+.gate-title {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.05;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.gate-title .accent { color: var(--teal); }
+
+.gate-subtitle {
+  font-size: 17px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.65;
+  margin-bottom: 32px;
+}
+
+.gate-value-list {
+  list-style: none;
+  margin-bottom: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.gate-value-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.55;
+}
+
+.gate-value-list li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--teal);
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 7px;
+}
+
+.gate-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(255,255,255,0.1);
+  margin-bottom: 32px;
+}
+
+.gate-form-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.gate-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.gate-input {
+  width: 100%;
+  padding: 14px 18px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 2px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--white);
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.gate-input::placeholder { color: rgba(255,255,255,0.3); }
+.gate-input:focus {
+  border-color: var(--teal);
+  background: rgba(22,118,140,0.08);
+}
+
+.gate-btn {
+  width: 100%;
+  padding: 16px 24px;
+  background: var(--teal);
+  border: none;
+  border-radius: 2px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--white);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  margin-top: 4px;
+}
+
+.gate-btn:hover { background: var(--teal-dark); }
+.gate-btn:active { transform: scale(0.99); }
+
+.gate-error {
+  font-size: 12px;
+  color: #E07070;
+  margin-top: 8px;
+  display: none;
+}
+
+.gate-privacy {
+  font-size: 11px;
+  color: rgba(255,255,255,0.25);
+  margin-top: 16px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* bg decorations */
+#gateScreen::before {
+  content: '';
+  position: fixed;
+  top: -80px; right: -80px;
+  width: 400px; height: 400px;
+  background: var(--teal);
+  opacity: 0.05;
+  border-radius: 50%;
+  pointer-events: none;
+}
+#gateScreen::after {
+  content: '';
+  position: fixed;
+  bottom: -80px; left: -80px;
+  width: 300px; height: 300px;
+  background: var(--teal-light);
+  opacity: 0.04;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* ════════════════════════════════════
+   MAIN CONTENT (hidden until gate passes)
+════════════════════════════════════ */
+#mainContent { display: none; }
+
+/* ════════════════════════════════════
+   STICKY TRACKER BAR
+════════════════════════════════════ */
+.tracker-bar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  background: var(--charcoal);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 40px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+}
+
+.tracker-left { display: flex; align-items: center; gap: 12px; }
+
+.nine-square-sm {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  width: 22px; height: 22px;
+  flex-shrink: 0;
+}
+.nine-square-sm span { background: rgba(255,255,255,0.2); border-radius: 1px; }
+.nine-square-sm span.accent { background: var(--teal); }
+
+.tracker-brand {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.tracker-center { display: flex; align-items: center; gap: 5px; }
+
+.tracker-dot {
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255,255,255,0.2);
+  background: transparent;
+  transition: background 0.2s, border-color 0.2s;
+  flex-shrink: 0;
+}
+.tracker-dot.active { background: var(--teal); border-color: var(--teal); }
+
+.tracker-right { display: flex; align-items: center; gap: 12px; }
+
+.tracker-count-label {
+  font-size: 10px; font-weight: 500;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 0.08em; text-transform: uppercase;
+}
+
+.tracker-count {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700; font-size: 20px;
+  color: var(--teal);
+  min-width: 24px; text-align: right; line-height: 1;
+  transition: transform 0.15s ease;
+}
+.tracker-count.bump { transform: scale(1.3); }
+
+/* ════════════════════════════════════
+   COVER
+════════════════════════════════════ */
+.cover {
+  background: var(--charcoal);
+  color: var(--white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 100px 72px 64px;
+  position: relative;
+  overflow: hidden;
+}
+.cover::before {
+  content: '';
+  position: absolute; top: 0; right: 0;
+  width: 320px; height: 320px;
+  background: var(--teal); opacity: 0.08; border-radius: 50%;
+  transform: translate(30%,-30%);
+}
+.cover::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0;
+  width: 200px; height: 200px;
+  background: var(--teal-light); opacity: 0.05; border-radius: 50%;
+  transform: translate(-30%,30%);
+}
+
+.cover-logo { display: flex; align-items: center; gap: 16px; position: relative; z-index: 1; }
+
+.nine-square {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 3px;
+  width: 40px; height: 40px;
+}
+.nine-square span { background: rgba(255,255,255,0.25); border-radius: 1px; }
+.nine-square span.accent { background: var(--teal); }
+
+.brand-name {
+  font-family: 'Oswald', sans-serif; font-weight: 700;
+  font-size: 18px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--white);
+  text-decoration: none;
+}
+
+.cover-body {
+  position: relative; z-index: 1; flex: 1;
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 48px 0 24px;
+}
+
+.cover-eyebrow {
+  font-size: 11px; font-weight: 500; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--teal-light); margin-bottom: 20px;
+}
+
+.cover-rule { width: 48px; height: 3px; background: var(--gold); margin-bottom: 32px; }
+
+.cover-title {
+  font-family: 'Oswald', sans-serif; font-weight: 700;
+  font-size: 64px; line-height: 1.05; color: var(--white);
+  margin-bottom: 12px; letter-spacing: -0.01em;
+}
+.cover-title .accent-word { color: var(--teal); }
+
+.cover-number {
+  font-family: 'Oswald', sans-serif; font-weight: 700;
+  font-size: 120px; line-height: 1;
+  color: rgba(255,255,255,0.04);
+  position: absolute; right: 0; top: 50%; transform: translateY(-50%);
+  pointer-events: none; user-select: none;
+}
+
+.cover-subtitle {
+  font-size: 18px; font-weight: 300;
+  color: rgba(255,255,255,0.65);
+  max-width: 520px; margin-top: 28px; line-height: 1.6;
+}
+
+.cover-instruction {
+  margin-top: 40px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 20px 24px;
+  max-width: 500px;
+  display: flex; align-items: flex-start; gap: 14px;
+}
+.cover-instruction-icon {
+  width: 20px; height: 20px; background: var(--teal); border-radius: 50%;
+  flex-shrink: 0; margin-top: 2px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 700; color: white;
+}
+.cover-instruction p {
+  font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.6; font-weight: 300;
+}
+.cover-instruction p strong { color: rgba(255,255,255,0.85); font-weight: 500; }
+
+.cover-footer {
+  position: relative; z-index: 1;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 24px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.cover-footer-text { font-size: 11px; color: rgba(255,255,255,0.4); letter-spacing: 0.06em; }
+.cover-footer-sequence {
+  font-family: 'Oswald', sans-serif; font-weight: 600;
+  font-size: 11px; letter-spacing: 0.18em; color: var(--teal); text-transform: uppercase;
+}
+
+/* ════════════════════════════════════
+   INTRO
+════════════════════════════════════ */
+.intro-section { background: var(--white); padding: 72px 80px; border-bottom: 1px solid var(--border); }
+
+.section-eyebrow {
+  font-size: 10px; font-weight: 600; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--teal); margin-bottom: 16px;
+}
+
+.intro-section h2 {
+  font-family: 'Oswald', sans-serif; font-weight: 700;
+  font-size: 36px; line-height: 1.15; color: var(--charcoal);
+  margin-bottom: 28px; max-width: 640px;
+}
+.intro-section p {
+  font-size: 15px; color: #4A4A4A;
+  max-width: 620px; margin-bottom: 20px; font-weight: 300;
+}
+.intro-section p strong { font-weight: 600; color: var(--charcoal); }
+
+.callout-box {
+  background: var(--off-white); border-left: 4px solid var(--teal);
+  padding: 24px 28px; margin-top: 36px; max-width: 600px;
+}
+.callout-box p {
+  font-size: 15px; font-weight: 500; color: var(--charcoal);
+  margin: 0; line-height: 1.65;
+}
+.callout-box .callout-caption {
+  font-size: 11px; font-weight: 500; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--teal);
+  margin-top: 12px; margin-bottom: 0;
+}
+
+/* ════════════════════════════════════
+   SIGNALS
+════════════════════════════════════ */
+.signals-section { padding: 0 0 80px; background: var(--off-white); }
+
+.signals-header {
+  background: var(--white); padding: 48px 80px 36px; border-bottom: 1px solid var(--border);
+}
+.signals-header h2 {
+  font-family: 'Oswald', sans-serif; font-size: 28px; font-weight: 700;
+  color: var(--charcoal); letter-spacing: 0.01em;
+}
+.signals-header p {
+  font-size: 14px; color: #6A6A6A; font-weight: 300; margin-top: 8px; max-width: 560px;
+}
+
+.signals-grid {
+  padding: 48px 80px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 28px;
+}
+
+.signal-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 2px; padding: 36px;
+  position: relative; cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+  user-select: none; -webkit-user-select: none;
+}
+.signal-card:hover { border-color: var(--teal-light); box-shadow: 0 2px 12px rgba(22,118,140,0.08); }
+.signal-card.selected { background: var(--active-bg); border-color: var(--active-border); box-shadow: 0 4px 16px rgba(22,118,140,0.12); }
+
+.signal-card::before {
+  content: ''; position: absolute; top: 0; left: 0;
+  width: 3px; height: 0; background: var(--teal);
+  transition: height 0.25s ease;
+}
+.signal-card:hover::before, .signal-card.selected::before { height: 100%; }
+
+.signal-checkbox {
+  position: absolute; top: 20px; right: 20px;
+  width: 22px; height: 22px; border-radius: 50%;
+  border: 2px solid var(--border); background: var(--white);
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s, border-color 0.2s; flex-shrink: 0;
+}
+.signal-card.selected .signal-checkbox { background: var(--teal); border-color: var(--teal); }
+.signal-checkbox svg { opacity: 0; transition: opacity 0.15s; }
+.signal-card.selected .signal-checkbox svg { opacity: 1; }
+
+.signal-number {
+  font-family: 'Oswald', sans-serif; font-weight: 700;
+  font-size: 13px; letter-spacing: 0.14em; color: var(--teal);
+  text-transform: uppercase; margin-bottom: 4px;
+}
+.signal-card h3 {
+  font-size: 16px; font-weight: 600; color: var(--charcoal);
+  line-height: 1.4; margin-bottom: 18px; padding-bottom: 16px;
+  border-bottom: 1px solid var(--border); padding-right: 32px;
+}
+.signal-label {
+  font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
+  text-transform: uppercase; color: #9A9A9A; margin-bottom: 6px;
+}
+.signal-reframe { font-size: 13.5px; color: var(--charcoal); line-height: 1.65; font-weight: 400; margin-bottom: 18px; }
+.signal-implication {
+  font-size: 13px; color: #5A5A5A; line-height: 1.6; font-weight: 300;
+  padding-top: 14px; border-top: 1px solid var(--off-white);
+}
+.signal-implication strong { font-weight: 600; color: var(--charcoal); }
+
+.signal-card.selected .signal-reframe { color: #1A1A1A; }
+.signal-card.selected .signal-implication { color: #3A3A3A; }
+.signal-card.selected h3 { border-bottom-color: rgba(22,118,140,0.2); }
+.signal-card.selected .signal-implication { border-top-color: rgba(22,118,140,0.12); }
+
+/* ════════════════════════════════════
+   RESULTS SECTION — OFF-WHITE BG
+════════════════════════════════════ */
+.results-section {
+  background: var(--off-white);
+  color: var(--charcoal);
+  padding: 80px 80px 0;
+  border-top: 1px solid var(--border);
+}
+
+.results-section .section-eyebrow { color: var(--teal); }
+
+.results-section h2 {
+  font-family: 'Oswald', sans-serif; font-size: 36px; font-weight: 700;
+  color: var(--charcoal); max-width: 640px; line-height: 1.15; margin-bottom: 40px;
+}
+
+/* Score display */
+.score-display {
+  display: flex; align-items: flex-end; gap: 32px;
+  margin-bottom: 32px; flex-wrap: wrap;
+}
+
+.score-number-block { display: flex; flex-direction: column; align-items: center; }
+
+.score-big {
+  font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 96px;
+  line-height: 1; color: var(--teal);
+  transition: all 0.3s ease; min-width: 120px; text-align: center;
+}
+.score-denom {
+  font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 22px;
+  color: #AAAAAA; margin-top: -4px; text-align: center; letter-spacing: 0.04em;
+}
+
+.score-meta { padding-bottom: 16px; }
+
+.score-label {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.18em;
+  text-transform: uppercase; color: #9A9A9A; margin-bottom: 8px;
+}
+
+.progress-bar-wrap {
+  width: 260px; height: 6px; background: var(--border);
+  border-radius: 3px; overflow: hidden; margin-bottom: 12px;
+}
+.progress-bar-fill {
+  height: 100%; background: var(--teal); border-radius: 3px;
+  transition: width 0.4s ease; width: 0%;
+}
+
+.score-descriptor {
+  font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 18px;
+  color: var(--charcoal); letter-spacing: 0.02em; transition: color 0.3s;
+}
+
+/* Pills */
+.signal-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 32px; }
+
+.signal-pill {
+  font-size: 11px; font-weight: 500; padding: 5px 12px;
+  border-radius: 20px; border: 1px solid var(--border);
+  color: #BBBBBB; background: var(--white);
+  transition: background 0.2s, color 0.2s, border-color 0.2s; letter-spacing: 0.04em;
+}
+.signal-pill.lit { background: var(--active-bg); border-color: var(--teal); color: var(--teal-dark); font-weight: 600; }
+
+/* Interpretation boxes */
+.interpretation-box {
+  background: var(--white); border: 1px solid var(--border);
+  padding: 28px 32px; max-width: 660px;
+  margin: 0 0 28px; transition: border-color 0.3s, background 0.3s; display: none;
+}
+.interpretation-box.visible { display: block; }
+.interpretation-box.highlight { border-color: var(--teal); border-left: 4px solid var(--teal); background: var(--active-bg); }
+
+.interpretation-box p {
+  font-size: 16px; font-weight: 500; color: var(--charcoal);
+  margin: 0; line-height: 1.6;
+}
+.interpretation-box .interp-sub {
+  font-size: 13.5px; font-weight: 300; color: #5A5A5A;
+  margin-top: 12px; margin-bottom: 0; line-height: 1.65;
+}
+
+/* Results body copy */
+.results-body { max-width: 660px; }
+.results-body p { font-size: 15px; color: #4A4A4A; font-weight: 300; line-height: 1.7; margin-bottom: 16px; }
+.results-body p strong { color: var(--charcoal); font-weight: 600; }
+
+/* Closing question */
+.closing-question {
+  font-size: 18px; font-weight: 500; color: var(--teal-dark);
+  line-height: 1.5; max-width: 580px;
+  margin-top: 36px; padding-top: 32px; border-top: 1px solid var(--border);
+}
+
+/* Reset btn */
+.reset-btn {
+  display: inline-block; margin-top: 24px;
+  font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+  color: #AAAAAA; cursor: pointer; border: none; background: none; padding: 0;
+  text-decoration: underline; text-underline-offset: 3px;
+  font-family: 'Poppins', sans-serif; transition: color 0.2s;
+}
+.reset-btn:hover { color: var(--charcoal); }
+
+/* ════════════════════════════════════
+   DOWNLOAD RESULTS SECTION
+════════════════════════════════════ */
+.download-section {
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  padding: 64px 80px;
+  margin-top: 0;
+}
+
+.download-section h3 {
+  font-family: 'Oswald', sans-serif; font-weight: 700;
+  font-size: 26px; color: var(--charcoal); line-height: 1.2; margin-bottom: 12px;
+}
+
+.download-section > p {
+  font-size: 14px; font-weight: 300; color: #5A5A5A;
+  max-width: 560px; margin-bottom: 32px; line-height: 1.65;
+}
+
+.download-preview {
+  background: var(--off-white); border: 1px solid var(--border);
+  padding: 32px; max-width: 660px; margin-bottom: 28px;
+  border-radius: 2px;
+}
+
+.download-preview-row {
+  display: flex; align-items: flex-start; gap: 16px;
+  padding: 14px 0; border-bottom: 1px solid var(--border);
+}
+.download-preview-row:last-child { border-bottom: none; padding-bottom: 0; }
+.download-preview-row:first-child { padding-top: 0; }
+
+.dpr-icon {
+  width: 32px; height: 32px; background: var(--active-bg);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; margin-top: 2px;
+}
+.dpr-icon svg { width: 14px; height: 14px; }
+
+.dpr-text strong { font-size: 13px; font-weight: 600; color: var(--charcoal); display: block; margin-bottom: 2px; }
+.dpr-text span { font-size: 12px; font-weight: 300; color: #7A7A7A; line-height: 1.5; }
+
+.download-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 28px;
+  background: var(--teal);
+  border: none; border-radius: 2px;
+  font-family: 'Oswald', sans-serif; font-weight: 700;
+  font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--white); cursor: pointer;
+  transition: background 0.2s; text-decoration: none;
+}
+.download-btn:hover { background: var(--teal-dark); }
+.download-btn svg { width: 15px; height: 15px; }
+
+.download-note {
+  font-size: 11px; font-weight: 300; color: #AAAAAA;
+  margin-top: 12px; line-height: 1.6;
+}
+
+/* ════════════════════════════════════
+   INVESTMENT READ SECTION
+════════════════════════════════════ */
+.investment-section {
+  background: var(--charcoal);
+  color: var(--white);
+  padding: 72px 80px;
+  position: relative; overflow: hidden;
+}
+
+.investment-section::before {
+  content: ''; position: absolute; top: -60px; right: -60px;
+  width: 240px; height: 240px; background: var(--teal);
+  opacity: 0.07; border-radius: 50%;
+}
+
+.investment-section .section-eyebrow { color: var(--teal-light); }
+
+.investment-section h2 {
+  font-family: 'Oswald', sans-serif; font-size: 36px; font-weight: 700;
+  color: var(--white); max-width: 620px; line-height: 1.15; margin-bottom: 28px;
+}
+
+.investment-section p {
+  font-size: 15px; color: rgba(255,255,255,0.7); font-weight: 300;
+  line-height: 1.7; max-width: 600px; margin-bottom: 16px;
+}
+.investment-section p strong { color: var(--white); font-weight: 500; }
+
+.investment-callout {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-left: 4px solid var(--teal);
+  padding: 28px 32px; max-width: 600px; margin: 32px 0;
+}
+.investment-callout p {
+  font-size: 16px; font-weight: 500; color: var(--white);
+  margin: 0; line-height: 1.6;
+}
+.investment-callout .callout-sub {
+  font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.55);
+  margin-top: 10px; margin-bottom: 0;
+}
+
+.deliverables-list {
+  list-style: none; margin: 24px 0 32px;
+  display: flex; flex-direction: column; gap: 10px; max-width: 520px;
+}
+.deliverables-list li {
+  display: flex; align-items: flex-start; gap: 12px;
+  font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.75); line-height: 1.5;
+}
+.deliverables-list li::before {
+  content: '';
+  width: 5px; height: 5px; background: var(--teal);
+  border-radius: 50%; flex-shrink: 0; margin-top: 8px;
+}
+
+/* Path cards */
+.paths-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+  max-width: 640px; margin: 0 0 32px;
+}
+.path-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 24px;
+}
+.path-card-label {
+  font-size: 10px; font-weight: 600; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--teal-light); margin-bottom: 8px;
+}
+.path-card h4 {
+  font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 17px;
+  color: var(--white); margin-bottom: 10px; line-height: 1.3;
+}
+.path-card p {
+  font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.6);
+  line-height: 1.55; margin: 0;
+}
+
+.inv-closing-question {
+  font-size: 18px; font-weight: 500; color: var(--teal-light);
+  line-height: 1.5; max-width: 580px;
+  margin-top: 40px; padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.closing-footer {
+  margin-top: 48px; padding-top: 28px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  display: flex; justify-content: space-between; align-items: center;
+}
+.closing-footer .brand {
+  font-family: 'Oswald', sans-serif; font-weight: 700;
+  font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--white);
+}
+.closing-footer .sequence {
+  font-family: 'Oswald', sans-serif; font-weight: 600;
+  font-size: 11px; letter-spacing: 0.2em; color: var(--teal); text-transform: uppercase;
+}
+
+/* ════════════════════════════════════
+   RESPONSIVE
+════════════════════════════════════ */
+@media (max-width: 780px) {
+  .cover { padding: 88px 32px 48px; }
+  .cover-title { font-size: 42px; }
+  .intro-section, .signals-header, .signals-grid,
+  .results-section, .download-section, .investment-section { padding-left: 28px; padding-right: 28px; }
+  .signals-grid { grid-template-columns: 1fr; }
+  .tracker-bar { padding: 10px 20px; }
+  .tracker-center { display: none; }
+  .score-big { font-size: 72px; }
+  .progress-bar-wrap { width: 180px; }
+  .paths-grid { grid-template-columns: 1fr; }
+  .gate-title { font-size: 36px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     EMAIL GATE
+════════════════════════════════════════ -->
+<div id="gateScreen">
+  <div class="gate-inner">
+    <div class="gate-logo">
+      <a href="index.html">
+        <img src="assets/compositions-offwhite-horizontal.png" alt="Compositions™" style="height:42px;width:auto;display:block;" />
+      </a>
+    </div>
+
+    <div class="gate-eyebrow">Free Resource — Recognition &amp; Structural Read</div>
+    <div class="gate-rule"></div>
+    <div class="gate-title"><span class="accent">10</span> Signals<br>Field Guide™</div>
+
+    <p class="gate-subtitle">
+      Most organizational problems don't arrive with a name. They show up as a feeling — something off, something stalling, something pulling against itself. This guide gives that feeling a structure.
+    </p>
+
+    <ul class="gate-value-list">
+      <li>Ten observable signals that your structural conditions and your communications have separated — in the language your leadership team is already using</li>
+      <li>A structural reframe for each signal that names the source, not just the symptom</li>
+      <li>An interactive tracker so you can identify which signals are active in your organization right now</li>
+      <li>A personalized results summary you can download and share — including what the signals mean and what to do next</li>
+    </ul>
+
+    <div class="gate-divider"></div>
+
+    <!-- Netlify form (hidden — captures data silently in background) -->
+    <form name="field-guide-gate" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="field-guide-gate" />
+      <input type="text" name="bot-field" />
+      <input type="text" name="first-name" />
+      <input type="email" name="email" />
+    </form>
+
+    <label class="gate-form-label" for="gateName">Enter your information to access the guide</label>
+    <div class="gate-fields">
+      <label for="gateName" style="position:absolute;left:-9999px;">First name</label>
+      <input class="gate-input" type="text" id="gateName" placeholder="First name" autocomplete="given-name" />
+      <label for="gateEmail" style="position:absolute;left:-9999px;">Work email address</label>
+      <input class="gate-input" type="email" id="gateEmail" placeholder="Work email address" autocomplete="email" />
+    </div>
+    <button class="gate-btn" onclick="submitGate()">Access the 10 Signals Field Guide™ →</button>
+    <div class="gate-error" id="gateError">Please enter your name and a valid email address.</div>
+    <p class="gate-privacy">Your information is kept private and used only to deliver this resource. No selling, no spam.</p>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     MAIN CONTENT
+════════════════════════════════════════ -->
+<div id="mainContent">
+
+<!-- SITE HEADER -->
+<div style="background:#2C2C2C;height:64px;padding:0 40px;display:flex;align-items:center;position:relative;z-index:1;">
+  <a href="index.html" style="display:flex;align-items:center;">
+    <img src="assets/compositions-offwhite-horizontal.png" alt="Compositions™" style="height:30px;width:auto;" />
+  </a>
+</div>
+
+<!-- STICKY TRACKER -->
+<div class="tracker-bar" id="trackerBar">
+  <div class="tracker-left">
+    <a href="index.html" style="display:flex;align-items:center;">
+      <img src="assets/compositions-offwhite-horizontal.png" alt="Compositions™" style="height:18px;width:auto;display:block;" />
+    </a>
+  </div>
+  <div class="tracker-center" id="trackerDots"></div>
+  <div class="tracker-right">
+    <span class="tracker-count-label">Active signals</span>
+    <span class="tracker-count" id="trackerCount">0</span>
+  </div>
+</div>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-logo">
+    <a href="index.html">
+      <img src="assets/compositions-offwhite-horizontal.png" alt="Compositions™" style="height:42px;width:auto;display:block;" />
+    </a>
+  </div>
+  <div class="cover-body">
+    <div class="cover-eyebrow">Recognition &amp; Structural Read</div>
+    <div class="cover-rule"></div>
+    <div class="cover-title"><span class="accent-word">10</span> Signals<br>Field Guide™</div>
+    <div class="cover-number">10</div>
+    <p class="cover-subtitle">How to recognize when your structural conditions and your communications have separated — and what it's costing you to leave the gap unnamed.</p>
+    <div class="cover-instruction">
+      <div class="cover-instruction-icon">↓</div>
+      <p><strong>How to use this guide:</strong> Read each signal. If it's active in your organization right now, select it. Your total builds as you go — your full results and a downloadable summary appear at the end.</p>
+    </div>
+  </div>
+  <div class="cover-footer">
+    <span class="cover-footer-text">Dana Middleton &nbsp;|&nbsp; Structural Advisor &amp; Principal, Compositions™</span>
+    <span class="cover-footer-sequence">Reveal. Architect. Govern.</span>
+  </div>
+</div>
+
+<!-- INTRO -->
+<div class="intro-section">
+  <p class="section-eyebrow">What you're holding</p>
+  <h2>The signals show up before the source does.</h2>
+  <p>Every organization analyzed here felt the contradiction before it could name it. Employer brand that current employees don't recognize. Internal communications that reaches everyone and moves no one. A change initiative that produced compliance on paper and resistance in practice. A growing sense that the message and the operating reality are pulling apart.</p>
+  <p>These are not separate problems. They are the same structural pattern — expressed differently across employer brand, internal communications, change communications, and external narrative.</p>
+  <p><strong>Every organization is already communicating its structural conditions, whether it intends to or not.</strong> Employees, candidates, funders, and partners measure what is said against what the operating decisions confirm. When the two are aligned, communications produces belief. When they are separated, no investment in message quality closes the gap.</p>
+  <p>The ten signals below are how that separation announces itself. They surface in different forms, at different moments, in different conversations. But they originate in the same structural condition: communications that is ahead of what the organization's structural conditions can currently support.</p>
+  <div class="callout-box">
+    <p>Select each signal that is active in your organization right now. Your results — and a downloadable summary — will be waiting for you at the end.</p>
+    <p class="callout-caption">Results + download appear on the final page</p>
+  </div>
+</div>
+
+<!-- SIGNALS -->
+<div class="signals-section">
+  <div class="signals-header">
+    <p class="section-eyebrow">The Signals</p>
+    <h2>Ten observable signals that the structural conditions and the communications have separated.</h2>
+    <p>Select each signal that is active in your organization right now.</p>
+  </div>
+
+  <div class="signals-grid">
+
+    <div class="signal-card" data-signal="1" onclick="toggleSignal(this)">
+      <div class="signal-checkbox"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="signal-number">Signal 01</div>
+      <h3>"We keep refining the message and getting the same skepticism back."</h3>
+      <div class="signal-label">Structural Reframe</div>
+      <p class="signal-reframe">Message quality can't close a structural gap. When what is communicated runs ahead of what the operating conditions can confirm, refining the language addresses the wrong layer — the structure is the message.</p>
+      <div class="signal-label">What This Means</div>
+      <p class="signal-implication"><strong>Before the next campaign:</strong> the structural conditions need a read. More communications investment into an unaligned structure doesn't close the gap — it raises the cost of the distance.</p>
+    </div>
+
+    <div class="signal-card" data-signal="2" onclick="toggleSignal(this)">
+      <div class="signal-checkbox"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="signal-number">Signal 02</div>
+      <h3>"Employees aren't believing what leadership says — and we can't tell why."</h3>
+      <div class="signal-label">Structural Reframe</div>
+      <p class="signal-reframe">Employees are not passive recipients of leadership communications. They are continuous observers of leadership decisions. Belief tracks evidence, not effort — and the evidence accumulates whether or not anyone is naming it.</p>
+      <div class="signal-label">What This Means</div>
+      <p class="signal-implication"><strong>The inability to name a cause is not a communications failure.</strong> It is a sign that no one has read the leadership communications against the leadership decisions side by side.</p>
+    </div>
+
+    <div class="signal-card" data-signal="3" onclick="toggleSignal(this)">
+      <div class="signal-checkbox"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="signal-number">Signal 03</div>
+      <h3>"Our employer brand looks strong and we're still losing the candidates we most want to keep."</h3>
+      <div class="signal-label">Structural Reframe</div>
+      <p class="signal-reframe">An EVP built from aspiration describes the experience leadership hopes to deliver, not the experience current employees would confirm as true. Candidates accept the story at the offer stage and revise their view against the structural conditions within months.</p>
+      <div class="signal-label">What This Means</div>
+      <p class="signal-implication"><strong>A stronger employer brand campaign won't close this gap.</strong> What current employees would confirm as true — not what the careers page claims — determines whether the candidates you want to keep, stay.</p>
+    </div>
+
+    <div class="signal-card" data-signal="4" onclick="toggleSignal(this)">
+      <div class="signal-checkbox"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="signal-number">Signal 04</div>
+      <h3>"The change initiative produced compliance at 30 days and drift at 90."</h3>
+      <div class="signal-label">Structural Reframe</div>
+      <p class="signal-reframe">Compliance and adoption look identical immediately after the announcement and diverge sharply once attention moves elsewhere. Employees are applying their accumulated evidence about how this organization has honored previous commitments — not the announcement itself.</p>
+      <div class="signal-label">What This Means</div>
+      <p class="signal-implication"><strong>A stronger announcement won't produce adoption.</strong> Adoption is won or lost in the conversations between managers and their direct reports — and those conversations need a structural credibility reserve the all-hands can't supply.</p>
+    </div>
+
+    <div class="signal-card" data-signal="5" onclick="toggleSignal(this)">
+      <div class="signal-checkbox"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="signal-number">Signal 05</div>
+      <h3>"The grant narrative is well-crafted and funders are asking harder questions than they used to."</h3>
+      <div class="signal-label">Structural Reframe</div>
+      <p class="signal-reframe">Experienced program officers measure the narrative against the organizational evidence they can independently observe. A well-written grant narrative asking funders to believe something the evidence doesn't yet fully support produces scrutiny, not confidence.</p>
+      <div class="signal-label">What This Means</div>
+      <p class="signal-implication"><strong>Sharper writing will not close this gap.</strong> The funder relationship is responding to the distance between the narrative and the operating reality — and that distance is a structural question, not an editorial one.</p>
+    </div>
+
+    <div class="signal-card" data-signal="6" onclick="toggleSignal(this)">
+      <div class="signal-checkbox"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="signal-number">Signal 06</div>
+      <h3>"I know something structural is wrong. I just can't name it precisely enough to act."</h3>
+      <div class="signal-label">Structural Reframe</div>
+      <p class="signal-reframe">The inability to name the source is not a failure of perception. Sophisticated leaders feel a structural gap before they can articulate it — because the gap lives between functions, not inside any one of them, and no single function is positioned to see the whole pattern.</p>
+      <div class="signal-label">What This Means</div>
+      <p class="signal-implication"><strong>The problem isn't invisible.</strong> It's unnamed. A structural read makes the pattern legible and gives it a price — which is the only thing that creates the conditions to act on it.</p>
+    </div>
+
+    <div class="signal-card" data-signal="7" onclick="toggleSignal(this)">
+      <div class="signal-checkbox"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="signal-number">Signal 07</div>
+      <h3>"Leadership communications is consistent and leadership credibility is still declining."</h3>
+      <div class="signal-label">Structural Reframe</div>
+      <p class="signal-reframe">When what leadership communicates diverges long enough from what employees observe in operating decisions, belief stops being a communications problem and becomes a structural one. Employees are not cynical. They are accurate. The structural conditions are teaching them what to trust.</p>
+      <div class="signal-label">What This Means</div>
+      <p class="signal-implication"><strong>No investment in content, channels, or leadership visibility</strong> corrects a belief deficit produced by structural contradiction. The conditions beneath the message — decision-making, incentives, and accountability — determine whether any message lands.</p>
+    </div>
+
+    <div class="signal-card" data-signal="8" onclick="toggleSignal(this)">
+      <div class="signal-checkbox"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="signal-number">Signal 08</div>
+      <h3>"Trust is thin right now. I'm not sure when it started or where it's coming from."</h3>
+      <div class="signal-label">Structural Reframe</div>
+      <p class="signal-reframe">Trust doesn't erode in a single event. It depletes through the accumulation of small contradictions — decisions that don't match what was said, commitments that were made and quietly revised, investments that signal priority but disappear when pressure arrives. Trust is a structural outcome, not a sentiment score.</p>
+      <div class="signal-label">What This Means</div>
+      <p class="signal-implication"><strong>Thin trust is structural evidence.</strong> It tracks where what was said and what was done have diverged long enough for people — employees, candidates, funders, communities — to stop giving the organization the benefit of the doubt.</p>
+    </div>
+
+    <div class="signal-card" data-signal="9" onclick="toggleSignal(this)">
+      <div class="signal-checkbox"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="signal-number">Signal 09</div>
+      <h3>"Our values haven't changed. But they've stopped landing in daily decisions."</h3>
+      <div class="signal-label">Structural Reframe</div>
+      <p class="signal-reframe">Values function as a claim about how the organization will decide. When operating decisions consistently bypass that claim, employees stop using the values language as a frame and start using observed behavior as one. The values haven't changed. What confirms them has.</p>
+      <div class="signal-label">What This Means</div>
+      <p class="signal-implication"><strong>A values refresh will not restore the credibility.</strong> What restores it is closing the distance between the language and the decisions — which is a structural question, not a communications campaign.</p>
+    </div>
+
+    <div class="signal-card" data-signal="10" onclick="toggleSignal(this)">
+      <div class="signal-checkbox"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="signal-number">Signal 10</div>
+      <h3>"We're spending more on communications and getting less belief back than we expected."</h3>
+      <div class="signal-label">Structural Reframe</div>
+      <p class="signal-reframe">Investment without addressing the structural source doesn't compound — it dilutes. Employer brand, internal communications, change communications, and external narrative each draw on the same structural conditions. When those conditions are unaddressed, each new investment competes with the credibility gap rather than closing it.</p>
+      <div class="signal-label">What This Means</div>
+      <p class="signal-implication"><strong>The question is not whether to invest more.</strong> It is whether the structural conditions are currently producing belief or contradiction — and whether anyone has analyzed that question before the next dollar is spent.</p>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     RESULTS — OFF-WHITE BACKGROUND
+════════════════════════════════════════ -->
+<div class="results-section">
+  <p class="section-eyebrow">Your Results</p>
+  <h2>Here's what your active signals are telling you.</h2>
+
+  <div class="score-display">
+    <div class="score-number-block">
+      <div class="score-big" id="scoreBig">0</div>
+      <div class="score-denom">of 10</div>
+    </div>
+    <div class="score-meta">
+      <div class="score-label">Active signals identified</div>
+      <div class="progress-bar-wrap"><div class="progress-bar-fill" id="progressFill"></div></div>
+      <div class="score-descriptor" id="scoreDescriptor">Select signals above to see your results.</div>
+    </div>
+  </div>
+
+  <div class="signal-pills" id="signalPills"></div>
+
+  <div class="interpretation-box" id="interp0">
+    <p>No active signals selected — or the organization is in its earliest stages of separation between structure and communications.</p>
+    <p class="interp-sub">Select the signals that are active in your organization to see your structural read.</p>
+  </div>
+  <div class="interpretation-box" id="interp1">
+    <p>One or two signals active suggests isolated friction rather than a systemic structural condition.</p>
+    <p class="interp-sub">Keep these signals on your radar. The pattern can compound quietly, and it is easier to address before it spreads across employer brand, internal communications, change communications, and external narrative.</p>
+  </div>
+  <div class="interpretation-box highlight" id="interp3">
+    <p>Three or more active signals confirm a structural pattern — not isolated incidents. The communications is running ahead of what the structural conditions can confirm, and the cost is already accumulating.</p>
+    <p class="interp-sub">The next step is not more communications investment. It is a structural read — an analysis that names the source, prices the gap, and identifies what must change before further spending compounds the problem.</p>
+  </div>
+  <div class="interpretation-box highlight" id="interp6">
+    <p>Six or more signals active indicates the separation has moved past isolated friction into a pattern spanning multiple communications domains. The cost is already showing up in lines you're tracking — turnover, change adoption, funder confidence.</p>
+    <p class="interp-sub">A structural read is overdue. The longer the gap runs unnamed, the more the next campaign — however well-crafted — works against the credibility the organization is trying to build.</p>
+  </div>
+  <div class="interpretation-box highlight" id="interp9">
+    <p>Nine or ten signals active means the distance between what is communicated and what the structural conditions can confirm has become the organization's primary credibility risk. Employer brand, internal communications, change communications, and external narrative are each absorbing the cost separately.</p>
+    <p class="interp-sub">This is not a messaging problem. It is a structural one. The structural read will show where the gap is most acute, what it's costing, and what must change before any communications investment compounds rather than erodes trust further.</p>
+  </div>
+
+  <div class="results-body" id="resultsBody" style="display:none;">
+    <p>The signals above are not ten separate problems. They are one structural condition expressed across employer brand, internal communications, change communications, and external narrative.</p>
+    <p><strong>The source is almost always the same:</strong> communications that is ahead of what the organization's structural conditions — its decisions, its incentives, its leadership behavior — can credibly confirm. Each function feels its own version of the gap and addresses it separately, which is exactly why the pattern keeps compounding.</p>
+  </div>
+
+  <div class="closing-question">Where is the gap between what you're communicating and what your structural conditions can confirm most visible right now — and what is it costing to leave it unnamed?</div>
+
+  <button class="reset-btn" onclick="resetAll()">Clear all selections and start over</button>
+
+  <div style="height: 64px;"></div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     DOWNLOAD RESULTS
+════════════════════════════════════════ -->
+<div class="download-section" id="downloadSection">
+  <p class="section-eyebrow">Take This With You</p>
+  <h3>Download your personalized results summary.</h3>
+  <p>Your results include a structural read of what your active signals mean, what they're telling you about your communications, and the specific next steps available to you — from building an internal business case to initiating a full structural analysis.</p>
+
+  <div class="download-preview">
+    <div class="download-preview-row">
+      <div class="dpr-icon">
+        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 1v9M4.5 7L8 10.5 11.5 7" stroke="#16768C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 12h12" stroke="#16768C" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="dpr-text">
+        <strong>Your Signal Score &amp; What It Means</strong>
+        <span>Your count, the structural interpretation for your range, and the specific signals you identified — in a format you can share with your leadership team.</span>
+      </div>
+    </div>
+    <div class="download-preview-row">
+      <div class="dpr-icon">
+        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="8" cy="8" r="6.5" stroke="#16768C" stroke-width="1.5"/>
+          <path d="M8 5v3.5l2 2" stroke="#16768C" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="dpr-text">
+        <strong>What This Pattern Is Costing</strong>
+        <span>The capital leakage context for your signal range — across workplace, marketplace, and community — so the cost of inaction is visible, not abstract.</span>
+      </div>
+    </div>
+    <div class="download-preview-row">
+      <div class="dpr-icon">
+        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="#16768C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="dpr-text">
+        <strong>Recommended Next Steps</strong>
+        <span>The two available paths forward — including how to build the internal case for a structural read and what the Communications Coherence Analysis™ produces — mapped to your specific signal count.</span>
+      </div>
+    </div>
+  </div>
+
+  <button class="download-btn" onclick="downloadResults()">
+    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8 1v9M4.5 7L8 10.5 11.5 7" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M2 12h12" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+    Download My Results Summary
+  </button>
+  <p class="download-note">Opens your personalized results summary. Select "Save as PDF" in the print dialog to save your copy.</p>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     INVESTMENT READ SECTION — CHARCOAL
+════════════════════════════════════════ -->
+<div class="investment-section">
+  <p class="section-eyebrow">If Three or More Signals Are Active</p>
+  <h2>The next step is not more communications investment. It is a structural read.</h2>
+
+  <p>The ten signals above are not ten separate problems. They are one structural condition expressed across employer brand, internal communications, change communications, and external narrative.</p>
+
+  <p><strong>The source is almost always the same:</strong> communications that is ahead of what the organization's structural conditions — its decisions, its incentives, its leadership behavior — can credibly confirm. Each function absorbs its own version of the cost: turnover in talent, drift in change adoption, skepticism in funder relationships. The result is not underinvestment. It is communications that keeps running ahead of a structure that hasn't been read.</p>
+
+  <div class="investment-callout">
+    <p>If three or more of these signals are present, the next dollar spent on a campaign, channel, or messaging refresh will compound the problem — not the investment.</p>
+    <p class="callout-sub">The Communications Coherence Analysis™ produces the structural read.</p>
+  </div>
+
+  <p>The Communications Coherence Analysis™ analyzes all four communications domains — employer brand, internal communications, change communications, and external narrative — against the structural conditions that determine whether each is believed. It produces:</p>
+
+  <ul class="deliverables-list">
+    <li>The Communications Coherence Report — the complete structural read, in plain language</li>
+    <li>An executive summary — board-ready, one page</li>
+    <li>The Enterprise Coherence Score™ (ECS™) — a baseline score with domain and class sub-scores</li>
+    <li>A priority governance map — where to close the gap first</li>
+    <li>A 90-day action plan</li>
+  </ul>
+
+  <p>It is not a survey, an engagement assessment, or a culture audit. It is a structural analysis — the thing that tells you what your communications is actually arranged to produce.</p>
+
+  <p>For organizations that need to build an internal case before initiating a full diagnostic, two intermediate paths are available:</p>
+
+  <div class="paths-grid">
+    <div class="path-card">
+      <div class="path-card-label">If you need internal justification first</div>
+      <h4>Structural Brief™</h4>
+      <p>A fixed-scope written deliverable that translates one named communications symptom into a structural finding and a directional capital cost estimate — giving you the language to authorize the Communications Coherence Analysis™ internally.</p>
+    </div>
+    <div class="path-card">
+      <div class="path-card-label">If you want to see the work first</div>
+      <h4>A Focused Working Session</h4>
+      <p>A half-day session — the Message-Reality Check™, the EVP Clarity Lab™, or the Change Communications Layout™ — that reads one communications domain in depth and produces a written deliverable within 48 hours, before committing to the full analysis.</p>
+    </div>
+  </div>
+
+  <div class="inv-closing-question">Where is the gap between what you're communicating and what your structural conditions can confirm most visible right now — and what is it costing to leave it unnamed?</div>
+
+  <div class="closing-footer">
+    <div>
+      <div class="brand">Compositions™</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.35);margin-top:4px;">Dana Middleton &nbsp;|&nbsp; Structural Advisor &amp; Principal</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.35);">CompositionsAdvisory.com</div>
+    </div>
+    <div class="sequence">Reveal. Architect. Govern.</div>
+  </div>
+</div>
+
+<!-- CLOSING CTA -->
+<div style="text-align: center; padding: 64px 40px; background: #2C2C2C; margin-top: 48px;">
+  <p style="font-family: 'Poppins', sans-serif; font-size: 16px; color: rgba(255,255,255,0.8); max-width: 560px; margin: 0 auto 32px; line-height: 1.7;">
+    If three or more signals are active in your organization, the issue is structural. The next step is not more communications investment.
+  </p>
+  <a href="index.html#inquire"
+     style="display: inline-block; background: #16768C; color: #ffffff; font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.06em; padding: 14px 28px; border-radius: 4px; text-decoration: none; transition: background 0.2s;">
+    Schedule a Working Session →
+  </a>
+  <br>
+  <a href="index.html"
+     style="display: inline-block; margin-top: 16px; font-family: 'Poppins', sans-serif; font-size: 13px; color: rgba(255,255,255,0.6); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 2px;">
+    Return to Compositions™ →
+  </a>
+</div>
+
+<!-- LEGAL FOOTER -->
+<div style="background:#2C2C2C;padding:14px 80px;border-top:1px solid rgba(255,255,255,0.06);display:flex;flex-wrap:wrap;gap:6px 20px;align-items:center;">
+  <a href="/privacy.html" style="font-family:'Poppins',sans-serif;font-size:11px;letter-spacing:0.05em;color:rgba(255,255,255,0.3);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.6)'" onmouseout="this.style.color='rgba(255,255,255,0.3)'">Privacy Policy</a>
+  <a href="/disclaimer.html" style="font-family:'Poppins',sans-serif;font-size:11px;letter-spacing:0.05em;color:rgba(255,255,255,0.3);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.6)'" onmouseout="this.style.color='rgba(255,255,255,0.3)'">Disclaimer</a>
+  <a href="/terms.html" style="font-family:'Poppins',sans-serif;font-size:11px;letter-spacing:0.05em;color:rgba(255,255,255,0.3);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.6)'" onmouseout="this.style.color='rgba(255,255,255,0.3)'">Terms of Use</a>
+</div>
+
+</div><!-- /mainContent -->
+
+
+<!-- ══════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════ -->
+<script>
+/* ── Gate labels ── */
+const SIGNAL_LABELS = [
+  '"We keep refining the message and getting the same skepticism back."',
+  '"Employees aren\'t believing what leadership says — and we can\'t tell why."',
+  '"Our employer brand looks strong and we\'re still losing the candidates we most want to keep."',
+  '"The change initiative produced compliance at 30 days and drift at 90."',
+  '"The grant narrative is well-crafted and funders are asking harder questions than they used to."',
+  '"I know something structural is wrong. I just can\'t name it precisely enough to act."',
+  '"Leadership communications is consistent and leadership credibility is still declining."',
+  '"Trust is thin right now. I\'m not sure when it started or where it\'s coming from."',
+  '"Our values haven\'t changed. But they\'ve stopped landing in daily decisions."',
+  '"We\'re spending more on communications and getting less belief back than we expected."'
+];
+
+let userName = '';
+let userEmail = '';
+
+/* ── GATE ── */
+function submitGate() {
+  const name = document.getElementById('gateName').value.trim();
+  const email = document.getElementById('gateEmail').value.trim();
+  const err = document.getElementById('gateError');
+
+  const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  if (!name || !emailOk) {
+    err.style.display = 'block';
+    return;
+  }
+  err.style.display = 'none';
+  userName = name;
+  userEmail = email;
+
+  /* Post silently to Netlify Forms — failure never blocks the user */
+  const fd = new FormData();
+  fd.append('form-name', 'field-guide-gate');
+  fd.append('first-name', name);
+  fd.append('email', email);
+  fetch('/', { method: 'POST', body: fd }).catch(function(){});
+
+  document.getElementById('gateScreen').style.display = 'none';
+  document.getElementById('mainContent').style.display = 'block';
+  initTracker();
+  updateUI();
+  window.scrollTo(0, 0);
+}
+
+/* Allow Enter key in gate fields */
+['gateName','gateEmail'].forEach(id => {
+  document.getElementById(id).addEventListener('keydown', e => {
+    if (e.key === 'Enter') submitGate();
+  });
+});
+
+/* ── TRACKER ── */
+const TOTAL = 10;
+let selected = new Set();
+
+function initTracker() {
+  const dotsContainer = document.getElementById('trackerDots');
+  for (let i = 1; i <= TOTAL; i++) {
+    const d = document.createElement('div');
+    d.className = 'tracker-dot';
+    d.id = 'dot-' + i;
+    dotsContainer.appendChild(d);
+  }
+  const pillsContainer = document.getElementById('signalPills');
+  for (let i = 1; i <= TOTAL; i++) {
+    const p = document.createElement('span');
+    p.className = 'signal-pill';
+    p.id = 'pill-' + i;
+    p.textContent = 'Signal ' + String(i).padStart(2, '0');
+    pillsContainer.appendChild(p);
+  }
+}
+
+function toggleSignal(card) {
+  const n = parseInt(card.dataset.signal);
+  if (selected.has(n)) { selected.delete(n); card.classList.remove('selected'); }
+  else { selected.add(n); card.classList.add('selected'); }
+  updateUI();
+}
+
+function updateUI() {
+  const count = selected.size;
+
+  const countEl = document.getElementById('trackerCount');
+  countEl.textContent = count;
+  countEl.classList.add('bump');
+  setTimeout(() => countEl.classList.remove('bump'), 200);
+
+  for (let i = 1; i <= TOTAL; i++) {
+    const dot = document.getElementById('dot-' + i);
+    if (dot) dot.classList.toggle('active', selected.has(i));
+    const pill = document.getElementById('pill-' + i);
+    if (pill) pill.classList.toggle('lit', selected.has(i));
+  }
+
+  document.getElementById('scoreBig').textContent = count;
+  document.getElementById('progressFill').style.width = (count / TOTAL * 100) + '%';
+
+  const desc = document.getElementById('scoreDescriptor');
+  if (count === 0) desc.textContent = 'Select signals above to see your results.';
+  else if (count <= 2) desc.textContent = 'Isolated friction detected.';
+  else if (count <= 5) desc.textContent = 'Structural pattern confirmed.';
+  else if (count <= 8) desc.textContent = 'Portfolio-wide incoherence active.';
+  else desc.textContent = 'Critical structural fragmentation.';
+
+  ['interp0','interp1','interp3','interp6','interp9'].forEach(id => {
+    document.getElementById(id).classList.remove('visible');
+  });
+  if (count === 0) document.getElementById('interp0').classList.add('visible');
+  else if (count <= 2) document.getElementById('interp1').classList.add('visible');
+  else if (count <= 5) document.getElementById('interp3').classList.add('visible');
+  else if (count <= 8) document.getElementById('interp6').classList.add('visible');
+  else document.getElementById('interp9').classList.add('visible');
+
+  document.getElementById('resultsBody').style.display = count >= 3 ? 'block' : 'none';
+}
+
+function resetAll() {
+  selected.clear();
+  document.querySelectorAll('.signal-card').forEach(c => c.classList.remove('selected'));
+  updateUI();
+}
+
+/* ── DOWNLOAD ── */
+function getInterpText(count) {
+  if (count === 0) return { headline: 'No active signals identified.', body: 'No signals were identified as active at this time, or the organization may be in its earliest stages of separation between structure and communications. Continue to monitor for emerging patterns.', urgency: 'low' };
+  if (count <= 2) return { headline: 'Isolated friction detected.', body: 'One or two signals active suggests isolated friction rather than a systemic structural condition. These patterns can compound quietly. Early signals are easier to address before they spread across employer brand, internal communications, change communications, and external narrative.', urgency: 'low' };
+  if (count <= 5) return { headline: 'Structural pattern confirmed.', body: 'Three or more active signals confirm a structural pattern — not isolated incidents. Communications is running ahead of what the structural conditions can confirm, and the cost is already accumulating. The next step is not more communications investment. It is a structural read — an analysis that names the source, prices the gap, and identifies what must change before further spending compounds the problem.', urgency: 'high' };
+  if (count <= 8) return { headline: 'Cross-domain incoherence active.', body: 'Six or more signals active indicates the separation has moved past isolated friction into a pattern spanning multiple communications domains. The cost is already showing up in lines you\'re tracking — turnover, change adoption, funder confidence. A structural read is overdue.', urgency: 'high' };
+  return { headline: 'Critical structural separation.', body: 'Nine or ten signals active means the distance between what is communicated and what the structural conditions can confirm has become the organization\'s primary credibility risk. Employer brand, internal communications, change communications, and external narrative are each absorbing the cost separately. This is not a messaging problem. It is a structural one.', urgency: 'high' };
+}
+
+function getCostContext(count) {
+  if (count === 0) return '';
+  if (count <= 2) return 'Even early-stage separation carries a cost. The patterns identified here, if left unaddressed, can produce $200K–$750K annually for a typical mid-market organization — primarily in recruiting inefficiency and the earliest signs of preventable turnover.';
+  if (count <= 5) return 'A structural pattern at this level typically corresponds to $450K–$2.5M annually for a 200-person organization — the documented range for preventable turnover from an employer brand-experience mismatch alone, before adding the cost of stalled change initiatives or grant narratives that aren\'t landing.';
+  if (count <= 8) return 'Cross-domain incoherence at this signal level typically corresponds to $1M–$5M or more annually — once turnover, change-initiative drift, and funder or candidate skepticism are all drawing from the same unaddressed structural source.';
+  return 'Critical structural separation at this level typically corresponds to $2.5M–$10M or more annually, distributed across turnover, failed change adoption, and weakened external trust. The range widens with organization size, but the source is the same at every scale.';
+}
+
+function getNextSteps(count) {
+  if (count === 0) return ['Monitor: Keep these signals on your radar. Review the ten signals quarterly as organizational conditions evolve.', 'Read: The 10 Signals Field Guide™ includes a structural reframe for each signal. Return to it when the pattern changes.'];
+  if (count <= 2) return ['Monitor: Continue to observe these signals. One or two active signals can become three or more as organizational pressures accumulate.', 'Prepare: Begin documenting where the identified signals are most acute. This evidence will be valuable if the pattern grows.', 'Request a working session: The Message-Reality Check™, the EVP Clarity Lab™, or the Change Communications Layout™ reads one domain in depth and produces a written deliverable within 48 hours.'];
+  return ['Initiate a structural read: The Communications Coherence Analysis™ is the analysis that names the source, prices the gap, and identifies what must change before further communications investment compounds the problem.', 'Build the internal case first: If you need to justify the analysis internally, the Structural Brief™ translates one named communications symptom into a capital cost estimate and the language needed to authorize the Communications Coherence Analysis™.', 'See the work first: If the organization wants to see the structural lens applied before committing to the full analysis, a focused working session — the Message-Reality Check™, the EVP Clarity Lab™, or the Change Communications Layout™ — reads one domain in depth within a half day.', 'Contact Compositions™: hello@compositionsadvisory.com — Dana Middleton, Structural Advisor & Principal.'];
+}
+
+function downloadResults() {
+  const count = selected.size;
+  const interp = getInterpText(count);
+  const cost = getCostContext(count);
+  const steps = getNextSteps(count);
+  const date = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+  const activeSignals = Array.from(selected).sort(function(a,b){ return a-b; });
+  const signalListHtml = activeSignals.length > 0
+    ? activeSignals.map(function(n){ return '<li style="margin-bottom:10px;padding-left:16px;position:relative;font-size:14px;color:#3A3A3A;font-weight:300;line-height:1.55;"><span style="position:absolute;left:0;color:#16768C;font-weight:700;">›</span> <strong style="font-weight:600;color:#2C2C2C;">Signal ' + String(n).padStart(2,'0') + ':</strong> ' + SIGNAL_LABELS[n-1] + '</li>'; }).join('')
+    : '<li style="font-size:14px;color:#9A9A9A;">No signals selected.</li>';
+
+  const stepsHtml = steps.map(function(s){ return '<li style="margin-bottom:14px;padding-left:20px;position:relative;font-size:14px;color:#3A3A3A;font-weight:300;line-height:1.6;"><span style="position:absolute;left:0;top:0;color:#16768C;font-weight:700;">→</span>' + s + '</li>'; }).join('');
+
+  const urgencyColor = interp.urgency === 'high' ? '#16768C' : '#9A9A9A';
+  const showCost = cost ? '<div style="background:#EBF6F8;border-left:4px solid #16768C;padding:20px 24px;margin:0 0 32px;border-radius:0 2px 2px 0;"><p style="font-size:11px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#16768C;margin-bottom:8px;">Capital Leakage Context</p><p style="font-size:14px;font-weight:400;color:#2C2C2C;line-height:1.65;margin:0;">' + cost + '</p></div>' : '';
+
+  const investmentBlock = count >= 3 ? '<div style="background:#2C2C2C;padding:28px 32px;margin-bottom:0;"><p style="font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#A3D2D8;margin-bottom:10px;">The Communications Coherence Analysis\u2122</p><p style="font-size:15px;font-weight:500;color:white;line-height:1.6;margin-bottom:12px;">The structural analysis that reveals where your communications has separated from your structural conditions, what it\u2019s costing, and what must change before the next investment compounds rather than erodes trust further.</p><p style="font-size:13px;font-weight:300;color:rgba(255,255,255,0.6);line-height:1.6;margin:0;">Produces: Communications Coherence Report \u00b7 Executive Summary \u00b7 Enterprise Coherence Score\u2122 (ECS\u2122) \u00b7 Priority Governance Map \u00b7 90-Day Action Plan</p></div>' : '';
+
+  const preparedFor = userName ? 'Prepared for: ' + userName + ' &nbsp;|&nbsp; ' : '';
+
+  const html = '<!DOCTYPE html>\n<html lang="en">\n<head>\n<meta charset="UTF-8">\n<meta name="viewport" content="width=device-width,initial-scale=1.0">\n<title>My Signal Results \u2014 10 Signals Field Guide\u2122 | Compositions\u2122</title>\n<style>\n@import url(\'https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap\');\n*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}\nbody{font-family:\'Poppins\',sans-serif;background:#F8F8F8;color:#2C2C2C;line-height:1.7;}\n@media print{\n  @page{margin:0;size:letter;}\n  body{background:white;-webkit-print-color-adjust:exact;print-color-adjust:exact;}\n  .no-print{display:none !important;}\n}\n</style>\n</head>\n<body>\n<div style="max-width:700px;margin:0 auto;padding:0;">\n\n<div style="background:#2C2C2C;padding:40px 48px;position:relative;overflow:hidden;">\n  <div style="display:flex;align-items:center;gap:12px;margin-bottom:36px;">\n    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;width:28px;height:28px;">\n      <span style="background:rgba(255,255,255,0.2);border-radius:1px;display:block;"></span><span style="background:rgba(255,255,255,0.2);border-radius:1px;display:block;"></span><span style="background:rgba(255,255,255,0.2);border-radius:1px;display:block;"></span><span style="background:rgba(255,255,255,0.2);border-radius:1px;display:block;"></span><span style="background:#16768C;border-radius:1px;display:block;"></span><span style="background:rgba(255,255,255,0.2);border-radius:1px;display:block;"></span><span style="background:rgba(255,255,255,0.2);border-radius:1px;display:block;"></span><span style="background:rgba(255,255,255,0.2);border-radius:1px;display:block;"></span><span style="background:rgba(255,255,255,0.2);border-radius:1px;display:block;"></span>\n    </div>\n    <span style="font-family:\'Oswald\',sans-serif;font-weight:700;font-size:14px;letter-spacing:0.14em;text-transform:uppercase;color:white;">Compositions\u2122</span>\n  </div>\n  <p style="font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:#A3D2D8;margin-bottom:10px;">10 Signals Field Guide\u2122 \u2014 Results Summary</p>\n  <div style="width:36px;height:3px;background:#D4AF37;margin-bottom:20px;"></div>\n  <h1 style="font-family:\'Oswald\',sans-serif;font-weight:700;font-size:38px;line-height:1.1;color:white;margin-bottom:8px;">' + count + ' of 10 Signals<br>Active</h1>\n  <p style="font-family:\'Oswald\',sans-serif;font-size:18px;font-weight:600;color:' + urgencyColor + ';letter-spacing:0.04em;">' + interp.headline + '</p>\n  <p style="font-size:12px;color:rgba(255,255,255,0.35);margin-top:20px;">' + preparedFor + date + '</p>\n</div>\n\n<div style="background:white;padding:40px 48px;">\n  <p style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#16768C;margin-bottom:12px;">What This Means</p>\n  <p style="font-size:15px;color:#2C2C2C;font-weight:400;line-height:1.7;margin-bottom:28px;">' + interp.body + '</p>\n  ' + showCost + '\n  <p style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#16768C;margin-bottom:16px;">Signals You Identified as Active</p>\n  ' + (activeSignals.length > 0 ? '<ul style="list-style:none;margin-bottom:36px;padding:0;">' + signalListHtml + '</ul>' : '<p style="font-size:14px;color:#9A9A9A;margin-bottom:36px;font-weight:300;">No signals were identified as currently active.</p>') + '\n  <div style="background:#F8F8F8;border:1px solid #E2E8EC;padding:24px 28px;margin-bottom:36px;">\n    <p style="font-size:13px;font-weight:500;color:#2C2C2C;line-height:1.65;margin:0;">These signals are not separate problems. They are one structural condition expressed across employer brand, internal communications, change communications, and external narrative \u2014 communications that is running ahead of what the structural conditions can confirm. The source of each signal is almost always the same: a gap between what is said and what is structurally true, named separately in each function and never read as one pattern.</p>\n  </div>\n  <p style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#16768C;margin-bottom:16px;">Recommended Next Steps</p>\n  <ul style="list-style:none;padding:0;margin-bottom:36px;">' + stepsHtml + '</ul>\n  ' + investmentBlock + '\n</div>\n\n<div style="background:#2C2C2C;padding:24px 48px;display:flex;justify-content:space-between;align-items:center;">\n  <div>\n    <div style="font-family:\'Oswald\',sans-serif;font-weight:700;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:white;">Compositions\u2122</div>\n    <div style="font-size:11px;color:rgba(255,255,255,0.35);margin-top:3px;">CompositionsAdvisory.com &nbsp;|&nbsp; Dana Middleton, Structural Advisor &amp; Principal</div>\n  </div>\n  <div style="font-family:\'Oswald\',sans-serif;font-weight:600;font-size:10px;letter-spacing:0.2em;color:#16768C;text-transform:uppercase;">Reveal. Architect. Govern.</div>\n</div>\n\n<div class="no-print" style="background:#F8F8F8;padding:16px 48px;text-align:center;">\n  <p style="font-size:12px;color:#AAAAAA;font-weight:300;">Use the print dialog above to save as PDF. Select \u201cSave as PDF\u201d as the destination.</p>\n</div>\n\n</div>\n</body>\n</html>';
+
+  /* Open in a new window and trigger the print/save-as-PDF dialog automatically */
+  const printWin = window.open('', '_blank', 'width=780,height=900');
+  if (!printWin) {
+    /* Popup blocked fallback — download as HTML */
+    const blob = new Blob([html], { type: 'text/html' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = 'compositions-10-signals-results.html';
+    document.body.appendChild(a); a.click();
+    document.body.removeChild(a); URL.revokeObjectURL(url);
+    return;
+  }
+  printWin.document.write(html);
+  printWin.document.close();
+  /* Small delay lets fonts load before print dialog opens */
+  printWin.onload = function() {
+    setTimeout(function() { printWin.print(); }, 800);
+  };
+}
+</script>
+</body>
+</html>

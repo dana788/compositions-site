@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>The Work | Compositions™</title>
+<meta name="description" content="Three focused working sessions for organizations whose employer brand, internal communications, change communications, or grant narratives are not producing the return they were designed to produce.">
+<link rel="canonical" href="https://compositions.netlify.app/work">
+<meta property="og:title" content="The Work | Compositions™">
+<meta property="og:description" content="Three focused working sessions for organizations whose communications isn't producing the return it was designed to produce.">
+<meta property="og:image" content="https://compositions.netlify.app/assets/og-image.png">
+<meta property="og:url" content="https://compositions.netlify.app/work">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Compositions™">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="assets/logo-square-color.png">
+<link rel="apple-touch-icon" href="assets/logo-square-color.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --teal: #16768C; --teal-dark: #144E73; --teal-light: #A3D2D8; --gold: #D4AF37;
+  --charcoal: #2C2C2C; --charcoal-mid: #383838; --off-white: #F8F8F8; --white: #FFFFFF;
+  --text: #1A1A1A; --text-sec: #666666; --border: #E0E0E0;
+  --font-display:'Oswald', sans-serif; --font-body:'Poppins', sans-serif;
+  --radius: 6px; --max-width: 1100px; --section-pad: 96px 24px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: var(--font-body); color: var(--text); background: var(--white); -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+h1, h2, h3 { font-family: var(--font-display); margin: 0; }
+p { margin: 0; }
+ul { margin: 0; padding: 0; }
+button { font-family: var(--font-body); cursor: pointer; }
+:focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; }
+.wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+section { padding: var(--section-pad); position: relative; }
+.bg-charcoal { background: var(--charcoal); }
+.bg-charcoal-mid { background: var(--charcoal-mid); }
+.bg-white { background: var(--white); }
+.bg-offwhite { background: var(--off-white); }
+.bg-teal { background: var(--teal); }
+.eyebrow { display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal); margin-bottom: 20px; }
+.eyebrow::before { content: ""; display: inline-block; width: 40px; height: 2px; background: var(--teal); }
+.eyebrow.on-dark { color: var(--teal-light); }
+.eyebrow.center { justify-content: center; }
+.btn { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.03em; padding: 14px 28px; border-radius: 4px; border: 2px solid transparent; transition: background 0.2s ease, transform 0.2s ease, color 0.2s ease, border-color 0.2s ease; }
+.btn-teal { background: var(--teal); color: var(--white); }
+.btn-teal:hover { background: var(--teal-dark); transform: translateY(-1px); }
+.btn-ghost { border-color: rgba(255,255,255,0.6); color: var(--white); background: transparent; }
+.btn-ghost:hover { border-color: var(--white); transform: translateY(-1px); }
+.btn-white { background: var(--white); color: var(--teal); }
+.btn-white:hover { background: var(--off-white); transform: translateY(-1px); }
+.btn-block { width: 100%; justify-content: center; }
+/* NAV */
+.site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; transition: background 0.25s ease, box-shadow 0.25s ease, padding 0.25s ease; }
+.site-nav.scrolled { background: var(--white); box-shadow: 0 2px 14px rgba(0,0,0,0.08); padding: 12px 24px; }
+.logo-mark { display: flex; align-items: center; gap: 10px; }
+.logo-mark svg { width: 30px; height: 30px; flex-shrink: 0; }
+.logo-mark .logo-text { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; letter-spacing: 0.04em; color: var(--white); transition: color 0.25s ease; }
+.site-nav.scrolled .logo-mark .logo-text { color: var(--text); }
+.nav-links { display: flex; align-items: center; gap: 32px; }
+.nav-link { position: relative; font-weight: 600; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); padding-bottom: 6px; transition: color 0.25s ease; }
+.site-nav.scrolled .nav-link { color: var(--text); }
+.nav-link::after { content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 2px; background: var(--teal); transition: width 0.2s ease; }
+.nav-link:hover::after, .nav-link.active::after { width: 100%; }
+.nav-link.active { color: var(--teal); }
+.site-nav.scrolled .nav-link.active { color: var(--teal); }
+.nav-cta { margin-left: 8px; }
+.hamburger { display: none; background: none; border: none; width: 32px; height: 32px; position: relative; z-index: 210; }
+.hamburger span { display: block; position: absolute; left: 4px; right: 4px; height: 2px; background: var(--white); transition: all 0.25s ease; }
+.site-nav.scrolled .hamburger span { background: var(--text); }
+.hamburger.open span { background: var(--text); }
+.hamburger span:nth-child(1) { top: 9px; } .hamburger span:nth-child(2) { top: 16px; } .hamburger span:nth-child(3) { top: 23px; }
+.hamburger.open span:nth-child(1) { top: 16px; transform: rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { top: 16px; transform: rotate(-45deg); }
+.mobile-menu { position: fixed; inset: 0; background: var(--white); z-index: 199; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 32px; transform: translateY(-100%); opacity: 0; visibility: hidden; transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease; }
+.mobile-menu.open { transform: translateY(0); opacity: 1; visibility: visible; }
+.mobile-menu a { font-size: 1rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text); }
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+.back-to-top { position: fixed; right: 24px; bottom: 24px; width: 44px; height: 44px; background: var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s, background 0.2s; cursor: pointer; border: none; z-index: 99; }
+.back-to-top.visible { opacity: 1; visibility: visible; }
+.back-to-top:hover { background: var(--teal-dark); }
+
+/* PAGE HERO (compact, not full viewport) */
+.page-hero { padding: 160px 24px 96px; }
+.page-hero h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); color: var(--white); line-height: 1.25; max-width: 780px; font-weight: 700; }
+.page-hero .body-copy { color: var(--teal-light); max-width: 620px; margin-top: 24px; line-height: 1.8; font-size: 1.1rem; }
+.page-hero .body-copy + .body-copy { margin-top: 14px; }
+
+/* WHEN TO ENGAGE */
+.checklist { display: flex; flex-direction: column; gap: 20px; max-width: 760px; }
+.checklist-item { display: flex; gap: 16px; }
+.checklist-item .dash { color: var(--teal); font-weight: 700; flex-shrink: 0; }
+.checklist-item p { line-height: 1.7; font-size: 1rem; color: var(--text); }
+.checklist-closing { margin-top: 28px; font-weight: 600; color: var(--teal); font-size: 1.05rem; }
+
+/* PREMISE */
+.premise-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 24px; }
+.premise-cols p { line-height: 1.8; color: #555; font-size: 0.98rem; }
+.premise-head h2 { font-size: 2rem; color: var(--charcoal); }
+.premise-head h2.accent { color: var(--teal); margin-top: 8px; }
+
+/* SESSION SECTIONS */
+.session-section { overflow: hidden; }
+.session-num { position: absolute; top: 24px; right: 24px; font-family: var(--font-display); font-weight: 700; font-size: 10rem; color: rgba(22,118,140,0.08); line-height: 1; pointer-events: none; user-select: none; }
+.session-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+.session-inner h2 { font-size: 2rem; color: var(--charcoal); max-width: 760px; line-height: 1.3; }
+.session-inner .body-copy { margin-top: 20px; color: #555; line-height: 1.8; max-width: 760px; }
+.outcome-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 36px; max-width: 900px; }
+.outcome-box { background: var(--teal); color: var(--white); padding: 26px; border-radius: 6px; }
+.outcome-box .label, .for-box .label { font-weight: 600; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 12px; }
+.outcome-box p { line-height: 1.7; font-size: 0.92rem; }
+.for-box { background: var(--off-white); padding: 26px; border-radius: 6px; }
+.for-box .label { color: var(--teal); }
+.for-box p { line-height: 1.7; font-size: 0.92rem; color: #444; }
+.session-cta { display: inline-block; margin-top: 28px; color: var(--teal); font-weight: 600; }
+
+/* COMPLETE ADVISORY SUITE */
+.suite-head { max-width: 760px; margin-bottom: 40px; }
+.suite-head h2 { font-size: 2rem; color: var(--charcoal); line-height: 1.3; margin-top: 4px; }
+.suite-head .body-copy { margin-top: 18px; color: #555; line-height: 1.8; }
+.suite-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.suite-card { background: var(--off-white); border: 1px solid var(--border); border-radius: 8px; padding: 28px; border-top: 4px solid var(--teal); transition: box-shadow 0.2s ease, transform 0.2s ease; }
+.suite-card:hover { box-shadow: 0 10px 26px rgba(0,0,0,0.08); transform: translateY(-4px); }
+.suite-card-featured { background: var(--white); border-top-color: var(--teal-dark); box-shadow: 0 4px 20px rgba(22,118,140,0.1); }
+.suite-tag { display: inline-block; font-weight: 600; font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; }
+.suite-card h3 { font-size: 1.2rem; color: var(--charcoal); margin-bottom: 12px; line-height: 1.3; }
+.suite-card p { color: #555; line-height: 1.7; font-size: 0.92rem; }
+.suite-delivers { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--border); }
+.suite-delivers .label { font-weight: 600; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--charcoal); display: block; margin-bottom: 6px; }
+.suite-footnote { margin-top: 28px; text-align: center; }
+.suite-footnote p { color: var(--text-sec); font-size: 0.9rem; }
+.suite-footnote a { color: var(--teal); font-weight: 600; }
+.suite-cta { text-align: center; margin-top: 28px; }
+
+/* BOUNDARY */
+.boundary-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 32px; }
+.boundary-tile { background: var(--charcoal-mid); border-radius: 6px; padding: 24px; }
+.boundary-tile h4 { font-family: var(--font-display); color: var(--teal-light); font-size: 1rem; letter-spacing: 0.08em; margin-bottom: 8px; }
+.boundary-tile p { color: rgba(255,255,255,0.75); font-size: 0.88rem; line-height: 1.6; }
+
+/* CLOSING CTA */
+.closing-cta { text-align: center; max-width: 640px; margin: 0 auto; }
+.closing-cta h2 { font-size: 2rem; color: var(--charcoal); }
+.closing-cta .body-copy { margin-top: 16px; color: #555; line-height: 1.7; }
+.closing-cta .btn { margin-top: 28px; }
+
+/* INQUIRE FORM (shared) */
+form .field { margin-bottom: 18px; }
+form label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; color: var(--charcoal); }
+form input, form select, form textarea { width: 100%; font-family: var(--font-body); font-size: 0.95rem; padding: 12px 14px; border: 1px solid var(--border); border-radius: 4px; background: var(--white); color: var(--text); }
+form input:focus, form select:focus, form textarea:focus { border-color: var(--teal); }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.success-message { display: none; background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 32px; }
+.success-message.show { display: block; }
+.success-message h3 { font-size: 1.3rem; color: var(--teal); margin-bottom: 12px; }
+.success-message p { color: #555; line-height: 1.7; }
+.inquire-form-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 32px; max-width: 560px; margin: 0 auto; }
+
+/* FOOTER */
+footer { background: var(--charcoal); padding: 64px 24px 32px; }
+.footer-inner { max-width: var(--max-width); margin: 0 auto; }
+.footer-logo { margin-bottom: 40px; }
+.footer-logo .logo-text { color: var(--white); font-size: 1.1rem; }
+.footer-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,0.12); }
+.footer-cols h4 { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 16px; font-family: var(--font-body); font-weight: 600; }
+.footer-cols ul { display: flex; flex-direction: column; gap: 10px; }
+.footer-cols a { color: rgba(255,255,255,0.5); font-size: 0.9rem; transition: color 0.2s ease; }
+.footer-cols a:hover { color: var(--white); }
+.footer-bottom { padding-top: 24px; color: rgba(255,255,255,0.5); font-size: 0.75rem; }
+
+@media (max-width: 900px) {
+  .premise-cols, .outcome-row, .boundary-tiles, .footer-cols, .suite-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  :root { --section-pad: 64px 20px; }
+  .nav-links { display: none; }
+  .hamburger { display: block; }
+  .field-row { grid-template-columns: 1fr; }
+  .session-num { font-size: 6rem; }
+}
+
+.logo-mark img { height: 34px; width: auto; display: block; }
+.logo-mark img.logo-on-light { display: none; }
+.site-nav.scrolled .logo-mark img.logo-on-dark { display: none; }
+.site-nav.scrolled .logo-mark img.logo-on-light { display: block; }
+.footer-logo img { height: 26px; width: auto; }
+</style>
+</head>
+<body>
+
+<nav class="site-nav" id="siteNav">
+  <a href="index.html" class="logo-mark" aria-label="Compositions home">
+    <img src="assets/compositions-offwhite-horizontal.png" alt="Compositions" class="logo-on-dark" />
+    <img src="assets/compositions-accent-horizontal.png" alt="Compositions" class="logo-on-light" />
+  </a>
+  <div class="nav-links">
+    <a href="work.html" class="nav-link active">Work</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="insights.html" class="nav-link">Insights</a>
+    <a href="#inquire" class="btn btn-teal nav-cta">Inquire</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="work.html">Work</a>
+  <a href="about.html">About</a>
+  <a href="insights.html">Insights</a>
+  <a href="#inquire" class="btn btn-teal">Inquire</a>
+</div>
+
+<main>
+
+<section class="page-hero bg-charcoal">
+  <div class="wrap reveal">
+    <p class="eyebrow on-dark">The Work</p>
+    <h1>Before investing in better communications, understand what the structural conditions are already producing.</h1>
+    <p class="body-copy">Three half-day working sessions for organizations whose employer brand, internal communications, change communications, or grant narratives are not producing the return they were designed to produce.</p>
+    <p class="body-copy">Not another messaging strategy. Not a brand refresh. A structural read of the conditions determining whether the communications is believed — and a governance design that makes credibility self-sustaining.</p>
+  </div>
+</section>
+
+<section class="bg-offwhite">
+  <div class="wrap reveal">
+    <p class="eyebrow">When to Engage</p>
+    <h2 style="font-size:2rem;color:var(--charcoal);margin-bottom:32px;">Engage when the communications is working and the outcomes still aren't there.</h2>
+    <div class="checklist">
+      <div class="checklist-item"><span class="dash">—</span><p>The employer brand is polished and the right candidates still aren't converting or staying.</p></div>
+      <div class="checklist-item"><span class="dash">—</span><p>The internal communications is reaching everyone and employees still aren't moving.</p></div>
+      <div class="checklist-item"><span class="dash">—</span><p>The change initiative followed the playbook and adoption isn't there at 90 days.</p></div>
+      <div class="checklist-item"><span class="dash">—</span><p>The grant narrative is strong and funders are still asking harder questions than they used to.</p></div>
+      <div class="checklist-item"><span class="dash">—</span><p>Leadership communications is consistent and leadership credibility is still declining.</p></div>
+      <div class="checklist-item"><span class="dash">—</span><p>The messaging has been refined repeatedly and the same skepticism keeps appearing.</p></div>
+      <div class="checklist-item"><span class="dash">—</span><p>Something structural feels off and no communications investment is closing the gap.</p></div>
+    </div>
+    <p class="checklist-closing">These are structural signals.</p>
+  </div>
+</section>
+
+<section class="bg-white">
+  <div class="wrap reveal premise-head">
+    <p class="eyebrow">The Premise</p>
+    <h2>The issue is rarely the quality of the communications.</h2>
+    <h2 class="accent">It is the distance between what the organization is communicating and what its operating conditions can credibly support.</h2>
+    <div class="premise-cols">
+      <p>Organizations invest heavily in employer brand, internal communications, change communications, and organizational storytelling.</p>
+      <p>But those investments often run ahead of the structural conditions that would make them credible — leading to employer brands that current employees don't recognize as true, internal communications that produces reach without belief, and change announcements that produce compliance without adoption.</p>
+      <p>Employees are not passive recipients of organizational communications. They are continuous observers of organizational behavior. They measure what they are told against what they observe daily — and when the structural conditions and the communications are separated, no investment in message quality closes the gap.</p>
+      <p>The most effective organizational communications is not the most polished. It is the most accurate.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SESSION 01 -->
+<section class="bg-white session-section" id="message-reality">
+  <span class="session-num" aria-hidden="true">01</span>
+  <div class="session-inner reveal">
+    <p class="eyebrow">The Message-Reality Check&trade;</p>
+    <h2>Closing the gap between what the organization is communicating and what funders, staff, and partners actually verify.</h2>
+    <p class="body-copy">Grant narratives that don't land aren't struggling because they're poorly written. They're struggling because they're asking funders to believe something the organizational evidence doesn't yet fully support. Experienced program officers can feel that distance — even when they can't name it explicitly.</p>
+    <p class="body-copy">This session reads the organization's core communications materials against the actual operating reality. The gap between them is named precisely and the language to close it is produced within the session.</p>
+    <p class="body-copy">The deliverable is a plain-language written memo: what is communicating accurately, where the narrative has separated from organizational reality, and specific language that can be used immediately.</p>
+    <div class="outcome-row">
+      <div class="outcome-box">
+        <span class="label">What's Delivered</span>
+        <p>A one-page written memo within 48 hours. What is credible, where the narrative has separated from organizational reality, and specific language the organization can use immediately.</p>
+      </div>
+      <div class="for-box">
+        <span class="label">Best For</span>
+        <p>Executive Directors and communications leads at nonprofits preparing for a grant submission, fundraising campaign, leadership transition, or staff communications push — who suspect the messaging isn't landing the way it should.</p>
+      </div>
+    </div>
+    <a href="#inquire" class="session-cta">Request this session →</a>
+  </div>
+</section>
+
+<!-- SESSION 02 -->
+<section class="bg-offwhite session-section" id="evp-clarity">
+  <span class="session-num" aria-hidden="true">02</span>
+  <div class="session-inner reveal">
+    <p class="eyebrow">The EVP Clarity Lab&trade;</p>
+    <h2>An employer value proposition built from what is structurally real — not from what leadership hopes is true.</h2>
+    <p class="body-copy">Most EVPs are built from aspiration rather than structural reality — describing the employee experience leadership hopes to deliver rather than the experience current employees would confirm as true. An EVP that current employees don't recognize as describing their experience is not a talent acquisition asset. It is a liability.</p>
+    <p class="body-copy">This session works through what is genuinely distinctive about working at this organization — the specific structural conditions, not the aspirational ones — and builds the employer value proposition from what the operating conditions can actually confirm.</p>
+    <p class="body-copy">The EVP is built in the session. The organization leaves with it.</p>
+    <div class="outcome-row">
+      <div class="outcome-box">
+        <span class="label">What's Delivered</span>
+        <p>A drafted EVP, language for job postings and career site copy, and a one-page internal message guide so recruiting teams, hiring managers, and senior leadership carry the same story into every talent conversation. Within 48 hours.</p>
+      </div>
+      <div class="for-box">
+        <span class="label">Best For</span>
+        <p>HR Directors, CHROs, and VP People at companies with 50–500 employees who are actively hiring, experiencing turnover they didn't expect, or whose EVP current employees don't recognize as describing their experience.</p>
+      </div>
+    </div>
+    <a href="#inquire" class="session-cta">Request this session →</a>
+  </div>
+</section>
+
+<!-- SESSION 03 -->
+<section class="bg-white session-section" id="change-layout">
+  <span class="session-num" aria-hidden="true">03</span>
+  <div class="session-inner reveal">
+    <p class="eyebrow">The Change Communications Layout&trade;</p>
+    <h2>Change communications that produces adoption — not compliance that looks like adoption at 30 days and reveals itself at 90.</h2>
+    <p class="body-copy">Change announcements don't produce the wrong outcomes because the communications was poorly crafted. They produce the wrong outcomes because employees are applying their accumulated evidence about how this organization has honored previous commitments — and what that evidence shows doesn't support the conviction the announcement is performing.</p>
+    <p class="body-copy">This session analyzes the structural credibility reserve going into the change, identifies what in the current change communications is producing skepticism, and designs the manager enablement approach that converts announcement into adoption.</p>
+    <p class="body-copy">Manager enablement is where adoption is won or lost. The all-hands reaches everyone. Adoption happens in the conversations between managers and their direct reports. This session equips those conversations.</p>
+    <div class="outcome-row">
+      <div class="outcome-box">
+        <span class="label">What's Delivered</span>
+        <p>A written structural read of the current change communications, specific narrative adjustments most likely to move compliance toward adoption, and a manager communications guide. Within 48 hours.</p>
+      </div>
+      <div class="for-box">
+        <span class="label">Best For</span>
+        <p>CHROs, COOs, and CEOs at organizations navigating restructuring, leadership transition, strategy pivot, rebrand, or new operating model — whose change communications needs to produce adoption, not surface compliance.</p>
+      </div>
+    </div>
+    <a href="#inquire" class="session-cta">Request this session →</a>
+  </div>
+</section>
+
+<!-- COMPLETE ADVISORY SUITE -->
+<section class="bg-white" id="suite">
+  <div class="wrap">
+    <div class="suite-head reveal">
+      <p class="eyebrow">For Organizations Ready for More</p>
+      <h2>Three working sessions are where most organizations start. They are not where the suite ends.</h2>
+      <p class="body-copy">Organizations that already see the challenge spanning more than one communications domain — or that are ready to move straight to the complete picture — have three additional engagements available. Each is available independently. The sequence below reflects how most organizations build toward greater scope, not a required path.</p>
+    </div>
+
+    <div class="suite-grid reveal">
+      <div class="suite-card">
+        <span class="suite-tag">Pre-Diagnostic Justification Tool</span>
+        <h3>The Structural Brief&trade;</h3>
+        <p>For organizations that need a written business case before authorizing a full analysis. Takes one named communications symptom and produces a structural finding with a directional capital cost estimate — the language needed to take a recommendation upward.</p>
+        <div class="suite-delivers"><span class="label">Delivers</span><p>A 2–3 page written brief: the structural source, the commitment class implicated, and a recommendation for the right next engagement.</p></div>
+      </div>
+
+      <div class="suite-card suite-card-featured">
+        <span class="suite-tag">4–6 Week Engagement</span>
+        <h3>The Communications Coherence Analysis&trade;</h3>
+        <p>The complete structural read of the Communications Composition&trade; — all four communications domains analyzed against the seven commitment classes where structural communications gaps appear most consistently, producing the Enterprise Coherence Score&trade; with domain and class sub-scores.</p>
+        <div class="suite-delivers"><span class="label">Delivers</span><p>The Communications Coherence Report, an executive summary, the ECS&trade; baseline, a priority governance map, and a 90-day action plan.</p></div>
+      </div>
+
+      <div class="suite-card">
+        <span class="suite-tag">8–12 Week Engagement</span>
+        <h3>Communications Governance Design&trade;</h3>
+        <p>For organizations whose Coherence Analysis identified structural conditions that need to be redesigned. Not a communications plan — the decision rights, manager enablement frameworks, and feedback systems that make coherence self-sustaining.</p>
+        <div class="suite-delivers"><span class="label">Delivers</span><p>The Communications Governance Blueprint, decision rights documentation, manager enablement materials, a governance rhythm design, and a capability transfer session.</p></div>
+      </div>
+
+      <div class="suite-card">
+        <span class="suite-tag">12-Month Minimum</span>
+        <h3>Communications Coherence Counsel&trade;</h3>
+        <p>Ongoing structural oversight once the governance architecture is in place — detecting drift before it becomes visible as a credibility problem, and keeping communications decisions grounded in what the structural conditions can currently support.</p>
+        <div class="suite-delivers"><span class="label">Delivers</span><p>A monthly coherence call, a quarterly coherence review, on-call structural counsel for significant communications decisions, and an annual coherence assessment.</p></div>
+      </div>
+    </div>
+
+    <div class="suite-footnote reveal">
+      <p><strong>The 10 Signals Field Guide&trade;</strong> remains the free starting point for organizations that sense the composition is off but can't yet name where — <a href="field-guide.html">available here</a>.</p>
+    </div>
+
+    <div class="suite-cta reveal">
+      <a href="#inquire" class="btn btn-teal">Inquire About the Complete Suite →</a>
+    </div>
+  </div>
+</section>
+
+<!-- BOUNDARY -->
+<section class="bg-charcoal">
+  <div class="wrap reveal">
+    <p class="eyebrow on-dark">What This Is Not</p>
+    <h2 style="font-size:2rem;color:var(--white);max-width:700px;">This is not a communications agency or a culture consultancy.</h2>
+    <p class="body-copy" style="color:var(--teal-light);max-width:700px;margin-top:20px;line-height:1.8;">These sessions do not produce employer brand campaigns, communications strategies, editorial calendars, culture programs, ESG reports, change management implementation, or facilitation packages.</p>
+    <p class="body-copy" style="color:var(--teal-light);max-width:700px;margin-top:14px;line-height:1.8;">The work is structural analysis and governance design.</p>
+    <p class="body-copy" style="color:var(--teal-light);max-width:700px;margin-top:14px;line-height:1.8;">The structural conditions producing the communications problem are identified. The language and governance that close the gap are designed. The organization implements with its existing team.</p>
+    <div class="boundary-tiles">
+      <div class="boundary-tile"><h4>Analyze</h4><p>What the structural conditions are producing.</p></div>
+      <div class="boundary-tile"><h4>Architect</h4><p>The governance conditions that close the gap.</p></div>
+      <div class="boundary-tile"><h4>Govern</h4><p>Coherence that holds over time.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING CTA + INQUIRE FORM -->
+<section class="bg-offwhite" id="inquire">
+  <div class="wrap reveal closing-cta">
+    <p class="eyebrow center">Inquire</p>
+    <h2>The right next step is not always better communications.</h2>
+    <p class="body-copy">Sometimes the most valuable move is understanding why the current communications is not producing the outcomes it was designed to produce.</p>
+  </div>
+  <div class="wrap reveal" style="margin-top:40px;">
+    <div class="inquire-form-card">
+      <form name="work-inquiry" id="workInquiryForm" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="work-inquiry">
+        <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
+        <div class="field-row">
+          <div class="field"><label for="wk-first">First Name</label><input type="text" id="wk-first" name="First Name" required></div>
+          <div class="field"><label for="wk-last">Last Name</label><input type="text" id="wk-last" name="Last Name" required></div>
+        </div>
+        <div class="field"><label for="wk-title">Title</label><input type="text" id="wk-title" name="Title" required></div>
+        <div class="field"><label for="wk-org">Organization Name</label><input type="text" id="wk-org" name="Organization Name" required></div>
+        <div class="field"><label for="wk-email">Work Email</label><input type="email" id="wk-email" name="Work Email" required></div>
+        <div class="field">
+          <label for="wk-situation">Which best describes what you're experiencing?</label>
+          <select id="wk-situation" name="Situation">
+            <option value="">Select one...</option>
+            <option>Employer brand or EVP that isn't converting or retaining</option>
+            <option>Internal communications producing reach but not belief</option>
+            <option>Change initiative producing compliance but not adoption</option>
+            <option>Grant narrative not landing with funders</option>
+            <option>Funder relationship plateauing or cooling</option>
+            <option>Staff communications producing skepticism</option>
+            <option>Something structural feels off — I can't name it yet</option>
+          </select>
+        </div>
+        <div class="field"><label for="wk-context">What are you trying to understand? (optional)</label><textarea id="wk-context" name="Context" rows="4"></textarea></div>
+        <button type="submit" class="btn btn-teal btn-block">Schedule a Working Session</button>
+      </form>
+      <div class="success-message" id="workSuccess">
+        <h3>Request received.</h3>
+        <p>Dana will be in touch to schedule a brief conversation about your situation and whether a working session is the right next step.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <a href="index.html" class="logo-mark" aria-label="Compositions home">
+        <img src="assets/compositions-offwhite-horizontal.png" alt="Compositions" />
+      </a>
+    </div>
+    <div class="footer-cols">
+      <div><h4>Company</h4><ul><li><a href="work.html">Work</a></li><li><a href="about.html">About</a></li><li><a href="insights.html">Insights</a></li><li><a href="#inquire">Inquire</a></li></ul></div>
+      <div><h4>Connect</h4><ul><li><a href="https://www.linkedin.com/in/danamiddletonkc/" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="privacy.html">Privacy</a></li><li><a href="disclaimer.html">Disclaimer</a></li><li><a href="terms.html">Terms</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">Compositions&trade; | Coherent by design. Credible over time. | &copy; 2026 Compositions&trade;. All rights reserved.</div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+
+<script>
+const nav = document.getElementById('siteNav');
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+  backToTop.classList.toggle('visible', window.scrollY > 400);
+});
+backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  const open = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open', open);
+  hamburger.setAttribute('aria-expanded', open);
+});
+mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  mobileMenu.classList.remove('open'); hamburger.classList.remove('open'); hamburger.setAttribute('aria-expanded', false);
+}));
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+function handleNetlifyForm(formId, successId) {
+  const form = document.getElementById(formId);
+  const success = document.getElementById(successId);
+  if (!form) return;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    fetch('/', { method: 'POST', body: new URLSearchParams(data).toString(), headers: { 'Content-Type': 'application/x-www-form-urlencoded' } })
+      .then(() => { form.style.display = 'none'; success.classList.add('show'); })
+      .catch(() => { form.style.display = 'none'; success.classList.add('show'); });
+  });
+}
+handleNetlifyForm('workInquiryForm', 'workSuccess');
+</script>
+
+</body>
+</html>
