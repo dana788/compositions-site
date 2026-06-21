@@ -1,283 +1,454 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="index, follow">
-<title>Insights | Compositions™</title>
-<meta name="description" content="Structural analysis for HR directors, communications leaders, and nonprofit executives navigating the gap between what organizations communicate and what employees, candidates, and funders actually believe.">
-<link rel="canonical" href="https://compositions.netlify.app/insights">
-<meta property="og:title" content="Insights | Compositions™">
-<meta property="og:description" content="Structural analysis for the communications problem that isn't a communications problem.">
-<meta property="og:image" content="https://compositions.netlify.app/assets/og-image.png">
-<meta property="og:url" content="https://compositions.netlify.app/insights">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Compositions™">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="alternate icon" href="assets/logo-square-color.png">
-<link rel="apple-touch-icon" href="assets/logo-square-color.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root {
-  --teal: #16768C; --teal-dark: #144E73; --teal-light: #A3D2D8; --gold: #D4AF37;
-  --charcoal: #2C2C2C; --charcoal-mid: #383838; --off-white: #F8F8F8; --white: #FFFFFF;
-  --text: #1A1A1A; --text-sec: #666666; --border: #E0E0E0;
-  --font-display:'Oswald', sans-serif; --font-body:'Poppins', sans-serif;
-  --radius: 6px; --max-width: 1100px; --section-pad: 96px 24px;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; font-family: var(--font-body); color: var(--text); background: var(--white); -webkit-font-smoothing: antialiased; }
-img { max-width: 100%; display: block; }
-a { color: inherit; text-decoration: none; }
-h1, h2, h3 { font-family: var(--font-display); margin: 0; }
-p { margin: 0; }
-ul { margin: 0; padding: 0; }
-button { font-family: var(--font-body); cursor: pointer; }
-:focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; }
-.wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
-section { padding: var(--section-pad); }
-.bg-charcoal { background: var(--charcoal); }
-.bg-white { background: var(--white); }
-.bg-offwhite { background: var(--off-white); }
-.eyebrow { display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal); margin-bottom: 20px; }
-.eyebrow::before { content: ""; display: inline-block; width: 40px; height: 2px; background: var(--teal); }
-.eyebrow.on-dark { color: var(--teal-light); }
-.eyebrow.center { justify-content: center; }
-.btn { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.03em; padding: 14px 28px; border-radius: 4px; border: 2px solid transparent; transition: background 0.2s ease, transform 0.2s ease; }
-.btn-teal { background: var(--teal); color: var(--white); }
-.btn-teal:hover { background: var(--teal-dark); transform: translateY(-1px); }
-.btn-block { width: 100%; justify-content: center; }
-/* NAV */
-.site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; transition: background 0.25s ease, box-shadow 0.25s ease, padding 0.25s ease; }
-.site-nav.scrolled { background: var(--white); box-shadow: 0 2px 14px rgba(0,0,0,0.08); padding: 12px 24px; }
-.logo-mark { display: flex; align-items: center; gap: 10px; }
-.logo-mark svg { width: 30px; height: 30px; flex-shrink: 0; }
-.logo-mark .logo-text { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; letter-spacing: 0.04em; color: var(--white); transition: color 0.25s ease; }
-.site-nav.scrolled .logo-mark .logo-text { color: var(--text); }
-.nav-links { display: flex; align-items: center; gap: 32px; }
-.nav-link { position: relative; font-weight: 600; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); padding-bottom: 6px; transition: color 0.25s ease; }
-.site-nav.scrolled .nav-link { color: var(--text); }
-.nav-link::after { content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 2px; background: var(--teal); transition: width 0.2s ease; }
-.nav-link:hover::after, .nav-link.active::after { width: 100%; }
-.nav-link.active { color: var(--teal); }
-.site-nav.scrolled .nav-link.active { color: var(--teal); }
-.nav-cta { margin-left: 8px; }
-.hamburger { display: none; background: none; border: none; width: 32px; height: 32px; position: relative; z-index: 210; }
-.hamburger span { display: block; position: absolute; left: 4px; right: 4px; height: 2px; background: var(--white); transition: all 0.25s ease; }
-.site-nav.scrolled .hamburger span { background: var(--text); }
-.hamburger.open span { background: var(--text); }
-.hamburger span:nth-child(1) { top: 9px; } .hamburger span:nth-child(2) { top: 16px; } .hamburger span:nth-child(3) { top: 23px; }
-.hamburger.open span:nth-child(1) { top: 16px; transform: rotate(45deg); }
-.hamburger.open span:nth-child(2) { opacity: 0; }
-.hamburger.open span:nth-child(3) { top: 16px; transform: rotate(-45deg); }
-.mobile-menu { position: fixed; inset: 0; background: var(--white); z-index: 199; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 32px; transform: translateY(-100%); opacity: 0; visibility: hidden; transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease; }
-.mobile-menu.open { transform: translateY(0); opacity: 1; visibility: visible; }
-.mobile-menu a { font-size: 1rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text); }
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
-.reveal.visible { opacity: 1; transform: translateY(0); }
-@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
-.back-to-top { position: fixed; right: 24px; bottom: 24px; width: 44px; height: 44px; background: var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s, background 0.2s; cursor: pointer; border: none; z-index: 99; }
-.back-to-top.visible { opacity: 1; visibility: visible; }
-.back-to-top:hover { background: var(--teal-dark); }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Insights | Compositions™</title>
+  <meta name="description" content="Structural analysis for HR directors, communications leaders, and nonprofit executives navigating the gap between what organizations communicate and what their structural conditions can credibly support.">
+  <link rel="canonical" href="https://compositionsadvisory.com/insights">
+  <meta property="og:title" content="Insights | Compositions™">
+  <meta property="og:description" content="Structural analysis for the communications problem that isn't a communications problem.">
+  <meta property="og:image" content="https://compositionsadvisory.com/assets/og-image.png">
+  <meta property="og:url" content="https://compositionsadvisory.com/insights">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Compositions™">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="assets/logo-square-color.png">
+  <link rel="apple-touch-icon" href="assets/logo-square-color.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <style>
+    :root {
+      --teal: #16768C; --teal-dark: #144E73; --teal-light: #A3D2D8; --gold: #D4AF37;
+      --charcoal: #2C2C2C; --charcoal-mid: #383838; --off-white: #F8F8F8; --white: #FFFFFF;
+      --text: #1A1A1A; --text-sec: #666666; --border: #E0E0E0;
+      --font-display: 'Oswald', sans-serif; --font-body: 'Poppins', sans-serif;
+      --radius: 0px; --max-width: 1100px; --section-pad: 96px 24px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: var(--font-body); color: var(--text); background: var(--white); -webkit-font-smoothing: antialiased; }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3 { font-family: var(--font-display); margin: 0; }
+    p { margin: 0; }
+    ul { margin: 0; padding: 0; }
+    button { font-family: var(--font-body); cursor: pointer; }
+    :focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; }
+    .wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+    section { padding: var(--section-pad); }
+    .bg-charcoal { background: var(--charcoal); }
+    .bg-white { background: var(--white); }
+    .bg-offwhite { background: var(--off-white); }
+    .eyebrow { display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal); margin-bottom: 24px; }
+    .eyebrow::before { content: ""; display: inline-block; width: 40px; height: 2px; background: var(--teal); }
+    .eyebrow.on-dark { color: var(--teal-light); }
+    .eyebrow.center { justify-content: center; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.03em; padding: 14px 28px; border-radius: 0px; border: none; cursor: pointer; transition: all 0.2s ease; text-decoration: none; }
+    .btn-teal { background: var(--teal); color: var(--white); }
+    .btn-teal:hover { background: var(--teal-dark); transform: translateY(-1px); }
+    .btn-block { width: 100%; justify-content: center; }
 
-/* COMPACT HERO */
-.insights-hero { padding: 140px 24px 64px; }
-.insights-hero h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); color: var(--white); line-height: 1.3; max-width: 760px; font-weight: 700; }
-.insights-hero .body-copy { color: var(--teal-light); margin-top: 16px; max-width: 620px; line-height: 1.7; }
+    /* NAV */
+    .site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; transition: all 0.3s ease; }
+    .site-nav.scrolled { background: var(--white); box-shadow: 0 2px 14px rgba(0,0,0,0.08); padding: 12px 24px; }
+    .logo-mark { display: flex; align-items: center; gap: 10px; }
+    .logo-mark img { height: 34px; width: auto; display: block; }
+    .logo-mark img.logo-on-light { display: none; }
+    .site-nav.scrolled .logo-mark img.logo-on-dark { display: none; }
+    .site-nav.scrolled .logo-mark img.logo-on-light { display: block; }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-link { position: relative; font-weight: 600; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); padding-bottom: 6px; transition: color 0.2s ease; }
+    .site-nav.scrolled .nav-link { color: var(--text); }
+    .nav-link::after { content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 2px; background: var(--teal); transition: width 0.2s ease; }
+    .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+    .nav-link.active { color: var(--teal); }
+    .site-nav.scrolled .nav-link.active { color: var(--teal); }
+    .nav-cta { margin-left: 8px; }
+    .hamburger { display: none; background: none; border: none; width: 32px; height: 32px; position: relative; z-index: 210; }
+    .hamburger span { display: block; position: absolute; left: 4px; right: 4px; height: 2px; background: var(--white); transition: all 0.25s ease; }
+    .site-nav.scrolled .hamburger span { background: var(--text); }
+    .hamburger span:nth-child(1) { top: 9px; } .hamburger span:nth-child(2) { top: 16px; } .hamburger span:nth-child(3) { top: 23px; }
+    .hamburger.open span:nth-child(1) { top: 16px; transform: rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { top: 16px; transform: rotate(-45deg); }
+    .mobile-menu { position: fixed; inset: 0; background: var(--white); z-index: 199; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 32px; opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; pointer-events: none; }
+    .mobile-menu.open { transform: translateY(0); opacity: 1; pointer-events: all; visibility: visible; }
+    .mobile-menu a { font-size: 1rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text); }
 
-/* GRID */
-.insights-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.article-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column; }
-.article-card:hover { transform: translateY(-4px); border-color: var(--teal); box-shadow: 0 10px 26px rgba(0,0,0,0.08); }
-.article-card .bar { height: 4px; background: var(--teal); }
-.article-card .card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
-.article-card .pillar { font-weight: 600; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; }
-.article-card h2 { font-family: var(--font-display); font-weight: 500; font-size: 1.1rem; color: var(--charcoal); line-height: 1.35; }
-.article-card .excerpt { font-size: 0.875rem; color: var(--text-sec); margin-top: 12px; line-height: 1.6; flex: 1; }
-.article-card .card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border); }
-.article-card .read-link { color: var(--teal); font-weight: 600; font-size: 0.85rem; }
-.article-card .read-time { color: var(--text-sec); font-size: 0.8rem; }
+    /* REVEAL */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
 
-/* NOTIFY */
-.notify-block { max-width: 480px; margin: 64px auto 0; text-align: center; }
-.notify-block .eyebrow { justify-content: center; }
-.notify-block h3 { font-size: 1.1rem; color: var(--charcoal); margin-bottom: 8px; }
-.notify-block p { color: var(--text-sec); font-size: 0.9rem; line-height: 1.6; margin-bottom: 24px; }
-.notify-form { display: flex; gap: 10px; }
-.notify-form input { flex: 1; font-family: var(--font-body); font-size: 0.95rem; padding: 12px 14px; border: 1px solid var(--border); border-radius: 4px; }
-.notify-form input:focus { border-color: var(--teal); }
-.notify-success { display: none; background: var(--off-white); border-radius: 6px; padding: 18px; color: var(--charcoal); font-size: 0.9rem; }
-.notify-success.show { display: block; }
+    /* BACK TO TOP */
+    .back-to-top { position: fixed; right: 24px; bottom: 24px; width: 44px; height: 44px; background: var(--teal); border-radius: 0px; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: all 0.3s ease; border: none; color: var(--white); }
+    .back-to-top.visible { opacity: 1; visibility: visible; }
+    .back-to-top:hover { background: var(--teal-dark); }
 
-/* FOOTER */
-footer { background: var(--charcoal); padding: 64px 24px 32px; }
-.footer-inner { max-width: var(--max-width); margin: 0 auto; }
-.footer-logo { margin-bottom: 40px; }
-.footer-logo .logo-text { color: var(--white); font-size: 1.1rem; }
-.footer-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,0.12); }
-.footer-cols h4 { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 16px; font-family: var(--font-body); font-weight: 600; }
-.footer-cols ul { display: flex; flex-direction: column; gap: 10px; }
-.footer-cols a { color: rgba(255,255,255,0.5); font-size: 0.9rem; transition: color 0.2s ease; }
-.footer-cols a:hover { color: var(--white); }
-.footer-bottom { padding-top: 24px; color: rgba(255,255,255,0.5); font-size: 0.75rem; }
+    /* HERO */
+    .insights-hero { padding: 140px 24px 64px; background: var(--charcoal); }
+    .insights-hero h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); color: var(--white); line-height: 1.3; max-width: 760px; font-weight: 700; }
+    .insights-hero .body-copy { color: var(--teal-light); margin-top: 16px; max-width: 620px; line-height: 1.7; }
 
-@media (max-width: 900px) { .insights-grid, .footer-cols { grid-template-columns: 1fr; } }
-@media (max-width: 768px) {
-  :root { --section-pad: 64px 20px; }
-  .nav-links { display: none; }
-  .hamburger { display: block; }
-  .notify-form { flex-direction: column; }
-}
+    /* FILTER BAR */
+    .filter-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 0 24px; position: sticky; top: 60px; z-index: 100; }
+    .filter-inner { max-width: var(--max-width); margin: 0 auto; display: flex; gap: 0; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+    .filter-inner::-webkit-scrollbar { display: none; }
+    .filter-btn { font-family: var(--font-body); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-sec); background: none; border: none; border-bottom: 3px solid transparent; padding: 16px 20px; cursor: pointer; white-space: nowrap; transition: all 0.2s ease; }
+    .filter-btn:hover { color: var(--teal); }
+    .filter-btn.active { color: var(--teal); border-bottom-color: var(--teal); }
 
-.logo-mark img { height: 34px; width: auto; display: block; }
-.logo-mark img.logo-on-light { display: none; }
-.site-nav.scrolled .logo-mark img.logo-on-dark { display: none; }
-.site-nav.scrolled .logo-mark img.logo-on-light { display: block; }
-.footer-logo img { height: 26px; width: auto; }
-</style>
+    /* GRID */
+    .insights-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 8px; }
+    .article-card { background: var(--white); border: 1px solid var(--border); border-radius: 0px; overflow: hidden; transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column; cursor: pointer; }
+    .article-card:hover { transform: translateY(-4px); border-color: var(--teal); box-shadow: 0 10px 26px rgba(0,0,0,0.08); }
+    .article-card .bar { height: 4px; background: var(--teal); flex-shrink: 0; }
+    .article-card .card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+    .article-card .pillar { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; }
+    .article-card h2 { font-family: var(--font-display); font-weight: 500; font-size: 1.1rem; color: var(--charcoal); line-height: 1.35; }
+    .article-card .excerpt { font-size: 0.875rem; color: var(--text-sec); margin-top: 12px; line-height: 1.6; flex: 1; }
+    .article-card .card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border); }
+    .article-card .read-link { color: var(--teal); font-weight: 600; font-size: 0.85rem; }
+    .article-card .read-time { color: var(--text-sec); font-size: 0.8rem; }
+
+    /* EMPTY STATE */
+    .empty-state { grid-column: 1 / -1; text-align: center; padding: 80px 24px; }
+    .empty-state h3 { font-family: var(--font-display); font-size: 1.4rem; color: var(--charcoal); margin-bottom: 12px; font-weight: 500; }
+    .empty-state p { color: var(--text-sec); font-size: 0.95rem; line-height: 1.6; max-width: 480px; margin: 0 auto; }
+
+    /* LOADING STATE */
+    .loading-state { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .skeleton-card { background: var(--white); border: 1px solid var(--border); overflow: hidden; }
+    .skeleton-bar { height: 4px; background: var(--border); }
+    .skeleton-body { padding: 24px; }
+    .skeleton-line { height: 12px; background: var(--off-white); border-radius: 2px; margin-bottom: 10px; animation: shimmer 1.4s infinite; }
+    .skeleton-line.short { width: 40%; }
+    .skeleton-line.medium { width: 70%; }
+    .skeleton-line.long { width: 100%; }
+    .skeleton-line.title { height: 18px; width: 90%; margin-bottom: 6px; }
+    .skeleton-line.title2 { height: 18px; width: 65%; }
+    @keyframes shimmer { 0%, 100% { opacity: 0.6; } 50% { opacity: 1; } }
+
+    /* NOTIFY */
+    .notify-block { max-width: 480px; margin: 64px auto 0; text-align: center; }
+    .notify-block .eyebrow { justify-content: center; }
+    .notify-block h3 { font-size: 1.1rem; color: var(--charcoal); margin-bottom: 8px; }
+    .notify-block p { color: var(--text-sec); font-size: 0.9rem; line-height: 1.6; margin-bottom: 24px; }
+    .notify-form { display: flex; gap: 10px; }
+    .notify-form input { flex: 1; font-family: var(--font-body); font-size: 0.95rem; padding: 12px 14px; border: 1px solid var(--border); border-radius: 0px; }
+    .notify-form input:focus { border-color: var(--teal); outline: none; }
+    .notify-success { display: none; background: var(--off-white); border-radius: 0px; padding: 18px; color: var(--charcoal); font-size: 0.9rem; }
+    .notify-success.show { display: block; }
+
+    /* FOOTER */
+    footer { background: var(--charcoal); padding: 64px 24px 32px; }
+    .footer-inner { max-width: var(--max-width); margin: 0 auto; }
+    .footer-logo { margin-bottom: 40px; }
+    .footer-logo img { height: 26px; width: auto; }
+    .footer-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,0.12); }
+    .footer-cols h4 { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 16px; font-family: var(--font-body); }
+    .footer-cols ul { display: flex; flex-direction: column; gap: 10px; }
+    .footer-cols a { color: rgba(255,255,255,0.5); font-size: 0.9rem; transition: color 0.2s ease; }
+    .footer-cols a:hover { color: var(--white); }
+    .footer-bottom { padding-top: 24px; color: rgba(255,255,255,0.5); font-size: 0.75rem; }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .insights-grid { grid-template-columns: repeat(2, 1fr); }
+      .loading-state { grid-template-columns: repeat(2, 1fr); }
+      .footer-cols { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      :root { --section-pad: 64px 20px; }
+      .nav-links { display: none; }
+      .hamburger { display: block; }
+      .insights-grid { grid-template-columns: 1fr; }
+      .loading-state { grid-template-columns: 1fr; }
+      .notify-form { flex-direction: column; }
+      .filter-btn { padding: 14px 14px; }
+    }
+    .logo-mark img { height: 34px; width: auto; display: block; }
+    .logo-mark img.logo-on-light { display: none; }
+    .site-nav.scrolled .logo-mark img.logo-on-dark { display: none; }
+    .site-nav.scrolled .logo-mark img.logo-on-light { display: block; }
+    .footer-logo img { height: 26px; width: auto; }
+  </style>
 </head>
 <body>
 
-<nav class="site-nav" id="siteNav">
-  <a href="index.html" class="logo-mark" aria-label="Compositions home">
-    <img src="assets/compositions-offwhite-horizontal.png" alt="Compositions" class="logo-on-dark" />
-    <img src="assets/compositions-accent-horizontal.png" alt="Compositions" class="logo-on-light" />
-  </a>
-  <div class="nav-links">
-    <a href="work.html" class="nav-link">Work</a>
-    <a href="about.html" class="nav-link">About</a>
-    <a href="insights.html" class="nav-link active">Insights</a>
-    <a href="index.html#inquire" class="btn btn-teal nav-cta">Inquire</a>
+  <nav class="site-nav" id="siteNav">
+    <a href="index.html" class="logo-mark" aria-label="Compositions home">
+      <img src="assets/compositions-offwhite-horizontal.png" alt="Compositions" class="logo-on-dark" />
+      <img src="assets/compositions-accent-horizontal.png" alt="Compositions" class="logo-on-light" />
+    </a>
+    <div class="nav-links">
+      <a href="work.html" class="nav-link">Work</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="insights.html" class="nav-link active">Insights</a>
+      <a href="index.html#inquire" class="btn btn-teal nav-cta">Inquire</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="work.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="insights.html">Insights</a>
+    <a href="index.html#inquire" class="btn btn-teal">Inquire</a>
   </div>
-  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
-</nav>
 
-<div class="mobile-menu" id="mobileMenu">
-  <a href="work.html">Work</a>
-  <a href="about.html">About</a>
-  <a href="insights.html">Insights</a>
-  <a href="index.html#inquire" class="btn btn-teal">Inquire</a>
-</div>
+  <main>
 
-<main>
+    <section class="insights-hero bg-charcoal">
+      <div class="wrap reveal">
+        <p class="eyebrow on-dark">Insights</p>
+        <h1>Structural analysis for the communications problem that isn't a communications problem.</h1>
+        <p class="body-copy">Employer brand. Internal communications. Change communications. Grant narratives. The structural conditions that determine whether any of it is believed.</p>
+      </div>
+    </section>
 
-<section class="insights-hero bg-charcoal">
-  <div class="wrap reveal">
-    <p class="eyebrow on-dark">Insights</p>
-    <h1>Structural analysis for the communications problem that isn't a communications problem.</h1>
-    <p class="body-copy">Employer brand. Internal communications. Change communications. Grant narratives. The structural conditions that determine whether any of it is believed.</p>
-  </div>
-</section>
+    <div class="filter-bar" id="filterBar">
+      <div class="filter-inner">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="The Belief Gap">The Belief Gap</button>
+        <button class="filter-btn" data-filter="Employer Brand">Employer Brand</button>
+        <button class="filter-btn" data-filter="Internal Communications">Internal Communications</button>
+        <button class="filter-btn" data-filter="Change Communications">Change Communications</button>
+        <button class="filter-btn" data-filter="Grant Narratives">Grant Narratives</button>
+        <button class="filter-btn" data-filter="ESG & Impact">ESG &amp; Impact</button>
+        <button class="filter-btn" data-filter="Structural Analysis">Structural Analysis</button>
+      </div>
+    </div>
 
-<section class="bg-offwhite">
-  <div class="wrap">
-    <div class="insights-grid reveal">
-      <article class="article-card">
+    <section class="bg-offwhite">
+      <div class="wrap">
+        <div class="insights-grid reveal" id="insightsGrid">
+          <!-- Posts load here dynamically -->
+          <div class="loading-state" id="loadingState">
+            <div class="skeleton-card"><div class="skeleton-bar"></div><div class="skeleton-body"><div class="skeleton-line short"></div><div class="skeleton-line title"></div><div class="skeleton-line title2"></div><div class="skeleton-line long" style="margin-top:16px"></div><div class="skeleton-line medium"></div></div></div>
+            <div class="skeleton-card"><div class="skeleton-bar"></div><div class="skeleton-body"><div class="skeleton-line short"></div><div class="skeleton-line title"></div><div class="skeleton-line title2"></div><div class="skeleton-line long" style="margin-top:16px"></div><div class="skeleton-line medium"></div></div></div>
+            <div class="skeleton-card"><div class="skeleton-bar"></div><div class="skeleton-body"><div class="skeleton-line short"></div><div class="skeleton-line title"></div><div class="skeleton-line title2"></div><div class="skeleton-line long" style="margin-top:16px"></div><div class="skeleton-line medium"></div></div></div>
+          </div>
+        </div>
+
+        <div class="notify-block reveal">
+          <p class="eyebrow center">Stay Notified</p>
+          <h3>New structural analysis published monthly.</h3>
+          <p>No newsletters. No roundups. One piece when it's ready.</p>
+          <form name="insights-notify" id="insightsNotifyForm" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="insights-notify">
+            <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
+            <div class="notify-form">
+              <label for="notify-email" class="visually-hidden" style="position:absolute;left:-9999px;">Email address</label>
+              <input type="email" id="notify-email" name="Email" placeholder="you@organization.com" required>
+              <button type="submit" class="btn btn-teal">Notify me →</button>
+            </div>
+          </form>
+          <div class="notify-success" id="insightsNotifySuccess">You'll hear from us when the next piece publishes.</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <a href="index.html" class="logo-mark" aria-label="Compositions home">
+          <img src="assets/compositions-offwhite-horizontal.png" alt="Compositions" />
+        </a>
+      </div>
+      <div class="footer-cols">
+        <div><h4>Company</h4><ul><li><a href="work.html">Work</a></li><li><a href="about.html">About</a></li><li><a href="insights.html">Insights</a></li><li><a href="index.html#inquire">Inquire</a></li></ul></div>
+        <div><h4>Connect</h4><ul><li><a href="https://www.linkedin.com/in/danamiddletonkc/" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
+        <div><h4>Legal</h4><ul><li><a href="privacy.html">Privacy</a></li><li><a href="disclaimer.html">Disclaimer</a></li><li><a href="terms.html">Terms</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">Compositions™ | Coherent by design. Credible over time. | &copy; 2026 Compositions™. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script>
+    /* ── NAV ── */
+    const nav = document.getElementById('siteNav');
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+      backToTop.classList.toggle('visible', window.scrollY > 400);
+    });
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', open);
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      mobileMenu.classList.remove('open'); hamburger.classList.remove('open'); hamburger.setAttribute('aria-expanded', false);
+    }));
+
+    /* ── REVEAL ── */
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    /* ── NOTIFY FORM ── */
+    const notifyForm = document.getElementById('insightsNotifyForm');
+    const notifySuccess = document.getElementById('insightsNotifySuccess');
+    notifyForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const data = new FormData(notifyForm);
+      fetch('/', { method: 'POST', body: new URLSearchParams(data.toString()), headers: { 'Content-Type': 'application/x-www-form-urlencoded' } })
+        .then(() => { notifyForm.style.display = 'none'; notifySuccess.classList.add('show'); })
+        .catch(() => { notifyForm.style.display = 'none'; notifySuccess.classList.add('show'); });
+    });
+
+    /* ── DYNAMIC POST LOADER ── */
+    const GITHUB_USER = 'dana788';
+    const GITHUB_REPO = 'compositions-site';
+    const POSTS_PATH  = '_posts';
+    const API_BASE    = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${POSTS_PATH}`;
+    const RAW_BASE    = `https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/main/${POSTS_PATH}`;
+
+    let allPosts = [];
+    let activeFilter = 'all';
+
+    /* Parse frontmatter from markdown */
+    function parseFrontmatter(text) {
+      const match = text.match(/^---\n([\s\S]*?)\n---/);
+      if (!match) return { body: text, meta: {} };
+      const raw = match[1];
+      const body = text.slice(match[0].length).trim();
+      const meta = {};
+      raw.split('\n').forEach(line => {
+        const sep = line.indexOf(':');
+        if (sep === -1) return;
+        const key = line.slice(0, sep).trim();
+        const val = line.slice(sep + 1).trim().replace(/^["']|["']$/g, '');
+        meta[key] = val;
+      });
+      return { meta, body };
+    }
+
+    /* Slugify filename to URL */
+    function fileToSlug(filename) {
+      return filename.replace(/\.md$/, '');
+    }
+
+    /* Render a single card */
+    function renderCard(post) {
+      const card = document.createElement('article');
+      card.className = 'article-card reveal';
+      card.dataset.category = post.category || '';
+      card.innerHTML = `
         <div class="bar"></div>
         <div class="card-body">
-          <span class="pillar">The Belief Gap</span>
-          <h2>Your Employees Are Not Skeptical of Your Communications. They Are Skeptical of the Distance Between It and What They Observe.</h2>
-          <p class="excerpt">Coming soon — subscribe to be notified when this piece publishes.</p>
-          <div class="card-footer"><span class="read-link">Read →</span><span class="read-time">5 min read</span></div>
-        </div>
-      </article>
-      <article class="article-card">
-        <div class="bar"></div>
-        <div class="card-body">
-          <span class="pillar">Employer Brand</span>
-          <h2>The Employer Brand Problem Isn't Your Employer Brand.</h2>
-          <p class="excerpt">Coming soon — subscribe to be notified when this piece publishes.</p>
-          <div class="card-footer"><span class="read-link">Read →</span><span class="read-time">4 min read</span></div>
-        </div>
-      </article>
-      <article class="article-card">
-        <div class="bar"></div>
-        <div class="card-body">
-          <span class="pillar">Change Communications</span>
-          <h2>Change Announcements Don't Produce the Wrong Outcomes. Structural Credibility Deficits Do.</h2>
-          <p class="excerpt">Coming soon — subscribe to be notified when this piece publishes.</p>
-          <div class="card-footer"><span class="read-link">Read →</span><span class="read-time">6 min read</span></div>
-        </div>
-      </article>
-    </div>
+          <span class="pillar">${post.category || 'Insights'}</span>
+          <h2>${post.title || 'Untitled'}</h2>
+          <p class="excerpt">${post.summary || ''}</p>
+          <div class="card-footer">
+            <span class="read-link">Read →</span>
+            <span class="read-time">${post.readtime || ''}</span>
+          </div>
+        </div>`;
+      card.addEventListener('click', () => {
+        window.location.href = `post.html?slug=${post.slug}`;
+      });
+      observer.observe(card);
+      return card;
+    }
 
-    <div class="notify-block reveal">
-      <p class="eyebrow">Stay Notified</p>
-      <h3>New structural analysis published monthly.</h3>
-      <p>No newsletters. No roundups. One piece when it's ready.</p>
-      <form name="insights-notify" id="insightsNotifyForm" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="insights-notify">
-        <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
-        <div class="notify-form">
-          <label for="notify-email" class="visually-hidden" style="position:absolute;left:-9999px;">Email address</label>
-          <input type="email" id="notify-email" name="Email" placeholder="you@organization.com" required>
-          <button type="submit" class="btn btn-teal">Notify me →</button>
-        </div>
-      </form>
-      <div class="notify-success" id="insightsNotifySuccess">You'll hear from us when the next piece publishes.</div>
-    </div>
-  </div>
-</section>
+    /* Render empty state */
+    function renderEmpty(message) {
+      const div = document.createElement('div');
+      div.className = 'empty-state';
+      div.innerHTML = `<h3>${message}</h3><p>Check back soon — new structural analysis published monthly.</p>`;
+      return div;
+    }
 
-</main>
+    /* Display posts based on active filter */
+    function displayPosts() {
+      const grid = document.getElementById('insightsGrid');
+      grid.innerHTML = '';
+      const filtered = activeFilter === 'all'
+        ? allPosts
+        : allPosts.filter(p => p.category === activeFilter);
+      if (filtered.length === 0) {
+        grid.appendChild(activeFilter === 'all'
+          ? renderEmpty('No posts published yet.')
+          : renderEmpty(`No posts in "${activeFilter}" yet.`));
+        return;
+      }
+      filtered.forEach(post => grid.appendChild(renderCard(post)));
+    }
 
-<footer>
-  <div class="footer-inner">
-    <div class="footer-logo">
-      <a href="index.html" class="logo-mark" aria-label="Compositions home">
-        <img src="assets/compositions-offwhite-horizontal.png" alt="Compositions" />
-      </a>
-    </div>
-    <div class="footer-cols">
-      <div><h4>Company</h4><ul><li><a href="work.html">Work</a></li><li><a href="about.html">About</a></li><li><a href="insights.html">Insights</a></li><li><a href="index.html#inquire">Inquire</a></li></ul></div>
-      <div><h4>Connect</h4><ul><li><a href="https://www.linkedin.com/in/danamiddletonkc/" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
-      <div><h4>Legal</h4><ul><li><a href="privacy.html">Privacy</a></li><li><a href="disclaimer.html">Disclaimer</a></li><li><a href="terms.html">Terms</a></li></ul></div>
-    </div>
-    <div class="footer-bottom">Compositions&trade; | Coherent by design. Credible over time. | &copy; 2026 Compositions&trade;. All rights reserved.</div>
-  </div>
-</footer>
+    /* Fetch and parse all posts */
+    async function loadPosts() {
+      const grid = document.getElementById('insightsGrid');
+      try {
+        const res = await fetch(API_BASE);
+        if (!res.ok) throw new Error('Could not reach posts folder.');
+        const files = await res.json();
+        const mdFiles = files.filter(f => f.name.endsWith('.md') && f.name !== '.gitkeep');
 
-<button class="back-to-top" id="backToTop" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        if (mdFiles.length === 0) {
+          grid.innerHTML = '';
+          grid.appendChild(renderEmpty('No posts published yet.'));
+          return;
+        }
 
-<script>
-const nav = document.getElementById('siteNav');
-const backToTop = document.getElementById('backToTop');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 60);
-  backToTop.classList.toggle('visible', window.scrollY > 400);
-});
-backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        /* Fetch all posts in parallel */
+        const posts = await Promise.all(mdFiles.map(async file => {
+          const raw = await fetch(`${RAW_BASE}/${file.name}`);
+          const text = await raw.text();
+          const { meta } = parseFrontmatter(text);
+          return {
+            slug: fileToSlug(file.name),
+            title: meta.title || '',
+            date: meta.date || '',
+            category: meta.category || '',
+            readtime: meta.readtime || '',
+            summary: meta.summary || '',
+          };
+        }));
 
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobileMenu');
-hamburger.addEventListener('click', () => {
-  const open = mobileMenu.classList.toggle('open');
-  hamburger.classList.toggle('open', open);
-  hamburger.setAttribute('aria-expanded', open);
-});
-mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-  mobileMenu.classList.remove('open'); hamburger.classList.remove('open'); hamburger.setAttribute('aria-expanded', false);
-}));
+        /* Sort newest first */
+        posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+        allPosts = posts;
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
-}, { threshold: 0.12 });
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        grid.innerHTML = '';
+        displayPosts();
 
-const notifyForm = document.getElementById('insightsNotifyForm');
-const notifySuccess = document.getElementById('insightsNotifySuccess');
-notifyForm.addEventListener('submit', function (e) {
-  e.preventDefault();
-  const data = new FormData(notifyForm);
-  fetch('/', { method: 'POST', body: new URLSearchParams(data).toString(), headers: { 'Content-Type': 'application/x-www-form-urlencoded' } })
-    .then(() => { notifyForm.style.display = 'none'; notifySuccess.classList.add('show'); })
-    .catch(() => { notifyForm.style.display = 'none'; notifySuccess.classList.add('show'); });
-});
-</script>
+      } catch (err) {
+        grid.innerHTML = '';
+        grid.appendChild(renderEmpty('Posts could not be loaded.'));
+        console.error('Post load error:', err);
+      }
+    }
+
+    /* Filter buttons */
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeFilter = btn.dataset.filter;
+        displayPosts();
+      });
+    });
+
+    loadPosts();
+  </script>
 
 </body>
 </html>
