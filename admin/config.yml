@@ -1,0 +1,20 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "insights"
+    label: "Insights"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Category", name: "category", widget: "select", options: ["The Belief Gap", "Employer Brand", "Internal Communications", "Change Communications", "Grant Narratives", "ESG & Impact", "Structural Analysis"]}
+      - {label: "Read Time", name: "readtime", widget: "string", hint: "e.g. 5 min read"}
+      - {label: "Summary", name: "summary", widget: "text", hint: "One or two sentences shown on the Insights index page"}
+      - {label: "Body", name: "body", widget: "markdown"}
