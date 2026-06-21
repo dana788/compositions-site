@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title id="pageTitle">Insights | Compositions™</title>
+  <meta name="description" id="pageDescription" content="Structural analysis for the communications problem that isn't a communications problem.">
+  <link rel="canonical" id="pageCanonical" href="https://compositionsadvisory.com/insights">
+  <meta property="og:title" id="ogTitle" content="Insights | Compositions™">
+  <meta property="og:description" id="ogDescription" content="Structural analysis for the communications problem that isn't a communications problem.">
+  <meta property="og:image" content="https://compositionsadvisory.com/assets/og-image.png">
+  <meta property="og:url" id="ogUrl" content="https://compositionsadvisory.com/insights">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Compositions™">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="assets/logo-square-color.png">
+  <link rel="apple-touch-icon" href="assets/logo-square-color.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <style>
+    :root {
+      --teal: #16768C; --teal-dark: #144E73; --teal-light: #A3D2D8; --gold: #D4AF37;
+      --charcoal: #2C2C2C; --charcoal-mid: #383838; --off-white: #F8F8F8; --white: #FFFFFF;
+      --text: #1A1A1A; --text-sec: #666666; --border: #E0E0E0;
+      --font-display: 'Oswald', sans-serif; --font-body: 'Poppins', sans-serif;
+      --max-width: 1100px; --content-width: 720px; --section-pad: 96px 24px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: var(--font-body); color: var(--text); background: var(--white); -webkit-font-smoothing: antialiased; }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3, h4 { font-family: var(--font-display); margin: 0; }
+    p { margin: 0; }
+    ul, ol { margin: 0; padding: 0; }
+    button { font-family: var(--font-body); cursor: pointer; }
+    :focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; }
+    .wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.03em; padding: 14px 28px; border-radius: 0px; border: none; cursor: pointer; transition: all 0.2s ease; text-decoration: none; }
+    .btn-teal { background: var(--teal); color: var(--white); }
+    .btn-teal:hover { background: var(--teal-dark); transform: translateY(-1px); }
+    .btn-outline { background: transparent; color: var(--white); border: 1px solid rgba(255,255,255,0.3); }
+    .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
+
+    /* NAV */
+    .site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; transition: all 0.3s ease; }
+    .site-nav.scrolled { background: var(--white); box-shadow: 0 2px 14px rgba(0,0,0,0.08); padding: 12px 24px; }
+    .logo-mark { display: flex; align-items: center; gap: 10px; }
+    .logo-mark img { height: 34px; width: auto; display: block; }
+    .logo-mark img.logo-on-light { display: none; }
+    .site-nav.scrolled .logo-mark img.logo-on-dark { display: none; }
+    .site-nav.scrolled .logo-mark img.logo-on-light { display: block; }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-link { position: relative; font-weight: 600; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); padding-bottom: 6px; transition: color 0.2s ease; }
+    .site-nav.scrolled .nav-link { color: var(--text); }
+    .nav-link::after { content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 2px; background: var(--teal); transition: width 0.2s ease; }
+    .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+    .nav-link.active { color: var(--teal); }
+    .site-nav.scrolled .nav-link.active { color: var(--teal); }
+    .nav-cta { margin-left: 8px; }
+    .hamburger { display: none; background: none; border: none; width: 32px; height: 32px; position: relative; z-index: 210; }
+    .hamburger span { display: block; position: absolute; left: 4px; right: 4px; height: 2px; background: var(--white); transition: all 0.25s ease; }
+    .site-nav.scrolled .hamburger span { background: var(--text); }
+    .hamburger span:nth-child(1) { top: 9px; } .hamburger span:nth-child(2) { top: 16px; } .hamburger span:nth-child(3) { top: 23px; }
+    .hamburger.open span:nth-child(1) { top: 16px; transform: rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { top: 16px; transform: rotate(-45deg); }
+    .mobile-menu { position: fixed; inset: 0; background: var(--white); z-index: 199; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 32px; opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; pointer-events: none; }
+    .mobile-menu.open { transform: translateY(0); opacity: 1; pointer-events: all; visibility: visible; }
+    .mobile-menu a { font-size: 1rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text); }
+
+    /* REVEAL */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+
+    /* BACK TO TOP */
+    .back-to-top { position: fixed; right: 24px; bottom: 24px; width: 44px; height: 44px; background: var(--teal); display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: all 0.3s ease; border: none; color: var(--white); cursor: pointer; }
+    .back-to-top.visible { opacity: 1; visibility: visible; }
+    .back-to-top:hover { background: var(--teal-dark); }
+
+    /* POST HERO */
+    .post-hero { padding: 140px 24px 72px; background: var(--charcoal); }
+    .post-hero .breadcrumb { display: flex; align-items: center; gap: 8px; margin-bottom: 28px; }
+    .post-hero .breadcrumb a { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5); transition: color 0.2s ease; }
+    .post-hero .breadcrumb a:hover { color: var(--teal-light); }
+    .post-hero .breadcrumb span { color: rgba(255,255,255,0.25); font-size: 0.75rem; }
+    .post-hero .category-tag { display: inline-block; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal-light); border: 1px solid rgba(163,210,216,0.35); padding: 5px 12px; margin-bottom: 20px; }
+    .post-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); color: var(--white); line-height: 1.2; max-width: 800px; font-weight: 700; }
+    .post-hero .post-meta { display: flex; align-items: center; gap: 24px; margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); }
+    .post-hero .post-meta span { font-size: 0.8rem; color: rgba(255,255,255,0.45); }
+    .post-hero .post-meta .read-time { color: var(--teal-light); font-weight: 600; }
+
+    /* POST BODY */
+    .post-body { padding: 72px 24px 96px; background: var(--white); }
+    .post-content { max-width: var(--content-width); margin: 0 auto; }
+
+    /* MARKDOWN RENDERED STYLES */
+    .post-content p { font-size: 1.05rem; line-height: 1.85; color: var(--text); margin-bottom: 1.6em; }
+    .post-content h2 { font-size: 1.5rem; color: var(--charcoal); margin-top: 2.4em; margin-bottom: 0.6em; font-weight: 700; line-height: 1.25; }
+    .post-content h3 { font-size: 1.2rem; color: var(--charcoal); margin-top: 2em; margin-bottom: 0.5em; font-weight: 600; }
+    .post-content h4 { font-size: 1rem; color: var(--charcoal); margin-top: 1.6em; margin-bottom: 0.4em; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+    .post-content ul, .post-content ol { margin-bottom: 1.6em; padding-left: 1.5em; }
+    .post-content li { font-size: 1.05rem; line-height: 1.8; color: var(--text); margin-bottom: 0.4em; }
+    .post-content blockquote { border-left: 4px solid var(--teal); margin: 2em 0; padding: 20px 24px; background: var(--off-white); }
+    .post-content blockquote p { font-size: 1.1rem; font-style: italic; color: var(--charcoal); margin-bottom: 0; line-height: 1.7; }
+    .post-content strong { font-weight: 600; color: var(--charcoal); }
+    .post-content em { font-style: italic; }
+    .post-content hr { border: none; border-top: 1px solid var(--border); margin: 2.4em 0; }
+    .post-content a { color: var(--teal); text-decoration: underline; text-underline-offset: 3px; }
+    .post-content a:hover { color: var(--teal-dark); }
+    .post-content code { font-family: monospace; background: var(--off-white); padding: 2px 6px; font-size: 0.9em; border-radius: 2px; }
+
+    /* PULL QUOTE — any blockquote with ** text becomes a pull quote */
+    .pull-quote { border-left: none; background: var(--charcoal); padding: 32px 40px; margin: 2.4em 0; }
+    .pull-quote p { font-family: var(--font-display); font-size: 1.3rem; font-style: normal; color: var(--white); line-height: 1.4; margin-bottom: 0; }
+    .pull-quote p::before { content: '\201C'; color: var(--teal); font-size: 2rem; line-height: 0; vertical-align: -0.4em; margin-right: 4px; }
+    .pull-quote p::after { content: '\201D'; color: var(--teal); font-size: 2rem; line-height: 0; vertical-align: -0.4em; margin-left: 4px; }
+
+    /* POST FOOTER */
+    .post-footer { max-width: var(--content-width); margin: 48px auto 0; padding-top: 40px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .post-footer .back-link { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 0.85rem; color: var(--teal); letter-spacing: 0.03em; transition: gap 0.2s ease; }
+    .post-footer .back-link:hover { gap: 12px; }
+    .post-footer .share-label { font-size: 0.8rem; color: var(--text-sec); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+
+    /* CTA BAND */
+    .cta-band { background: var(--charcoal); padding: 80px 24px; text-align: center; }
+    .cta-band .eyebrow { display: flex; align-items: center; justify-content: center; gap: 12px; font-weight: 600; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal-light); margin-bottom: 20px; }
+    .cta-band .eyebrow::before { content: ""; display: inline-block; width: 40px; height: 2px; background: var(--teal); }
+    .cta-band h2 { font-size: clamp(1.4rem, 3vw, 2rem); color: var(--white); max-width: 600px; margin: 0 auto 12px; line-height: 1.3; }
+    .cta-band p { color: rgba(255,255,255,0.55); max-width: 480px; margin: 0 auto 32px; font-size: 0.95rem; line-height: 1.7; }
+    .cta-band .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    /* ERROR / LOADING */
+    .post-error { max-width: var(--content-width); margin: 0 auto; padding: 80px 0; text-align: center; }
+    .post-error h2 { font-size: 1.4rem; color: var(--charcoal); margin-bottom: 12px; }
+    .post-error p { color: var(--text-sec); line-height: 1.6; margin-bottom: 28px; }
+    .skeleton-hero { padding: 140px 24px 72px; background: var(--charcoal); }
+    .skeleton-line { height: 14px; background: rgba(255,255,255,0.08); border-radius: 2px; margin-bottom: 12px; animation: shimmer 1.4s infinite; }
+    .skeleton-line.title { height: 40px; width: 80%; margin-bottom: 8px; }
+    .skeleton-line.title2 { height: 40px; width: 55%; }
+    .skeleton-line.short { width: 25%; }
+    .skeleton-line.medium { width: 50%; }
+    @keyframes shimmer { 0%, 100% { opacity: 0.4; } 50% { opacity: 0.8; } }
+
+    /* FOOTER */
+    footer { background: var(--charcoal); padding: 64px 24px 32px; }
+    .footer-inner { max-width: var(--max-width); margin: 0 auto; }
+    .footer-logo { margin-bottom: 40px; }
+    .footer-logo img { height: 26px; width: auto; }
+    .footer-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,0.12); }
+    .footer-cols h4 { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 16px; font-family: var(--font-body); }
+    .footer-cols ul { display: flex; flex-direction: column; gap: 10px; list-style: none; }
+    .footer-cols a { color: rgba(255,255,255,0.5); font-size: 0.9rem; transition: color 0.2s ease; }
+    .footer-cols a:hover { color: var(--white); }
+    .footer-bottom { padding-top: 24px; color: rgba(255,255,255,0.5); font-size: 0.75rem; }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      :root { --section-pad: 64px 20px; }
+      .nav-links { display: none; }
+      .hamburger { display: block; }
+      .post-hero { padding: 120px 20px 56px; }
+      .post-body { padding: 48px 20px 72px; }
+      .footer-cols { grid-template-columns: 1fr; }
+      .post-footer { flex-direction: column; align-items: flex-start; }
+      .cta-band .cta-actions { flex-direction: column; align-items: center; }
+      .pull-quote { padding: 24px 24px; }
+      .pull-quote p { font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav" id="siteNav">
+    <a href="index.html" class="logo-mark" aria-label="Compositions home">
+      <img src="assets/compositions-offwhite-horizontal.png" alt="Compositions" class="logo-on-dark" />
+      <img src="assets/compositions-accent-horizontal.png" alt="Compositions" class="logo-on-light" />
+    </a>
+    <div class="nav-links">
+      <a href="work.html" class="nav-link">Work</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="insights.html" class="nav-link active">Insights</a>
+      <a href="index.html#inquire" class="btn btn-teal nav-cta">Inquire</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="work.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="insights.html">Insights</a>
+    <a href="index.html#inquire" class="btn btn-teal">Inquire</a>
+  </div>
+
+  <!-- Content injected by JS -->
+  <div id="postContainer"></div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <a href="index.html" class="logo-mark" aria-label="Compositions home">
+          <img src="assets/compositions-offwhite-horizontal.png" alt="Compositions" />
+        </a>
+      </div>
+      <div class="footer-cols">
+        <div><h4>Company</h4><ul><li><a href="work.html">Work</a></li><li><a href="about.html">About</a></li><li><a href="insights.html">Insights</a></li><li><a href="index.html#inquire">Inquire</a></li></ul></div>
+        <div><h4>Connect</h4><ul><li><a href="https://www.linkedin.com/in/danamiddletonkc/" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
+        <div><h4>Legal</h4><ul><li><a href="privacy.html">Privacy</a></li><li><a href="disclaimer.html">Disclaimer</a></li><li><a href="terms.html">Terms</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">Compositions™ | Coherent by design. Credible over time. | &copy; 2026 Compositions™. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script>
+    /* ── NAV ── */
+    const nav = document.getElementById('siteNav');
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+      backToTop.classList.toggle('visible', window.scrollY > 400);
+    });
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', open);
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', false);
+    }));
+
+    /* ── REVEAL ── */
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+
+    /* ── MARKDOWN PARSER ── */
+    function parseMarkdown(md) {
+      let html = md
+        // Escape HTML entities
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        // Bold and italic
+        .replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>')
+        .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*(.+?)\*/g, '<em>$1</em>')
+        // Headings
+        .replace(/^#### (.+)$/gm, '<h4>$1</h4>')
+        .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+        .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+        // Horizontal rule
+        .replace(/^---$/gm, '<hr>')
+        // Blockquote — wrapped in pull-quote style
+        .replace(/^> (.+)$/gm, '<blockquote class="pull-quote"><p>$1</p></blockquote>')
+        // Unordered lists
+        .replace(/^\- (.+)$/gm, '<li>$1</li>')
+        // Ordered lists
+        .replace(/^\d+\. (.+)$/gm, '<li>$1</li>')
+        // Inline links
+        .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
+        // Inline code
+        .replace(/`(.+?)`/g, '<code>$1</code>');
+
+      // Wrap consecutive <li> in <ul>
+      html = html.replace(/(<li>.*<\/li>\n?)+/g, match => `<ul>${match}</ul>`);
+
+      // Paragraphs — wrap lines not already wrapped in a block element
+      const lines = html.split('\n');
+      const blocked = ['<h2', '<h3', '<h4', '<ul', '<li', '<blockquote', '<hr', '</ul'];
+      const result = [];
+      let buf = [];
+      for (const line of lines) {
+        const trimmed = line.trim();
+        if (!trimmed) {
+          if (buf.length) { result.push(`<p>${buf.join(' ')}</p>`); buf = []; }
+        } else if (blocked.some(tag => trimmed.startsWith(tag))) {
+          if (buf.length) { result.push(`<p>${buf.join(' ')}</p>`); buf = []; }
+          result.push(trimmed);
+        } else {
+          buf.push(trimmed);
+        }
+      }
+      if (buf.length) result.push(`<p>${buf.join(' ')}</p>`);
+      return result.join('\n');
+    }
+
+    /* ── FRONTMATTER PARSER ── */
+    function parseFrontmatter(text) {
+      const match = text.match(/^---\n([\s\S]*?)\n---/);
+      if (!match) return { body: text, meta: {} };
+      const raw = match[1];
+      const body = text.slice(match[0].length).trim();
+      const meta = {};
+      raw.split('\n').forEach(line => {
+        const sep = line.indexOf(':');
+        if (sep === -1) return;
+        const key = line.slice(0, sep).trim();
+        const val = line.slice(sep + 1).trim().replace(/^["']|["']$/g, '');
+        meta[key] = val;
+      });
+      return { meta, body };
+    }
+
+    /* ── FORMAT DATE ── */
+    function formatDate(dateStr) {
+      if (!dateStr) return '';
+      try {
+        return new Date(dateStr).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+      } catch { return ''; }
+    }
+
+    /* ── RENDER ERROR ── */
+    function renderError(message) {
+      document.getElementById('postContainer').innerHTML = `
+        <section style="padding: 140px 24px 96px; background: var(--white);">
+          <div class="post-error">
+            <h2>Post not found</h2>
+            <p>${message}</p>
+            <a href="insights.html" class="btn btn-teal">← Back to Insights</a>
+          </div>
+        </section>`;
+    }
+
+    /* ── RENDER POST ── */
+    function renderPost(meta, bodyHtml) {
+      const title = meta.title || 'Untitled';
+      const category = meta.category || 'Insights';
+      const date = formatDate(meta.date);
+      const readtime = meta.readtime || '';
+      const pageUrl = window.location.href;
+
+      // Update meta tags
+      document.getElementById('pageTitle').textContent = `${title} | Compositions™`;
+      document.getElementById('pageDescription').setAttribute('content', meta.summary || '');
+      document.getElementById('pageCanonical').setAttribute('href', pageUrl);
+      document.getElementById('ogTitle').setAttribute('content', `${title} | Compositions™`);
+      document.getElementById('ogDescription').setAttribute('content', meta.summary || '');
+      document.getElementById('ogUrl').setAttribute('content', pageUrl);
+
+      document.getElementById('postContainer').innerHTML = `
+        <section class="post-hero">
+          <div class="wrap reveal">
+            <div class="breadcrumb">
+              <a href="insights.html">Insights</a>
+              <span>/</span>
+              <a href="insights.html?filter=${encodeURIComponent(category)}">${category}</a>
+            </div>
+            <span class="category-tag">${category}</span>
+            <h1>${title}</h1>
+            <div class="post-meta">
+              ${date ? `<span>${date}</span>` : ''}
+              ${readtime ? `<span class="read-time">${readtime}</span>` : ''}
+            </div>
+          </div>
+        </section>
+
+        <section class="post-body">
+          <div class="post-content reveal">
+            ${bodyHtml}
+          </div>
+          <div class="post-footer reveal">
+            <a href="insights.html" class="back-link">← Back to Insights</a>
+            <span class="share-label">Share on
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pageUrl)}"
+                 target="_blank" rel="noopener"
+                 style="color:var(--teal);margin-left:8px;font-weight:600;">LinkedIn →</a>
+            </span>
+          </div>
+        </section>
+
+        <section class="cta-band">
+          <div class="wrap reveal">
+            <p class="eyebrow">Work Together</p>
+            <h2>The structural conditions are readable. The question is whether you're reading them.</h2>
+            <p>A half-day session is where most organizations start. The analysis follows when the evidence is there.</p>
+            <div class="cta-actions">
+              <a href="index.html#inquire" class="btn btn-teal">Inquire about a session</a>
+              <a href="insights.html" class="btn btn-outline">More Insights</a>
+            </div>
+          </div>
+        </section>`;
+
+      // Trigger reveal animations
+      document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    }
+
+    /* ── LOAD POST ── */
+    async function loadPost() {
+      const params = new URLSearchParams(window.location.search);
+      const slug = params.get('slug');
+
+      if (!slug) { renderError('No post was specified.'); return; }
+
+      // Show skeleton while loading
+      document.getElementById('postContainer').innerHTML = `
+        <div class="skeleton-hero">
+          <div class="wrap">
+            <div class="skeleton-line short" style="margin-bottom:28px;"></div>
+            <div class="skeleton-line title"></div>
+            <div class="skeleton-line title2"></div>
+            <div class="skeleton-line short" style="margin-top:24px;"></div>
+          </div>
+        </div>`;
+
+      const GITHUB_USER = 'dana788';
+      const GITHUB_REPO = 'compositions-site';
+      const RAW_URL = `https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/main/_posts/${slug}.md`;
+
+      try {
+        const res = await fetch(RAW_URL);
+        if (!res.ok) throw new Error('Post file not found.');
+        const text = await res.text();
+        const { meta, body } = parseFrontmatter(text);
+        const bodyHtml = parseMarkdown(body);
+        renderPost(meta, bodyHtml);
+      } catch (err) {
+        renderError('This post could not be loaded. It may have moved or been removed.');
+        console.error('Post load error:', err);
+      }
+    }
+
+    loadPost();
+  </script>
+
+</body>
+</html>
