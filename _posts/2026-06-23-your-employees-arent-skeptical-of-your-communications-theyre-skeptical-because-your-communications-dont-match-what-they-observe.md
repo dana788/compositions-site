@@ -84,10 +84,16 @@ Did your organization's last communications push align with your operating decis
 
 
 
-**References**
+###### **References**
 
-Edelman. (2025). *2025 Edelman Trust Barometer*. Edelman. [https://www.edelman.com/trust/2025/trust-barometer](https://www.edelman.com/trust/2025/trust-barometer)
+###### Edelman. (2025). *2025 Edelman Trust Barometer*. Edelman.
 
-Gallup. (2025). *State of the global workplace: 2025 report*. Gallup Press. [https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx](https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx)
+######  [https://www.edelman.com/trust/2025/trust-barometer](https://www.edelman.com/trust/2025/trust-barometer)
 
-Gallup. (2024). *State of the global workplace: 2024 report*. Gallup Press. [https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx](https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx)
+###### 
+
+###### Gallup. (2025). *State of the global workplace: 2025 report*. Gallup Press. [https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx](https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx)
+
+###### 
+
+###### Gallup. (2024). *State of the global workplace: 2024 report*. Gallup Press. [https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx](https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx)
