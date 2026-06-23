@@ -28,7 +28,7 @@ The Glassdoor review that doesn't reflect the employer brand: it is not a measur
 
 Gallup's 2025 State of the Global Workplace report found that global employee engagement fell to its lowest level since the pandemic — 21% of employees engaged worldwide, with disengagement costing the global economy approximately $10 trillion in lost productivity. That figure represents more than dissatisfied workers. It represents the aggregate cost of organizations asking their people to sustain commitment to conditions that the organization is not sustaining in return.
 
-The specific pattern is instructive: engagement scores peaked in 2022 and 2023\. They have declined in every subsequent year. In the same period, most large organizations increased their investment in employee communications — platforms, leadership visibility programs, culture campaigns, and values workshops. The investment went up. The belief did not.
+The specific pattern is instructive: engagement scores peaked in 2022 and 2023. They have declined in every subsequent year. In the same period, most large organizations increased their investment in employee communications — platforms, leadership visibility programs, culture campaigns, and values workshops. The investment went up. The belief did not.
 
 This is not a coincidence. It is a structural pattern.
 
@@ -42,7 +42,7 @@ This body of operating evidence is not cynicism. It is organizational intelligen
 
 When an internal communication arrives, employees automatically run it against this record. Not deliberately, not adversarially — structurally. The communication either confirms what the operating evidence says, or describes a version of organizational reality that the operating evidence cannot confirm. In the latter case, the communication produces skepticism regardless of its quality.
 
-This is why 68% of employees globally, in the 2025 Edelman Trust Barometer, believe business leaders deliberately mislead them — a 12-point increase from 2021\. The perception is almost certainly not accurate in most cases. Leaders are not, by and large, intentionally misleading their employees. But the gap between organizational communications and operating conditions can lead to a reading of deception even when deception is not the intent. The conditions are making the communications appear dishonest.
+This is why 68% of employees globally, in the [2025 Edelman Trust Barometer](https://www.edelman.com/trust/2025/trust-barometer), believe business leaders deliberately mislead them — a 12-point increase from 2021. The perception is almost certainly not accurate in most cases. Leaders are not, by and large, intentionally misleading their employees. But the gap between organizational communications and operating conditions can lead to a reading of deception even when deception is not the intent. The conditions are making the communications appear dishonest.
 
 ## Why Leadership Visibility Compounds the Problem
 
@@ -52,7 +52,7 @@ This investment in leadership presence makes intuitive sense. It is also, when d
 
 Leadership visibility without structural credibility consistency does not repair trust. It accelerates erosion. When employees receive more communications from a leadership team whose operating decisions regularly contradict those communications, the increased volume reads as evidence of the gap, not the resolution of it. The CEO's video message about organizational values lands differently after a budget decision that contradicted those values. The all-hands meeting about the importance of "our people" doesn't produce belief after the utilization targets that make the statement structurally implausible.
 
-Manager engagement data from Gallup adds the mechanism layer. Manager engagement dropped nine points between 2022 and 2025, with the sharpest single-year decline occurring between 2024 and 2025, when it fell from 27% to 22%. Managers are the primary conduit through which organizational communications become lived experience for employees. When managers carry the structural contradiction — asked to communicate organizational commitments that the conditions of their own work do not confirm — the communications they deliver are filtered through that structural gap before they reach anyone on their team.
+[Manager engagement data](https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx) from Gallup adds the mechanism layer. Manager engagement dropped nine points between 2022 and 2025, with the sharpest single-year decline occurring between 2024 and 2025, when it fell from 27% to 22%. Managers are the primary conduit through which organizational communications become lived experience for employees. When managers carry the structural contradiction — asked to communicate organizational commitments that the conditions of their own work do not confirm — the communications they deliver are filtered through that structural gap before they reach anyone on their team.
 
 More leadership communication through that conduit does not close the gap. It adds volume to the signal of incoherence.
 
@@ -84,16 +84,13 @@ Did your organization's last communications push align with your operating decis
 
 
 
-###### **References**
 
-###### Edelman. (2025). *2025 Edelman Trust Barometer*. Edelman.
 
-######  [https://www.edelman.com/trust/2025/trust-barometer](https://www.edelman.com/trust/2025/trust-barometer)
 
-###### 
+**References**
 
-###### Gallup. (2025). *State of the global workplace: 2025 report*. Gallup Press. [https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx](https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx)
+Edelman. (2025). *2025 Edelman Trust Barometer*. Edelman.
 
-###### 
+Gallup. (2025). *State of the global workplace: 2025 report*. Gallup Press.
 
-###### Gallup. (2024). *State of the global workplace: 2024 report*. Gallup Press. [https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx](https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx)
+Gallup. (2024). *State of the global workplace: 2024 report*. Gallup Press.
