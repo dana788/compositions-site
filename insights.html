@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
   <title>Insights | Compositions™</title>
-  <meta name="description" content="Structural analysis for HR directors, communications leaders, and nonprofit executives navigating the gap between what organizations communicate and what their structural conditions can credibly support.">
+  <meta name="description" content="Structural analysis for HR directors, communications leaders, and nonprofit executives navigating the gap between what organizations invest in and what their structural conditions can credibly sustain.">
   <link rel="canonical" href="https://compositionsadvisory.com/insights">
   <meta property="og:title" content="Insights | Compositions™">
   <meta property="og:description" content="Structural analysis for the communications problem that isn't a communications problem.">
@@ -28,7 +28,7 @@
       --charcoal: #2C2C2C; --charcoal-mid: #383838; --off-white: #F8F8F8; --white: #FFFFFF;
       --text: #1A1A1A; --text-sec: #666666; --border: #E0E0E0;
       --font-display: 'Oswald', sans-serif; --font-body: 'Poppins', sans-serif;
-      --radius: 0px; --max-width: 1100px; --section-pad: 96px 24px;
+      --max-width: 1100px; --section-pad: 96px 24px;
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -37,7 +37,7 @@
     a { color: inherit; text-decoration: none; }
     h1, h2, h3 { font-family: var(--font-display); margin: 0; }
     p { margin: 0; }
-    ul { margin: 0; padding: 0; }
+    ul { margin: 0; padding: 0; list-style: none; }
     button { font-family: var(--font-body); cursor: pointer; }
     :focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; }
     .wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
@@ -45,11 +45,16 @@
     .bg-charcoal { background: var(--charcoal); }
     .bg-white { background: var(--white); }
     .bg-offwhite { background: var(--off-white); }
+
+    /* EYEBROW */
     .eyebrow { display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal); margin-bottom: 24px; }
-    .eyebrow::before { content: ""; display: inline-block; width: 40px; height: 2px; background: var(--teal); }
+    .eyebrow::before { content: ""; display: inline-block; width: 40px; height: 2px; background: var(--teal); flex-shrink: 0; }
     .eyebrow.on-dark { color: var(--teal-light); }
+    .eyebrow.on-dark::before { background: var(--teal-light); }
     .eyebrow.center { justify-content: center; }
-    .btn { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.03em; padding: 14px 28px; border-radius: 0px; border: none; cursor: pointer; transition: all 0.2s ease; text-decoration: none; }
+
+    /* BUTTONS */
+    .btn { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.03em; padding: 14px 28px; border: none; cursor: pointer; transition: all 0.2s ease; text-decoration: none; }
     .btn-teal { background: var(--teal); color: var(--white); }
     .btn-teal:hover { background: var(--teal-dark); transform: translateY(-1px); }
     .btn-block { width: 100%; justify-content: center; }
@@ -77,7 +82,7 @@
     .hamburger.open span:nth-child(1) { top: 16px; transform: rotate(45deg); }
     .hamburger.open span:nth-child(2) { opacity: 0; }
     .hamburger.open span:nth-child(3) { top: 16px; transform: rotate(-45deg); }
-    .mobile-menu { position: fixed; inset: 0; background: var(--white); z-index: 199; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 32px; opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; pointer-events: none; }
+    .mobile-menu { position: fixed; inset: 0; background: var(--white); z-index: 199; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 32px; opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; pointer-events: none; visibility: hidden; }
     .mobile-menu.open { transform: translateY(0); opacity: 1; pointer-events: all; visibility: visible; }
     .mobile-menu a { font-size: 1rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text); }
 
@@ -87,14 +92,14 @@
     @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
 
     /* BACK TO TOP */
-    .back-to-top { position: fixed; right: 24px; bottom: 24px; width: 44px; height: 44px; background: var(--teal); border-radius: 0px; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: all 0.3s ease; border: none; color: var(--white); }
+    .back-to-top { position: fixed; right: 24px; bottom: 24px; width: 44px; height: 44px; background: var(--teal); display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: all 0.3s ease; border: none; color: var(--white); cursor: pointer; z-index: 99; }
     .back-to-top.visible { opacity: 1; visibility: visible; }
     .back-to-top:hover { background: var(--teal-dark); }
 
     /* HERO */
     .insights-hero { padding: 140px 24px 64px; background: var(--charcoal); }
     .insights-hero h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); color: var(--white); line-height: 1.3; max-width: 760px; font-weight: 700; }
-    .insights-hero .body-copy { color: var(--teal-light); margin-top: 16px; max-width: 620px; line-height: 1.7; }
+    .insights-hero .body-copy { color: var(--teal-light); margin-top: 18px; max-width: 620px; line-height: 1.8; font-size: 1rem; }
 
     /* FILTER BAR */
     .filter-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 0 24px; position: sticky; top: 60px; z-index: 100; }
@@ -106,13 +111,13 @@
 
     /* GRID */
     .insights-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 8px; }
-    .article-card { background: var(--white); border: 1px solid var(--border); border-radius: 0px; overflow: hidden; transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column; cursor: pointer; }
+    .article-card { background: var(--white); border: 1px solid var(--border); overflow: hidden; transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column; cursor: pointer; }
     .article-card:hover { transform: translateY(-4px); border-color: var(--teal); box-shadow: 0 10px 26px rgba(0,0,0,0.08); }
     .article-card .bar { height: 4px; background: var(--teal); flex-shrink: 0; }
     .article-card .card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
     .article-card .pillar { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; }
     .article-card h2 { font-family: var(--font-display); font-weight: 500; font-size: 1.1rem; color: var(--charcoal); line-height: 1.35; }
-    .article-card .excerpt { font-size: 0.875rem; color: var(--text-sec); margin-top: 12px; line-height: 1.6; flex: 1; }
+    .article-card .excerpt { font-size: 0.875rem; color: var(--text-sec); margin-top: 12px; line-height: 1.65; flex: 1; }
     .article-card .card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border); }
     .article-card .read-link { color: var(--teal); font-weight: 600; font-size: 0.85rem; }
     .article-card .read-time { color: var(--text-sec); font-size: 0.8rem; }
@@ -120,14 +125,14 @@
     /* EMPTY STATE */
     .empty-state { grid-column: 1 / -1; text-align: center; padding: 80px 24px; }
     .empty-state h3 { font-family: var(--font-display); font-size: 1.4rem; color: var(--charcoal); margin-bottom: 12px; font-weight: 500; }
-    .empty-state p { color: var(--text-sec); font-size: 0.95rem; line-height: 1.6; max-width: 480px; margin: 0 auto; }
+    .empty-state p { color: var(--text-sec); font-size: 0.95rem; line-height: 1.65; max-width: 480px; margin: 0 auto; }
 
     /* LOADING STATE */
     .loading-state { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
     .skeleton-card { background: var(--white); border: 1px solid var(--border); overflow: hidden; }
     .skeleton-bar { height: 4px; background: var(--border); }
     .skeleton-body { padding: 24px; }
-    .skeleton-line { height: 12px; background: var(--off-white); border-radius: 2px; margin-bottom: 10px; animation: shimmer 1.4s infinite; }
+    .skeleton-line { height: 12px; background: var(--off-white); margin-bottom: 10px; animation: shimmer 1.4s infinite; }
     .skeleton-line.short { width: 40%; }
     .skeleton-line.medium { width: 70%; }
     .skeleton-line.long { width: 100%; }
@@ -136,14 +141,13 @@
     @keyframes shimmer { 0%, 100% { opacity: 0.6; } 50% { opacity: 1; } }
 
     /* NOTIFY */
-    .notify-block { max-width: 480px; margin: 64px auto 0; text-align: center; }
-    .notify-block .eyebrow { justify-content: center; }
-    .notify-block h3 { font-size: 1.1rem; color: var(--charcoal); margin-bottom: 8px; }
-    .notify-block p { color: var(--text-sec); font-size: 0.9rem; line-height: 1.6; margin-bottom: 24px; }
+    .notify-block { max-width: 500px; margin: 64px auto 0; text-align: center; }
+    .notify-block h3 { font-family: var(--font-display); font-size: 1.15rem; color: var(--charcoal); margin-bottom: 8px; font-weight: 600; letter-spacing: 0.02em; }
+    .notify-block p { color: var(--text-sec); font-size: 0.9rem; line-height: 1.65; margin-bottom: 24px; }
     .notify-form { display: flex; gap: 10px; }
-    .notify-form input { flex: 1; font-family: var(--font-body); font-size: 0.95rem; padding: 12px 14px; border: 1px solid var(--border); border-radius: 0px; }
+    .notify-form input { flex: 1; font-family: var(--font-body); font-size: 0.95rem; padding: 12px 14px; border: 1px solid var(--border); background: var(--white); color: var(--text); transition: border-color 0.2s; }
     .notify-form input:focus { border-color: var(--teal); outline: none; }
-    .notify-success { display: none; background: var(--off-white); border-radius: 0px; padding: 18px; color: var(--charcoal); font-size: 0.9rem; }
+    .notify-success { display: none; background: var(--white); border: 1px solid var(--border); padding: 18px; color: var(--charcoal); font-size: 0.9rem; line-height: 1.6; }
     .notify-success.show { display: block; }
 
     /* FOOTER */
@@ -151,12 +155,12 @@
     .footer-inner { max-width: var(--max-width); margin: 0 auto; }
     .footer-logo { margin-bottom: 40px; }
     .footer-logo img { height: 26px; width: auto; }
-    .footer-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,0.12); }
-    .footer-cols h4 { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 16px; font-family: var(--font-body); }
+    .footer-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .footer-cols h4 { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 16px; font-family: var(--font-body); font-weight: 600; }
     .footer-cols ul { display: flex; flex-direction: column; gap: 10px; }
-    .footer-cols a { color: rgba(255,255,255,0.5); font-size: 0.9rem; transition: color 0.2s ease; }
+    .footer-cols a { color: rgba(255,255,255,0.45); font-size: 0.88rem; transition: color 0.2s ease; }
     .footer-cols a:hover { color: var(--white); }
-    .footer-bottom { padding-top: 24px; color: rgba(255,255,255,0.5); font-size: 0.75rem; }
+    .footer-bottom { padding-top: 24px; color: rgba(255,255,255,0.4); font-size: 0.75rem; }
 
     /* RESPONSIVE */
     @media (max-width: 900px) {
@@ -172,12 +176,8 @@
       .loading-state { grid-template-columns: 1fr; }
       .notify-form { flex-direction: column; }
       .filter-btn { padding: 14px 14px; }
+      .insights-hero { padding: 120px 20px 56px; }
     }
-    .logo-mark img { height: 34px; width: auto; display: block; }
-    .logo-mark img.logo-on-light { display: none; }
-    .site-nav.scrolled .logo-mark img.logo-on-dark { display: none; }
-    .site-nav.scrolled .logo-mark img.logo-on-light { display: block; }
-    .footer-logo img { height: 26px; width: auto; }
   </style>
 </head>
 <body>
@@ -193,7 +193,9 @@
       <a href="insights.html" class="nav-link active">Insights</a>
       <a href="index.html#inquire" class="btn btn-teal nav-cta">Inquire</a>
     </div>
-    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
   <div class="mobile-menu" id="mobileMenu">
@@ -205,14 +207,16 @@
 
   <main>
 
+    <!-- HERO -->
     <section class="insights-hero bg-charcoal">
       <div class="wrap reveal">
         <p class="eyebrow on-dark">Insights</p>
         <h1>Structural analysis for the communications problem that isn't a communications problem.</h1>
-        <p class="body-copy">Employer brand. Internal communications. Change communications. Grant narratives. The structural conditions that determine whether any of it is believed.</p>
+        <p class="body-copy">Employer brand. Internal communications. Change communications. Grant narratives. People commitments. The structural conditions that determine whether any of it can be believed.</p>
       </div>
     </section>
 
+    <!-- FILTER BAR -->
     <div class="filter-bar" id="filterBar">
       <div class="filter-inner">
         <button class="filter-btn active" data-filter="all">All</button>
@@ -221,15 +225,15 @@
         <button class="filter-btn" data-filter="Internal Communications">Internal Communications</button>
         <button class="filter-btn" data-filter="Change Communications">Change Communications</button>
         <button class="filter-btn" data-filter="Grant Narratives">Grant Narratives</button>
-        <button class="filter-btn" data-filter="ESG & Impact">ESG &amp; Impact</button>
+        <button class="filter-btn" data-filter="ESG & Impact">Responsible Business</button>
         <button class="filter-btn" data-filter="Structural Analysis">Structural Analysis</button>
       </div>
     </div>
 
+    <!-- GRID -->
     <section class="bg-offwhite">
       <div class="wrap">
         <div class="insights-grid reveal" id="insightsGrid">
-          <!-- Posts load here dynamically -->
           <div class="loading-state" id="loadingState">
             <div class="skeleton-card"><div class="skeleton-bar"></div><div class="skeleton-body"><div class="skeleton-line short"></div><div class="skeleton-line title"></div><div class="skeleton-line title2"></div><div class="skeleton-line long" style="margin-top:16px"></div><div class="skeleton-line medium"></div></div></div>
             <div class="skeleton-card"><div class="skeleton-bar"></div><div class="skeleton-body"><div class="skeleton-line short"></div><div class="skeleton-line title"></div><div class="skeleton-line title2"></div><div class="skeleton-line long" style="margin-top:16px"></div><div class="skeleton-line medium"></div></div></div>
@@ -237,20 +241,23 @@
           </div>
         </div>
 
+        <!-- NOTIFY -->
         <div class="notify-block reveal">
           <p class="eyebrow center">Stay Notified</p>
           <h3>New structural analysis published monthly.</h3>
-          <p>No newsletters. No roundups. One piece when it's ready.</p>
+          <p>No newsletters. No roundups. One piece when it's ready — when the pattern is worth naming.</p>
           <form name="insights-notify" id="insightsNotifyForm" method="POST" data-netlify="true" netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="insights-notify">
             <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
             <div class="notify-form">
-              <label for="notify-email" class="visually-hidden" style="position:absolute;left:-9999px;">Email address</label>
+              <label for="notify-email" style="position:absolute;left:-9999px;">Email address</label>
               <input type="email" id="notify-email" name="Email" placeholder="you@organization.com" required>
               <button type="submit" class="btn btn-teal">Notify me →</button>
             </div>
           </form>
-          <div class="notify-success" id="insightsNotifySuccess">You'll hear from us when the next piece publishes.</div>
+          <div class="notify-success" id="insightsNotifySuccess">
+            You'll hear from us when the next piece publishes.
+          </div>
         </div>
       </div>
     </section>
@@ -269,7 +276,7 @@
         <div><h4>Connect</h4><ul><li><a href="https://www.linkedin.com/in/danamiddletonkc/" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
         <div><h4>Legal</h4><ul><li><a href="privacy.html">Privacy</a></li><li><a href="disclaimer.html">Disclaimer</a></li><li><a href="terms.html">Terms</a></li></ul></div>
       </div>
-      <div class="footer-bottom">Compositions™ | Coherent by design. Credible over time. | &copy; 2026 Compositions™. All rights reserved.</div>
+      <div class="footer-bottom">Compositions&#8482; | Coherent by design. Credible over time. | &copy; 2026 Compositions&#8482;. All rights reserved.</div>
     </div>
   </footer>
 
@@ -295,12 +302,16 @@
       hamburger.setAttribute('aria-expanded', open);
     });
     mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      mobileMenu.classList.remove('open'); hamburger.classList.remove('open'); hamburger.setAttribute('aria-expanded', false);
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', false);
     }));
 
     /* ── REVEAL ── */
     const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+      });
     }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
@@ -310,9 +321,13 @@
     notifyForm.addEventListener('submit', function(e) {
       e.preventDefault();
       const data = new FormData(notifyForm);
-      fetch('/', { method: 'POST', body: new URLSearchParams(data.toString()), headers: { 'Content-Type': 'application/x-www-form-urlencoded' } })
-        .then(() => { notifyForm.style.display = 'none'; notifySuccess.classList.add('show'); })
-        .catch(() => { notifyForm.style.display = 'none'; notifySuccess.classList.add('show'); });
+      fetch('/', {
+        method: 'POST',
+        body: new URLSearchParams(data).toString(),
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+      })
+      .then(() => { notifyForm.style.display = 'none'; notifySuccess.classList.add('show'); })
+      .catch(() => { notifyForm.style.display = 'none'; notifySuccess.classList.add('show'); });
     });
 
     /* ── DYNAMIC POST LOADER ── */
@@ -374,7 +389,7 @@
     function renderEmpty(message) {
       const div = document.createElement('div');
       div.className = 'empty-state';
-      div.innerHTML = `<h3>${message}</h3><p>Check back soon — new structural analysis published monthly.</p>`;
+      div.innerHTML = `<h3>${message}</h3><p>New structural analysis published monthly. Enter your email above to be notified when the next piece is ready.</p>`;
       return div;
     }
 
