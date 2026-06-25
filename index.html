@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index, follow">
-<title>Compositions™ | Closing the Communications Gap</title>
-<meta name="description" content="Closing the gap between what organizations say and what employees, candidates, and stakeholders believe. Compositions™ analyzes the structural conditions that determine whether organizational communications is believed.">
+<title>Compositions™ | Structural Communications Advisory</title>
+<meta name="description" content="Compositions™ analyzes the structural conditions that determine whether investments in culture, change, employer brand, and people commitments produce the adoption, credibility, and return leaders expected.">
 <link rel="canonical" href="https://compositionsadvisory.com/">
-<meta property="og:title" content="Compositions™ | Closing the Communications Gap">
-<meta property="og:description" content="Closing the gap between what organizations say and what employees, candidates, and stakeholders believe.">
+<meta property="og:title" content="Compositions™ | Structural Communications Advisory">
+<meta property="og:description" content="Closing the gap between what organizations say and what stakeholders believe.">
 <meta property="og:image" content="https://compositions.netlify.app/assets/og-image.png">
 <meta property="og:url" content="https://compositions.netlify.app/">
 <meta property="og:type" content="website">
@@ -88,6 +88,7 @@ section { padding: var(--section-pad); }
   background: var(--teal);
 }
 .eyebrow.on-dark { color: var(--teal-light); }
+.eyebrow.on-dark::before { background: var(--teal-light); }
 .eyebrow.center { justify-content: center; }
 
 .btn {
@@ -405,6 +406,24 @@ section { padding: var(--section-pad); }
   line-height: 1.7;
 }
 
+/* POSITIONING STATEMENT */
+.positioning-block { text-align: center; padding: 100px 24px; }
+.positioning-block h2 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  color: var(--white);
+  font-weight: 700;
+  max-width: 820px;
+  margin: 0 auto;
+  line-height: 1.2;
+}
+.positioning-block .body-copy {
+  color: rgba(255,255,255,0.75);
+  max-width: 520px;
+  margin: 24px auto 0;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
 /* RAG SEQUENCE */
 .rag-head { text-align: center; margin-bottom: 56px; }
 .rag-head h2 { font-size: 3rem; text-transform: uppercase; color: var(--charcoal); font-weight: 700; }
@@ -549,9 +568,9 @@ footer { background: var(--charcoal); padding: 64px 24px 32px; }
 <section class="hero bg-charcoal">
   <div class="hero-inner">
     <p class="eyebrow on-dark">Structural Advisory Practice</p>
-    <h1>Closing the gap<br>between what<br>organizations say<br>and what<br><span class="accent">stakeholders believe.</span></h1>
-    <p class="subhead">Employer brand. Internal communications.<br>Change communications. Grant narratives.</p>
-    <p class="body-copy">The problem is almost never the message. It is the distance between what the organization is communicating and what its structural conditions can credibly support.</p>
+    <h1>Investments are<br>extensive. The return<br>is not what<br><span class="accent">leaders expected.</span></h1>
+    <p class="subhead">Culture. Change. Employer Brand.<br>People Commitments.</p>
+    <p class="body-copy">The issue is rarely the quality of the initiative or the clarity of the message. It is the structural gap between what the organization is funding, what it is communicating, and what its operating conditions can actually sustain.</p>
     <div class="cta-row">
       <a href="field-guide.html" class="btn btn-teal">Download the 10 Signals Field Guide&trade;</a>
       <a href="#inquire" class="btn btn-ghost">Schedule a Working Session →</a>
@@ -699,49 +718,57 @@ footer { background: var(--charcoal); padding: 64px 24px 32px; }
   </div>
 </section>
 
+<!-- POSITIONING STATEMENT -->
+<section class="bg-charcoal">
+  <div class="positioning-block reveal">
+    <h2>Closing the gap between what organizations say and what stakeholders believe.</h2>
+    <p class="body-copy">Most communications work asks whether the message is good. This work asks whether the organization is positioned to be believed when it sends it.</p>
+  </div>
+</section>
+
 <!-- WORKING SESSIONS -->
 <section class="bg-white">
   <div class="wrap">
     <div class="offers-head reveal">
       <p class="eyebrow">The Work</p>
-      <h2>A focused path from recognition to a working session.</h2>
-      <p class="body-copy">Three half-day working sessions for organizations whose employer brand, internal communications, change communications, or grant narratives are not producing the return they were designed to produce. Each session produces a written deliverable within 48 hours.</p>
+      <h2>The entry point depends on where the structural gap is showing up.</h2>
+      <p class="body-copy">Tailored working sessions analyzing a specific structural condition — the employer value proposition against operating reality, the credibility reserve going into a change, or the claims the organization is making against what the evidence can confirm.</p>
     </div>
     <div class="offer-grid reveal">
       <div class="offer-card">
-        <div class="offer-header"><span>Message-Reality Check&trade;</span></div>
+        <div class="offer-header"><span>Claim-Reality Check&trade;</span></div>
         <div class="offer-body">
           <span class="tag">For Nonprofits</span>
-          <p>A half-day working session. Core communications materials are read against actual operating reality. A plain-language memo is delivered within 48 hours: what is credible, what is ahead of organizational reality, and what to say instead.</p>
+          <p>A half-day working session. External-facing claims — grant narratives, impact statements, funder communications — are read against what the organizational evidence can actually confirm. A plain-language memo is delivered within 48 hours: what is credible, what is ahead of organizational reality, and what to say instead.</p>
           <div class="delivered">
             <span class="label">What's Delivered</span>
             <p>A one-page written structural read within 48 hours.</p>
           </div>
-          <a href="work.html#message-reality" class="card-cta">Learn More →</a>
+          <a href="work.html#claim-reality" class="card-cta">Learn More →</a>
         </div>
       </div>
       <div class="offer-card">
-        <div class="offer-header"><span>EVP Clarity Lab&trade;</span></div>
+        <div class="offer-header"><span>EVP Reality Read&trade;</span></div>
         <div class="offer-body">
           <span class="tag">For Mid-Market Organizations</span>
-          <p>A half-day working session. The employer value proposition is built from what is structurally real — not from aspiration. Produced in the session itself.</p>
+          <p>A half-day working session. The employer value proposition is analyzed against the structural conditions of employment — what current employees actually experience, what advancement criteria actually reward, and what the operating evidence confirms. The EVP is built from what is structurally real, not from aspiration.</p>
           <div class="delivered">
             <span class="label">What's Delivered</span>
             <p>A drafted EVP, job posting language, and a one-page internal message guide. Within 48 hours.</p>
           </div>
-          <a href="work.html#evp-clarity" class="card-cta">Learn More →</a>
+          <a href="work.html#evp-reality" class="card-cta">Learn More →</a>
         </div>
       </div>
       <div class="offer-card">
-        <div class="offer-header"><span>Change Communications Layout&trade;</span></div>
+        <div class="offer-header"><span>Change Credibility Read&trade;</span></div>
         <div class="offer-body">
           <span class="tag">For Organizations Mid-Transition</span>
-          <p>A half-day working session. The structural credibility reserve going into the change is analyzed. The manager enablement approach that produces adoption rather than compliance is designed.</p>
+          <p>A half-day working session. The structural credibility reserve going into the change is analyzed — the accumulated evidence employees hold about whether this organization honors its commitments when they meet operating pressure. The manager enablement approach that produces adoption rather than compliance is designed.</p>
           <div class="delivered">
             <span class="label">What's Delivered</span>
             <p>A structural read, narrative adjustments, and a manager communications guide. Within 48 hours.</p>
           </div>
-          <a href="work.html#change-layout" class="card-cta">Learn More →</a>
+          <a href="work.html#change-credibility" class="card-cta">Learn More →</a>
         </div>
       </div>
     </div>
