@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index, follow">
 <title>About Dana Middleton | Compositions™</title>
-<meta name="description" content="Dana Middleton is a Structural Advisor and the principal of Compositions™. 25 years of enterprise-scale pattern recognition at the intersection of organizational communications and the structural conditions that determine whether it's believed.">
-<link rel="canonical" href="https://compositions.netlify.app/about">
+<meta name="description" content="Dana Middleton is a Structural Communications Advisor and the principal of Compositions™. 25 years of enterprise-scale pattern recognition at the intersection of organizational communications and the structural conditions that determine whether it's believed.">
+<link rel="canonical" href="https://compositionsadvisory.com/about">
 <meta property="og:title" content="About Dana Middleton | Compositions™">
 <meta property="og:description" content="25 years of enterprise-scale pattern recognition at the intersection of organizational communications and the structural conditions that determine whether it's believed.">
 <meta property="og:image" content="https://compositions.netlify.app/assets/og-image.png">
-<meta property="og:url" content="https://compositions.netlify.app/about">
+<meta property="og:url" content="https://compositionsadvisory.com/about">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Compositions™">
 <meta name="twitter:card" content="summary_large_image">
@@ -49,17 +49,18 @@ section { padding: var(--section-pad); }
 .eyebrow { display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal); margin-bottom: 20px; }
 .eyebrow::before { content: ""; display: inline-block; width: 40px; height: 2px; background: var(--teal); }
 .eyebrow.on-dark { color: var(--teal-light); }
+.eyebrow.on-dark::before { background: var(--teal-light); }
 .eyebrow.center { justify-content: center; }
 .btn { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.03em; padding: 14px 28px; border-radius: 4px; border: 2px solid transparent; transition: background 0.2s ease, transform 0.2s ease, color 0.2s ease, border-color 0.2s ease; }
 .btn-teal { background: var(--teal); color: var(--white); }
 .btn-teal:hover { background: var(--teal-dark); transform: translateY(-1px); }
 .btn-white { background: var(--white); color: var(--teal); }
 .btn-white:hover { background: var(--off-white); transform: translateY(-1px); }
+
 /* NAV */
 .site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; transition: background 0.25s ease, box-shadow 0.25s ease, padding 0.25s ease; }
 .site-nav.scrolled { background: var(--white); box-shadow: 0 2px 14px rgba(0,0,0,0.08); padding: 12px 24px; }
 .logo-mark { display: flex; align-items: center; gap: 10px; }
-.logo-mark svg { width: 30px; height: 30px; flex-shrink: 0; }
 .logo-mark .logo-text { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; letter-spacing: 0.04em; color: var(--white); transition: color 0.25s ease; }
 .site-nav.scrolled .logo-mark .logo-text { color: var(--text); }
 .nav-links { display: flex; align-items: center; gap: 32px; }
@@ -90,14 +91,30 @@ section { padding: var(--section-pad); }
 
 /* HERO */
 .page-hero { padding: 160px 24px 96px; }
-.page-hero h1 { font-size: clamp(2rem, 4.5vw, 3rem); color: var(--white); line-height: 1.3; max-width: 700px; font-weight: 700; }
-.page-hero h1 .accent { color: var(--teal); display: inline-block; margin-top: 12px; }
+.page-hero h1 { font-size: clamp(2rem, 4.5vw, 3rem); color: var(--white); line-height: 1.3; max-width: 760px; font-weight: 700; }
+.page-hero h1 .accent { color: var(--teal); display: block; margin-top: 12px; }
 
 /* ABOUT TEXT BLOCKS */
 .about-block { max-width: 760px; margin: 0 auto; }
 .about-block h2 { font-size: 2rem; color: var(--charcoal); line-height: 1.3; }
 .about-block .body-copy { margin-top: 24px; color: #555; line-height: 1.8; }
 .about-block .body-copy + .body-copy { margin-top: 18px; }
+
+/* WHY COMPOSITIONS */
+.why-block { max-width: 760px; margin: 0 auto; }
+.why-block h2 { font-size: 2rem; color: var(--charcoal); line-height: 1.3; }
+.why-block .body-copy { margin-top: 24px; color: #555; line-height: 1.8; }
+.why-block .body-copy + .body-copy { margin-top: 18px; }
+.why-block blockquote {
+  margin: 32px 0 0;
+  padding: 24px 28px;
+  border-left: 4px solid var(--teal);
+  background: var(--off-white);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--charcoal);
+  font-style: italic;
+}
 
 /* DISCIPLINES */
 .disciplines-head { max-width: 680px; margin-bottom: 16px; }
@@ -129,7 +146,6 @@ section { padding: var(--section-pad); }
 footer { background: var(--charcoal); padding: 64px 24px 32px; }
 .footer-inner { max-width: var(--max-width); margin: 0 auto; }
 .footer-logo { margin-bottom: 40px; }
-.footer-logo .logo-text { color: var(--white); font-size: 1.1rem; }
 .footer-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,0.12); }
 .footer-cols h4 { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 16px; font-family: var(--font-body); font-weight: 600; }
 .footer-cols ul { display: flex; flex-direction: column; gap: 10px; }
@@ -178,33 +194,52 @@ footer { background: var(--charcoal); padding: 64px 24px 32px; }
 
 <main>
 
+<!-- HERO -->
 <section class="page-hero bg-charcoal">
   <div class="wrap reveal">
     <p class="eyebrow on-dark">About Compositions&trade;</p>
-    <h1>Your organization is investing in employer brand, internal communications, and change communications.<br><span class="accent">The question is whether the structural conditions are arranged to make that investment believed.</span></h1>
+    <h1>The programs are well-designed.<span class="accent">The investment is not producing what leaders expected. The source is almost always structural.</span></h1>
   </div>
 </section>
 
+<!-- THE PRACTICE -->
 <section class="bg-white">
   <div class="wrap about-block reveal">
     <p class="eyebrow">The Practice</p>
-    <h2>Compositions&trade; exists because organizations are investing more in communications than the structural conditions beneath it can support.</h2>
-    <p class="body-copy">Every day, HR directors invest in employer brand, communications leaders build internal campaigns, change managers craft announcements, and nonprofit executives write grant narratives — with genuine intent and genuine craft.</p>
-    <p class="body-copy">But the pattern is consistent: sophisticated audiences don't evaluate communications. They measure it against operating evidence they already hold. They know what gets rewarded. They've seen what happens when commitments meet budget pressure. They've noticed the distance between what leadership says and what the operating decisions confirm.</p>
-    <p class="body-copy">When that distance is small, communications produces belief. When it is large, no investment in communications quality compensates.</p>
-    <p class="body-copy">Compositions&trade; analyzes that distance before it becomes damage — and designs the structural and governance conditions that make the gap self-closing rather than self-widening.</p>
+    <h2>Compositions&trade; exists because organizations are investing more in programs and commitments than the structural conditions beneath them can support.</h2>
+    <p class="body-copy">Every day, HR directors invest in employer brand and people commitments, communications leaders build internal campaigns, change managers craft transformation narratives, and nonprofit executives write grant narratives — with genuine intent and genuine craft.</p>
+    <p class="body-copy">But the pattern is consistent: sophisticated audiences do not evaluate communications. They measure it against operating evidence they already hold. They know what gets rewarded. They have seen what happens when commitments meet budget pressure. They have noticed the distance between what leadership says and what the operating decisions confirm.</p>
+    <p class="body-copy">When that distance is small, communications produces belief. When it is large, no investment in message quality closes it.</p>
+    <p class="body-copy">Compositions&trade; analyzes the structural conditions beneath organizational communications — governance, incentives, decision rights, manager routines, cultural norms, and evidence systems — before that distance becomes damage. It designs the governance infrastructure that makes coherence between what organizations say, what they fund, and how they operate self-sustaining.</p>
   </div>
 </section>
 
+<!-- THE WORK -->
 <section class="bg-offwhite">
   <div class="wrap about-block reveal">
     <p class="eyebrow">The Work</p>
     <h2>Compositions&trade; is not a communications agency. Not a culture consultancy. Not an HR advisory firm.</h2>
-    <p class="body-copy">It is a structural advisory practice: analyzing the conditions that determine whether organizational communications is believed, and designing the governance infrastructure that makes coherence between structural conditions and communications self-sustaining.</p>
-    <p class="body-copy">The work is structural analysis, architectural, and governance-focused. The deliverables are written structural reads and governance blueprints — designed for implementation by the organization's existing team, not to create dependency on continued outside support.</p>
+    <p class="body-copy">It is a structural advisory practice for organizations where investments in culture, change, brand, and people commitments are not producing the adoption, credibility, or measurable return leaders expected.</p>
+    <p class="body-copy">The issue is rarely the quality of the initiative or the clarity of the message. It is the structural gap between what the organization is funding, what it is communicating, and what its operating conditions can actually sustain.</p>
+    <p class="body-copy">The entry point is the communications problem. The work is structural. The outcome is credibility that compounds.</p>
+    <p class="body-copy">The deliverables are written structural reads and governance blueprints — designed for implementation by the organization's existing team, not to create dependency on continued outside support.</p>
   </div>
 </section>
 
+<!-- WHY COMPOSITIONS -->
+<section class="bg-white">
+  <div class="wrap why-block reveal">
+    <p class="eyebrow">Why Compositions&trade;</p>
+    <h2>The name holds two meanings. Both describe the same problem.</h2>
+    <p class="body-copy">In music and design, a composition is not a collection of elements — it is the intentional arrangement of elements into a unified whole. The quality of the composition is not only determined by the quality of the individual pieces. It is determined by how they work together.</p>
+    <p class="body-copy">Organizations are compositions. They are arrangements of commitments, structures, incentives, communications, governance, and behavior. When those elements are arranged coherently — when the culture narrative aligns with what the incentive structure rewards, when the employer brand describes an experience the operating conditions produce, when change communications is grounded in the structural credibility required to make it believed — the organization is well-composed. The whole becomes credible.</p>
+    <p class="body-copy">When the elements contradict each other, the organization fragments. The individual pieces may be strong. The arrangement is producing incoherence.</p>
+    <p class="body-copy">The second meaning: composition is where structure meets communications — the relationship between what the organization is built to deliver and what it says it delivers. Reading that relationship, identifying where it has separated, and designing the conditions that make coherence self-sustaining is the work.</p>
+    <blockquote>Most communications work is about the quality of the message. My work is about whether people can believe it.</blockquote>
+  </div>
+</section>
+
+<!-- THE FOUNDATION -->
 <section class="bg-white">
   <div class="wrap">
     <div class="disciplines-head reveal">
@@ -231,11 +266,11 @@ footer { background: var(--charcoal); padding: 64px 24px 32px; }
       </div>
       <div class="discipline-card">
         <h3>Impact &amp; Outcomes Measurement</h3>
-        <p>Reads whether communications investments are producing defensible outcomes — connecting investment, evidence, and stakeholder value in ways that make structural arguments credible to funders, boards, and senior leadership.</p>
+        <p>Reads whether investments in programs and commitments are producing defensible outcomes — connecting investment, evidence, and stakeholder value in ways that make structural arguments credible to funders, boards, and senior leadership.</p>
       </div>
       <div class="discipline-card">
         <h3>Social Epidemiology &amp; Structural Determinant Thinking</h3>
-        <p>Grounds the work in the principle that structural conditions, not intentions alone, shape outcomes across populations. DrPH Candidate, Social Epidemiology, Capella University.</p>
+        <p>Grounds the work in the principle that structural conditions, not intentions alone, shape outcomes across populations.</p>
       </div>
       <div class="discipline-card" style="grid-column: 1 / -1;">
         <h3>Instructional Design &amp; Permanent Capability Transfer</h3>
@@ -245,26 +280,50 @@ footer { background: var(--charcoal); padding: 64px 24px 32px; }
   </div>
 </section>
 
+<!-- DANA BIO -->
 <section class="bg-offwhite">
   <div class="wrap bio-grid reveal">
     <div>
-      <p class="bio-label">Dana Middleton | Structural Advisor</p>
-      <p class="body-copy">Dana Middleton is a Structural Advisor and the principal of Compositions&trade;, a Kansas City-based advisory practice working at the intersection of organizational communications and the structural conditions that determine whether it's believed.</p>
-      <p class="body-copy">With 25 years of experience across strategic communications, brand strategy, and culture integration at enterprise scale — including leading the corporate social impact function at MMGY Global and directing change communications and health equity integration at Blue Cross Blue Shield of Kansas City — Dana works with mid-market organizations and nonprofits on a problem the field rarely names directly: the distance between what an organization communicates and what its operating structure can credibly support.</p>
-      <p class="body-copy">Most communications investment assumes the problem is reach, clarity, or craft. This work starts one layer beneath that — identifying where the structural conditions are producing the gap, and designing the governance that closes it.</p>
-      <p class="body-copy">She is a doctoral candidate in Social Epidemiology at Capella University and holds a Master's in Instructional Design. Her work is grounded in the conviction that structure, not messaging, determines whether organizational commitments hold.</p>
+      <p class="bio-label">Dana Middleton | Structural Communications Advisor</p>
+      <p class="body-copy">Dana Middleton is a Structural Communications Advisor and the principal of Compositions&trade;, a Kansas City-based advisory practice. She works with mid-market organizations and nonprofits on a problem the field rarely names directly: the distance between what an organization is funding, what it is communicating, and what its operating conditions can credibly sustain.</p>
+      <p class="body-copy">The work grew from a question asked repeatedly over more than two decades of practice inside enterprise-scale organizations. Not "how do we communicate this commitment better?" but "what structural conditions would need to be true for this commitment to be credible?" The answer kept pointing to the same place: governance, incentives, decision rights, and operating behavior — the conditions beneath the communications layer, not the communications itself.</p>
+      <p class="body-copy">With over two decades of experience across strategic communications, brand strategy, and enterprise-scale culture integration, Dana brings the pattern recognition of a practitioner who has been inside the gap, built the infrastructure to close it, and developed the structural framework to name it precisely.</p>
+      <p class="body-copy">She holds a Master's in Instructional Design, and her doctoral research examines coherence as a structural determinant of stakeholder well-being and enterprise health in organizations — the same question the practice answers in every engagement.</p>
     </div>
     <div class="credential-strip">
-      <div class="credential-item"><div class="top">DrPH Candidate</div><div class="mid">Social Epidemiology</div><div class="bottom">Capella University</div></div>
-      <div class="credential-item"><div class="top">Master of Liberal Arts</div><div class="mid">Instructional Design</div><div class="bottom">Baker University</div></div>
-      <div class="credential-item"><div class="top">25 Years</div><div class="mid">Enterprise-Scale</div><div class="bottom">Pattern Recognition</div></div>
+      <div class="credential-item">
+        <div class="top">DrPH Candidate</div>
+        <div class="mid">Social Epidemiology</div>
+        <div class="bottom">Capella University</div>
+      </div>
+      <div class="credential-item">
+        <div class="top">Master of Liberal Arts</div>
+        <div class="mid">Instructional Design</div>
+        <div class="bottom">Baker University</div>
+      </div>
+      <div class="credential-item">
+        <div class="top">25 Years</div>
+        <div class="mid">Enterprise-Scale</div>
+        <div class="bottom">Pattern Recognition</div>
+      </div>
+      <div class="credential-item">
+        <div class="top">MMGY Global</div>
+        <div class="mid">Corporate Social Impact</div>
+        <div class="bottom">550 people · 15 offices · 6 countries</div>
+      </div>
+      <div class="credential-item">
+        <div class="top">BCBS Kansas City</div>
+        <div class="mid">Change Communications</div>
+        <div class="bottom">Health equity integration · 1,800 employees</div>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- CLOSING CTA -->
 <section class="bg-teal">
   <div class="wrap cta-block reveal">
-    <h2>Organizations don't need more messaging. They need the structural conditions that make messaging believed.</h2>
+    <h2>Organizations don't need more messaging. They need the structural conditions that make messaging believable.</h2>
     <a href="index.html#inquire" class="btn btn-white">Schedule a Working Session →</a>
   </div>
 </section>
