@@ -4,16 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
-  <title>Insights | Compositions™</title>
-  <meta name="description" content="Structural analysis for HR directors, communications leaders, and nonprofit executives navigating the gap between what organizations invest in and what their structural conditions can credibly sustain.">
+  <title>Insights | Compositions™ | Structural Communications Advisory</title>
+  <meta name="description" content="Structural analysis for HR directors, communications leaders, and nonprofit executives navigating the gap between what organizations fund and what their structural conditions can credibly sustain. Adoption and credibility is about structure, not just message quality.">
   <link rel="canonical" href="https://compositionsadvisory.com/insights">
   <meta property="og:title" content="Insights | Compositions™">
-  <meta property="og:description" content="Structural analysis for the communications problem that isn't a communications problem.">
+  <meta property="og:description" content="Adoption and credibility isn't just about the quality of the initiative or the clarity of the message. It's about the structures and operating conditions that allow them to sustain.">
   <meta property="og:image" content="https://compositionsadvisory.com/assets/og-image.png">
   <meta property="og:url" content="https://compositionsadvisory.com/insights">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Compositions™">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Insights | Compositions™">
+  <meta name="twitter:description" content="Adoption and credibility isn't just about the quality of the initiative or the clarity of the message. It's about the structures and operating conditions that allow them to sustain.">
+  <meta name="twitter:image" content="https://compositionsadvisory.com/assets/og-image.png">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" type="image/png" href="assets/Logo Square Color.png">
   <link rel="alternate icon" href="assets/logo-square-color.png">
@@ -46,14 +49,12 @@
     .bg-white { background: var(--white); }
     .bg-offwhite { background: var(--off-white); }
 
-    /* EYEBROW */
     .eyebrow { display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal); margin-bottom: 24px; }
     .eyebrow::before { content: ""; display: inline-block; width: 40px; height: 2px; background: var(--teal); flex-shrink: 0; }
     .eyebrow.on-dark { color: var(--teal-light); }
     .eyebrow.on-dark::before { background: var(--teal-light); }
     .eyebrow.center { justify-content: center; }
 
-    /* BUTTONS */
     .btn { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.03em; padding: 14px 28px; border: none; cursor: pointer; transition: all 0.2s ease; text-decoration: none; }
     .btn-teal { background: var(--teal); color: var(--white); }
     .btn-teal:hover { background: var(--teal-dark); transform: translateY(-1px); }
@@ -75,9 +76,9 @@
     .nav-link.active { color: var(--teal); }
     .site-nav.scrolled .nav-link.active { color: var(--teal); }
     .nav-cta { margin-left: 8px; }
-    .hamburger { display: none; background: none; border: none; width: 32px; height: 32px; position: relative; z-index: 210; }
+    .hamburger { display: none; background: none; border: none; width: 32px; height: 32px; position: relative; z-index: 210; cursor: pointer; }
     .hamburger span { display: block; position: absolute; left: 4px; right: 4px; height: 2px; background: var(--white); transition: all 0.25s ease; }
-    .site-nav.scrolled .hamburger span { background: var(--text); }
+    .site-nav.scrolled .hamburger span, .hamburger.open span { background: var(--text); }
     .hamburger span:nth-child(1) { top: 9px; } .hamburger span:nth-child(2) { top: 16px; } .hamburger span:nth-child(3) { top: 23px; }
     .hamburger.open span:nth-child(1) { top: 16px; transform: rotate(45deg); }
     .hamburger.open span:nth-child(2) { opacity: 0; }
@@ -86,20 +87,18 @@
     .mobile-menu.open { transform: translateY(0); opacity: 1; pointer-events: all; visibility: visible; }
     .mobile-menu a { font-size: 1rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text); }
 
-    /* REVEAL */
     .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
     @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
 
-    /* BACK TO TOP */
-    .back-to-top { position: fixed; right: 24px; bottom: 24px; width: 44px; height: 44px; background: var(--teal); display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: all 0.3s ease; border: none; color: var(--white); cursor: pointer; z-index: 99; }
+    .back-to-top { position: fixed; right: 24px; bottom: 24px; width: 44px; height: 44px; background: var(--teal); display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: all 0.3s ease; border: none; color: var(--white); cursor: pointer; z-index: 99; border-radius: 50%; }
     .back-to-top.visible { opacity: 1; visibility: visible; }
     .back-to-top:hover { background: var(--teal-dark); }
 
     /* HERO */
     .insights-hero { padding: 140px 24px 64px; background: var(--charcoal); }
-    .insights-hero h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); color: var(--white); line-height: 1.3; max-width: 760px; font-weight: 700; }
-    .insights-hero .body-copy { color: var(--teal-light); margin-top: 18px; max-width: 620px; line-height: 1.8; font-size: 1rem; }
+    .insights-hero h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); color: var(--white); line-height: 1.25; max-width: 760px; font-weight: 700; }
+    .insights-hero .body-copy { color: rgba(255,255,255,0.7); margin-top: 20px; max-width: 640px; line-height: 1.8; font-size: 1rem; }
 
     /* FILTER BAR */
     .filter-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 0 24px; position: sticky; top: 60px; z-index: 100; }
@@ -122,35 +121,28 @@
     .article-card .read-link { color: var(--teal); font-weight: 600; font-size: 0.85rem; }
     .article-card .read-time { color: var(--text-sec); font-size: 0.8rem; }
 
-    /* EMPTY STATE */
     .empty-state { grid-column: 1 / -1; text-align: center; padding: 80px 24px; }
     .empty-state h3 { font-family: var(--font-display); font-size: 1.4rem; color: var(--charcoal); margin-bottom: 12px; font-weight: 500; }
     .empty-state p { color: var(--text-sec); font-size: 0.95rem; line-height: 1.65; max-width: 480px; margin: 0 auto; }
 
-    /* LOADING STATE */
     .loading-state { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
     .skeleton-card { background: var(--white); border: 1px solid var(--border); overflow: hidden; }
     .skeleton-bar { height: 4px; background: var(--border); }
     .skeleton-body { padding: 24px; }
     .skeleton-line { height: 12px; background: var(--off-white); margin-bottom: 10px; animation: shimmer 1.4s infinite; }
-    .skeleton-line.short { width: 40%; }
-    .skeleton-line.medium { width: 70%; }
-    .skeleton-line.long { width: 100%; }
-    .skeleton-line.title { height: 18px; width: 90%; margin-bottom: 6px; }
-    .skeleton-line.title2 { height: 18px; width: 65%; }
+    .skeleton-line.short { width: 40%; } .skeleton-line.medium { width: 70%; } .skeleton-line.long { width: 100%; }
+    .skeleton-line.title { height: 18px; width: 90%; margin-bottom: 6px; } .skeleton-line.title2 { height: 18px; width: 65%; }
     @keyframes shimmer { 0%, 100% { opacity: 0.6; } 50% { opacity: 1; } }
 
-    /* NOTIFY */
     .notify-block { max-width: 500px; margin: 64px auto 0; text-align: center; }
     .notify-block h3 { font-family: var(--font-display); font-size: 1.15rem; color: var(--charcoal); margin-bottom: 8px; font-weight: 600; letter-spacing: 0.02em; }
     .notify-block p { color: var(--text-sec); font-size: 0.9rem; line-height: 1.65; margin-bottom: 24px; }
     .notify-form { display: flex; gap: 10px; }
-    .notify-form input { flex: 1; font-family: var(--font-body); font-size: 0.95rem; padding: 12px 14px; border: 1px solid var(--border); background: var(--white); color: var(--text); transition: border-color 0.2s; }
+    .notify-form input { flex: 1; font-family: var(--font-body); font-size: 0.95rem; padding: 12px 14px; border: 1px solid var(--border); background: var(--white); color: var(--text); border-radius: 0; transition: border-color 0.2s; }
     .notify-form input:focus { border-color: var(--teal); outline: none; }
     .notify-success { display: none; background: var(--white); border: 1px solid var(--border); padding: 18px; color: var(--charcoal); font-size: 0.9rem; line-height: 1.6; }
     .notify-success.show { display: block; }
 
-    /* FOOTER */
     footer { background: var(--charcoal); padding: 64px 24px 32px; }
     .footer-inner { max-width: var(--max-width); margin: 0 auto; }
     .footer-logo { margin-bottom: 40px; }
@@ -162,22 +154,8 @@
     .footer-cols a:hover { color: var(--white); }
     .footer-bottom { padding-top: 24px; color: rgba(255,255,255,0.4); font-size: 0.75rem; }
 
-    /* RESPONSIVE */
-    @media (max-width: 900px) {
-      .insights-grid { grid-template-columns: repeat(2, 1fr); }
-      .loading-state { grid-template-columns: repeat(2, 1fr); }
-      .footer-cols { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 768px) {
-      :root { --section-pad: 64px 20px; }
-      .nav-links { display: none; }
-      .hamburger { display: block; }
-      .insights-grid { grid-template-columns: 1fr; }
-      .loading-state { grid-template-columns: 1fr; }
-      .notify-form { flex-direction: column; }
-      .filter-btn { padding: 14px 14px; }
-      .insights-hero { padding: 120px 20px 56px; }
-    }
+    @media (max-width: 900px) { .insights-grid { grid-template-columns: repeat(2, 1fr); } .loading-state { grid-template-columns: repeat(2, 1fr); } .footer-cols { grid-template-columns: 1fr; } }
+    @media (max-width: 768px) { :root { --section-pad: 64px 20px; } .nav-links { display: none; } .hamburger { display: block; } .insights-grid { grid-template-columns: 1fr; } .loading-state { grid-template-columns: 1fr; } .notify-form { flex-direction: column; } .filter-btn { padding: 14px 14px; } .insights-hero { padding: 120px 20px 56px; } }
   </style>
 </head>
 <body>
@@ -206,17 +184,14 @@
   </div>
 
   <main>
-
-    <!-- HERO -->
     <section class="insights-hero bg-charcoal">
       <div class="wrap reveal">
         <p class="eyebrow on-dark">Insights</p>
-        <h1>Structural analysis for the communications problem that isn't a communications problem.</h1>
-        <p class="body-copy">Employer brand. Internal communications. Change communications. Grant narratives. People commitments. The structural conditions that determine whether any of it is believable.</p>
+        <h1>Adoption and credibility isn't just about the quality of the initiative or the clarity of the message.</h1>
+        <p class="body-copy">It's about the structures and operating conditions that allow them to sustain. Employer brand. Internal communications. Change communications. Grant narratives. People commitments. The structural conditions that determine whether any of it is believed.</p>
       </div>
     </section>
 
-    <!-- FILTER BAR -->
     <div class="filter-bar" id="filterBar">
       <div class="filter-inner">
         <button class="filter-btn active" data-filter="all">All</button>
@@ -230,7 +205,6 @@
       </div>
     </div>
 
-    <!-- GRID -->
     <section class="bg-offwhite">
       <div class="wrap">
         <div class="insights-grid reveal" id="insightsGrid">
@@ -241,7 +215,6 @@
           </div>
         </div>
 
-        <!-- NOTIFY -->
         <div class="notify-block reveal">
           <p class="eyebrow center">Stay Notified</p>
           <h3>New structural analysis published monthly.</h3>
@@ -255,13 +228,10 @@
               <button type="submit" class="btn btn-teal">Notify me →</button>
             </div>
           </form>
-          <div class="notify-success" id="insightsNotifySuccess">
-            You'll hear from us when the next piece publishes.
-          </div>
+          <div class="notify-success" id="insightsNotifySuccess">You'll hear from us when the next piece publishes.</div>
         </div>
       </div>
     </section>
-
   </main>
 
   <footer>
@@ -285,7 +255,6 @@
   </button>
 
   <script>
-    /* ── NAV ── */
     const nav = document.getElementById('siteNav');
     const backToTop = document.getElementById('backToTop');
     window.addEventListener('scroll', () => {
@@ -293,7 +262,6 @@
       backToTop.classList.toggle('visible', window.scrollY > 400);
     });
     backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
     hamburger.addEventListener('click', () => {
@@ -302,114 +270,56 @@
       hamburger.setAttribute('aria-expanded', open);
     });
     mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      mobileMenu.classList.remove('open');
-      hamburger.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', false);
+      mobileMenu.classList.remove('open'); hamburger.classList.remove('open'); hamburger.setAttribute('aria-expanded', false);
     }));
-
-    /* ── REVEAL ── */
     const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
-      });
+      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
     }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    /* ── NOTIFY FORM ── */
     const notifyForm = document.getElementById('insightsNotifyForm');
     const notifySuccess = document.getElementById('insightsNotifySuccess');
     notifyForm.addEventListener('submit', function(e) {
       e.preventDefault();
       const data = new FormData(notifyForm);
-      fetch('/', {
-        method: 'POST',
-        body: new URLSearchParams(data).toString(),
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
-      })
-      .then(() => { notifyForm.style.display = 'none'; notifySuccess.classList.add('show'); })
-      .catch(() => { notifyForm.style.display = 'none'; notifySuccess.classList.add('show'); });
+      fetch('/', { method: 'POST', body: new URLSearchParams(data).toString(), headers: { 'Content-Type': 'application/x-www-form-urlencoded' } })
+        .then(() => { notifyForm.style.display = 'none'; notifySuccess.classList.add('show'); })
+        .catch(() => { notifyForm.style.display = 'none'; notifySuccess.classList.add('show'); });
     });
-
-    /* ── DYNAMIC POST LOADER ── */
     const GITHUB_USER = 'dana788';
     const GITHUB_REPO = 'compositions-site';
     const POSTS_PATH  = '_posts';
     const API_BASE    = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${POSTS_PATH}`;
     const RAW_BASE    = `https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/main/${POSTS_PATH}`;
-
     let allPosts = [];
     let activeFilter = 'all';
-
-    /* Parse frontmatter from markdown */
     function parseFrontmatter(text) {
       const match = text.match(/^---\n([\s\S]*?)\n---/);
       if (!match) return { body: text, meta: {} };
-      const raw = match[1];
-      const body = text.slice(match[0].length).trim();
-      const meta = {};
-      raw.split('\n').forEach(line => {
-        const sep = line.indexOf(':');
-        if (sep === -1) return;
-        const key = line.slice(0, sep).trim();
-        const val = line.slice(sep + 1).trim().replace(/^["']|["']$/g, '');
-        meta[key] = val;
-      });
+      const raw = match[1]; const body = text.slice(match[0].length).trim(); const meta = {};
+      raw.split('\n').forEach(line => { const sep = line.indexOf(':'); if (sep === -1) return; const key = line.slice(0, sep).trim(); const val = line.slice(sep + 1).trim().replace(/^["']|["']$/g, ''); meta[key] = val; });
       return { meta, body };
     }
-
-    /* Slugify filename to URL */
-    function fileToSlug(filename) {
-      return filename.replace(/\.md$/, '');
-    }
-
-    /* Render a single card */
+    function fileToSlug(filename) { return filename.replace(/\.md$/, ''); }
     function renderCard(post) {
       const card = document.createElement('article');
       card.className = 'article-card reveal';
       card.dataset.category = post.category || '';
-      card.innerHTML = `
-        <div class="bar"></div>
-        <div class="card-body">
-          <span class="pillar">${post.category || 'Insights'}</span>
-          <h2>${post.title || 'Untitled'}</h2>
-          <p class="excerpt">${post.summary || ''}</p>
-          <div class="card-footer">
-            <span class="read-link">Read →</span>
-            <span class="read-time">${post.readtime || ''}</span>
-          </div>
-        </div>`;
-      card.addEventListener('click', () => {
-        window.location.href = `post.html?slug=${post.slug}`;
-      });
+      card.innerHTML = `<div class="bar"></div><div class="card-body"><span class="pillar">${post.category || 'Insights'}</span><h2>${post.title || 'Untitled'}</h2><p class="excerpt">${post.summary || ''}</p><div class="card-footer"><span class="read-link">Read →</span><span class="read-time">${post.readtime || ''}</span></div></div>`;
+      card.addEventListener('click', () => { window.location.href = `post.html?slug=${post.slug}`; });
       observer.observe(card);
       return card;
     }
-
-    /* Render empty state */
     function renderEmpty(message) {
-      const div = document.createElement('div');
-      div.className = 'empty-state';
+      const div = document.createElement('div'); div.className = 'empty-state';
       div.innerHTML = `<h3>${message}</h3><p>New structural analysis published monthly. Enter your email above to be notified when the next piece is ready.</p>`;
       return div;
     }
-
-    /* Display posts based on active filter */
     function displayPosts() {
-      const grid = document.getElementById('insightsGrid');
-      grid.innerHTML = '';
-      const filtered = activeFilter === 'all'
-        ? allPosts
-        : allPosts.filter(p => p.category === activeFilter);
-      if (filtered.length === 0) {
-        grid.appendChild(activeFilter === 'all'
-          ? renderEmpty('No posts published yet.')
-          : renderEmpty(`No posts in "${activeFilter}" yet.`));
-        return;
-      }
+      const grid = document.getElementById('insightsGrid'); grid.innerHTML = '';
+      const filtered = activeFilter === 'all' ? allPosts : allPosts.filter(p => p.category === activeFilter);
+      if (filtered.length === 0) { grid.appendChild(activeFilter === 'all' ? renderEmpty('No posts published yet.') : renderEmpty(`No posts in "${activeFilter}" yet.`)); return; }
       filtered.forEach(post => grid.appendChild(renderCard(post)));
     }
-
-    /* Fetch and parse all posts */
     async function loadPosts() {
       const grid = document.getElementById('insightsGrid');
       try {
@@ -417,54 +327,24 @@
         if (!res.ok) throw new Error('Could not reach posts folder.');
         const files = await res.json();
         const mdFiles = files.filter(f => f.name.endsWith('.md') && f.name !== '.gitkeep');
-
-        if (mdFiles.length === 0) {
-          grid.innerHTML = '';
-          grid.appendChild(renderEmpty('No posts published yet.'));
-          return;
-        }
-
-        /* Fetch all posts in parallel */
+        if (mdFiles.length === 0) { grid.innerHTML = ''; grid.appendChild(renderEmpty('No posts published yet.')); return; }
         const posts = await Promise.all(mdFiles.map(async file => {
           const raw = await fetch(`${RAW_BASE}/${file.name}`);
           const text = await raw.text();
           const { meta } = parseFrontmatter(text);
-          return {
-            slug: fileToSlug(file.name),
-            title: meta.title || '',
-            date: meta.date || '',
-            category: meta.category || '',
-            readtime: meta.readtime || '',
-            summary: meta.summary || '',
-          };
+          return { slug: fileToSlug(file.name), title: meta.title || '', date: meta.date || '', category: meta.category || '', readtime: meta.readtime || '', summary: meta.summary || '' };
         }));
-
-        /* Sort newest first */
         posts.sort((a, b) => new Date(b.date) - new Date(a.date));
-        allPosts = posts;
-
-        grid.innerHTML = '';
-        displayPosts();
-
-      } catch (err) {
-        grid.innerHTML = '';
-        grid.appendChild(renderEmpty('Posts could not be loaded.'));
-        console.error('Post load error:', err);
-      }
+        allPosts = posts; grid.innerHTML = ''; displayPosts();
+      } catch (err) { grid.innerHTML = ''; grid.appendChild(renderEmpty('Posts could not be loaded.')); console.error('Post load error:', err); }
     }
-
-    /* Filter buttons */
     document.querySelectorAll('.filter-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        activeFilter = btn.dataset.filter;
-        displayPosts();
+        btn.classList.add('active'); activeFilter = btn.dataset.filter; displayPosts();
       });
     });
-
     loadPosts();
   </script>
-
 </body>
 </html>
