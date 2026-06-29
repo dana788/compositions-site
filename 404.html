@@ -5,17 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, follow">
 <title>Page Not Found | Compositions™</title>
-<meta name="description" content="The page you're looking for isn't here. Find your way back to Compositions™.">
-<link rel="canonical" href="https://compositions.netlify.app/404.html">
+<meta name="description" content="The page you're looking for isn't here. Find your way back to Compositions™ — structural communications advisory.">
+<link rel="canonical" href="https://compositionsadvisory.com/404.html">
 <meta property="og:title" content="Page Not Found | Compositions™">
-<meta property="og:description" content="The page you're looking for isn't here. Find your way back to Compositions™.">
-<meta property="og:image" content="https://compositions.netlify.app/assets/og-image.png">
-<meta property="og:url" content="https://compositions.netlify.app/404.html">
+<meta property="og:description" content="Uh oh! The page you're looking for isn't here. Find your way back to Compositions™.">
+<meta property="og:image" content="https://compositionsadvisory.com/assets/og-image.png">
+<meta property="og:url" content="https://compositionsadvisory.com/404.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Compositions™">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="icon" type="image/png" href="assets/Logo Square Color.png">
+<link rel="icon" type="image/png" href="assets/logo-square-color.png">
 <link rel="alternate icon" href="assets/logo-square-color.png">
 <link rel="apple-touch-icon" href="assets/logo-square-color.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +27,7 @@
   --charcoal: #2C2C2C; --charcoal-mid: #383838; --off-white: #F8F8F8; --white: #FFFFFF;
   --text: #1A1A1A; --text-sec: #666666; --border: #E0E0E0;
   --font-display:'Oswald', sans-serif; --font-body:'Poppins', sans-serif;
-  --radius: 6px; --max-width: 1100px; --section-pad: 96px 24px;
+  --max-width: 1100px;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -43,27 +43,33 @@ button { font-family: var(--font-body); cursor: pointer; }
 .eyebrow { display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal-light); margin-bottom: 20px; }
 .eyebrow::before { content: ""; display: inline-block; width: 40px; height: 2px; background: var(--teal); }
 .eyebrow.center { justify-content: center; }
-.btn { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.03em; padding: 14px 28px; border-radius: 4px; border: 2px solid transparent; transition: background 0.2s ease, transform 0.2s ease, color 0.2s ease, border-color 0.2s ease; }
+.btn { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.03em; padding: 14px 28px; border-radius: 0; border: 2px solid transparent; transition: background 0.2s ease, transform 0.2s ease, color 0.2s ease, border-color 0.2s ease; }
 .btn-teal { background: var(--teal); color: var(--white); }
 .btn-teal:hover { background: var(--teal-dark); transform: translateY(-1px); }
 .btn-ghost { border-color: rgba(255,255,255,0.6); color: var(--white); background: transparent; }
 .btn-ghost:hover { border-color: var(--white); transform: translateY(-1px); }
 
 /* NAV */
-.site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; }
+.site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; transition: background 0.25s ease, box-shadow 0.25s ease, padding 0.25s ease; }
+.site-nav.scrolled { background: var(--white); box-shadow: 0 2px 14px rgba(0,0,0,0.08); padding: 12px 24px; }
 .logo-mark { display: flex; align-items: center; }
-.logo-mark img { height: 32px; width: auto; display: block; }
+.logo-mark img { height: 34px; width: auto; display: block; }
+.logo-mark img.logo-on-light { display: none; }
+.site-nav.scrolled .logo-mark img.logo-on-dark { display: none; }
+.site-nav.scrolled .logo-mark img.logo-on-light { display: block; }
 .nav-links { display: flex; align-items: center; gap: 32px; }
-.nav-link { position: relative; font-weight: 600; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); padding-bottom: 6px; }
+.nav-link { position: relative; font-weight: 600; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); padding-bottom: 6px; transition: color 0.25s ease; }
+.site-nav.scrolled .nav-link { color: var(--text); }
 .nav-link::after { content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 2px; background: var(--teal); transition: width 0.2s ease; }
 .nav-link:hover::after { width: 100%; }
 .nav-cta { margin-left: 8px; }
-.hamburger { display: none; background: none; border: none; width: 32px; height: 32px; position: relative; z-index: 210; }
+.hamburger { display: none; background: none; border: none; width: 32px; height: 32px; position: relative; z-index: 210; cursor: pointer; }
 .hamburger span { display: block; position: absolute; left: 4px; right: 4px; height: 2px; background: var(--white); transition: all 0.25s ease; }
+.site-nav.scrolled .hamburger span, .hamburger.open span { background: var(--text); }
+.hamburger span:nth-child(1) { top: 9px; } .hamburger span:nth-child(2) { top: 16px; } .hamburger span:nth-child(3) { top: 23px; }
 .hamburger.open span:nth-child(1) { top: 16px; transform: rotate(45deg); }
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { top: 16px; transform: rotate(-45deg); }
-.hamburger span:nth-child(1) { top: 9px; } .hamburger span:nth-child(2) { top: 16px; } .hamburger span:nth-child(3) { top: 23px; }
 .mobile-menu { position: fixed; inset: 0; background: var(--white); z-index: 199; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 32px; transform: translateY(-100%); opacity: 0; visibility: hidden; transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease; }
 .mobile-menu.open { transform: translateY(0); opacity: 1; visibility: visible; }
 .mobile-menu a { font-size: 1rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text); }
@@ -88,17 +94,15 @@ button { font-family: var(--font-body); cursor: pointer; }
 footer { background: var(--charcoal-mid); padding: 32px 24px; text-align: center; }
 footer p { color: rgba(255,255,255,0.45); font-size: 0.75rem; }
 
-@media (max-width: 768px) {
-  .nav-links { display: none; }
-  .hamburger { display: block; }
-}
+@media (max-width: 768px) { .nav-links { display: none; } .hamburger { display: block; } }
 </style>
 </head>
 <body>
 
 <nav class="site-nav" id="siteNav">
   <a href="index.html" class="logo-mark" aria-label="Compositions home">
-    <img src="assets/compositions-offwhite-horizontal.png" alt="Compositions" />
+    <img src="assets/compositions-offwhite-horizontal.png" alt="Compositions" class="logo-on-dark" />
+    <img src="assets/compositions-accent-horizontal.png" alt="Compositions" class="logo-on-light" />
   </a>
   <div class="nav-links">
     <a href="work.html" class="nav-link">Work</a>
@@ -142,6 +146,8 @@ footer p { color: rgba(255,255,255,0.45); font-size: 0.75rem; }
 </footer>
 
 <script>
+const nav = document.getElementById('siteNav');
+window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); });
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 hamburger.addEventListener('click', () => {
@@ -152,12 +158,10 @@ hamburger.addEventListener('click', () => {
 mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   mobileMenu.classList.remove('open'); hamburger.classList.remove('open'); hamburger.setAttribute('aria-expanded', false);
 }));
-
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
 }, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
-
 </body>
 </html>
