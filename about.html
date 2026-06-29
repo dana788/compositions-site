@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index, follow">
-<title>About Dana Middleton | Compositions™</title>
-<meta name="description" content="Dana Middleton is a Structural Communications Advisor and the principal of Compositions™. 25 years of enterprise-scale pattern recognition at the intersection of organizational communications and the structural conditions that determine whether it's believed.">
+<title>About | Dana Middleton & Compositions™ | Structural Communications Advisory</title>
+<meta name="description" content="Most communications work asks whether the message is good. Dana Middleton asks whether the organization is positioned to be believed when it sends it — and what it costs when it cannot be.">
 <link rel="canonical" href="https://compositionsadvisory.com/about">
-<meta property="og:title" content="About Dana Middleton | Compositions™">
-<meta property="og:description" content="25 years of enterprise-scale pattern recognition at the intersection of organizational communications and the structural conditions that determine whether it's believed.">
+<meta property="og:title" content="About Compositions™ | Dana Middleton, Structural Communications Advisor">
+<meta property="og:description" content="The work grew from a question asked repeatedly over two decades inside enterprise-scale organizations: not how do we communicate this commitment better — but what structural conditions would need to be true for this commitment to be credible?">
 <meta property="og:image" content="https://compositions.netlify.app/assets/og-image.png">
 <meta property="og:url" content="https://compositionsadvisory.com/about">
 <meta property="og:type" content="website">
@@ -26,7 +26,7 @@
   --teal: #16768C; --teal-dark: #144E73; --teal-light: #A3D2D8; --gold: #D4AF37;
   --charcoal: #2C2C2C; --charcoal-mid: #383838; --off-white: #F8F8F8; --white: #FFFFFF;
   --text: #1A1A1A; --text-sec: #666666; --border: #E0E0E0;
-  --font-display: 'Oswald', sans-serif; --font-body: 'Poppins', sans-serif;
+  --font-display:'Oswald', sans-serif; --font-body:'Poppins', sans-serif;
   --max-width: 1100px; --section-pad: 96px 24px;
 }
 * { box-sizing: border-box; }
@@ -36,29 +36,25 @@ img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 h1, h2, h3 { font-family: var(--font-display); margin: 0; }
 p { margin: 0; }
-ul { margin: 0; padding: 0; list-style: none; }
+ul { margin: 0; padding: 0; }
 button { font-family: var(--font-body); cursor: pointer; }
 :focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; }
 .wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
 section { padding: var(--section-pad); }
 .bg-charcoal { background: var(--charcoal); }
-.bg-charcoal-mid { background: var(--charcoal-mid); }
 .bg-white { background: var(--white); }
 .bg-offwhite { background: var(--off-white); }
-
-/* EYEBROW */
+.bg-teal { background: var(--teal); }
 .eyebrow { display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal); margin-bottom: 20px; }
-.eyebrow::before { content: ""; display: inline-block; width: 40px; height: 2px; background: var(--teal); flex-shrink: 0; }
+.eyebrow::before { content: ""; display: inline-block; width: 40px; height: 2px; background: var(--teal); }
 .eyebrow.on-dark { color: var(--teal-light); }
 .eyebrow.on-dark::before { background: var(--teal-light); }
-
-/* BUTTONS */
-.btn { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.03em; padding: 14px 28px; border: 2px solid transparent; transition: background 0.2s ease, transform 0.2s ease, color 0.2s ease, border-color 0.2s ease; }
+.eyebrow.center { justify-content: center; }
+.btn { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.03em; padding: 14px 28px; border-radius: 0; border: 2px solid transparent; transition: background 0.2s ease, transform 0.2s ease, color 0.2s ease; }
 .btn-teal { background: var(--teal); color: var(--white); }
 .btn-teal:hover { background: var(--teal-dark); transform: translateY(-1px); }
-.btn-ghost { border-color: rgba(255,255,255,0.6); color: var(--white); background: transparent; }
-.btn-ghost:hover { border-color: var(--white); transform: translateY(-1px); }
-
+.btn-white { background: var(--white); color: var(--teal); }
+.btn-white:hover { background: var(--off-white); transform: translateY(-1px); }
 /* NAV */
 .site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; transition: background 0.25s ease, box-shadow 0.25s ease, padding 0.25s ease; }
 .site-nav.scrolled { background: var(--white); box-shadow: 0 2px 14px rgba(0,0,0,0.08); padding: 12px 24px; }
@@ -75,10 +71,9 @@ section { padding: var(--section-pad); }
 .nav-link.active { color: var(--teal); }
 .site-nav.scrolled .nav-link.active { color: var(--teal); }
 .nav-cta { margin-left: 8px; }
-.hamburger { display: none; background: none; border: none; width: 32px; height: 32px; position: relative; z-index: 210; }
+.hamburger { display: none; background: none; border: none; width: 32px; height: 32px; position: relative; z-index: 210; cursor: pointer; }
 .hamburger span { display: block; position: absolute; left: 4px; right: 4px; height: 2px; background: var(--white); transition: all 0.25s ease; }
-.site-nav.scrolled .hamburger span { background: var(--text); }
-.hamburger.open span { background: var(--text); }
+.site-nav.scrolled .hamburger span, .hamburger.open span { background: var(--text); }
 .hamburger span:nth-child(1) { top: 9px; } .hamburger span:nth-child(2) { top: 16px; } .hamburger span:nth-child(3) { top: 23px; }
 .hamburger.open span:nth-child(1) { top: 16px; transform: rotate(45deg); }
 .hamburger.open span:nth-child(2) { opacity: 0; }
@@ -86,323 +81,112 @@ section { padding: var(--section-pad); }
 .mobile-menu { position: fixed; inset: 0; background: var(--white); z-index: 199; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 32px; transform: translateY(-100%); opacity: 0; visibility: hidden; transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease; }
 .mobile-menu.open { transform: translateY(0); opacity: 1; visibility: visible; }
 .mobile-menu a { font-size: 1rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text); }
-
-/* REVEAL */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
-
-/* BACK TO TOP */
 .back-to-top { position: fixed; right: 24px; bottom: 24px; width: 44px; height: 44px; background: var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s, background 0.2s; cursor: pointer; border: none; z-index: 99; }
 .back-to-top.visible { opacity: 1; visibility: visible; }
 .back-to-top:hover { background: var(--teal-dark); }
 
-/* ═══════════════════════════════════════════════════════════
-   HERO — two-column split architecture
-═══════════════════════════════════════════════════════════ */
-.about-hero {
-  background: var(--charcoal);
-  padding: 140px 0 0;
-  overflow: hidden;
-  position: relative;
-}
+/* HERO */
+.page-hero { padding: 160px 24px 80px; }
+.page-hero h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); color: var(--white); line-height: 1.2; max-width: 760px; font-weight: 700; }
+.page-hero .hero-sub { font-family: var(--font-body); font-size: 1.15rem; color: rgba(255,255,255,0.7); margin-top: 20px; max-width: 640px; line-height: 1.7; }
 
-/* 4px teal left-edge rail — architectural accent */
-.about-hero::before {
-  content: '';
-  position: absolute;
-  left: 0; top: 0; bottom: 0;
-  width: 4px;
-  background: var(--teal);
-  pointer-events: none;
-}
+/* GOVERNING SENTENCE */
+.governing-block { text-align: center; padding: 88px 24px; }
+.governing-block blockquote { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.6rem, 3.5vw, 2.4rem); color: var(--white); margin: 0 auto; max-width: 860px; line-height: 1.25; font-style: normal; }
+.governing-block .attribution { font-family: var(--font-body); font-size: 0.9rem; color: rgba(255,255,255,0.65); margin-top: 28px; letter-spacing: 0.04em; }
 
-.about-hero-inner {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 24px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-  align-items: end;
-}
-
-/* Left: white declarative statement — contained, authoritative */
-.about-hero-left {
-  padding: 0 64px 80px 0;
-  border-right: 1px solid rgba(255,255,255,0.1);
-}
-
-.about-hero-left .eyebrow {
-  color: var(--teal-light);
-  margin-bottom: 28px;
-}
-.about-hero-left .eyebrow::before {
-  background: var(--teal-light);
-}
-
-.about-hero-statement {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: clamp(2.4rem, 3.8vw, 3.4rem);
-  color: var(--white);
-  line-height: 1.12;
-  letter-spacing: -0.01em;
-}
-
-/* Right: teal reframe — lower, quieter, consequence of left */
-.about-hero-right {
-  padding: 80px 0 80px 64px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.about-hero-reframe {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: clamp(1.4rem, 2.2vw, 2rem);
-  color: var(--teal);
-  line-height: 1.3;
-  letter-spacing: -0.005em;
-  max-width: 420px;
-}
-
-/* Short gold rule — creates pause before governing sentence */
-.about-hero-rule {
-  width: 36px;
-  height: 3px;
-  background: var(--gold);
-  margin: 28px 0 18px;
-}
-
-.about-hero-governing {
-  font-family: var(--font-body);
-  font-weight: 400;
-  font-size: 0.92rem;
-  color: rgba(255,255,255,0.45);
-  line-height: 1.75;
-  font-style: italic;
-  max-width: 380px;
-}
-
-/* 5px gradient band closes the hero */
-.about-hero-band {
-  height: 5px;
-  background: linear-gradient(90deg, var(--teal) 0%, var(--teal-dark) 100%);
-}
-
-/* ═══════════════════════════════════════════════════════════
-   ABOUT TEXT BLOCKS
-═══════════════════════════════════════════════════════════ */
+/* TEXT BLOCKS */
 .about-block { max-width: 760px; margin: 0 auto; }
-.about-block h2 { font-size: clamp(1.6rem, 3vw, 2rem); color: var(--charcoal); line-height: 1.3; }
-.about-block .body-copy { margin-top: 24px; color: #555; line-height: 1.85; font-size: 0.97rem; }
-.about-block .body-copy + .body-copy { margin-top: 16px; }
+.about-block h2 { font-size: 2rem; color: var(--charcoal); line-height: 1.3; }
+.about-block .body-copy { margin-top: 24px; color: #555; line-height: 1.8; }
+.about-block .body-copy + .body-copy { margin-top: 18px; }
+.programs-verdict { font-weight: 600; color: var(--teal) !important; font-size: 1.05rem; margin-top: 20px !important; }
 
-.why-block { max-width: 760px; margin: 0 auto; }
-.why-block h2 { font-size: clamp(1.6rem, 3vw, 2rem); color: var(--charcoal); line-height: 1.3; }
-.why-block .body-copy { margin-top: 24px; color: #555; line-height: 1.85; font-size: 0.97rem; }
-.why-block .body-copy + .body-copy { margin-top: 16px; }
-.why-block blockquote {
-  margin: 36px 0 0;
-  padding: 24px 28px;
-  border-left: 4px solid var(--teal);
-  background: var(--off-white);
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: var(--charcoal);
-  font-style: italic;
-}
+/* TWO-COL PRACTICE */
+.practice-grid { display: grid; grid-template-columns: 2fr 3fr; gap: 64px; align-items: start; }
+.practice-grid h2 { font-size: 2rem; color: var(--charcoal); line-height: 1.3; }
+.practice-grid .body-copy { color: #555; line-height: 1.8; }
+.practice-grid .body-copy + .body-copy { margin-top: 16px; }
 
-/* ═══════════════════════════════════════════════════════════
-   DISCIPLINES
-═══════════════════════════════════════════════════════════ */
-.disciplines-head { max-width: 680px; margin-bottom: 16px; }
-.disciplines-head h2 { font-size: clamp(1.6rem, 3vw, 2rem); color: var(--charcoal); }
-.disciplines-intro { max-width: 680px; color: #555; line-height: 1.85; margin-bottom: 48px; font-size: 0.97rem; }
-.disciplines-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
-.discipline-card {
-  background: var(--white); border: 1px solid var(--border);
-  padding: 28px; border-top: 3px solid var(--teal); border-left: 3px solid transparent;
-  transition: box-shadow 0.2s ease, border-left-color 0.2s ease;
-}
-.discipline-card:hover { box-shadow: 0 10px 26px rgba(0,0,0,0.07); border-left-color: var(--teal); }
-.discipline-card h3 { font-family: var(--font-body); font-weight: 600; font-size: 0.88rem; letter-spacing: 0.05em; color: var(--charcoal); margin-bottom: 12px; text-transform: uppercase; }
-.discipline-card p { color: #555; line-height: 1.75; font-size: 0.91rem; }
+/* THE WORK BLOCK */
+.work-block { max-width: 720px; margin: 0 auto; text-align: center; }
+.work-block h2 { font-size: 2.2rem; color: var(--charcoal); line-height: 1.2; }
+.work-block .sub { font-size: 1.1rem; color: var(--teal); margin: 20px 0; font-weight: 600; }
+.work-block .body-copy { color: #555; line-height: 1.8; }
+.work-block .body-copy + .body-copy { margin-top: 16px; }
+.work-block .thesis-lines { margin: 28px 0; }
+.work-block .thesis-line { font-weight: 600; font-size: 1rem; color: var(--charcoal); padding: 10px 0; border-bottom: 1px solid var(--border); }
+.work-block .thesis-line:first-child { border-top: 1px solid var(--border); }
 
-/* ═══════════════════════════════════════════════════════════
-   DANA BIO — redesigned sidebar
-═══════════════════════════════════════════════════════════ */
-.bio-grid {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 56px;
-  align-items: start;
-}
+/* WHY COMPOSITIONS */
+.why-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 64px; align-items: start; }
+.why-grid .body-copy { color: #555; line-height: 1.8; }
+.why-grid .body-copy + .body-copy { margin-top: 16px; }
+.why-second { background: var(--off-white); border-left: 3px solid var(--teal); padding: 28px; }
+.why-second .label { font-weight: 600; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); margin-bottom: 16px; display: block; }
+.why-second p { color: #555; line-height: 1.8; font-size: 0.95rem; }
+.why-second p + p { margin-top: 14px; }
+.governing-quote { margin-top: 32px; padding: 24px 28px; border-left: 4px solid var(--teal); background: var(--off-white); font-size: 1.05rem; line-height: 1.8; color: var(--charcoal); font-style: italic; }
 
-.bio-label {
-  font-weight: 600;
-  font-size: 0.72rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--teal);
-  margin-bottom: 24px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.bio-label::before {
-  content: '';
-  display: inline-block;
-  width: 32px;
-  height: 2px;
-  background: var(--teal);
-  flex-shrink: 0;
-}
+/* DISCIPLINES */
+.disciplines-head { max-width: 720px; }
+.disciplines-head h2 { font-size: 2rem; color: var(--white); }
+.disciplines-intro { max-width: 720px; color: rgba(255,255,255,0.75); line-height: 1.8; margin-top: 16px; margin-bottom: 48px; }
+.disciplines-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.discipline-card { background: rgba(255,255,255,0.05); border-top: 1px solid var(--teal-light); padding: 24px; }
+.discipline-card .num { font-family: var(--font-display); font-weight: 700; font-size: 1.8rem; color: var(--teal); margin-bottom: 8px; }
+.discipline-card h3 { font-family: var(--font-body); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.06em; color: var(--white); margin-bottom: 10px; text-transform: uppercase; }
+.discipline-card p { color: rgba(255,255,255,0.75); line-height: 1.7; font-size: 0.88rem; }
 
-.bio-grid .body-copy { color: #555; line-height: 1.85; font-size: 0.97rem; }
+/* BIO */
+.bio-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 56px; align-items: start; }
+.bio-label { font-weight: 600; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--teal); margin-bottom: 24px; }
+.bio-grid .body-copy { color: #555; line-height: 1.8; }
 .bio-grid .body-copy + .body-copy { margin-top: 16px; }
+.bio-contrast { margin: 28px 0; }
+.bio-contrast .not-line { color: #555; line-height: 1.8; padding: 6px 0; }
+.bio-contrast .but-line { color: var(--charcoal); font-weight: 600; line-height: 1.8; padding: 6px 0 6px 16px; border-left: 3px solid var(--teal); margin-top: 4px; }
+.credential-strip { display: flex; flex-direction: column; gap: 0; }
+.credential-item { border-top: 1px solid var(--border); padding: 18px 0; }
+.credential-item:last-child { border-bottom: 1px solid var(--border); }
+.credential-item .top { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; color: var(--charcoal); }
+.credential-item .mid { font-size: 0.88rem; color: var(--teal); margin-top: 4px; }
+.credential-item .bottom { font-size: 0.8rem; color: var(--text-sec); margin-top: 2px; }
 
-/* Sidebar — three tiers */
-.about-sidebar { display: flex; flex-direction: column; gap: 0; }
+/* COMPETENCIES */
+.competency-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; }
+.competency-tag { font-family: var(--font-body); font-weight: 600; font-size: 0.82rem; color: var(--charcoal); border: 1px solid var(--charcoal); padding: 8px 16px; letter-spacing: 0.04em; transition: border-color 0.2s, color 0.2s; }
+.competency-tag:hover { border-color: var(--teal); color: var(--teal); }
 
-.sidebar-tier {
-  padding: 24px 0;
-  border-bottom: 1px solid var(--border);
-}
-.sidebar-tier:first-child { padding-top: 0; }
-.sidebar-tier:last-child { border-bottom: none; padding-bottom: 0; }
+/* CTA BLOCK */
+.cta-block { text-align: center; max-width: 640px; margin: 0 auto; }
+.cta-block h2 { font-size: 2.2rem; color: var(--white); line-height: 1.3; }
+.cta-block .body-copy { color: rgba(255,255,255,0.75); margin-top: 16px; line-height: 1.8; }
+.cta-block .btn { margin-top: 32px; }
 
-.sidebar-tier-label {
-  font-family: var(--font-body);
-  font-size: 0.65rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--teal);
-  margin-bottom: 16px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.sidebar-tier-label::before {
-  content: '';
-  display: inline-block;
-  width: 20px;
-  height: 2px;
-  background: var(--teal);
-  flex-shrink: 0;
-}
-
-/* Degree items */
-.sidebar-degrees { display: flex; flex-direction: column; gap: 14px; }
-.sidebar-degree-name {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 0.95rem;
-  color: var(--charcoal);
-  line-height: 1.2;
-  letter-spacing: 0.01em;
-}
-.sidebar-degree-field {
-  font-size: 0.78rem;
-  font-weight: 500;
-  color: var(--teal);
-  margin-top: 3px;
-}
-
-/* Competency items — teal left-border tiles */
-.sidebar-competencies { display: flex; flex-direction: column; gap: 6px; }
-.sidebar-competency {
-  font-size: 0.8rem;
-  font-weight: 400;
-  color: var(--charcoal);
-  line-height: 1.5;
-  padding: 7px 12px;
-  background: var(--white);
-  border-left: 3px solid var(--teal);
-}
-
-/* Credential items */
-.sidebar-credentials { display: flex; flex-direction: column; gap: 5px; }
-.sidebar-credential {
-  font-size: 0.77rem;
-  font-weight: 400;
-  color: #555;
-  line-height: 1.5;
-  padding-left: 12px;
-  position: relative;
-}
-.sidebar-credential::before {
-  content: '';
-  position: absolute;
-  left: 0; top: 7px;
-  width: 4px; height: 4px;
-  background: var(--teal);
-  border-radius: 50%;
-}
-
-/* ═══════════════════════════════════════════════════════════
-   CLOSING CTA — charcoal (not teal) per brand authority palette
-═══════════════════════════════════════════════════════════ */
-.about-cta-section {
-  background: var(--charcoal);
-  padding: var(--section-pad);
-}
-
-.about-cta-inner {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-/* Left-aligned per brand system; wide container prevents orphan */
-.about-cta-quote {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-  color: var(--white);
-  line-height: 1.2;
-  max-width: 820px;
-  text-align: left;
-  margin-bottom: 36px;
-}
-
-/* ═══════════════════════════════════════════════════════════
-   FOOTER
-═══════════════════════════════════════════════════════════ */
+/* FOOTER */
 footer { background: var(--charcoal); padding: 64px 24px 32px; }
 .footer-inner { max-width: var(--max-width); margin: 0 auto; }
 .footer-logo { margin-bottom: 40px; }
 .footer-logo img { height: 26px; width: auto; }
-.footer-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,0.1); }
-.footer-cols h4 { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 16px; font-family: var(--font-body); font-weight: 600; }
+.footer-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,0.12); }
+.footer-cols h4 { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 16px; font-family: var(--font-body); font-weight: 600; }
 .footer-cols ul { display: flex; flex-direction: column; gap: 10px; }
-.footer-cols a { color: rgba(255,255,255,0.45); font-size: 0.88rem; transition: color 0.2s ease; }
+.footer-cols a { color: rgba(255,255,255,0.5); font-size: 0.9rem; transition: color 0.2s ease; }
 .footer-cols a:hover { color: var(--white); }
-.footer-bottom { padding-top: 24px; color: rgba(255,255,255,0.4); font-size: 0.75rem; }
+.footer-bottom { padding-top: 24px; color: rgba(255,255,255,0.5); font-size: 0.75rem; }
 
-/* ═══════════════════════════════════════════════════════════
-   RESPONSIVE
-═══════════════════════════════════════════════════════════ */
 @media (max-width: 900px) {
-  .about-hero-inner { grid-template-columns: 1fr; }
-  .about-hero-left {
-    padding: 0 0 40px 0;
-    border-right: none;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-  }
-  .about-hero-right { padding: 40px 0 64px 0; }
-  .disciplines-grid { grid-template-columns: 1fr; }
-  .bio-grid { grid-template-columns: 1fr; }
-  .footer-cols { grid-template-columns: 1fr; }
+  .practice-grid, .why-grid, .bio-grid, .disciplines-grid, .footer-cols { grid-template-columns: 1fr; }
 }
 @media (max-width: 768px) {
   :root { --section-pad: 64px 20px; }
   .nav-links { display: none; }
   .hamburger { display: block; }
-  .about-hero { padding-top: 110px; }
+  .governing-block { padding: 64px 24px; }
 }
 </style>
 </head>
@@ -419,9 +203,7 @@ footer { background: var(--charcoal); padding: 64px 24px 32px; }
     <a href="insights.html" class="nav-link">Insights</a>
     <a href="index.html#inquire" class="btn btn-teal nav-cta">Inquire</a>
   </div>
-  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-    <span></span><span></span><span></span>
-  </button>
+  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
@@ -433,189 +215,194 @@ footer { background: var(--charcoal); padding: 64px 24px 32px; }
 
 <main>
 
-<!-- ═══════════════════════════════════════════════════════════
-     HERO — two-column split
-═══════════════════════════════════════════════════════════ -->
-<div class="about-hero">
-  <div class="about-hero-inner">
-
-    <div class="about-hero-left reveal">
-      <p class="eyebrow on-dark">About Compositions&#8482;</p>
-      <h1 class="about-hero-statement">The programs<br>are well-designed.</h1>
-    </div>
-
-    <div class="about-hero-right reveal">
-      <p class="about-hero-reframe">The investment is not producing what leaders expected. The source is almost always structural.</p>
-      <div class="about-hero-rule"></div>
-      <p class="about-hero-governing">"Most communications work is about the quality of the message. My work is about whether people can believe it."</p>
-    </div>
-
-  </div>
-  <div class="about-hero-band"></div>
-</div>
-
-<!-- ═══════════════════════════════════════════════════════════
-     THE PRACTICE
-═══════════════════════════════════════════════════════════ -->
-<section class="bg-white">
-  <div class="wrap about-block reveal">
-    <p class="eyebrow">The Practice</p>
-    <h2>Compositions&#8482; exists because organizations are investing more in programs and commitments than the structural conditions beneath them can support.</h2>
-    <p class="body-copy">Every day, HR directors invest in employer brand and people commitments, communications leaders build internal campaigns, change managers craft transformation narratives, and nonprofit executives write grant narratives — with genuine intent and genuine craft.</p>
-    <p class="body-copy">But the pattern is consistent: sophisticated audiences do not evaluate communications. They measure it against operating evidence they already hold. They know what gets rewarded. They have seen what happens when commitments meet budget pressure. They have noticed the distance between what leadership says and what the operating decisions confirm.</p>
-    <p class="body-copy">When that distance is small, communications produces belief. When it is large, no investment in message quality closes it.</p>
-    <p class="body-copy">Compositions&#8482; analyzes the structural conditions beneath organizational communications — governance, incentives, decision rights, manager routines, cultural norms, and evidence systems — before that distance becomes damage. It designs the governance infrastructure that makes coherence between what organizations say, what they fund, and how they operate self-sustaining.</p>
+<!-- HERO -->
+<section class="page-hero bg-charcoal">
+  <div class="wrap reveal">
+    <p class="eyebrow on-dark">About Compositions&trade;</p>
+    <h1>The initiatives have been well-designed.<br>The communications are clear and compelling.</h1>
+    <p class="hero-sub">When the investment is not producing what leaders expected, the source is almost always structural.</p>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════
-     THE WORK
-═══════════════════════════════════════════════════════════ -->
+<!-- GOVERNING SENTENCE -->
+<section class="bg-teal">
+  <div class="governing-block reveal">
+    <blockquote>"Most communications work is about the quality of the message.<br>My work is about whether people can believe it — and what it costs when they cannot."</blockquote>
+    <p class="attribution">— Dana Middleton, Structural Communications Advisor &amp; Principal, Compositions&trade;</p>
+  </div>
+</section>
+
+<!-- THE PRACTICE -->
+<section class="bg-white">
+  <div class="wrap practice-grid reveal">
+    <div>
+      <p class="eyebrow">The Practice</p>
+      <h2>Organizations are investing heavily in commitments their structures are not always built to sustain.</h2>
+    </div>
+    <div>
+      <p class="body-copy">They invest in culture initiatives, leadership development, employer brand campaigns, internal communications platforms, change management efforts, wellbeing programs, DEI strategies, ESG reporting, impact narratives, and transformation programs. These investments are extensive. The intentions behind them are typically genuine. The initiatives have been well-designed. The communications are clear and compelling.</p>
+      <p class="body-copy">Yet most still do not produce the adoption, credibility, or measurable return leaders expected.</p>
+      <p class="body-copy">The instinct is to create another program — or most often, improve the message. Better language. Stronger storytelling. More leadership visibility. More investment in the expression layer. It's not that the instinct is wrong. It's that it is almost always incomplete.</p>
+      <p class="body-copy">Every day, HR directors invest in employer brand and people commitments, communications leaders build internal campaigns, change managers craft transformation narratives, and nonprofit executives write grant narratives — with clear intent and rigorous craft. Most of those commitments are structured as programs and initiatives: well-designed, properly resourced, and launched with organizational support.</p>
+      <p class="body-copy programs-verdict">But programs cannot solve governance conditions.</p>
+      <p class="body-copy">Those investments frequently run ahead of the structural conditions that would make them credible — and without the governance infrastructure to hold them, they revert.</p>
+      <p class="body-copy">Compositions&trade; analyzes the structural conditions beneath organizational communications — governance, incentives, decision rights, manager routines, cultural norms, and evidence systems — before the distance between what organizations say and how they operate becomes damage. It designs the governance infrastructure that makes coherence between what organizations say, what they fund, and how they operate self-sustaining.</p>
+    </div>
+  </div>
+</section>
+
+<!-- THE WORK -->
 <section class="bg-offwhite">
-  <div class="wrap about-block reveal">
-    <p class="eyebrow">The Work</p>
-    <h2>Compositions&#8482; is not a communications agency. Not a culture consultancy. Not an HR advisory firm.</h2>
-    <p class="body-copy">It is a structural advisory practice for organizations where investments in culture, change, brand, and people commitments are not producing the adoption, credibility, or measurable return leaders expected.</p>
-    <p class="body-copy">The issue is rarely the quality of the initiative or the clarity of the message. It is the structural gap between what the organization is funding, what it is communicating, and what its operating conditions can actually sustain.</p>
-    <p class="body-copy">The entry point is the communications problem. The work is structural. The outcome is credibility that compounds.</p>
+  <div class="wrap work-block reveal">
+    <p class="eyebrow center">The Work</p>
+    <h2>Not a communications agency. Not a culture consultancy. Not an HR advisory firm.</h2>
+    <p class="sub">A structural advisory practice for organizations where investments in culture, change, brand, and people commitments are not producing the adoption, credibility, or measurable return leaders expected.</p>
+    <p class="body-copy">The issue is not the design of the initiative or the clarity of the communications. It is the structural gap between what the organization says it commits to and what its operating conditions can actually sustain.</p>
+    <div class="thesis-lines">
+      <div class="thesis-line">The entry point is the communications problem.</div>
+      <div class="thesis-line">The work is structural.</div>
+      <div class="thesis-line">The outcome is credibility that compounds.</div>
+    </div>
     <p class="body-copy">The deliverables are written structural reads and governance blueprints — designed for implementation by the organization's existing team, not to create dependency on continued outside support.</p>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════
-     WHY COMPOSITIONS
-═══════════════════════════════════════════════════════════ -->
+<!-- WHY COMPOSITIONS -->
 <section class="bg-white">
-  <div class="wrap why-block reveal">
-    <p class="eyebrow">Why Compositions&#8482;</p>
-    <h2>The name holds two meanings. Both describe the same problem.</h2>
-    <p class="body-copy">In music and design, a composition is not a collection of elements — it is the intentional arrangement of elements into a unified whole. The quality of the composition is not only determined by the quality of the individual pieces. It is determined by how they work together.</p>
-    <p class="body-copy">Organizations are compositions. They are arrangements of commitments, structures, incentives, communications, governance, and behavior. When those elements are arranged coherently — when the culture narrative aligns with what the incentive structure rewards, when the employer brand describes an experience the operating conditions produce, when change communications is grounded in the structural credibility required to make it believed — the organization is well-composed. The whole becomes credible.</p>
-    <p class="body-copy">When the elements contradict each other, the organization fragments. The individual pieces may be strong. The arrangement is producing incoherence.</p>
-    <p class="body-copy">The second meaning: composition is where structure meets communications — the relationship between what the organization is built to deliver and what it says it delivers. Reading that relationship, identifying where it has separated, and designing the conditions that make coherence self-sustaining is the work.</p>
-    <blockquote>Most communications work is about the quality of the message. My work is about whether people can believe it.</blockquote>
+  <div class="wrap why-grid reveal">
+    <div>
+      <p class="eyebrow">Why Compositions&trade;</p>
+      <h2 style="font-size:1.8rem;color:var(--charcoal);line-height:1.3;margin-bottom:24px;">The name holds two meanings. Both describe the same problem.</h2>
+      <p class="body-copy">In music and design, a composition is not a collection of elements — it is the intentional arrangement of elements into a unified whole. The quality of the composition is not only determined by the quality of the individual pieces. It is determined by how they work together.</p>
+      <p class="body-copy">Organizations are compositions. They are arrangements of commitments, structures, incentives, communications, governance, and behavior. When those elements are arranged coherently — when the culture narrative aligns with what the incentive structure rewards, when the employer brand describes an experience the operating conditions produce, when change communications is grounded in the structural credibility required to make it believed — the organization is well-composed. The whole becomes credible.</p>
+      <p class="body-copy">When the elements contradict each other, the organization fragments. The individual pieces may be strong. The arrangement is producing incoherence.</p>
+      <blockquote class="governing-quote">Most communications work is about the quality of the message. My work is about whether people can believe it — and what it costs when they cannot.</blockquote>
+    </div>
+    <div>
+      <div class="why-second">
+        <span class="label">The Second Meaning</span>
+        <p>Composition is where structure meets communications — the relationship between what the organization is built to deliver and what it says it delivers.</p>
+        <p>Reading that relationship, identifying where it has separated from what the organization says and how it operates, and designing the conditions that make coherence self-sustaining is the work.</p>
+        <p>The entry point is visible: the communications problem — the employer brand that isn't converting, the change initiative that isn't holding, the internal campaign that isn't moving anyone. The structural source is beneath it. That is where the work goes.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════
-     THE FOUNDATION
-═══════════════════════════════════════════════════════════ -->
-<section class="bg-white" style="border-top: 1px solid var(--border);">
+<!-- THE FOUNDATION -->
+<section class="bg-charcoal">
   <div class="wrap">
     <div class="disciplines-head reveal">
-      <p class="eyebrow">The Foundation</p>
-      <h2>The lens is built from seven disciplines most advisors treat as separate domains.</h2>
+      <p class="eyebrow on-dark">The Foundation</p>
+      <h2>Seven lenses. One analytical capacity no single discipline can match.</h2>
     </div>
-    <p class="disciplines-intro reveal">Each discipline sees a different dimension of the same structural problem. Together, they produce an analytical capacity no single discipline can match — and that no other practitioner in the employer brand, internal communications, and change communications space currently holds.</p>
+    <p class="disciplines-intro reveal">Most practitioners in the employer brand, internal communications, and change communications space hold one or two of these lenses. The work of Compositions&trade; is built from all seven simultaneously — which is why the structural read it produces is different in kind, not just in degree, from what adjacent advisory and consulting practices can offer.</p>
     <div class="disciplines-grid reveal">
       <div class="discipline-card">
+        <div class="num">01</div>
         <h3>Strategic Communications at Enterprise Scale</h3>
-        <p>Reads the gap between what the organization says, what the operating architecture can support, and what stakeholders actually experience. Operates across governance, strategic, execution, and capability transfer layers simultaneously.</p>
+        <p>Reads the gap between what the organization says, what the operating architecture can support, and what stakeholders actually experience. The lens that makes every other discipline applicable — keeping structural analysis grounded in what organizations are actually doing, not only in what the research says about them.</p>
       </div>
       <div class="discipline-card">
+        <div class="num">02</div>
         <h3>Brand Strategy</h3>
-        <p>Reads whether the brand promise — including the employer brand — is structurally real, or performing a reality the organization cannot currently sustain.</p>
+        <p>Reads whether the brand promise — including the employer brand — is structurally real, or performing a reality the organization cannot currently sustain. This is how the Glassdoor gap is read not as a reputation problem but as a structural credibility problem with a specific, closeable source.</p>
       </div>
       <div class="discipline-card">
+        <div class="num">03</div>
         <h3>Organizational Development at Enterprise Scale</h3>
-        <p>Reads the conditions shaping behavior at scale: decision rights, accountability, capability, role clarity, trust, and adaptation. Grounded in director-level roles across a 550-person global agency and a 1,800-employee regional health system.</p>
+        <p>Reads the conditions shaping behavior at scale: decision rights, accountability, capability, role clarity, trust, and adaptation. Grounded in director-level roles at enterprise-scale organizations — not theoretical, operational.</p>
       </div>
       <div class="discipline-card">
+        <div class="num">04</div>
         <h3>Culture Integration at Enterprise Scale</h3>
-        <p>Reads how operating decisions, incentives, leadership behavior, and norms either reinforce or quietly defeat organizational commitments — and what that means for whether communications about culture will be believed.</p>
+        <p>Reads how operating decisions, incentives, leadership behavior, and norms either reinforce or quietly defeat organizational commitments — and what that means for whether communications about culture will be believed. Culture as a produced condition of governance, not a chosen attribute.</p>
       </div>
       <div class="discipline-card">
+        <div class="num">05</div>
         <h3>Impact &amp; Outcomes Measurement</h3>
-        <p>Reads whether investments in programs and commitments are producing defensible outcomes — connecting investment, evidence, and stakeholder value in ways that make structural arguments credible to funders, boards, and senior leadership.</p>
+        <p>Reads whether the portfolio of commitments organizations are already funding is producing defensible outcomes. Connects investment, evidence, and stakeholder value in the capital language that makes structural arguments boardroom-legible — to funders, boards, and CFOs who want the number before they approve the case.</p>
       </div>
       <div class="discipline-card">
+        <div class="num">06</div>
         <h3>Social Epidemiology &amp; Structural Determinant Thinking</h3>
-        <p>Grounds the work in the principle that structural conditions, not intentions alone, shape outcomes across populations.</p>
+        <p>Grounds the work in the principle that structural conditions, not intentions alone, shape outcomes across populations. The same theoretical framework that explains health disparities across communities explains why organizational commitments revert: the structure, not the program, determines the outcome.</p>
       </div>
       <div class="discipline-card" style="grid-column: 1 / -1;">
+        <div class="num">07</div>
         <h3>Instructional Design &amp; Permanent Capability Transfer</h3>
-        <p>Ensures the work transfers into permanent internal capability — so organizations don't require ongoing outside interpretation to sustain the governance over time.</p>
+        <p>Ensures the work transfers into permanent internal capability. The governance architecture is designed to be owned and maintained by the organization — not to require ongoing outside interpretation to sustain it. The engagement ends. The coherence continues.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════
-     DANA BIO — redesigned sidebar
-═══════════════════════════════════════════════════════════ -->
+<!-- DANA MIDDLETON -->
 <section class="bg-offwhite">
   <div class="wrap bio-grid reveal">
-
-    <!-- Bio copy (unchanged) -->
     <div>
       <p class="bio-label">Dana Middleton | Structural Communications Advisor</p>
-      <p class="body-copy">Dana Middleton is a Structural Communications Advisor and the principal of Compositions&#8482;, a Kansas City-based advisory practice. She works with mid-market organizations and nonprofits on a problem the field rarely names directly: the distance between what an organization is funding, what it is communicating, and what its operating conditions can credibly sustain.</p>
-      <p class="body-copy">The work grew from a question asked repeatedly over more than two decades of practice inside enterprise-scale organizations. Not "how do we communicate this commitment better?" but "what structural conditions would need to be true for this commitment to be credible?" The answer kept pointing to the same place: governance, incentives, decision rights, and operating behavior — the conditions beneath the communications layer, not the communications itself.</p>
-      <p class="body-copy">With over two decades of experience across strategic communications, brand strategy, and enterprise-scale culture integration, Dana brings the pattern recognition of a practitioner who has been inside the gap, built the infrastructure to close it, and developed the structural framework to name it precisely.</p>
-      <p class="body-copy">She holds a Master's in Instructional Design, and her doctoral research examines coherence as a structural determinant of stakeholder well-being and enterprise health in organizations — the same question the practice answers in every engagement.</p>
+      <div class="bio-contrast">
+        <p class="not-line">The question asked most often inside large organizations isn't:</p>
+        <p class="not-line" style="padding-left:16px;font-style:italic;">"How do we communicate this commitment better?"</p>
+        <p class="but-line">It is: "What structural conditions would need to be true for this commitment to be credible?"</p>
+      </div>
+      <p class="body-copy">That question was asked repeatedly over more than two decades of practice inside enterprise-scale organizations — building the communications infrastructure required to make people and culture commitments structurally real, across complex multi-office environments, and navigating the specific gap between what organizational leadership intends to commit to and what the governance, incentive, and operating architecture can actually sustain.</p>
+      <p class="body-copy">The answer kept pointing to the same place: governance, incentives, decision rights, and operating behavior — the conditions beneath the communications layer, not the communications itself. That is where Compositions&trade; operates.</p>
+      <p class="body-copy">Dana Middleton is a Structural Communications Advisor and the principal of Compositions&trade;, a Kansas City-based advisory practice. She works with mid-market organizations and nonprofits on a problem the field rarely names directly: the distance between what an organization is funding, what it is communicating, and what its operating conditions can credibly sustain.</p>
+      <p class="body-copy">With over two decades of experience across strategic communications, brand strategy, and enterprise-scale culture integration — and doctoral research examining coherence as a structural determinant of stakeholder wellbeing and enterprise health in organizations — she brings the pattern recognition of a practitioner who has been inside the gap, built the infrastructure to close it, and developed the structural framework to name it precisely.</p>
+      <p class="body-copy" style="font-weight:500;color:var(--charcoal);">The practitioner who can most clearly see the structural source of the credibility gap is rarely the person with the authority to close it alone. Dana has spent her career in that position — and building the framework that changes what's possible from it.</p>
     </div>
-
-    <!-- Sidebar — three tiers: Education / Core Competencies / Credentials -->
-    <div class="about-sidebar">
-
-      <div class="sidebar-tier">
-        <p class="sidebar-tier-label">Education</p>
-        <div class="sidebar-degrees">
-          <div>
-            <div class="sidebar-degree-name">Doctor of Public Health</div>
-            <div class="sidebar-degree-field">Social Epidemiology · Candidate</div>
-          </div>
-          <div>
-            <div class="sidebar-degree-name">Master of Liberal Arts</div>
-            <div class="sidebar-degree-field">Instructional Design</div>
-          </div>
-          <div>
-            <div class="sidebar-degree-name">Bachelor of Science</div>
-            <div class="sidebar-degree-field">Public Health Education</div>
-          </div>
+    <div>
+      <div class="credential-strip">
+        <div class="credential-item">
+          <div class="top">DrPH Candidate</div>
+          <div class="mid">Social Epidemiology</div>
+        </div>
+        <div class="credential-item">
+          <div class="top">Master of Liberal Arts</div>
+          <div class="mid">Instructional Design</div>
+        </div>
+        <div class="credential-item">
+          <div class="top">Bachelor of Science</div>
+          <div class="mid">Public Health Education</div>
+        </div>
+        <div class="credential-item">
+          <div class="top">Professional Certified Marketer</div>
+          <div class="mid">PCM · American Marketing Association</div>
+        </div>
+        <div class="credential-item">
+          <div class="top">Level C Brand Strategist</div>
+        </div>
+        <div class="credential-item">
+          <div class="top">Health Care Marketing &amp; Communications</div>
+          <div class="mid">SHSMD</div>
+        </div>
+        <div class="credential-item">
+          <div class="top">Social Impact &amp; Sustainability</div>
         </div>
       </div>
-
-      <div class="sidebar-tier">
-        <p class="sidebar-tier-label">Core Competencies</p>
-        <div class="sidebar-competencies">
-          <div class="sidebar-competency">Structural Communications Analysis</div>
-          <div class="sidebar-competency">Employer Brand &amp; EVP Architecture</div>
-          <div class="sidebar-competency">Change &amp; Strategic Communications</div>
-          <div class="sidebar-competency">Culture, Values &amp; ESG Governance</div>
-          <div class="sidebar-competency">Governance &amp; Capability Transfer</div>
-          <div class="sidebar-competency">Executive Communications &amp; Leadership Voice</div>
-        </div>
+      <p style="margin-top:20px;font-size:0.82rem;color:var(--text-sec);line-height:1.6;">Full professional history available on <a href="https://www.linkedin.com/in/danamiddletonkc/" target="_blank" rel="noopener" style="color:var(--teal);font-weight:600;">LinkedIn &rarr;</a></p>
+      <div class="competency-tags" style="margin-top:28px;">
+        <span class="competency-tag">Structural Communications Analysis</span>
+        <span class="competency-tag">Employer Brand &amp; EVP Architecture</span>
+        <span class="competency-tag">Change &amp; Strategic Communications</span>
+        <span class="competency-tag">Culture, Values &amp; ESG Governance</span>
+        <span class="competency-tag">Governance &amp; Capability Transfer</span>
+        <span class="competency-tag">Executive Communications &amp; Leadership Voice</span>
       </div>
-
-      <div class="sidebar-tier">
-        <p class="sidebar-tier-label">Credentials</p>
-        <div class="sidebar-credentials">
-          <div class="sidebar-credential">Professional Certified Marketer (PCM) · AMA</div>
-          <div class="sidebar-credential">Level C Brand Strategist</div>
-          <div class="sidebar-credential">Health Care Marketing &amp; Communications · SHSMD</div>
-          <div class="sidebar-credential">Social Impact &amp; Sustainability · Univ. of Colorado</div>
-          <div class="sidebar-credential">Change Management · Prosci Methodology</div>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════
-     CLOSING CTA — charcoal, left-aligned, wide quote
-═══════════════════════════════════════════════════════════ -->
-<div class="about-cta-section">
-  <div class="about-cta-inner reveal">
-    <h2 class="about-cta-quote">
-      Organizations don't need more messaging.<br>
-      They need the structural conditions<br>
-      that make messaging believable.
-    </h2>
-    <a href="index.html#inquire" class="btn btn-teal">Inquire →</a>
+<!-- CLOSING CTA -->
+<section class="bg-teal">
+  <div class="wrap cta-block reveal">
+    <h2>Organizations don't need more messaging.<br>Nor do they need another initiative.<br>They need the structural conditions that make messaging believable.</h2>
+    <p class="body-copy">When the issue is structural, the right next step is not better communications. It is a structural read — before more budget is committed to messaging the structural conditions cannot confirm.</p>
+    <a href="index.html#inquire" class="btn btn-white">Inquire &rarr;</a>
   </div>
-</div>
+</section>
 
 </main>
 
@@ -631,13 +418,11 @@ footer { background: var(--charcoal); padding: 64px 24px 32px; }
       <div><h4>Connect</h4><ul><li><a href="https://www.linkedin.com/in/danamiddletonkc/" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
       <div><h4>Legal</h4><ul><li><a href="privacy.html">Privacy</a></li><li><a href="disclaimer.html">Disclaimer</a></li><li><a href="terms.html">Terms</a></li></ul></div>
     </div>
-    <div class="footer-bottom">Compositions&#8482; | Coherent by design. Credible over time. | &copy; 2026 Compositions&#8482;. All rights reserved.</div>
+    <div class="footer-bottom">Compositions&trade; | Coherent by design. Credible over time. | &copy; 2026 Compositions&trade;. All rights reserved.</div>
   </div>
 </footer>
 
-<button class="back-to-top" id="backToTop" aria-label="Back to top">
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-</button>
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
 
 <script>
 const nav = document.getElementById('siteNav');
@@ -647,7 +432,6 @@ window.addEventListener('scroll', () => {
   backToTop.classList.toggle('visible', window.scrollY > 400);
 });
 backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 hamburger.addEventListener('click', () => {
@@ -656,18 +440,12 @@ hamburger.addEventListener('click', () => {
   hamburger.setAttribute('aria-expanded', open);
 });
 mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-  mobileMenu.classList.remove('open');
-  hamburger.classList.remove('open');
-  hamburger.setAttribute('aria-expanded', false);
+  mobileMenu.classList.remove('open'); hamburger.classList.remove('open'); hamburger.setAttribute('aria-expanded', false);
 }));
-
 const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
-  });
+  entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
 }, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
-
 </body>
 </html>
