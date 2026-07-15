@@ -18,9 +18,9 @@
   <meta name="twitter:description" content="Adoption and credibility aren't just about the quality of the initiative or the clarity of the message. It's about the structures and operating conditions that allow them to hold.">
   <meta name="twitter:image" content="https://compositionsadvisory.com/assets/og-image.png">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="icon" type="image/png" href="assets/logo-square-color.png">
-  <link rel="alternate icon" href="assets/logo-square-color.png">
-  <link rel="apple-touch-icon" href="assets/logo-square-color.png">
+  <link rel="icon" type="image/png" href="/assets/logo-square-color.png">
+  <link rel="alternate icon" href="/assets/logo-square-color.png">
+  <link rel="apple-touch-icon" href="/assets/logo-square-color.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
@@ -161,15 +161,15 @@
 <body>
 
   <nav class="site-nav" id="siteNav">
-    <a href="index.html" class="logo-mark" aria-label="Compositions home">
-      <img src="assets/compositions-offwhite-horizontal.png" alt="Compositions" class="logo-on-dark" />
-      <img src="assets/compositions-accent-horizontal.png" alt="Compositions" class="logo-on-light" />
+    <a href="/index.html" class="logo-mark" aria-label="Compositions home">
+      <img src="/assets/compositions-offwhite-horizontal.png" alt="Compositions" class="logo-on-dark" />
+      <img src="/assets/compositions-accent-horizontal.png" alt="Compositions" class="logo-on-light" />
     </a>
     <div class="nav-links">
-      <a href="work.html" class="nav-link">Work</a>
-      <a href="about.html" class="nav-link">About</a>
-      <a href="insights.html" class="nav-link active">Insights</a>
-      <a href="index.html#inquire" class="btn btn-teal nav-cta">Inquire</a>
+      <a href="/work.html" class="nav-link">Work</a>
+      <a href="/about.html" class="nav-link">About</a>
+      <a href="/insights.html" class="nav-link active">Insights</a>
+      <a href="/index.html#inquire" class="btn btn-teal nav-cta">Inquire</a>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
@@ -177,10 +177,10 @@
   </nav>
 
   <div class="mobile-menu" id="mobileMenu">
-    <a href="work.html">Work</a>
-    <a href="about.html">About</a>
-    <a href="insights.html">Insights</a>
-    <a href="index.html#inquire" class="btn btn-teal">Inquire</a>
+    <a href="/work.html">Work</a>
+    <a href="/about.html">About</a>
+    <a href="/insights.html">Insights</a>
+    <a href="/index.html#inquire" class="btn btn-teal">Inquire</a>
   </div>
 
   <main>
@@ -237,14 +237,14 @@
   <footer>
     <div class="footer-inner">
       <div class="footer-logo">
-        <a href="index.html" class="logo-mark" aria-label="Compositions home">
-          <img src="assets/compositions-offwhite-horizontal.png" alt="Compositions" />
+        <a href="/index.html" class="logo-mark" aria-label="Compositions home">
+          <img src="/assets/compositions-offwhite-horizontal.png" alt="Compositions" />
         </a>
       </div>
       <div class="footer-cols">
-        <div><h4>Company</h4><ul><li><a href="work.html">Work</a></li><li><a href="about.html">About</a></li><li><a href="insights.html">Insights</a></li><li><a href="field-guide.html">Field Guide</a></li><li><a href="index.html#inquire">Inquire</a></li></ul></div>
+        <div><h4>Company</h4><ul><li><a href="/work.html">Work</a></li><li><a href="/about.html">About</a></li><li><a href="/insights.html">Insights</a></li><li><a href="/field-guide.html">Field Guide</a></li><li><a href="/index.html#inquire">Inquire</a></li></ul></div>
         <div><h4>Connect</h4><ul><li><a href="https://www.linkedin.com/in/danamiddletonkc/" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
-        <div><h4>Legal</h4><ul><li><a href="privacy.html">Privacy</a></li><li><a href="disclaimer.html">Disclaimer</a></li><li><a href="terms.html">Terms</a></li></ul></div>
+        <div><h4>Legal</h4><ul><li><a href="/privacy.html">Privacy</a></li><li><a href="/disclaimer.html">Disclaimer</a></li><li><a href="/terms.html">Terms</a></li></ul></div>
       </div>
       <div class="footer-bottom">Compositions&#8482; | Coherent by design. Credible over time. | &copy; 2026 Compositions&#8482;. All rights reserved.</div>
     </div>
@@ -305,7 +305,7 @@
       card.className = 'article-card reveal';
       card.dataset.category = post.category || '';
       card.innerHTML = `<div class="bar"></div><div class="card-body"><span class="pillar">${post.category || 'Insights'}</span><h2>${post.title || 'Untitled'}</h2><p class="excerpt">${post.summary || ''}</p><div class="card-footer"><span class="read-link">Read →</span><span class="read-time">${post.readtime || ''}</span></div></div>`;
-      card.addEventListener('click', () => { window.location.href = `post.html?slug=${post.slug}`; });
+      card.addEventListener('click', () => { window.location.href = `/post.html?slug=${post.slug}`; });
       observer.observe(card);
       return card;
     }
