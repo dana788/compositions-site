@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Every Commitment Has Conditions | Compositions</title>
+<meta name="description" content="Every commitment has conditions. Compositions examines whether an organization's employer brand, culture, change effort, leadership standard, or stakeholder promise is structurally built to hold — especially as growth, leadership turnover, or funding pressure put it to the test.">
+<link rel="canonical" href="https://compositionsadvisory.com/every-commitment-has-conditions">
+<meta property="og:title" content="Every Commitment Has Conditions | Compositions">
+<meta property="og:description" content="Every commitment has conditions. Compositions examines whether an organization's employer brand, culture, change effort, leadership standard, or stakeholder promise is structurally built to hold.">
+<meta property="og:image" content="https://compositionsadvisory.com/assets/og-image.png">
+<meta property="og:url" content="https://compositionsadvisory.com/every-commitment-has-conditions">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Compositions">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Every Commitment Has Conditions | Compositions">
+<meta name="twitter:description" content="Every commitment has conditions. Compositions examines whether an organization's employer brand, culture, change effort, leadership standard, or stakeholder promise is structurally built to hold.">
+<meta name="twitter:image" content="https://compositionsadvisory.com/assets/og-image.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" href="/assets/logo-square-color.png">
+<link rel="alternate icon" href="/assets/logo-square-color.png">
+<link rel="apple-touch-icon" href="/assets/logo-square-color.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --teal: #16768C; --teal-dark: #144E73; --teal-light: #A3D2D8; --gold: #D4AF37;
+  --charcoal: #2C2C2C; --charcoal-mid: #383838; --off-white: #F8F8F8; --white: #FFFFFF;
+  --text: #1A1A1A; --text-sec: #666666; --border: #E0E0E0;
+  --font-display:'Oswald', sans-serif; --font-body:'Poppins', sans-serif;
+  --max-width: 1100px; --measure: 700px; --section-pad: 96px 24px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: var(--font-body); color: var(--text); background: var(--white); -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+h1, h2 { font-family: var(--font-display); margin: 0; }
+p { margin: 0; }
+ul { margin: 0; padding: 0; list-style: none; }
+:focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; }
+.wrap { max-width: var(--measure); margin: 0 auto; padding: 0 24px; }
+section { padding: var(--section-pad); }
+.bg-charcoal { background: var(--charcoal); }
+.bg-white { background: var(--white); }
+.bg-offwhite { background: var(--off-white); }
+.bg-teal { background: var(--teal); }
+
+.eyebrow { display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal); margin-bottom: 24px; }
+.eyebrow::before { content: ""; display: inline-block; width: 40px; height: 2px; background: var(--teal); }
+.eyebrow.on-dark { color: var(--teal-light); }
+.eyebrow.on-dark::before { background: var(--teal-light); }
+.eyebrow.center { justify-content: center; }
+
+.btn { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.03em; padding: 14px 28px; border-radius: 0; border: 2px solid transparent; transition: background 0.2s ease, transform 0.2s ease, color 0.2s ease; }
+.btn-teal { background: var(--teal); color: var(--white); }
+.btn-teal:hover { background: var(--teal-dark); transform: translateY(-1px); }
+
+.site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 14px 24px; background: var(--white); box-shadow: 0 2px 14px rgba(0,0,0,0.08); }
+.logo-mark { display: flex; align-items: center; gap: 10px; }
+.logo-mark img { height: 30px; width: auto; display: block; }
+.nav-links { display: flex; align-items: center; gap: 32px; }
+.nav-link { position: relative; font-weight: 600; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text); padding-bottom: 6px; transition: color 0.2s ease; }
+.nav-link::after { content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 2px; background: var(--teal); transition: width 0.2s ease; }
+.nav-link:hover::after { width: 100%; }
+.nav-cta { margin-left: 8px; }
+.hamburger { display: none; background: none; border: none; width: 32px; height: 32px; position: relative; z-index: 210; cursor: pointer; }
+.hamburger span { display: block; position: absolute; left: 4px; right: 4px; height: 2px; background: var(--text); transition: all 0.25s ease; }
+.hamburger span:nth-child(1) { top: 9px; } .hamburger span:nth-child(2) { top: 16px; } .hamburger span:nth-child(3) { top: 23px; }
+.hamburger.open span:nth-child(1) { top: 16px; transform: rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { top: 16px; transform: rotate(-45deg); }
+.mobile-menu { position: fixed; inset: 0; background: var(--white); z-index: 199; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 32px; transform: translateY(-100%); opacity: 0; visibility: hidden; transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease; }
+.mobile-menu.open { transform: translateY(0); opacity: 1; visibility: visible; }
+.mobile-menu a { font-size: 1rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text); }
+
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+
+.back-to-top { position: fixed; right: 24px; bottom: 24px; width: 44px; height: 44px; background: var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s, background 0.2s; cursor: pointer; border: none; z-index: 99; }
+.back-to-top.visible { opacity: 1; visibility: visible; }
+.back-to-top:hover { background: var(--teal-dark); }
+
+.hero-editorial { padding: 200px 24px 100px; }
+.hero-editorial h1 { font-size: clamp(2.4rem, 5.5vw, 3.6rem); line-height: 1.16; color: var(--charcoal); font-weight: 700; }
+.hero-editorial h1 .accent { color: var(--teal); }
+.hero-lede { font-size: 1.1rem; line-height: 1.75; color: #444; margin-top: 32px; font-weight: 400; }
+.hero-lede + .hero-lede { margin-top: 20px; }
+
+.editorial-inner p { font-size: 1.05rem; line-height: 1.85; color: #444; }
+.editorial-inner.on-dark p { color: rgba(255,255,255,0.8); }
+.editorial-inner p + p { margin-top: 22px; }
+.editorial-inner p em { font-style: italic; color: var(--charcoal); }
+.editorial-inner.on-dark p em { color: var(--white); }
+.editorial-inner h2 { font-size: 1.9rem; line-height: 1.3; color: var(--charcoal); font-weight: 700; margin-bottom: 22px; }
+.editorial-inner.on-dark h2 { color: var(--white); }
+
+.showsup-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0; margin: 26px 0; }
+.showsup-item { font-family: var(--font-display); font-weight: 600; font-size: 1.02rem; color: var(--charcoal); padding: 6px 0; }
+.showsup-divider { color: var(--teal-light); padding: 0 16px; font-weight: 600; }
+
+.visible-list { margin-top: 20px; }
+.visible-item { display: flex; gap: 18px; padding: 16px 0; border-top: 1px solid var(--border); }
+.visible-item:last-child { border-bottom: 1px solid var(--border); }
+.visible-num { font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; color: var(--teal); flex-shrink: 0; padding-top: 2px; }
+.visible-item p { font-size: 1rem; line-height: 1.7; color: #444; margin: 0; }
+
+.statement-block { text-align: center; }
+.statement-block .lead { font-size: 1.1rem; line-height: 1.8; color: rgba(255,255,255,0.85); max-width: 620px; margin: 0 auto 36px; }
+.statement-block .governing-line { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.3rem, 2.6vw, 1.7rem); color: var(--white); line-height: 1.4; max-width: 700px; margin: 0 auto 44px; }
+.statement-block .bridge { font-size: 1.05rem; line-height: 1.8; color: rgba(255,255,255,0.85); max-width: 600px; margin: 0 auto 40px; }
+.statement-block .question { font-size: 1.2rem; font-weight: 600; color: var(--white); line-height: 1.6; }
+.statement-block .question + .question { margin-top: 16px; }
+
+.closing-lead { font-size: 1rem; color: #555; margin-bottom: 24px; }
+.closing-links { display: flex; flex-direction: column; gap: 16px; }
+.closing-links a { color: var(--teal); font-weight: 600; font-size: 1.05rem; transition: color 0.2s ease; display: inline-block; }
+.closing-links a:hover { color: var(--teal-dark); }
+
+footer { background: var(--charcoal); padding: 64px 24px 32px; }
+.footer-inner { max-width: var(--max-width); margin: 0 auto; }
+.footer-logo { margin-bottom: 40px; }
+.footer-logo img { height: 26px; width: auto; }
+.footer-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,0.12); max-width: var(--max-width); margin: 0 auto; }
+.footer-cols h4 { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 16px; font-family: var(--font-body); font-weight: 600; }
+.footer-cols ul { display: flex; flex-direction: column; gap: 10px; }
+.footer-cols a { color: rgba(255,255,255,0.5); font-size: 0.9rem; transition: color 0.2s ease; }
+.footer-cols a:hover { color: var(--white); }
+.footer-bottom { padding-top: 24px; color: rgba(255,255,255,0.5); font-size: 0.75rem; max-width: var(--max-width); margin: 0 auto; }
+
+@media (max-width: 900px) { .footer-cols { grid-template-columns: 1fr; } }
+@media (max-width: 768px) {
+  :root { --section-pad: 64px 20px; }
+  .nav-links { display: none; }
+  .hamburger { display: block; }
+  .hero-editorial { padding: 150px 20px 72px; }
+  .showsup-row { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .showsup-divider { display: none; }
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav" id="siteNav">
+  <a href="/index.html" class="logo-mark" aria-label="Compositions home">
+    <img src="/assets/compositions-accent-horizontal.png" alt="Compositions" />
+  </a>
+  <div class="nav-links">
+    <a href="/work.html" class="nav-link">Work</a>
+    <a href="/about.html" class="nav-link">About</a>
+    <a href="/insights.html" class="nav-link">Insights</a>
+    <a href="/index.html#inquire" class="btn btn-teal nav-cta">Inquire</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/work.html">Work</a>
+  <a href="/about.html">About</a>
+  <a href="/insights.html">Insights</a>
+  <a href="/index.html#inquire" class="btn btn-teal">Inquire</a>
+</div>
+
+<main>
+
+<section class="hero-editorial bg-offwhite">
+  <div class="wrap reveal">
+    <p class="eyebrow">An Introduction to the Work</p>
+    <h1>Every commitment <span class="accent">has conditions.</span></h1>
+    <p class="hero-lede">Compositions examines whether an organization's employer brand, culture, change effort, leadership standard, or stakeholder promise is structurally built to hold — especially as growth, leadership turnover, or funding pressure put it to the test.</p>
+    <p class="hero-lede">Because when it doesn't hold, the cost is rarely just a stalled program. It's the trust, talent, and capital spent trying to make it work anyway.</p>
+  </div>
+</section>
+
+<section class="bg-white">
+  <div class="wrap editorial-inner reveal">
+    <p class="eyebrow">Why This Exists</p>
+    <h2>I examine whether organizations are actually structured to keep the promises they've already made.</h2>
+    <p>To employees, customers, investors, communities.</p>
+    <p>Most leaders assume that if the strategy's sound and the message is clear, the commitment will hold. It usually doesn't fail there. It fails when nobody's checked whether governance, incentives, and ownership were ever built to carry it — and that gap tends to stay invisible until growth, a leadership change, or funding pressure forces the question.</p>
+    <p>This isn't a communications practice, a culture consultancy, or a change-management firm. Those practices ask what the culture, message, or program should be. I ask a different question: is the organization arranged to sustain what it's already committed to — before the answer costs more than the commitment was worth.</p>
+  </div>
+</section>
+
+<section class="bg-offwhite">
+  <div class="wrap editorial-inner reveal">
+    <p class="eyebrow">Where This Shows Up</p>
+    <p>The pattern doesn't stay in one place. It shows up wherever an organization has made a promise it now has to live inside of:</p>
+    <div class="showsup-row">
+      <span class="showsup-item">Employer Brand &amp; Talent</span><span class="showsup-divider">&middot;</span>
+      <span class="showsup-item">Culture &amp; Values</span><span class="showsup-divider">&middot;</span>
+      <span class="showsup-item">Change &amp; Transformation</span><span class="showsup-divider">&middot;</span>
+      <span class="showsup-item">Leadership &amp; Internal Communications</span><span class="showsup-divider">&middot;</span>
+      <span class="showsup-item">Impact &amp; Stakeholder Trust</span>
+    </div>
+    <p>Different departments. Different budgets. Different leaders — most of whom would tell you they take the commitment seriously. The pattern isn't that people don't mean what they say. It's that meaning it was never the part in question.</p>
+  </div>
+</section>
+
+<section class="bg-charcoal">
+  <div class="wrap editorial-inner on-dark reveal">
+    <p class="eyebrow on-dark">Why This Lens</p>
+    <p>I've watched this same shape repeat across strategic communications, brand architecture, culture integration, organizational development, and the study of the conditions that shape population-level outcomes. Different disciplines. Same underlying question, asked from different angles: <em>what conditions are producing the outcomes we keep seeing?</em></p>
+    <p>That question is why Compositions exists. Not as a communications practice, a culture consultancy, or a change-management firm — those ask what the culture, message, or program should be. I ask something upstream of that: is the organization arranged to sustain what it's already committed to.</p>
+  </div>
+</section>
+
+<section class="bg-white">
+  <div class="wrap editorial-inner reveal">
+    <p class="eyebrow">What Becomes Visible</p>
+    <p>The work doesn't hand leadership another program to run. It hands them something more specific: the ability to tell the difference between a messaging problem and a structural one, before spending more to fix the wrong thing.</p>
+    <p style="margin-top:16px;color:var(--charcoal);font-weight:600;">What becomes visible:</p>
+    <div class="visible-list">
+      <div class="visible-item"><span class="visible-num">01</span><p>Whether a concern is isolated or part of a larger pattern</p></div>
+      <div class="visible-item"><span class="visible-num">02</span><p>Where credibility and capital are already exposed</p></div>
+      <div class="visible-item"><span class="visible-num">03</span><p>What the available evidence can — and cannot — responsibly establish</p></div>
+      <div class="visible-item"><span class="visible-num">04</span><p>What leadership actually has to govern for the commitment to hold</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-teal">
+  <div class="wrap statement-block reveal">
+    <p class="lead">Each part may make sense on its own — the program, the message, the incentive, the decision. The contradiction often appears in composition.</p>
+    <p class="governing-line">Trust loss is the visible symptom. Capital leakage is the measurable consequence. Structural incoherence is the cause.</p>
+    <p class="bridge">Before the next relaunch, before the next campaign, before the next commitment goes into a strategy deck — it's worth asking a less comfortable question than how to say it better:</p>
+    <p class="question">What did the organization actually agree to when it made this commitment?</p>
+    <p class="question">And has anything about the organization itself changed to make that true?</p>
+  </div>
+</section>
+
+<section class="bg-offwhite">
+  <div class="wrap reveal">
+    <p class="closing-lead">If this describes something you're already circling, two places to go from here:</p>
+    <div class="closing-links">
+      <a href="/index.html">Explore the full body of work &rarr;</a>
+      <a href="/field-guide.html">Start with the Credibility Gap Field Guide&trade; &rarr;</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <a href="/index.html" class="logo-mark" aria-label="Compositions home">
+        <img src="/assets/compositions-offwhite-horizontal.png" alt="Compositions" />
+      </a>
+    </div>
+    <div class="footer-cols">
+      <div><h4>Company</h4><ul><li><a href="/work.html">Work</a></li><li><a href="/about.html">About</a></li><li><a href="/insights.html">Insights</a></li><li><a href="/field-guide.html">Field Guide</a></li><li><a href="/index.html#inquire">Inquire</a></li></ul></div>
+      <div><h4>Connect</h4><ul><li><a href="https://www.linkedin.com/in/danamiddletonkc/" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="/privacy.html">Privacy</a></li><li><a href="/disclaimer.html">Disclaimer</a></li><li><a href="/terms.html">Terms</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">Compositions | Coherent by design. Credible over time. | &copy; 2026 Compositions. All rights reserved.</div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+
+<script>
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => { backToTop.classList.toggle('visible', window.scrollY > 500); });
+backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  const open = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open', open);
+  hamburger.setAttribute('aria-expanded', open);
+});
+mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  mobileMenu.classList.remove('open'); hamburger.classList.remove('open'); hamburger.setAttribute('aria-expanded', false);
+}));
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
