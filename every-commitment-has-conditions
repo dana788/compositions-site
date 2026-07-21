@@ -5,17 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index, follow">
 <title>Every Commitment Has Conditions | Compositions</title>
-<meta name="description" content="Every commitment has conditions. Compositions examines whether an organization's employer brand, culture, change effort, leadership standard, or stakeholder promise is structurally built to hold — especially as growth, leadership turnover, or funding pressure put it to the test.">
+<meta name="description" content="Compositions is a structural advisory practice. Every commitment has conditions — and depends on the organization having the conditions to meet them. An introduction to the idea, and the practice built around it.">
 <link rel="canonical" href="https://compositionsadvisory.com/every-commitment-has-conditions">
 <meta property="og:title" content="Every Commitment Has Conditions | Compositions">
-<meta property="og:description" content="Every commitment has conditions. Compositions examines whether an organization's employer brand, culture, change effort, leadership standard, or stakeholder promise is structurally built to hold.">
+<meta property="og:description" content="Compositions is a structural advisory practice. Every commitment has conditions — and depends on the organization having the conditions to meet them.">
 <meta property="og:image" content="https://compositionsadvisory.com/assets/og-image.png">
 <meta property="og:url" content="https://compositionsadvisory.com/every-commitment-has-conditions">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Compositions">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Every Commitment Has Conditions | Compositions">
-<meta name="twitter:description" content="Every commitment has conditions. Compositions examines whether an organization's employer brand, culture, change effort, leadership standard, or stakeholder promise is structurally built to hold.">
+<meta name="twitter:description" content="Compositions is a structural advisory practice. Every commitment has conditions — and depends on the organization having the conditions to meet them.">
 <meta name="twitter:image" content="https://compositionsadvisory.com/assets/og-image.png">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" type="image/png" href="/assets/logo-square-color.png">
@@ -84,41 +84,63 @@ section { padding: var(--section-pad); }
 .back-to-top.visible { opacity: 1; visibility: visible; }
 .back-to-top:hover { background: var(--teal-dark); }
 
-.hero-editorial { padding: 200px 24px 100px; }
-.hero-editorial h1 { font-size: clamp(2.4rem, 5.5vw, 3.6rem); line-height: 1.16; color: var(--charcoal); font-weight: 700; }
+/* HERO */
+.hero-editorial { padding: 200px 24px 96px; }
+.hero-editorial h1 { font-size: clamp(2.4rem, 5.5vw, 3.6rem); line-height: 1.16; color: var(--charcoal); font-weight: 700; margin-top: 4px; }
 .hero-editorial h1 .accent { color: var(--teal); }
-.hero-lede { font-size: 1.1rem; line-height: 1.75; color: #444; margin-top: 32px; font-weight: 400; }
-.hero-lede + .hero-lede { margin-top: 20px; }
+.hero-lede { font-size: 1.08rem; line-height: 1.75; color: #444; margin-top: 28px; font-weight: 400; }
+.hero-lede + .hero-lede { margin-top: 18px; }
+.hero-conditions-row { font-family: var(--font-display); font-weight: 600; font-size: 0.98rem; color: var(--charcoal); margin-top: 24px; letter-spacing: 0.01em; }
+.hero-lede.emphasis { color: var(--charcoal); font-weight: 600; margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--border); }
 
-.editorial-inner p { font-size: 1.05rem; line-height: 1.85; color: #444; }
+/* GENERIC EDITORIAL */
+.editorial-inner p { font-size: 1.03rem; line-height: 1.8; color: #444; }
 .editorial-inner.on-dark p { color: rgba(255,255,255,0.8); }
-.editorial-inner p + p { margin-top: 22px; }
+.editorial-inner p + p { margin-top: 18px; }
 .editorial-inner p em { font-style: italic; color: var(--charcoal); }
 .editorial-inner.on-dark p em { color: var(--white); }
-.editorial-inner h2 { font-size: 1.9rem; line-height: 1.3; color: var(--charcoal); font-weight: 700; margin-bottom: 22px; }
+.editorial-inner h2 { font-size: 1.75rem; line-height: 1.32; color: var(--charcoal); font-weight: 700; margin-bottom: 20px; }
 .editorial-inner.on-dark h2 { color: var(--white); }
+.editorial-inner p.lead-line { font-weight: 600; color: var(--charcoal); margin-top: 20px; }
+.editorial-inner.on-dark p.lead-line { color: var(--white); }
 
-.showsup-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0; margin: 26px 0; }
-.showsup-item { font-family: var(--font-display); font-weight: 600; font-size: 1.02rem; color: var(--charcoal); padding: 6px 0; }
-.showsup-divider { color: var(--teal-light); padding: 0 16px; font-weight: 600; }
+/* PULL BOX (value statement) */
+.pull-box { margin-top: 28px; padding: 24px 28px; border-left: 4px solid var(--teal); background: var(--off-white); }
+.pull-box p { font-size: 1.05rem; font-weight: 600; color: var(--charcoal); line-height: 1.6; margin: 0; }
 
-.visible-list { margin-top: 20px; }
-.visible-item { display: flex; gap: 18px; padding: 16px 0; border-top: 1px solid var(--border); }
-.visible-item:last-child { border-bottom: 1px solid var(--border); }
-.visible-num { font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; color: var(--teal); flex-shrink: 0; padding-top: 2px; }
-.visible-item p { font-size: 1rem; line-height: 1.7; color: #444; margin: 0; }
+/* SIMPLE PULL LINE */
+.pull-quote-line { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.1rem, 2.1vw, 1.3rem); line-height: 1.4; color: var(--teal-dark); margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--border); }
 
+/* RECOGNITION QUOTES (section 4) */
+.recognition-head h2 { color: var(--white); }
+.recognition-list { display: flex; flex-direction: column; gap: 0; margin-top: 32px; }
+.recognition-item { border-top: 1px solid rgba(255,255,255,0.14); padding: 22px 0; }
+.recognition-item:last-child { border-bottom: 1px solid rgba(255,255,255,0.14); }
+.recognition-item p { font-family: var(--font-display); font-weight: 500; font-size: 1.08rem; line-height: 1.5; color: var(--white); font-style: italic; }
+.recognition-followup { margin-top: 32px; }
+.recognition-followup p { color: rgba(255,255,255,0.75); font-size: 1rem; line-height: 1.8; }
+.recognition-question { font-family: var(--font-display); font-weight: 600; font-size: 1.2rem; color: var(--teal-light); margin-top: 24px; line-height: 1.5; }
+
+/* VALUE LIST (section 5) */
+.value-list { margin-top: 24px; }
+.value-item { padding: 20px 0; border-top: 1px solid var(--border); }
+.value-item:last-child { border-bottom: 1px solid var(--border); }
+.value-item .value-title { font-weight: 600; color: var(--charcoal); font-size: 1.02rem; margin-bottom: 6px; }
+.value-item .value-body { font-size: 0.97rem; line-height: 1.7; color: #555; }
+.value-closer { margin-top: 28px; padding: 24px 28px; background: var(--charcoal); }
+.value-closer p { color: var(--white); font-weight: 600; font-size: 1.03rem; line-height: 1.65; margin: 0; }
+
+/* CLOSE / TEAL */
 .statement-block { text-align: center; }
-.statement-block .lead { font-size: 1.1rem; line-height: 1.8; color: rgba(255,255,255,0.85); max-width: 620px; margin: 0 auto 36px; }
-.statement-block .governing-line { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.3rem, 2.6vw, 1.7rem); color: var(--white); line-height: 1.4; max-width: 700px; margin: 0 auto 44px; }
-.statement-block .bridge { font-size: 1.05rem; line-height: 1.8; color: rgba(255,255,255,0.85); max-width: 600px; margin: 0 auto 40px; }
-.statement-block .question { font-size: 1.2rem; font-weight: 600; color: var(--white); line-height: 1.6; }
-.statement-block .question + .question { margin-top: 16px; }
-
-.closing-lead { font-size: 1rem; color: #555; margin-bottom: 24px; }
-.closing-links { display: flex; flex-direction: column; gap: 16px; }
-.closing-links a { color: var(--teal); font-weight: 600; font-size: 1.05rem; transition: color 0.2s ease; display: inline-block; }
-.closing-links a:hover { color: var(--teal-dark); }
+.statement-block .governing-line { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.7rem, 4vw, 2.5rem); color: var(--white); line-height: 1.25; max-width: 720px; margin: 0 auto; text-transform: uppercase; }
+.statement-block .bridge { font-size: 1.03rem; line-height: 1.8; color: rgba(255,255,255,0.85); max-width: 600px; margin: 32px auto 0; }
+.statement-block .sub-line { font-size: 1.03rem; line-height: 1.8; color: rgba(255,255,255,0.85); max-width: 560px; margin: 12px auto 0; }
+.statement-block .question { font-size: 1.25rem; font-weight: 600; color: var(--white); line-height: 1.5; margin-top: 32px; }
+.statement-block .question + .question { margin-top: 14px; }
+.statement-block .final-line { font-size: 1.03rem; color: rgba(255,255,255,0.8); margin-top: 32px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.15); max-width: 500px; margin-left: auto; margin-right: auto; }
+.close-ctas { display: flex; flex-direction: column; gap: 14px; align-items: center; margin-top: 36px; }
+.close-ctas a { color: var(--white); font-weight: 600; font-size: 1.02rem; border-bottom: 2px solid rgba(255,255,255,0.4); padding-bottom: 3px; transition: border-color 0.2s ease; }
+.close-ctas a:hover { border-color: var(--white); }
 
 footer { background: var(--charcoal); padding: 64px 24px 32px; }
 .footer-inner { max-width: var(--max-width); margin: 0 auto; }
@@ -136,9 +158,7 @@ footer { background: var(--charcoal); padding: 64px 24px 32px; }
   :root { --section-pad: 64px 20px; }
   .nav-links { display: none; }
   .hamburger { display: block; }
-  .hero-editorial { padding: 150px 20px 72px; }
-  .showsup-row { flex-direction: column; align-items: flex-start; gap: 6px; }
-  .showsup-divider { display: none; }
+  .hero-editorial { padding: 150px 20px 64px; }
 }
 </style>
 </head>
@@ -166,77 +186,119 @@ footer { background: var(--charcoal); padding: 64px 24px 32px; }
 
 <main>
 
+<!-- SECTION 1 — HERO -->
 <section class="hero-editorial bg-offwhite">
   <div class="wrap reveal">
-    <p class="eyebrow">An Introduction to the Work</p>
+    <p class="eyebrow">Introducing Compositions</p>
     <h1>Every commitment <span class="accent">has conditions.</span></h1>
-    <p class="hero-lede">Compositions examines whether an organization's employer brand, culture, change effort, leadership standard, or stakeholder promise is structurally built to hold — especially as growth, leadership turnover, or funding pressure put it to the test.</p>
-    <p class="hero-lede">Because when it doesn't hold, the cost is rarely just a stalled program. It's the trust, talent, and capital spent trying to make it work anyway.</p>
+    <p class="hero-lede">A commitment does more than state what an organization intends. It creates requirements — and depends on the organization having the conditions to meet them.</p>
+    <p class="hero-conditions-row">Governance. Authority. Resources. Incentives. Leadership decisions. Operating practices.</p>
+    <p class="hero-lede">When those conditions support the commitment, it has a stronger basis to become believable, adoptable, and sustainable. When they do not, the organization may keep investing in something its own structure is making harder to deliver.</p>
+    <p class="hero-lede emphasis">That is the problem Compositions was created to examine.</p>
   </div>
 </section>
 
+<!-- SECTION 2 — WHAT COMPOSITIONS IS -->
 <section class="bg-white">
   <div class="wrap editorial-inner reveal">
-    <p class="eyebrow">Why This Exists</p>
-    <h2>I examine whether organizations are actually structured to keep the promises they've already made.</h2>
-    <p>To employees, customers, investors, communities.</p>
-    <p>Most leaders assume that if the strategy's sound and the message is clear, the commitment will hold. It usually doesn't fail there. It fails when nobody's checked whether governance, incentives, and ownership were ever built to carry it — and that gap tends to stay invisible until growth, a leadership change, or funding pressure forces the question.</p>
-    <p>This isn't a communications practice, a culture consultancy, or a change-management firm. Those practices ask what the culture, message, or program should be. I ask a different question: is the organization arranged to sustain what it's already committed to — before the answer costs more than the commitment was worth.</p>
+    <p class="eyebrow">The Advisory Practice</p>
+    <h2>Compositions is a structural advisory practice that examines whether organizations are actually arranged to deliver what they say they will.</h2>
+    <p>The work begins with commitments organizations are already making and funding — across culture, change, employer brand, leadership, people, and stakeholder relationships. Compositions looks beneath the visible concern to examine the conditions surrounding the commitment: what the organization governs, funds, rewards, authorizes, prioritizes, and reinforces through everyday decisions and operating experience.</p>
+    <p>The purpose is not to add another program. It is to make the structural relationship visible enough for leadership to make a better decision.</p>
+    <div class="pull-box">
+      <p>Compositions provides disciplined structural clarity before organizations spend more trying to solve the wrong problem.</p>
+    </div>
   </div>
 </section>
 
+<!-- SECTION 3 — WHY THIS MATTERS -->
 <section class="bg-offwhite">
   <div class="wrap editorial-inner reveal">
-    <p class="eyebrow">Where This Shows Up</p>
-    <p>The pattern doesn't stay in one place. It shows up wherever an organization has made a promise it now has to live inside of:</p>
-    <div class="showsup-row">
-      <span class="showsup-item">Employer Brand &amp; Talent</span><span class="showsup-divider">&middot;</span>
-      <span class="showsup-item">Culture &amp; Values</span><span class="showsup-divider">&middot;</span>
-      <span class="showsup-item">Change &amp; Transformation</span><span class="showsup-divider">&middot;</span>
-      <span class="showsup-item">Leadership &amp; Internal Communications</span><span class="showsup-divider">&middot;</span>
-      <span class="showsup-item">Impact &amp; Stakeholder Trust</span>
-    </div>
-    <p>Different departments. Different budgets. Different leaders — most of whom would tell you they take the commitment seriously. The pattern isn't that people don't mean what they say. It's that meaning it was never the part in question.</p>
+    <p class="eyebrow">When Intention and Conditions Part Ways</p>
+    <h2>A commitment can be sincere and still be structurally unsupported.</h2>
+    <p>An organization can commit to collaboration while rewarding individual competition. It can commit to wellbeing while depending on chronic overwork. It can hold managers accountable for outcomes they do not have the authority to control. It can launch a transformation while leaving the systems and incentives that sustain the old way of working largely intact.</p>
+    <p>None of those contradictions necessarily means leaders were insincere.</p>
+    <p class="lead-line"><em>Meaning it was never necessarily the part in question.</em></p>
+    <p>The more consequential question is:</p>
+    <p class="pull-quote-line">Did the organization create what the commitment actually requires?</p>
   </div>
 </section>
 
+<!-- SECTION 4 — WHAT THE PROBLEM LOOKS LIKE BEFORE ANYONE CALLS IT STRUCTURAL -->
 <section class="bg-charcoal">
-  <div class="wrap editorial-inner on-dark reveal">
-    <p class="eyebrow on-dark">Why This Lens</p>
-    <p>I've watched this same shape repeat across strategic communications, brand architecture, culture integration, organizational development, and the study of the conditions that shape population-level outcomes. Different disciplines. Same underlying question, asked from different angles: <em>what conditions are producing the outcomes we keep seeing?</em></p>
-    <p>That question is why Compositions exists. Not as a communications practice, a culture consultancy, or a change-management firm — those ask what the culture, message, or program should be. I ask something upstream of that: is the organization arranged to sustain what it's already committed to.</p>
+  <div class="wrap editorial-inner on-dark recognition-head reveal">
+    <p class="eyebrow on-dark">What Leaders Often See First</p>
+    <h2>Structural problems rarely arrive labeled "structural."</h2>
+    <p>They may look like this instead:</p>
+    <div class="recognition-list">
+      <div class="recognition-item"><p>"People understand the message. They still don't believe it."</p></div>
+      <div class="recognition-item"><p>"Adoption was strong at launch. Six months later, we're back where we started."</p></div>
+      <div class="recognition-item"><p>"Managers are accountable for this, but they don't control the decisions that determine it."</p></div>
+      <div class="recognition-item"><p>"We've invested heavily. We still can't explain why the expected return isn't showing up."</p></div>
+      <div class="recognition-item"><p>"We keep relaunching some version of the same thing."</p></div>
+    </div>
+    <div class="recognition-followup">
+      <p>Those concerns may lead to another campaign, program, workshop, survey, or relaunch. Sometimes that is the right response. Sometimes the more useful question is upstream:</p>
+      <p class="recognition-question">What conditions are producing the outcomes we keep seeing?</p>
+    </div>
   </div>
 </section>
 
+<!-- SECTION 5 — WHAT COMPOSITIONS MAKES VISIBLE -->
 <section class="bg-white">
   <div class="wrap editorial-inner reveal">
-    <p class="eyebrow">What Becomes Visible</p>
-    <p>The work doesn't hand leadership another program to run. It hands them something more specific: the ability to tell the difference between a messaging problem and a structural one, before spending more to fix the wrong thing.</p>
-    <p style="margin-top:16px;color:var(--charcoal);font-weight:600;">What becomes visible:</p>
-    <div class="visible-list">
-      <div class="visible-item"><span class="visible-num">01</span><p>Whether a concern is isolated or part of a larger pattern</p></div>
-      <div class="visible-item"><span class="visible-num">02</span><p>Where credibility and capital are already exposed</p></div>
-      <div class="visible-item"><span class="visible-num">03</span><p>What the available evidence can — and cannot — responsibly establish</p></div>
-      <div class="visible-item"><span class="visible-num">04</span><p>What leadership actually has to govern for the commitment to hold</p></div>
+    <p class="eyebrow">The Value of the Work</p>
+    <h2>Before deciding what to change, see what is actually happening.</h2>
+    <p>Compositions examines the relationship between an organizational commitment and the conditions responsible for carrying it. Depending on the question and the available evidence, the work can clarify:</p>
+    <div class="value-list">
+      <div class="value-item">
+        <p class="value-title">Whether the concern is isolated or part of a larger pattern</p>
+        <p class="value-body">What appears to be one problem may reflect conditions operating across teams, functions, or commitments.</p>
+      </div>
+      <div class="value-item">
+        <p class="value-title">Where the organization may be contradicting what it has committed to</p>
+        <p class="value-body">The promise, investment, governance, incentives, authority, and operating reality may not be pointing in the same direction.</p>
+      </div>
+      <div class="value-item">
+        <p class="value-title">What the evidence can — and cannot — responsibly establish</p>
+        <p class="value-body">A signal is not a diagnosis. The conclusion should never be stronger than the evidence.</p>
+      </div>
+      <div class="value-item">
+        <p class="value-title">What leadership actually needs to govern</p>
+        <p class="value-body">The next decision may not be another intervention. It may be a question of authority, ownership, priorities, resources, incentives, or accountability.</p>
+      </div>
+    </div>
+    <div class="value-closer">
+      <p>The value is structural visibility — seeing the arrangement clearly enough to make a better governance decision.</p>
     </div>
   </div>
 </section>
 
+<!-- SECTION 6 — WHY COMPOSITIONS SEES IT DIFFERENTLY -->
+<section class="bg-offwhite">
+  <div class="wrap editorial-inner reveal">
+    <p class="eyebrow">A Different Unit of Analysis</p>
+    <h2>Most organizational problems are managed where they become visible.</h2>
+    <p>A communication concern goes to Communications. A culture concern goes to Human Resources. An adoption concern goes to Change. A return concern goes to Finance.</p>
+    <p>Those functions may each be doing exactly what they should. But the source of the problem may sit between them.</p>
+    <p>The work draws on more than two decades across strategic communications, brand architecture, culture integration, organizational development, leadership, evidence, and the study of how conditions shape patterned outcomes. Across those disciplines, the same thing kept surfacing:</p>
+    <p class="lead-line">Problems that look separate can be produced by conditions they share.</p>
+    <p>Compositions therefore examines something different: <em>the commitment and the organizational system required to sustain it.</em></p>
+  </div>
+</section>
+
+<!-- SECTION 7 — CLOSE -->
 <section class="bg-teal">
   <div class="wrap statement-block reveal">
-    <p class="lead">Each part may make sense on its own — the program, the message, the incentive, the decision. The contradiction often appears in composition.</p>
-    <p class="governing-line">Trust loss is the visible symptom. Capital leakage is the measurable consequence. Structural incoherence is the cause.</p>
-    <p class="bridge">Before the next relaunch, before the next campaign, before the next commitment goes into a strategy deck — it's worth asking a less comfortable question than how to say it better:</p>
-    <p class="question">What did the organization actually agree to when it made this commitment?</p>
-    <p class="question">And has anything about the organization itself changed to make that true?</p>
-  </div>
-</section>
-
-<section class="bg-offwhite">
-  <div class="wrap reveal">
-    <p class="closing-lead">If this describes something you're already circling, two places to go from here:</p>
-    <div class="closing-links">
-      <a href="/index.html">Explore the full body of work &rarr;</a>
+    <p class="eyebrow on-dark center">The Question Beneath the Commitment</p>
+    <p class="governing-line">Every commitment has conditions.</p>
+    <p class="bridge">A commitment carries requirements. And it depends on the conditions the organization creates around it.</p>
+    <p class="sub-line">So before another promise is made, another initiative is relaunched, or more capital is committed to making something work:</p>
+    <p class="question">What does this commitment require of the organization?</p>
+    <p class="question">And have we actually created those conditions?</p>
+    <p class="final-line">That is where Compositions begins.</p>
+    <div class="close-ctas">
+      <a href="/index.html">Explore Compositions &rarr;</a>
       <a href="/field-guide.html">Start with the Credibility Gap Field Guide&trade; &rarr;</a>
     </div>
   </div>
