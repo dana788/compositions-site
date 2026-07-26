@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Our Commitments | Compositions</title>
+<meta name="description" content="What Compositions holds itself to — the same principles it advises organizations to bring to their own consequential commitments.">
+<link rel="canonical" href="https://compositionsadvisory.com/about/our-commitments/">
+<meta property="og:title" content="Our Commitments | Compositions">
+<meta property="og:description" content="Compositions should operate according to the same principles it advises.">
+<meta property="og:image" content="https://compositionsadvisory.com/assets/og-image.png">
+<meta property="og:url" content="https://compositionsadvisory.com/about/our-commitments/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Compositions">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" href="/assets/logo-square-color.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --teal: #16768C; --teal-dark: #144E73; --teal-light: #A3D2D8;
+  --charcoal: #2C2C2C; --off-white: #F8F8F8; --white: #FFFFFF;
+  --text: #1A1A1A; --text-sec: #63615D; --border: #E2E0DA;
+  --font-display: 'Oswald', sans-serif; --font-body: 'Poppins', sans-serif;
+  --max-width: 1160px; --section-pad: 100px 32px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: var(--font-body); font-weight: 300; color: var(--text); background: var(--off-white); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+img, svg { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+h1, h2, h3 { font-family: var(--font-display); margin: 0; font-weight: 600; }
+p { margin: 0; }
+ul { margin: 0; padding: 0; list-style: none; }
+button { font-family: var(--font-body); cursor: pointer; }
+:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
+.wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 32px; }
+section { padding: var(--section-pad); position: relative; }
+.bg-charcoal { background: var(--charcoal); }
+.bg-white { background: var(--white); }
+.bg-offwhite { background: var(--off-white); }
+
+.eyebrow { display: flex; align-items: center; gap: 14px; font-weight: 600; font-size: 0.72rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--teal); margin-bottom: 24px; }
+.eyebrow::before { content: ""; display: inline-block; width: 36px; height: 2px; background: var(--teal); flex-shrink: 0; }
+.eyebrow.on-dark { color: var(--teal-light); }
+.eyebrow.on-dark::before { background: var(--teal-light); }
+
+.btn { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.04em; padding: 16px 30px; border: 1.5px solid transparent; transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease; }
+.btn-teal { background: var(--teal); color: var(--white); }
+.btn-teal:hover { background: var(--teal-dark); transform: translateY(-1px); }
+.btn-ghost { border-color: rgba(255,255,255,0.45); color: var(--white); }
+.btn-ghost:hover { border-color: var(--white); transform: translateY(-1px); }
+.btn-ghost-dark { border-color: var(--charcoal); color: var(--charcoal); }
+.btn-ghost-dark:hover { background: var(--charcoal); color: var(--white); }
+.btn svg { transition: transform 0.2s ease; }
+.btn:hover svg { transform: translateX(3px); }
+
+/* NAV */
+.site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 300; display: flex; align-items: center; justify-content: space-between; padding: 20px 32px; background: rgba(248,248,248,0.94); backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--border); }
+.logo-mark img { height: 26px; width: auto; }
+.nav-links { display: flex; align-items: center; gap: 40px; }
+.nav-link { position: relative; font-weight: 500; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--charcoal); padding-bottom: 6px; }
+.nav-link.active { color: var(--teal-dark); }
+.nav-link::after { content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 1.5px; background: var(--teal); transition: width 0.2s ease; }
+.nav-link:hover::after, .nav-link.active::after { width: 100%; }
+.nav-cta { margin-left: 8px; padding: 12px 24px; }
+.hamburger { display: none; background: none; border: none; width: 32px; height: 32px; position: relative; z-index: 310; cursor: pointer; }
+.hamburger span { display: block; position: absolute; left: 4px; right: 4px; height: 2px; background: var(--charcoal); transition: all 0.25s ease; }
+.hamburger span:nth-child(1) { top: 10px; } .hamburger span:nth-child(2) { top: 16px; } .hamburger span:nth-child(3) { top: 22px; }
+.hamburger.open span:nth-child(1) { top: 16px; transform: rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { top: 16px; transform: rotate(-45deg); }
+.mobile-menu { position: fixed; inset: 0; background: var(--off-white); z-index: 290; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 36px; transform: translateY(-100%); opacity: 0; visibility: hidden; transition: transform 0.35s ease, opacity 0.3s ease, visibility 0.35s; }
+.mobile-menu.open { transform: translateY(0); opacity: 1; visibility: visible; }
+.mobile-menu a { font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; color: var(--charcoal); }
+@media (max-width: 860px) { .nav-links { display: none; } .hamburger { display: block; } }
+
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+
+.page-hero { padding: 158px 32px 70px; }
+.page-hero h1 { font-size: clamp(2rem, 4.2vw, 3.1rem); line-height: 1.2; color: var(--charcoal); max-width: 760px; }
+.page-hero .support { font-size: 1.02rem; color: var(--text-sec); max-width: 600px; margin-top: 24px; line-height: 1.8; }
+
+/* VALUE LIST */
+.value-list { display: flex; flex-direction: column; }
+.value-row { display: grid; grid-template-columns: 50px 2fr 3fr; gap: 28px; padding: 32px 0; border-top: 1px solid rgba(255,255,255,0.14); align-items: baseline; }
+.value-list .value-row:last-child { border-bottom: 1px solid rgba(255,255,255,0.14); }
+.value-row .num { font-family: var(--font-display); font-weight: 600; color: var(--teal-light); font-size: 0.95rem; }
+.value-row h3 { font-size: 1.2rem; color: var(--white); font-weight: 500; }
+.value-row p { font-size: 0.94rem; color: rgba(255,255,255,0.62); line-height: 1.75; }
+@media (max-width: 760px) { .value-row { grid-template-columns: 1fr; gap: 8px; } .value-row .num { display: none; } }
+
+/* OPERATIONAL COMMITMENTS */
+.op-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--border); border: 1px solid var(--border); }
+.op-card { background: var(--white); padding: 40px 38px; }
+.op-card .tag { font-family: var(--font-display); font-weight: 600; font-size: 0.72rem; letter-spacing: 0.1em; color: var(--teal); display: block; margin-bottom: 16px; }
+.op-card h3 { font-size: 1.25rem; color: var(--charcoal); margin-bottom: 14px; }
+.op-card p { font-size: 0.95rem; color: var(--text-sec); line-height: 1.8; }
+.op-card a.op-link { display: inline-block; margin-top: 18px; font-size: 0.85rem; font-weight: 600; color: var(--teal-dark); text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 760px) { .op-grid { grid-template-columns: 1fr; } }
+
+.cta-band { text-align: center; }
+.cta-band h2 { font-size: clamp(1.6rem, 2.8vw, 2.2rem); color: var(--white); max-width: 640px; margin: 0 auto; line-height: 1.35; }
+.cta-band .cta-row { margin-top: 36px; display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; }
+
+footer { background: var(--charcoal); padding: 72px 32px 32px; }
+.footer-inner { max-width: var(--max-width); margin: 0 auto; }
+.footer-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.footer-brand img { height: 24px; width: auto; }
+.footer-tag { font-size: 0.85rem; color: rgba(255,255,255,0.4); margin-top: 14px; max-width: 300px; line-height: 1.6; }
+.footer-cols { display: flex; gap: 64px; flex-wrap: wrap; }
+.footer-cols h4 { font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 18px; font-weight: 600; }
+.footer-cols ul { display: flex; flex-direction: column; gap: 12px; }
+.footer-cols a { color: rgba(255,255,255,0.62); font-size: 0.92rem; }
+.footer-cols a:hover { color: var(--white); }
+.footer-bottom { padding-top: 28px; color: rgba(255,255,255,0.35); font-size: 0.78rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.back-to-top { position: fixed; right: 28px; bottom: 28px; width: 46px; height: 46px; background: var(--charcoal); display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s, background 0.2s; cursor: pointer; border: none; z-index: 99; }
+.back-to-top.visible { opacity: 1; visibility: visible; }
+.back-to-top:hover { background: var(--teal); }
+@media (max-width: 640px) { .page-hero { padding: 136px 22px 50px; } }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="/" class="logo-mark" aria-label="Compositions home">
+    <img src="/assets/Compositions-Accent-Horizontal.png" alt="Compositions">
+  </a>
+  <div class="nav-links">
+    <a href="/work/" class="nav-link">Work</a>
+    <a href="/expertise/" class="nav-link">Expertise</a>
+    <a href="/about/" class="nav-link active">About</a>
+    <a href="/ideas/" class="nav-link">Ideas</a>
+    <a href="/#start" class="btn btn-teal nav-cta">Contact</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/work/">Work</a>
+  <a href="/expertise/">Expertise</a>
+  <a href="/about/">About</a>
+  <a href="/ideas/">Ideas</a>
+  <a href="/#start">Contact</a>
+</div>
+
+<main>
+
+<section class="bg-white page-hero">
+  <div class="wrap reveal visible">
+    <p class="eyebrow">Our Commitments</p>
+    <h1>What we ask organizations to bring to their commitments, we hold ourselves to as well.</h1>
+    <p class="support">Compositions should operate according to the same principles it advises. These aren't values on a wall — they're the discipline the work is checked against, including our own.</p>
+  </div>
+</section>
+
+<!-- SEVEN GOVERNING VALUES -->
+<section class="bg-charcoal">
+  <div class="wrap">
+    <div class="reveal" style="max-width:680px;margin-bottom:20px;">
+      <p class="eyebrow on-dark">The Seven</p>
+      <h2 style="font-size:clamp(1.6rem,2.8vw,2.2rem);color:var(--white);line-height:1.3;">The principles the work is checked against.</h2>
+    </div>
+    <div class="value-list reveal">
+      <div class="value-row"><span class="num">01</span><h3>Evidence Before Assertion</h3><p>Conclusions must remain proportional to evidence.</p></div>
+      <div class="value-row"><span class="num">02</span><h3>Meaning and Reality Together</h3><p>Communication should not be separated from the reality stakeholders are being asked to interpret.</p></div>
+      <div class="value-row"><span class="num">03</span><h3>Clarity Before Complexity</h3><p>The buyer should not have to become a methodologist to understand the work.</p></div>
+      <div class="value-row"><span class="num">04</span><h3>Human and Enterprise Value Together</h3><p>Do not artificially separate human experience from enterprise consequence.</p></div>
+      <div class="value-row"><span class="num">05</span><h3>Creative Intelligence With Structural Discipline</h3><p>Expression should be imaginative without sacrificing rigor. Rigor should be sophisticated without becoming sterile.</p></div>
+      <div class="value-row"><span class="num">06</span><h3>Independent Judgment</h3><p>Recommendations should follow evidence and judgment — not a predetermined deliverable.</p></div>
+      <div class="value-row"><span class="num">07</span><h3>Coherence in Practice</h3><p>Compositions should operate according to the same principles it advises.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- OPERATIONAL COMMITMENTS -->
+<section class="bg-offwhite">
+  <div class="wrap">
+    <div class="reveal" style="max-width:680px;margin-bottom:36px;">
+      <p class="eyebrow">In Practice</p>
+      <h2 style="font-size:clamp(1.5rem,2.6vw,2rem);color:var(--charcoal);line-height:1.35;">Two commitments worth stating plainly.</h2>
+    </div>
+    <div class="op-grid reveal">
+      <div class="op-card">
+        <span class="tag">RESPONSIBLE AI</span>
+        <h3>How AI is used here</h3>
+        <p>Compositions uses AI tools for drafting, research support, and production work — including on this website. It does not use AI to generate client-facing conclusions, interpretation, or recommendations in place of judgment. Dana owns problem framing, diagnosis, synthesis, and final recommendations personally; AI assists the work, it doesn't replace the judgment the work depends on.</p>
+      </div>
+      <div class="op-card">
+        <span class="tag">ACCESSIBILITY</span>
+        <h3>An accessible site, honestly stated</h3>
+        <p>This site is built with accessibility principles in mind — keyboard operability, visible focus states, semantic structure, and respect for reduced-motion preferences. We haven't yet completed a formal audit against a specific standard, and we say so plainly rather than overclaiming.</p>
+        <a class="op-link" href="/accessibility/">Read the full accessibility statement →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-charcoal cta-band">
+  <div class="wrap reveal">
+    <p class="eyebrow on-dark" style="justify-content:center;">Start Here</p>
+    <h2>What commitments has your organization made?</h2>
+    <div class="cta-row">
+      <a href="/#start" class="btn btn-teal">Start a conversation <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="/about/" class="btn btn-ghost">Back to About</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <a href="/" class="footer-brand" aria-label="Compositions home">
+          <img src="/assets/Compositions-Off-White-Horizontal.png" alt="Compositions">
+        </a>
+        <p class="footer-tag">A Structural Communications Firm specializing in consequential organizational commitments.</p>
+      </div>
+      <div class="footer-cols">
+        <div>
+          <h4>Firm</h4>
+          <ul>
+            <li><a href="/work/">Work</a></li>
+            <li><a href="/expertise/">Expertise</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/about/our-commitments/">Our Commitments</a></li>
+            <li><a href="/ideas/">Ideas</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="/#start">Start a conversation</a></li>
+            <li><a href="https://www.linkedin.com/in/danamiddletonkc/" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy/">Privacy</a></li>
+            <li><a href="/terms/">Terms</a></li>
+            <li><a href="/disclaimer/">Disclaimer</a></li>
+            <li><a href="/accessibility/">Accessibility</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Compositions | Structural Communications Firm</span>
+      <span>&copy; 2026 Compositions. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+
+<script>
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => backToTop.classList.toggle('visible', window.scrollY > 500));
+backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  const open = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open', open);
+  hamburger.setAttribute('aria-expanded', open);
+});
+mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  mobileMenu.classList.remove('open'); hamburger.classList.remove('open'); hamburger.setAttribute('aria-expanded', false);
+}));
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+</script>
+</body>
+</html>
