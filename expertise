@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Expertise | Compositions — Structural Communications Firm</title>
+<meta name="description" content="Where Compositions specializes: Mission, Purpose & Values; Culture & Workforce; Brand & Customer Promise; Strategic Change & Transformation; Social Impact & Community.">
+<link rel="canonical" href="https://compositionsadvisory.com/expertise/">
+<meta property="og:title" content="Expertise | Compositions">
+<meta property="og:description" content="Five classes of consequential organizational commitment.">
+<meta property="og:image" content="https://compositionsadvisory.com/assets/og-image.png">
+<meta property="og:url" content="https://compositionsadvisory.com/expertise/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Compositions">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" href="/assets/logo-square-color.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --teal: #16768C; --teal-dark: #144E73; --teal-light: #A3D2D8;
+  --charcoal: #2C2C2C; --off-white: #F8F8F8; --white: #FFFFFF;
+  --text: #1A1A1A; --text-sec: #63615D; --border: #E2E0DA;
+  --font-display: 'Oswald', sans-serif; --font-body: 'Poppins', sans-serif;
+  --max-width: 1160px; --section-pad: 120px 32px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: var(--font-body); font-weight: 300; color: var(--text); background: var(--off-white); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+img, svg { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+h1, h2, h3 { font-family: var(--font-display); margin: 0; font-weight: 600; }
+p { margin: 0; }
+ul { margin: 0; padding: 0; list-style: none; }
+button { font-family: var(--font-body); cursor: pointer; }
+:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
+.wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 32px; }
+section { padding: var(--section-pad); position: relative; }
+.bg-charcoal { background: var(--charcoal); }
+.bg-white { background: var(--white); }
+.bg-offwhite { background: var(--off-white); }
+
+.eyebrow { display: flex; align-items: center; gap: 14px; font-weight: 600; font-size: 0.72rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--teal); margin-bottom: 24px; }
+.eyebrow::before { content: ""; display: inline-block; width: 36px; height: 2px; background: var(--teal); flex-shrink: 0; }
+.eyebrow.on-dark { color: var(--teal-light); }
+.eyebrow.on-dark::before { background: var(--teal-light); }
+
+.btn { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.04em; padding: 16px 30px; border: 1.5px solid transparent; transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease; }
+.btn-teal { background: var(--teal); color: var(--white); }
+.btn-teal:hover { background: var(--teal-dark); transform: translateY(-1px); }
+.btn-ghost { border-color: rgba(255,255,255,0.45); color: var(--white); }
+.btn-ghost:hover { border-color: var(--white); transform: translateY(-1px); }
+.btn-ghost-dark { border-color: var(--charcoal); color: var(--charcoal); }
+.btn-ghost-dark:hover { background: var(--charcoal); color: var(--white); }
+.btn svg { transition: transform 0.2s ease; }
+.btn:hover svg { transform: translateX(3px); }
+
+/* NAV */
+.site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 300; display: flex; align-items: center; justify-content: space-between; padding: 20px 32px; background: rgba(248,248,248,0.94); backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--border); }
+.logo-mark img { height: 26px; width: auto; }
+.nav-links { display: flex; align-items: center; gap: 40px; }
+.nav-link { position: relative; font-weight: 500; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--charcoal); padding-bottom: 6px; }
+.nav-link.active { color: var(--teal-dark); }
+.nav-link::after { content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 1.5px; background: var(--teal); transition: width 0.2s ease; }
+.nav-link:hover::after, .nav-link.active::after { width: 100%; }
+.nav-cta { margin-left: 8px; padding: 12px 24px; }
+.hamburger { display: none; background: none; border: none; width: 32px; height: 32px; position: relative; z-index: 310; cursor: pointer; }
+.hamburger span { display: block; position: absolute; left: 4px; right: 4px; height: 2px; background: var(--charcoal); transition: all 0.25s ease; }
+.hamburger span:nth-child(1) { top: 10px; } .hamburger span:nth-child(2) { top: 16px; } .hamburger span:nth-child(3) { top: 22px; }
+.hamburger.open span:nth-child(1) { top: 16px; transform: rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { top: 16px; transform: rotate(-45deg); }
+.mobile-menu { position: fixed; inset: 0; background: var(--off-white); z-index: 290; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 36px; transform: translateY(-100%); opacity: 0; visibility: hidden; transition: transform 0.35s ease, opacity 0.3s ease, visibility 0.35s; }
+.mobile-menu.open { transform: translateY(0); opacity: 1; visibility: visible; }
+.mobile-menu a { font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; color: var(--charcoal); }
+@media (max-width: 860px) { .nav-links { display: none; } .hamburger { display: block; } }
+
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s cubic-bezier(0.2,0.6,0.2,1), transform 0.7s cubic-bezier(0.2,0.6,0.2,1); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+
+.page-hero { padding: 168px 32px 90px; }
+.page-hero h1 { font-size: clamp(2.1rem, 4.6vw, 3.4rem); line-height: 1.18; color: var(--charcoal); max-width: 780px; }
+.page-hero .support { font-size: 1.05rem; color: var(--text-sec); max-width: 620px; margin-top: 24px; line-height: 1.8; }
+
+.full-bleed-photo { position: relative; height: 56vh; max-height: 480px; overflow: hidden; }
+.full-bleed-photo img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.05); }
+@media (max-width: 640px) { .full-bleed-photo { height: 38vh; } }
+
+/* EXPERTISE ACCORDION (same pattern as Work) */
+.service-list { display: flex; flex-direction: column; border-top: 1px solid var(--border); }
+.service-item { border-bottom: 1px solid var(--border); }
+.service-head { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 36px 0; cursor: pointer; }
+.service-head .num { font-family: var(--font-display); font-weight: 600; font-size: 0.78rem; letter-spacing: 0.1em; color: var(--teal); flex-shrink: 0; width: 40px; }
+.service-head h3 { font-size: 1.4rem; color: var(--charcoal); flex: 1; }
+.service-head .question { font-size: 0.9rem; color: var(--text-sec); font-style: italic; max-width: 320px; text-align: right; display: none; }
+@media (min-width: 900px) { .service-head .question { display: block; } }
+.service-toggle { width: 30px; height: 30px; border: 1.5px solid var(--border); border-radius: 50%; flex-shrink: 0; position: relative; transition: border-color 0.2s ease, background 0.2s ease; }
+.service-toggle::before, .service-toggle::after { content: ""; position: absolute; background: var(--charcoal); transition: transform 0.25s ease; }
+.service-toggle::before { top: 50%; left: 8px; right: 8px; height: 1.5px; transform: translateY(-50%); }
+.service-toggle::after { left: 50%; top: 8px; bottom: 8px; width: 1.5px; transform: translateX(-50%); }
+.service-item.open .service-toggle::after { transform: translateX(-50%) rotate(90deg) scaleY(0); }
+.service-item.open .service-toggle { border-color: var(--teal); background: #EBF6F8; }
+.service-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+.service-item.open .service-body { max-height: 1000px; }
+.service-body-inner { padding: 0 0 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.service-body-inner .question-mobile { display: none; font-size: 0.95rem; color: var(--text-sec); font-style: italic; margin-bottom: 20px; grid-column: 1 / -1; }
+@media (max-width: 899px) { .service-body-inner .question-mobile { display: block; } }
+.service-col h4 { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal-dark); margin-bottom: 16px; }
+.service-col p.desc { font-size: 0.95rem; color: #444; line-height: 1.75; }
+.service-col ul { display: flex; flex-direction: column; gap: 10px; }
+.service-col li { font-size: 0.92rem; color: #444; line-height: 1.6; padding-left: 16px; position: relative; }
+.service-col li::before { content: ""; position: absolute; left: 0; top: 0.6em; width: 6px; height: 1.5px; background: var(--teal); }
+.service-col.situations li { font-style: italic; color: var(--text-sec); padding-left: 0; }
+@media (max-width: 899px) { .service-body-inner { grid-template-columns: 1fr; gap: 24px; } }
+
+.cta-band { text-align: center; }
+.cta-band h2 { font-size: clamp(1.6rem, 2.8vw, 2.2rem); color: var(--white); max-width: 640px; margin: 0 auto; line-height: 1.35; }
+.cta-band .cta-row { margin-top: 36px; display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; }
+
+footer { background: var(--charcoal); padding: 72px 32px 32px; }
+.footer-inner { max-width: var(--max-width); margin: 0 auto; }
+.footer-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.footer-brand img { height: 24px; width: auto; }
+.footer-tag { font-size: 0.85rem; color: rgba(255,255,255,0.4); margin-top: 14px; max-width: 300px; line-height: 1.6; }
+.footer-cols { display: flex; gap: 64px; flex-wrap: wrap; }
+.footer-cols h4 { font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 18px; font-weight: 600; }
+.footer-cols ul { display: flex; flex-direction: column; gap: 12px; }
+.footer-cols a { color: rgba(255,255,255,0.62); font-size: 0.92rem; }
+.footer-cols a:hover { color: var(--white); }
+.footer-bottom { padding-top: 28px; color: rgba(255,255,255,0.35); font-size: 0.78rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.back-to-top { position: fixed; right: 28px; bottom: 28px; width: 46px; height: 46px; background: var(--charcoal); display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s, background 0.2s; cursor: pointer; border: none; z-index: 99; }
+.back-to-top.visible { opacity: 1; visibility: visible; }
+.back-to-top:hover { background: var(--teal); }
+@media (max-width: 640px) { :root { --section-pad: 84px 22px; } .page-hero { padding: 140px 22px 70px; } }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="/" class="logo-mark" aria-label="Compositions home">
+    <img src="/assets/Compositions-Accent-Horizontal.png" alt="Compositions">
+  </a>
+  <div class="nav-links">
+    <a href="/work/" class="nav-link">Work</a>
+    <a href="/expertise/" class="nav-link active">Expertise</a>
+    <a href="/about/" class="nav-link">About</a>
+    <a href="/ideas/" class="nav-link">Ideas</a>
+    <a href="/#start" class="btn btn-teal nav-cta">Contact</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/work/">Work</a>
+  <a href="/expertise/">Expertise</a>
+  <a href="/about/">About</a>
+  <a href="/ideas/">Ideas</a>
+  <a href="/#start">Contact</a>
+</div>
+
+<main>
+
+<section class="bg-white page-hero">
+  <div class="wrap reveal visible">
+    <p class="eyebrow">Expertise</p>
+    <h1>Five classes of consequential commitment. Not every organizational problem — these.</h1>
+    <p class="support">Compositions specializes in commitments where communication and organizational reality have to work together. Work answers what Compositions does; this answers where.</p>
+  </div>
+</section>
+
+<section class="full-bleed-photo">
+  <img src="/assets/photography/community-circle.png" alt="A diverse group of six seated in conversation in a modern community space" loading="lazy">
+</section>
+
+<!-- FIVE COMMITMENT CLASSES -->
+<section class="bg-white">
+  <div class="wrap">
+    <div class="service-list reveal" id="classList">
+
+      <div class="service-item open" data-class="1" id="mission-purpose-values">
+        <div class="service-head">
+          <span class="num">01</span>
+          <h3>Mission, Purpose &amp; Values</h3>
+          <p class="question">Does what we say should guide us actually guide decisions?</p>
+          <div class="service-toggle"></div>
+        </div>
+        <div class="service-body">
+          <div class="service-body-inner">
+            <p class="question-mobile">Does what we say should guide us actually guide decisions?</p>
+            <div class="service-col">
+              <h4>What This Covers</h4>
+              <p class="desc">Defining what the organization stands for — and making it usable in leadership, decisions, communication, and daily work. Mission, purpose, values, organizational and leadership principles, institutional identity.</p>
+            </div>
+            <div class="service-col situations">
+              <h4>What Buyers Say</h4>
+              <ul>
+                <li>"Our values feel generic."</li>
+                <li>"Leadership isn't aligned on what the purpose means."</li>
+                <li>"Employees can name the values, but they don't use them."</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-item" data-class="2" id="culture-workforce">
+        <div class="service-head">
+          <span class="num">02</span>
+          <h3>Culture &amp; Workforce</h3>
+          <p class="question">Does the employee promise match the experience the organization creates?</p>
+          <div class="service-toggle"></div>
+        </div>
+        <div class="service-body">
+          <div class="service-body-inner">
+            <p class="question-mobile">Does the employee promise match the experience the organization creates?</p>
+            <div class="service-col">
+              <h4>What This Covers</h4>
+              <p class="desc">Shaping what the organization promises employees and ensuring culture, leadership, communications, and workforce experience reinforce it. Culture, EVP, employer brand, workforce promise, leadership experience, wellbeing, belonging, capability.</p>
+            </div>
+            <div class="service-col situations">
+              <h4>What Buyers Say</h4>
+              <ul>
+                <li>"The EVP doesn't sound like the actual experience."</li>
+                <li>"We're asking managers to carry too much."</li>
+                <li>"The same workforce concern keeps appearing in different forms."</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-item" data-class="3" id="brand-customer-promise">
+        <div class="service-head">
+          <span class="num">03</span>
+          <h3>Brand &amp; Customer Promise</h3>
+          <p class="question">Can the operating reality consistently sustain what the brand promises?</p>
+          <div class="service-toggle"></div>
+        </div>
+        <div class="service-body">
+          <div class="service-body-inner">
+            <p class="question-mobile">Can the operating reality consistently sustain what the brand promises?</p>
+            <div class="service-col">
+              <h4>What This Covers</h4>
+              <p class="desc">Connecting the external promise to the internal decisions, behaviors, communications, and capabilities required to deliver it. Brand promise, customer promise, service promise, customer experience, internal/external brand alignment.</p>
+            </div>
+            <div class="service-col situations">
+              <h4>What Buyers Say</h4>
+              <ul>
+                <li>"The campaign is stronger than the experience."</li>
+                <li>"Different parts of the organization deliver the brand differently."</li>
+                <li>"Our external narrative and internal reality are drifting apart."</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-item" data-class="4" id="strategic-change-transformation">
+        <div class="service-head">
+          <span class="num">04</span>
+          <h3>Strategic Change &amp; Transformation</h3>
+          <p class="question">Are people only informed about the change, or structurally able to enact it?</p>
+          <div class="service-toggle"></div>
+        </div>
+        <div class="service-body">
+          <div class="service-body-inner">
+            <p class="question-mobile">Are people only informed about the change, or structurally able to enact it?</p>
+            <div class="service-col">
+              <h4>What This Covers</h4>
+              <p class="desc">Helping leaders define the future, communicate it clearly, equip people to act, and sustain adoption beyond launch. Strategy activation, change, transformation, merger integration, reorganization, new ways of working.</p>
+            </div>
+            <div class="service-col situations">
+              <h4>What Buyers Say</h4>
+              <ul>
+                <li>"People understand the change, but they're not working differently."</li>
+                <li>"The launch went well, but adoption has stalled."</li>
+                <li>"We keep relaunching the same change."</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-item" data-class="5" id="social-impact-community">
+        <div class="service-head">
+          <span class="num">05</span>
+          <h3>Social Impact &amp; Community</h3>
+          <p class="question">What changed, for whom, and what can the organization responsibly claim?</p>
+          <div class="service-toggle"></div>
+        </div>
+        <div class="service-body">
+          <div class="service-body-inner">
+            <p class="question-mobile">What changed, for whom, and what can the organization responsibly claim?</p>
+            <div class="service-col">
+              <h4>What This Covers</h4>
+              <p class="desc">Turning public commitments into credible strategy, stakeholder communication, evidence, and demonstrable impact. Social impact, community impact, corporate citizenship, health equity, responsible-business commitments.</p>
+            </div>
+            <div class="service-col situations">
+              <h4>What Buyers Say</h4>
+              <ul>
+                <li>"We have a lot of activity but can't clearly explain the impact."</li>
+                <li>"Our public commitment is stronger than our evidence."</li>
+                <li>"The report describes what we did, not what changed."</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-cta reveal" style="margin-top:48px;text-align:center;">
+      <a href="/work/" class="btn btn-ghost-dark">See how this becomes work <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-charcoal cta-band">
+  <div class="wrap reveal">
+    <p class="eyebrow on-dark" style="justify-content:center;">Start Here</p>
+    <h2>Where does the issue seem to be?</h2>
+    <div class="cta-row">
+      <a href="/#start" class="btn btn-teal">Start a conversation <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="/ideas/" class="btn btn-ghost">Read our Ideas</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <a href="/" class="footer-brand" aria-label="Compositions home">
+          <img src="/assets/Compositions-Off-White-Horizontal.png" alt="Compositions">
+        </a>
+        <p class="footer-tag">A Structural Communications Firm specializing in consequential organizational commitments.</p>
+      </div>
+      <div class="footer-cols">
+        <div>
+          <h4>Firm</h4>
+          <ul>
+            <li><a href="/work/">Work</a></li>
+            <li><a href="/expertise/">Expertise</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/about/our-commitments/">Our Commitments</a></li>
+            <li><a href="/ideas/">Ideas</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="/#start">Start a conversation</a></li>
+            <li><a href="https://www.linkedin.com/in/danamiddletonkc/" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy/">Privacy</a></li>
+            <li><a href="/terms/">Terms</a></li>
+            <li><a href="/disclaimer/">Disclaimer</a></li>
+            <li><a href="/accessibility/">Accessibility</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Compositions | Structural Communications Firm</span>
+      <span>&copy; 2026 Compositions. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+
+<script>
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => backToTop.classList.toggle('visible', window.scrollY > 500));
+backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  const open = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open', open);
+  hamburger.setAttribute('aria-expanded', open);
+});
+mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  mobileMenu.classList.remove('open'); hamburger.classList.remove('open'); hamburger.setAttribute('aria-expanded', false);
+}));
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+/* CLASS ACCORDION */
+document.querySelectorAll('.service-item').forEach(item => {
+  item.querySelector('.service-head').addEventListener('click', () => {
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.service-item').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  });
+});
+
+/* OPEN + SCROLL TO TARGET SECTION IF ARRIVING VIA HASH LINK */
+if (window.location.hash) {
+  const target = document.querySelector(window.location.hash);
+  if (target && target.classList.contains('service-item')) {
+    document.querySelectorAll('.service-item').forEach(i => i.classList.remove('open'));
+    target.classList.add('open');
+    setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+  }
+}
+</script>
+</body>
+</html>
