@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Accessibility | Compositions</title>
+<meta name="description" content="Compositions' accessibility commitment and how to report an issue.">
+<link rel="canonical" href="https://compositionsadvisory.com/accessibility/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" href="/assets/logo-square-color.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --teal: #16768C; --teal-dark: #144E73;
+  --charcoal: #2C2C2C; --off-white: #F8F8F8; --white: #FFFFFF;
+  --text: #1A1A1A; --text-sec: #63615D; --border: #E2E0DA;
+  --font-display: 'Oswald', sans-serif; --font-body: 'Poppins', sans-serif;
+  --max-width: 1160px; --content-width: 700px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: var(--font-body); font-weight: 300; color: var(--text); background: var(--off-white); -webkit-font-smoothing: antialiased; }
+img, svg { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+h1, h2 { font-family: var(--font-display); margin: 0; font-weight: 600; }
+p { margin: 0; }
+ul { margin: 0; padding: 0; list-style: none; }
+:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
+.wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 32px; }
+.btn { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.04em; padding: 16px 30px; border: 1.5px solid transparent; }
+.btn-teal { background: var(--teal); color: var(--white); }
+.btn-teal:hover { background: var(--teal-dark); }
+
+.site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 300; display: flex; align-items: center; justify-content: space-between; padding: 20px 32px; background: rgba(248,248,248,0.94); backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--border); }
+.logo-mark img { height: 26px; width: auto; }
+.nav-links { display: flex; align-items: center; gap: 40px; }
+.nav-link { font-weight: 500; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--charcoal); }
+.nav-cta { margin-left: 8px; padding: 12px 24px; }
+.hamburger { display: none; background: none; border: none; width: 32px; height: 32px; position: relative; z-index: 310; cursor: pointer; }
+.hamburger span { display: block; position: absolute; left: 4px; right: 4px; height: 2px; background: var(--charcoal); }
+.hamburger span:nth-child(1) { top: 10px; } .hamburger span:nth-child(2) { top: 16px; } .hamburger span:nth-child(3) { top: 22px; }
+.hamburger.open span:nth-child(1) { top: 16px; transform: rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { top: 16px; transform: rotate(-45deg); }
+.mobile-menu { position: fixed; inset: 0; background: var(--off-white); z-index: 290; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 32px; transform: translateY(-100%); opacity: 0; visibility: hidden; transition: transform 0.35s ease, opacity 0.3s ease, visibility 0.35s; }
+.mobile-menu.open { transform: translateY(0); opacity: 1; visibility: visible; }
+.mobile-menu a { font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; color: var(--charcoal); }
+@media (max-width: 860px) { .nav-links { display: none; } .hamburger { display: block; } }
+
+.page-body { padding: 156px 32px 100px; }
+.content { max-width: var(--content-width); margin: 0 auto; }
+.content .eyebrow { font-weight: 600; font-size: 0.72rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--teal); margin-bottom: 20px; }
+.content h1 { font-size: clamp(1.8rem, 3.4vw, 2.4rem); color: var(--charcoal); line-height: 1.25; }
+.content .updated { font-size: 0.85rem; color: var(--text-sec); margin-top: 16px; }
+.content p.lede { font-size: 1.05rem; color: #444; line-height: 1.85; margin-top: 32px; }
+.content h2 { font-size: 1.25rem; color: var(--charcoal); margin-top: 2.4em; margin-bottom: 0.8em; }
+.content p { font-size: 0.98rem; color: #444; line-height: 1.85; margin-bottom: 1.2em; }
+.content ul { margin: 1.2em 0; display: flex; flex-direction: column; gap: 12px; }
+.content li { font-size: 0.98rem; color: #444; line-height: 1.75; padding-left: 20px; position: relative; }
+.content li::before { content: ""; position: absolute; left: 0; top: 0.65em; width: 8px; height: 1.5px; background: var(--teal); }
+.contact-block { margin-top: 2.4em; padding: 28px 30px; background: var(--white); border: 1px solid var(--border); }
+.contact-block p { margin-bottom: 6px; }
+.contact-block a { color: var(--teal-dark); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
+
+footer { background: var(--charcoal); padding: 64px 32px 32px; }
+.footer-inner { max-width: var(--max-width); margin: 0 auto; }
+.footer-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px; padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.footer-brand img { height: 22px; width: auto; }
+.footer-cols { display: flex; gap: 56px; flex-wrap: wrap; }
+.footer-cols h4 { font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 14px; font-weight: 600; }
+.footer-cols ul { display: flex; flex-direction: column; gap: 10px; }
+.footer-cols a { color: rgba(255,255,255,0.62); font-size: 0.9rem; }
+.footer-cols a:hover { color: var(--white); }
+.footer-bottom { padding-top: 24px; color: rgba(255,255,255,0.35); font-size: 0.76rem; }
+@media (max-width: 640px) { .page-body { padding: 132px 22px 72px; } }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="/" class="logo-mark" aria-label="Compositions home">
+    <img src="/assets/Compositions-Accent-Horizontal.png" alt="Compositions">
+  </a>
+  <div class="nav-links">
+    <a href="/work/" class="nav-link">Work</a>
+    <a href="/expertise/" class="nav-link">Expertise</a>
+    <a href="/about/" class="nav-link">About</a>
+    <a href="/ideas/" class="nav-link">Ideas</a>
+    <a href="/#start" class="btn btn-teal nav-cta">Contact</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/work/">Work</a>
+  <a href="/expertise/">Expertise</a>
+  <a href="/about/">About</a>
+  <a href="/ideas/">Ideas</a>
+  <a href="/#start">Contact</a>
+</div>
+
+<main class="page-body">
+  <div class="content">
+    <p class="eyebrow">Accessibility</p>
+    <h1>Our commitment to an accessible website.</h1>
+    <p class="updated">Last updated: July 2026</p>
+
+    <p class="lede">Compositions is built for leaders navigating consequential decisions — and that means the website itself has to be usable by everyone who needs it, regardless of ability or how they access the web. Accessibility isn't a checkbox here; it's the same discipline the firm applies everywhere else: does the thing we built actually hold up for the people using it?</p>
+
+    <h2>What's built into this site</h2>
+    <ul>
+      <li>Semantic HTML structure throughout, so screen readers and other assistive technology can navigate headings, sections, and landmarks correctly.</li>
+      <li>Full keyboard operability — navigation, accordions, filters, and forms can all be reached and used without a mouse.</li>
+      <li>Visible focus indicators on every interactive element, rather than suppressing the browser's default focus styling.</li>
+      <li>Descriptive alternative text on meaningful images; purely decorative imagery is marked so it doesn't clutter screen-reader output.</li>
+      <li>Motion and animation respect your system's reduced-motion preference — if you've asked your device to minimize motion, this site honors that automatically.</li>
+      <li>Color choices intended to maintain sufficient contrast between text and background throughout the site.</li>
+    </ul>
+
+    <h2>An honest note on where we are</h2>
+    <p>We've built this site with these principles in mind from the start, but we have not yet completed a formal, independent accessibility audit against a specific standard (such as WCAG 2.1 AA). We'd rather tell you that plainly than claim a level of compliance we haven't verified. Closing that gap is an active priority, not a someday item.</p>
+
+    <h2>Something not working for you?</h2>
+    <p>If you encounter a barrier anywhere on this site — content you can't reach, text you can't read, or anything else that gets in your way — we want to know about it and fix it.</p>
+
+    <div class="contact-block">
+      <p><strong>Email:</strong> <a href="mailto:hello@compositionsadvisory.com">hello@compositionsadvisory.com</a></p>
+      <p>Please include the page you were on and a brief description of what happened. We'll respond as quickly as we can.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <a href="/" class="footer-brand" aria-label="Compositions home">
+          <img src="/assets/Compositions-Off-White-Horizontal.png" alt="Compositions">
+        </a>
+      </div>
+      <div class="footer-cols">
+        <div>
+          <h4>Firm</h4>
+          <ul>
+            <li><a href="/work/">Work</a></li>
+            <li><a href="/expertise/">Expertise</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/ideas/">Ideas</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy/">Privacy</a></li>
+            <li><a href="/terms/">Terms</a></li>
+            <li><a href="/disclaimer/">Disclaimer</a></li>
+            <li><a href="/accessibility/">Accessibility</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">Compositions | Structural Communications Firm | &copy; 2026 Compositions. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  const open = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open', open);
+  hamburger.setAttribute('aria-expanded', open);
+});
+mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  mobileMenu.classList.remove('open'); hamburger.classList.remove('open'); hamburger.setAttribute('aria-expanded', false);
+}));
+</script>
+</body>
+</html>
