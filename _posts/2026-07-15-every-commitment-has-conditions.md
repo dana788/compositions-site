@@ -1,7 +1,7 @@
 ---
 title: Every Commitment Has Conditions
 date: 2026-07-14T23:06:00.000-05:00
-category: The Belief Gap
+category: Communication & Believability
 readtime: 6 Min Read
 summary: A wellbeing initiative launches. Six months later, the workload never
   changed. A values statement goes out. Promotion decisions never did. The
