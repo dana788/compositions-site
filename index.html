@@ -84,7 +84,7 @@ section { padding: var(--section-pad); position: relative; }
 .full-bleed-photo { position: relative; height: 76vh; max-height: 700px; overflow: hidden; }
 .full-bleed-photo.reveal-crop { clip-path: inset(0 0 26% 0); transition: clip-path 1.1s cubic-bezier(0.16,1,0.3,1); }
 .full-bleed-photo.reveal-crop.visible { clip-path: inset(0 0 0 0); }
-.full-bleed-photo img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 22%; transform: scale(1.6); filter: grayscale(1) contrast(1.05); will-change: transform; }
+.full-bleed-photo img { position: absolute; left: 0; top: -20%; width: 100%; height: 140%; object-fit: cover; object-position: center 15%; filter: grayscale(1) contrast(1.05); will-change: transform; }
 @media (max-width: 640px) { .full-bleed-photo { height: 50vh; } }
 @media (prefers-reduced-motion: reduce) { .full-bleed-photo img { transform: none !important; } }
 
@@ -472,7 +472,7 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
 <!-- FULL-BLEED IMAGE: seeing the arrangement before reading about it -->
 <section class="full-bleed-image-section">
   <div class="full-bleed-photo reveal-crop">
-    <img class="parallax-target" data-base-scale="1.6" data-drift="190" src="/assets/photography/exec-profile.png" alt="A senior leader standing in a modern studio, with a subtle geometric structural overlay evoking arrangement and composition" loading="lazy">
+    <img class="parallax-target" data-base-scale="1" data-drift="140" src="/assets/photography/exec-profile.png" alt="A senior leader standing in a modern studio, with a subtle geometric structural overlay evoking arrangement and composition" loading="lazy">
   </div>
 </section>
 
