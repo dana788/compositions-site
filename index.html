@@ -218,8 +218,6 @@ section { padding: var(--section-pad); position: relative; }
 
 /* ── COLLAGE STRIP: proof of sensibility, not a client logo wall ── */
 .collage-strip-section { padding: 64px 0; overflow: hidden; }
-.collage-strip { display: flex; gap: 3px; padding: 0 32px; overflow-x: auto; scrollbar-width: none; }
-.collage-strip::-webkit-scrollbar { display: none; }
 .collage-tile { flex: 0 0 auto; height: 260px; position: relative; overflow: hidden; background: var(--charcoal); }
 .collage-tile img { height: 100%; width: auto; display: block; filter: grayscale(1) contrast(1.05); transition: transform 0.5s ease; }
 .collage-tile:hover img { transform: scale(1.05); }
@@ -229,7 +227,19 @@ section { padding: var(--section-pad); position: relative; }
 .collage-tile.card.dark { background: var(--charcoal); }
 .collage-tile.card span { font-family: var(--font-display); font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-sec); text-align: center; padding: 12px; }
 .collage-tile.card.dark span { color: rgba(255,255,255,0.4); }
+.collage-set { display: flex; gap: 3px; }
 @media (max-width: 640px) { .collage-tile { height: 190px; } .collage-tile.wide { width: 320px; } .collage-tile.narrow { width: 140px; } .collage-tile.card { width: 110px; } }
+
+/* ── CONTINUOUS SCROLL: two identical tracks, animated as one loop ── */
+.collage-strip-outer { overflow-x: auto; overflow-y: hidden; scrollbar-width: none; }
+.collage-strip-outer::-webkit-scrollbar { display: none; }
+.collage-strip-track { display: flex; gap: 3px; width: max-content; padding: 0 32px; animation: collageScroll 52s linear infinite; }
+.collage-strip-outer:hover .collage-strip-track { animation-play-state: paused; }
+@keyframes collageScroll { from { transform: translateX(0); } to { transform: translateX(calc(-50% - 1.5px)); } }
+@media (prefers-reduced-motion: reduce) {
+  .collage-strip-track { animation: none; }
+  .collage-strip-track .collage-set.duplicate { display: none; }
+}
 
 /* ── EXPERTISE (light variant) ── */
 .expertise-list.on-light .expertise-row { border-top-color: var(--border); }
@@ -538,13 +548,29 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
 
 <!-- COLLAGE STRIP: proof of sensibility, not a client logo wall -->
 <section class="bg-offwhite collage-strip-section">
-  <div class="collage-strip reveal" aria-label="A collage of editorial and archival imagery representing Compositions' sensibility">
-    <div class="collage-tile wide"><img src="/assets/photography/collage-mood.png" alt="Black and white studio archive collage of editorial materials" loading="lazy"></div>
-    <div class="collage-tile card"><span>Every commitment has conditions.</span></div>
-    <div class="collage-tile narrow"><img src="/assets/photography/wall-art.png" alt="Abstract geometric artwork in a minimalist architectural hallway" loading="lazy"></div>
-    <div class="collage-tile card dark"><span>Reveal. Architect. Govern.</span></div>
-    <div class="collage-tile wide"><img src="/assets/photography/office-desk.png" alt="Minimalist executive office with city skyline view" loading="lazy"></div>
-    <div class="collage-tile narrow"><img src="/assets/photography/city-skyline-portrait.png" alt="A black and white portrait-oriented New York City skyline viewed from an architectural terrace" loading="lazy"></div>
+  <div class="collage-strip-outer reveal" aria-label="A continuously scrolling collage of editorial and archival imagery representing Compositions' sensibility">
+    <div class="collage-strip-track">
+      <div class="collage-set">
+        <div class="collage-tile wide"><img src="/assets/photography/collage-mood.png" alt="Black and white studio archive collage of editorial materials" loading="lazy"></div>
+        <div class="collage-tile card"><span>Every commitment has conditions.</span></div>
+        <div class="collage-tile narrow"><img src="/assets/photography/wall-art.png" alt="Abstract geometric artwork in a minimalist architectural hallway" loading="lazy"></div>
+        <div class="collage-tile card dark"><span>Reveal. Architect. Govern.</span></div>
+        <div class="collage-tile wide"><img src="/assets/photography/office-desk.png" alt="Minimalist executive office with city skyline view" loading="lazy"></div>
+        <div class="collage-tile narrow"><img src="/assets/photography/city-skyline-portrait.png" alt="A black and white portrait-oriented New York City skyline viewed from an architectural terrace" loading="lazy"></div>
+        <div class="collage-tile wide"><img src="/assets/photography/lobby-motion.png" alt="Motion-blurred figures moving through a modern office lobby" loading="lazy"></div>
+        <div class="collage-tile wide"><img src="/assets/photography/collateral-layout.png" alt="A flat-lay arrangement of editorial print collateral and layout materials" loading="lazy"></div>
+      </div>
+      <div class="collage-set duplicate" aria-hidden="true">
+        <div class="collage-tile wide"><img src="/assets/photography/collage-mood.png" alt="" loading="lazy"></div>
+        <div class="collage-tile card"><span>Every commitment has conditions.</span></div>
+        <div class="collage-tile narrow"><img src="/assets/photography/wall-art.png" alt="" loading="lazy"></div>
+        <div class="collage-tile card dark"><span>Reveal. Architect. Govern.</span></div>
+        <div class="collage-tile wide"><img src="/assets/photography/office-desk.png" alt="" loading="lazy"></div>
+        <div class="collage-tile narrow"><img src="/assets/photography/city-skyline-portrait.png" alt="" loading="lazy"></div>
+        <div class="collage-tile wide"><img src="/assets/photography/lobby-motion.png" alt="" loading="lazy"></div>
+        <div class="collage-tile wide"><img src="/assets/photography/collateral-layout.png" alt="" loading="lazy"></div>
+      </div>
+    </div>
   </div>
 </section>
 
