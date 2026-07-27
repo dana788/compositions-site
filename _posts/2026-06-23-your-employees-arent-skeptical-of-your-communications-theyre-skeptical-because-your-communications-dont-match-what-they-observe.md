@@ -1,14 +1,14 @@
 ---
-title: Your Employees Aren't Skeptical of Your Communications. They're Skeptical
-  Because Your Communications Don't Match What They Observe.
+title: Your Employees Aren't Skeptical of Your Communications.
 date: 2026-06-23T11:22:00.000-05:00
-category: Communication & Believability
+category: Communications and Credibility
 readtime: 6 Min Read
 summary: Employees don't evaluate organizational communications against its
   craft — they measure it against the operating evidence they already hold. When
   structural conditions contradict what communications describes, no investment
   in message quality, channel strategy, or leadership visibility closes the
-  distance.
+  distance. Your Employees Aren't Skeptical of Your Communications. They're
+  Skeptical Because Your Communications Don't Match What They Observe.
 ---
 In 2025, for the first time in the history of Edelman's annual Trust Barometer, trust in employers declined globally. The institution that held the highest trust ranking since 2021 — outperforming government, media, and NGOs — dropped 3 points. Seventy-five percent of employees still trust their employer to do what is right. Twenty-five percent don't.
 
