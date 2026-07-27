@@ -2,7 +2,7 @@
 title: Your Employees Aren't Skeptical of Your Communications. They're Skeptical
   Because Your Communications Don't Match What They Observe.
 date: 2026-06-23T11:22:00.000-05:00
-category: The Belief Gap
+category: Communication & Believability
 readtime: 6 Min Read
 summary: Employees don't evaluate organizational communications against its
   craft — they measure it against the operating evidence they already hold. When
