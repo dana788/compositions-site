@@ -14,7 +14,7 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Category", name: "category", widget: "select", options: ["Organizational Commitments", "Communication & Believability", "Commitment to Reality", "Conditions & Coherence", "Evidence & Return", "Portfolio Governance"]}
+      - {label: "Category", name: "category", widget: "select", options: ["Communications and Credibility", "Culture and Workforce", "Brand and Customer Promise", "Change and Transformation", "Mission, Values, and Leadership", "Social Impact and Community", "Evidence, Investment, and Governance"]}
       - {label: "Read Time", name: "readtime", widget: "string", hint: "e.g. 5 min read"}
       - {label: "Summary", name: "summary", widget: "text", hint: "One or two sentences shown on the Ideas index page"}
       - {label: "Body", name: "body", widget: "markdown"}
