@@ -5,14 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index, follow">
 <title>About | Compositions — Structural Communications Firm</title>
-<meta name="description" content="Compositions is a Structural Communications Firm specializing in consequential organizational commitments. Led by Dana Middleton, Structural Advisor & Principal.">
+<meta name="description" content="Compositions is a Structural Communications Firm specializing in consequential organizational commitments — built so leaders can deliver on what they've promised, with measurable outcomes and evidence, not just good intentions. Led by Dana Middleton.">
 <link rel="canonical" href="https://compositionsadvisory.com/about/">
-<meta property="og:title" content="About | Compositions">
-<meta property="og:description" content="The firm, its method, and the person behind it.">
+<meta property="og:title" content="About | Compositions — Structural Communications Firm">
+<meta property="og:description" content="Compositions exists because well-intentioned organizations still struggle to deliver on their commitments — and the cost of that gap is measurable. Here's how the firm addresses it, and who leads the work.">
 <meta property="og:image" content="https://compositionsadvisory.com/assets/og-image.png">
 <meta property="og:url" content="https://compositionsadvisory.com/about/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Compositions">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" type="image/png" href="/assets/logo-square-color.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -83,43 +84,52 @@ section { padding: var(--section-pad); position: relative; }
 
 .page-hero { padding: 168px 32px 90px; }
 .page-hero h1 { font-size: clamp(2.1rem, 4.6vw, 3.4rem); line-height: 1.18; color: var(--charcoal); max-width: 780px; }
-.page-hero .support { font-size: 1.05rem; color: var(--text-sec); max-width: 620px; margin-top: 24px; line-height: 1.8; }
+.page-hero .support { font-size: 1.05rem; color: var(--text-sec); max-width: 660px; margin-top: 24px; line-height: 1.8; }
 
 /* THE FIRM: photo + copy */
 .firm-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 64px; align-items: center; }
 .firm-photo { position: relative; aspect-ratio: 4/5; overflow: hidden; }
 .firm-photo img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.05); }
+.firm-copy h2.tagline { font-size: clamp(1.5rem,2.6vw,2.1rem); color: var(--charcoal); line-height: 1.35; }
 .firm-copy p.body-copy { font-size: 1.02rem; line-height: 1.85; color: #444; margin-top: 20px; }
 @media (max-width: 900px) { .firm-grid { grid-template-columns: 1fr; } }
 
-/* WHY COMPOSITIONS */
+/* THE NAME — rhythm via line breaks, not bold weight */
 .name-block { max-width: 700px; }
-.name-block .principle { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.3rem, 2.4vw, 1.8rem); line-height: 1.5; color: var(--charcoal); }
-.name-block p.body-copy { font-size: 1.02rem; line-height: 1.9; color: #444; margin-top: 22px; }
+.name-block .verse { font-size: 1.08rem; line-height: 1.9; color: var(--charcoal); }
+.name-block .verse span { display: block; }
+.name-block .verse span + span { margin-top: 4px; }
+.name-block p.body-copy { font-size: 1.02rem; line-height: 1.9; color: #444; margin-top: 26px; }
+.name-block .sub-label { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal-dark); margin-top: 40px; margin-bottom: 4px; }
+.name-block .payoff { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.35rem, 2.5vw, 1.9rem); line-height: 1.5; color: var(--charcoal); margin-top: 30px; }
+.name-block .payoff span { display: block; }
 
-/* SEVEN-PILLAR MOAT */
-.pillar-list { display: flex; flex-direction: column; }
-.pillar-row { display: grid; grid-template-columns: 40px 2fr 3fr; gap: 24px; padding: 28px 0; border-top: 1px solid rgba(255,255,255,0.14); align-items: baseline; }
-.pillar-list .pillar-row:last-child { border-bottom: 1px solid rgba(255,255,255,0.14); }
-.pillar-row .num { font-family: var(--font-display); font-weight: 600; color: var(--teal-light); font-size: 0.9rem; }
-.pillar-row h3 { font-size: 1.15rem; color: var(--white); font-weight: 500; }
-.pillar-row p { font-size: 0.9rem; color: rgba(255,255,255,0.6); line-height: 1.7; }
-@media (max-width: 700px) { .pillar-row { grid-template-columns: 1fr; gap: 6px; } .pillar-row .num { display: none; } }
+/* METHOD STRIP — interactive hover-lift cards */
+.method-strip { display: flex; flex-wrap: wrap; gap: 2px; background: var(--border); border: 1px solid var(--border); margin-top: 40px; }
+.method-step { flex: 1 1 220px; background: var(--white); padding: 32px 28px; transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease; }
+.method-step:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(44,44,44,0.08); background: #FCFFFF; }
+.method-step .step-num { font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; color: var(--teal); }
+.method-step .step-gloss { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-sec); margin-top: 8px; display: block; }
+.method-step p { font-size: 0.9rem; color: var(--text-sec); line-height: 1.7; margin-top: 14px; }
 
-/* DANA — TEXT-ONLY */
-.dana-block { max-width: 760px; }
-.dana-block .lede { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.3rem, 2.4vw, 1.7rem); line-height: 1.45; color: var(--charcoal); }
-.dana-block .body-copy { font-size: 1.02rem; line-height: 1.9; color: #444; margin-top: 26px; }
+/* DANA — narrative bio + credential rail */
+.dana-block { max-width: 780px; }
+.dana-block .lede { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.3rem, 2.4vw, 1.8rem); line-height: 1.45; color: var(--charcoal); }
+.dana-block .body-copy { font-size: 1.02rem; line-height: 1.9; color: #444; margin-top: 24px; }
 .dana-block .body-copy + .body-copy { margin-top: 18px; }
-.credential-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 36px; }
+.dana-block .facts { font-size: 0.92rem; line-height: 1.8; color: var(--text-sec); margin-top: 26px; }
+.credential-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
 .credential-pill { border: 1px solid var(--border); padding: 9px 18px; font-size: 0.82rem; color: var(--charcoal); background: var(--white); }
 
-/* METHOD STRIP */
-.method-strip { display: flex; flex-wrap: wrap; gap: 2px; background: var(--border); border: 1px solid var(--border); margin-top: 40px; }
-.method-step { flex: 1 1 220px; background: var(--white); padding: 32px 28px; }
-.method-step .step-num { font-family: var(--font-display); font-weight: 600; font-size: 0.75rem; letter-spacing: 0.1em; color: var(--teal); }
-.method-step h4 { font-size: 1.15rem; color: var(--charcoal); margin-top: 12px; }
-.method-step p { font-size: 0.9rem; color: var(--text-sec); line-height: 1.7; margin-top: 10px; }
+/* INTERDISCIPLINARY LENS — one integrated cluster, not seven separate rows */
+.lens-intro { max-width: 720px; }
+.lens-intro h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); color: var(--white); line-height: 1.35; }
+.lens-intro p { margin-top: 18px; font-size: 0.98rem; color: rgba(255,255,255,0.6); line-height: 1.85; }
+.pill-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 36px; }
+.pill { border: 1px solid var(--border); padding: 10px 20px; font-size: 0.85rem; color: var(--charcoal); background: var(--white); display: inline-block; transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease; cursor: default; }
+.pill:hover { transform: scale(1.045); border-color: var(--teal); box-shadow: 0 6px 18px rgba(22,118,140,0.14); background: #F3FAFB; }
+.pill.on-dark { border-color: rgba(255,255,255,0.25); color: rgba(255,255,255,0.85); background: transparent; }
+.pill.on-dark:hover { background: rgba(163,210,216,0.1); border-color: var(--teal-light); box-shadow: 0 6px 18px rgba(163,210,216,0.1); }
 
 .cta-band { text-align: center; }
 .cta-band h2 { font-size: clamp(1.6rem, 2.8vw, 2.2rem); color: var(--white); max-width: 640px; margin: 0 auto; line-height: 1.35; }
@@ -153,7 +163,7 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
     <a href="/expertise/" class="nav-link">Expertise</a>
     <a href="/about/" class="nav-link active">About</a>
     <a href="/ideas/" class="nav-link">Ideas</a>
-    <a href="/#start" class="btn btn-teal nav-cta">Contact</a>
+    <a href="/commitment-inquiry/" class="btn btn-teal nav-cta">Contact</a>
   </div>
   <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
 </nav>
@@ -163,7 +173,7 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
   <a href="/expertise/">Expertise</a>
   <a href="/about/">About</a>
   <a href="/ideas/">Ideas</a>
-  <a href="/#start">Contact</a>
+  <a href="/commitment-inquiry/">Contact</a>
 </div>
 
 <main>
@@ -171,8 +181,8 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
 <section class="bg-white page-hero">
   <div class="wrap reveal visible">
     <p class="eyebrow">About</p>
-    <h1>Compositions is a Structural Communications Firm specializing in consequential organizational commitments.</h1>
-    <p class="support">The firm works on mission and values, culture and workforce, brand and customer promise, strategic change and transformation, and social impact — areas where communication is central, but where the outcome also depends on leadership, operating practice, stakeholder experience, and evidence.</p>
+    <h1>Compositions is a Structural Communications Firm.</h1>
+    <p class="support">The firm specializes in consequential organizational commitments — mission and values, culture and workforce, brand and customer promise, strategic change and transformation, and social impact — areas where communication is central, but where the outcome also depends on structures and conditions like leadership, operating practice, stakeholder experience, and evidence.</p>
   </div>
 </section>
 
@@ -184,50 +194,69 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
     </div>
     <div class="firm-copy">
       <p class="eyebrow">The Firm</p>
-      <h2 style="font-size:clamp(1.5rem,2.6vw,2.1rem);color:var(--charcoal);line-height:1.35;">Editorial on the surface. Structural underneath. Human throughout.</h2>
+      <h2 class="tagline">Editorial on the surface. Structural underneath. Human throughout.</h2>
       <p class="body-copy">Compositions brings those dimensions together so an important promise or priority can be clearly defined, credibly communicated, put into practice, measured, and governed over time.</p>
-      <p class="body-copy">The firm is principal-led and network-enabled — Dana directly owns problem framing, diagnosis, commitment strategy, senior communications strategy, and final recommendations, extending delivery through a curated bench of specialists assembled around the commitment rather than a fixed staffing pyramid.</p>
+      <p class="body-copy">When you work with Compositions, you're working directly with the person who diagnoses the situation, shapes the strategy, and stands behind the recommendation — not handed off to a rotating team once the engagement begins.</p>
     </div>
   </div>
 </section>
 
-<!-- WHY COMPOSITIONS -->
+<!-- THE NAME -->
 <section class="bg-white">
   <div class="wrap reveal">
     <p class="eyebrow">The Name</p>
     <div class="name-block">
-      <p class="principle">A portfolio is a composition of assets. An organization is a composition of commitments, decisions, and stakeholder experience. Meaning itself is composed — through words, sequence, and context.</p>
-      <p class="body-copy">Compositions works at all three levels at once. Even the mark is built the same way: distinct, bounded forms that become one coherent whole.</p>
-      <p class="body-copy">The quality of the parts matters. But the arrangement governs what the whole becomes.</p>
+      <p class="verse">
+        <span>A portfolio is a composition of assets.</span>
+        <span>An organization is a composition of commitments, decisions, and stakeholder experience.</span>
+        <span>Meaning itself is composed — through words, sequence, and context.</span>
+      </p>
+      <p class="sub-label">The Meaning of Composition</p>
+      <p class="body-copy">Composition is the intentional arrangement of distinct elements into a unified whole. In writing, individual sentences may all be accurate yet fail to produce a coherent argument. In design, every image, color, and type choice may be strong yet compete for attention rather than create meaning. In music, each instrument may be played well yet fail to produce harmony.</p>
+      <p class="body-copy">Applied to organizations, composition is the relationship among what the organization says, what it funds, what it governs, what it rewards, how it makes decisions, how it operates, what stakeholders experience, and what the available evidence can confirm.</p>
+      <p class="payoff">
+        <span>The quality of the parts matters.</span>
+        <span>But the arrangement governs what the whole becomes.</span>
+      </p>
     </div>
   </div>
 </section>
 
-<!-- SEVEN-PILLAR MOAT -->
-<section class="bg-charcoal">
+<!-- THE METHOD — interactive hover-lift, matching the Work page's routing cards -->
+<section class="bg-offwhite">
   <div class="wrap reveal">
-    <p class="eyebrow on-dark">The Interdisciplinary Lens</p>
-    <h2 style="font-size:clamp(1.6rem,2.8vw,2.2rem);color:var(--white);max-width:680px;line-height:1.3;">Seven disciplines organizations usually keep separate.</h2>
-    <div class="pillar-list">
-      <div class="pillar-row"><span class="num">01</span><h3>Strategic &amp; Integrated Communications</h3><p>Governance, strategy, execution, diagnosis, capability development, creative and content fluency.</p></div>
-      <div class="pillar-row"><span class="num">02</span><h3>Brand Strategy &amp; Brand Architecture</h3><p>Identity, promise, meaning, expression, experience.</p></div>
-      <div class="pillar-row"><span class="num">03</span><h3>Organizational Development</h3><p>Governance, decision rights, accountability, capability, systems.</p></div>
-      <div class="pillar-row"><span class="num">04</span><h3>Culture Integration</h3><p>Norms, behavior, leadership signals, lived experience.</p></div>
-      <div class="pillar-row"><span class="num">05</span><h3>Impact &amp; Outcomes Measurement</h3><p>Evidence versus claim, activity versus outcome.</p></div>
-      <div class="pillar-row"><span class="num">06</span><h3>Social Epidemiology &amp; Structural-Determinant Thinking</h3><p>Conditions, populations, distribution, exposure.</p></div>
-      <div class="pillar-row"><span class="num">07</span><h3>Instructional Design &amp; Capability Development</h3><p>How people understand, learn, apply, and act.</p></div>
+    <p class="eyebrow">The Method</p>
+    <h2 style="font-size:clamp(1.5rem,2.6vw,2rem);color:var(--charcoal);max-width:620px;line-height:1.35;">Reveal. Architect. Govern.</h2>
+    <div class="method-strip">
+      <div class="method-step">
+        <span class="step-num">Reveal</span>
+        <span class="step-gloss">Clarify</span>
+        <p>What the organization is committing to, what's happening, what stakeholders are experiencing, and what the evidence actually supports.</p>
+      </div>
+      <div class="method-step">
+        <span class="step-num">Architect</span>
+        <span class="step-gloss">Design</span>
+        <p>What the commitment requires across strategy, narrative, communication, activation, alignment, implementation, and measurement.</p>
+      </div>
+      <div class="method-step">
+        <span class="step-num">Govern</span>
+        <span class="step-gloss">Sustain</span>
+        <p>How leadership will own, decide, reinforce, monitor, and adapt the commitment over time.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- DANA — TEXT ONLY -->
+<!-- DANA MIDDLETON — narrative bio -->
 <section class="bg-white">
   <div class="wrap reveal">
     <p class="eyebrow">Dana Middleton</p>
     <div class="dana-block">
-      <p class="lede">Structural Advisor and Principal, Compositions.</p>
-      <p class="body-copy">Dana's work sits at the intersection of communications, brand, organizational development, culture, measurement, and public health — disciplines most organizations keep in separate departments. She moved deeper into what makes communication credible, actionable, human, and effective, rather than moving beyond communications itself. It remains her deepest vertical expertise, and the connective thread running through everything else.</p>
-      <p class="body-copy">Twenty-plus years across strategic communications, brand architecture, culture integration, organizational development, impact measurement, and instructional design — including global enterprise leadership and roles within marketing agency and health-system organizations.</p>
+      <p class="lede">Structural Communications Advisor and Principal, Compositions.</p>
+      <p class="body-copy">Dana has spent two decades watching the same pattern repeat inside organizations of every size: leadership makes a promise in good faith, funds it seriously, communicates it well — and the organization still can't deliver on it. Culture initiatives that never fully land. Brand promises the front line can't keep. Transformations that get announced twice. She kept noticing that the fix everyone reached for was more communication, and that it was rarely the whole answer.</p>
+      <p class="body-copy">That pattern is what pulled her across disciplines most organizations keep separate. Strategic communications and brand architecture remain her deepest expertise — sharpened by years in organizational development, culture integration, impact measurement, instructional design, and, perhaps most unexpectedly, social epidemiology: the study of how the conditions surrounding a population shape what happens to it. Applied to an organization instead of a public health crisis, the same discipline asks a useful question — what are the conditions around this commitment, and are they helping it perform, or quietly working against it?</p>
+      <p class="body-copy">It's an unusual combination. It's also why Compositions exists.</p>
+      <p class="facts">Twenty-plus years across strategic communications, brand architecture, culture integration, organizational development, impact measurement, and instructional design — including global enterprise leadership and roles within marketing agency and health-system organizations.</p>
       <div class="credential-row">
         <span class="credential-pill">Master's, Instructional Design</span>
         <span class="credential-pill">PCM, American Marketing Association</span>
@@ -237,27 +266,22 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
   </div>
 </section>
 
-<!-- METHOD -->
-<section class="bg-offwhite">
+<!-- THE INTERDISCIPLINARY LENS — one integrated cluster -->
+<section class="bg-charcoal">
   <div class="wrap reveal">
-    <p class="eyebrow">The Method</p>
-    <h2 style="font-size:clamp(1.5rem,2.6vw,2rem);color:var(--charcoal);max-width:620px;line-height:1.35;">Reveal. Architect. Govern.</h2>
-    <div class="method-strip">
-      <div class="method-step">
-        <span class="step-num">REVEAL</span>
-        <h4>Clarify</h4>
-        <p>What the organization is committing to, what's happening, what stakeholders are experiencing, and what the evidence actually supports.</p>
-      </div>
-      <div class="method-step">
-        <span class="step-num">ARCHITECT</span>
-        <h4>Design</h4>
-        <p>What the commitment requires across strategy, narrative, communication, activation, alignment, implementation, and measurement.</p>
-      </div>
-      <div class="method-step">
-        <span class="step-num">GOVERN</span>
-        <h4>Sustain</h4>
-        <p>How leadership will own, decide, reinforce, monitor, and adapt the commitment over time.</p>
-      </div>
+    <div class="lens-intro">
+      <p class="eyebrow on-dark">The Interdisciplinary Lens</p>
+      <h2>One lens, built from seven disciplines organizations usually keep separate.</h2>
+      <p>Compositions doesn't rotate between these disciplines depending on the question. She reads every commitment through all seven — which is what makes it possible to see a problem most single-discipline advisors would only see part of.</p>
+    </div>
+    <div class="pill-grid">
+      <span class="pill on-dark">Strategic &amp; Integrated Communications</span>
+      <span class="pill on-dark">Brand Strategy &amp; Brand Architecture</span>
+      <span class="pill on-dark">Organizational Development</span>
+      <span class="pill on-dark">Culture Integration</span>
+      <span class="pill on-dark">Impact &amp; Outcomes Measurement</span>
+      <span class="pill on-dark">Social Epidemiology &amp; Structural-Determinant Thinking</span>
+      <span class="pill on-dark">Instructional Design &amp; Capability Development</span>
     </div>
   </div>
 </section>
@@ -266,10 +290,10 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
 <section class="bg-charcoal cta-band">
   <div class="wrap reveal">
     <p class="eyebrow on-dark" style="justify-content:center;">Start Here</p>
-    <h2>What commitments has your organization made?</h2>
+    <h2>Bring us the commitment that isn't performing the way you expected.</h2>
     <div class="cta-row">
-      <a href="/#start" class="btn btn-teal">Start a conversation <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <a href="/work/" class="btn btn-ghost">See our work</a>
+      <a href="/commitment-inquiry/" class="btn btn-teal">Start the Commitment Inquiry <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="/work/" class="btn btn-ghost">See the work</a>
     </div>
   </div>
 </section>
@@ -299,7 +323,7 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
         <div>
           <h4>Connect</h4>
           <ul>
-            <li><a href="/#start">Start a conversation</a></li>
+            <li><a href="/commitment-inquiry/">Start the Commitment Inquiry</a></li>
             <li><a href="https://www.linkedin.com/in/danamiddletonkc/" target="_blank" rel="noopener">LinkedIn</a></li>
           </ul>
         </div>
