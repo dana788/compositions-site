@@ -35,7 +35,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .btn-teal:hover { background: var(--teal-dark); }
 
 .site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 300; display: flex; align-items: center; justify-content: space-between; padding: 20px 32px; background: rgba(248,248,248,0.94); backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--border); }
-.logo-mark img { height: 26px; width: auto; }
+.logo-mark img { height: 28px; width: auto; }
 .nav-links { display: flex; align-items: center; gap: 40px; }
 .nav-link { font-weight: 500; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--charcoal); }
 .nav-cta { margin-left: 8px; padding: 12px 24px; }
@@ -65,17 +65,19 @@ ul { margin: 0; padding: 0; list-style: none; }
 .contact-block p { margin-bottom: 6px; }
 .contact-block a { color: var(--teal-dark); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
 
-footer { background: var(--charcoal); padding: 64px 32px 32px; }
+footer { background: var(--charcoal); padding: 72px 32px 32px; }
 .footer-inner { max-width: var(--max-width); margin: 0 auto; }
-.footer-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px; padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.footer-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,0.1); }
 .footer-brand img { height: 22px; width: auto; }
-.footer-cols { display: flex; gap: 56px; flex-wrap: wrap; }
-.footer-cols h4 { font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 14px; font-weight: 600; }
-.footer-cols ul { display: flex; flex-direction: column; gap: 10px; }
-.footer-cols a { color: rgba(255,255,255,0.62); font-size: 0.9rem; }
+.footer-tag { font-size: 0.85rem; color: rgba(255,255,255,0.4); margin-top: 14px; max-width: 300px; line-height: 1.6; }
+.footer-cols { display: flex; gap: 64px; flex-wrap: wrap; }
+.footer-cols h4 { font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 18px; font-weight: 600; }
+.footer-cols ul { display: flex; flex-direction: column; gap: 12px; }
+.footer-cols a { color: rgba(255,255,255,0.62); font-size: 0.92rem; }
 .footer-cols a:hover { color: var(--white); }
-.footer-bottom { padding-top: 24px; color: rgba(255,255,255,0.35); font-size: 0.76rem; }
-@media (max-width: 640px) { .page-body { padding: 132px 22px 72px; } }
+.footer-bottom { padding-top: 28px; color: rgba(255,255,255,0.35); font-size: 0.78rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+@media (max-width: 900px) { .footer-top { flex-direction: column; } }
+@media (max-width: 640px) { .page-body { padding: 132px 22px 72px; } .footer-cols { gap: 40px; } }
 </style>
 </head>
 <body>
@@ -89,7 +91,7 @@ footer { background: var(--charcoal); padding: 64px 32px 32px; }
     <a href="/expertise/" class="nav-link">Expertise</a>
     <a href="/about/" class="nav-link">About</a>
     <a href="/ideas/" class="nav-link">Ideas</a>
-    <a href="/#start" class="btn btn-teal nav-cta">Contact</a>
+    <a href="/commitment-inquiry/" class="btn btn-teal nav-cta">Contact</a>
   </div>
   <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
 </nav>
@@ -99,7 +101,7 @@ footer { background: var(--charcoal); padding: 64px 32px 32px; }
   <a href="/expertise/">Expertise</a>
   <a href="/about/">About</a>
   <a href="/ideas/">Ideas</a>
-  <a href="/#start">Contact</a>
+  <a href="/commitment-inquiry/">Contact</a>
 </div>
 
 <main class="page-body">
@@ -139,6 +141,7 @@ footer { background: var(--charcoal); padding: 64px 32px 32px; }
         <a href="/" class="footer-brand" aria-label="Compositions home">
           <img src="/assets/Compositions-Off-White-Horizontal.png" alt="Compositions">
         </a>
+        <p class="footer-tag">A Structural Communications Firm specializing in consequential organizational commitments.</p>
       </div>
       <div class="footer-cols">
         <div>
@@ -147,7 +150,15 @@ footer { background: var(--charcoal); padding: 64px 32px 32px; }
             <li><a href="/work/">Work</a></li>
             <li><a href="/expertise/">Expertise</a></li>
             <li><a href="/about/">About</a></li>
+            <li><a href="/about/our-commitments/">Our Commitments</a></li>
             <li><a href="/ideas/">Ideas</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="/commitment-inquiry/">Start the Commitment Inquiry</a></li>
+            <li><a href="https://www.linkedin.com/in/danamiddletonkc/" target="_blank" rel="noopener">LinkedIn</a></li>
           </ul>
         </div>
         <div>
@@ -161,7 +172,10 @@ footer { background: var(--charcoal); padding: 64px 32px 32px; }
         </div>
       </div>
     </div>
-    <div class="footer-bottom">Compositions | Structural Communications Firm | &copy; 2026 Compositions. All rights reserved.</div>
+    <div class="footer-bottom">
+      <span>Compositions | Structural Communications Firm</span>
+      <span>&copy; 2026 Compositions. All rights reserved.</span>
+    </div>
   </div>
 </footer>
 
