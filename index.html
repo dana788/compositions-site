@@ -330,7 +330,7 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
     <a href="/expertise/" class="nav-link">Expertise</a>
     <a href="/about/" class="nav-link">About</a>
     <a href="/ideas/" class="nav-link">Ideas</a>
-    <a href="/commitment-inquiry/" class="btn btn-teal nav-cta">Contact</a>
+    <a href="#start" class="btn btn-teal nav-cta">Contact</a>
   </div>
   <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
 </nav>
@@ -340,7 +340,7 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
   <a href="/expertise/">Expertise</a>
   <a href="/about/">About</a>
   <a href="/ideas/">Ideas</a>
-  <a href="/commitment-inquiry/">Contact</a>
+  <a href="#start">Contact</a>
 </div>
 
 <main>
@@ -353,7 +353,7 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
     <h1>Every <span class="accent">commitment</span> has conditions. It carries <span class="accent">terms</span>. It depends on <span class="accent">structure</span>.</h1>
     <p class="support">Compositions works with leaders responsible for culture, workforce, brand, transformation, mission, values, and social impact commitments that are not producing the credibility, adoption, experience, evidence, or return they expected.</p>
     <div class="cta-row">
-      <a href="/commitment-inquiry/" class="btn btn-teal">Start the Commitment Inquiry <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="/commitment-inquiry/" class="btn btn-teal">Take the Commitment Inquiry <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       <a href="/work/" class="btn btn-ghost">See the work</a>
     </div>
   </div>
@@ -407,7 +407,7 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
           <span class="tag">Social Impact &amp; Community</span>
         </div>
       </div>
-      <p class="signals-note"><a href="/commitment-inquiry/">Let's talk it through →</a></p>
+      <p class="signals-note"><a href="#start">Let's talk it through →</a></p>
     </div>
   </div>
 </section>
@@ -548,22 +548,38 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
     <div class="reveal">
       <p class="eyebrow on-dark">Start Here</p>
       <h2>What commitments has your organization made?</h2>
-      <p class="body-copy">The Commitment Inquiry is where that gets clarified — a complimentary, self-guided tool that takes about 10 minutes. Share what's happening, and you'll get a preliminary read on the pattern and a recommended next step, before you ever talk to us.</p>
-      <p class="contact-subtext">No documents, no evidence review — just a place to start.</p>
+      <p class="body-copy">Share the commitment, the result leadership expected, and what is not working as intended. We will use that information to determine whether a conversation is appropriate and what kind of inquiry may be useful.</p>
+      <p class="contact-subtext">Prefer a faster, self-guided start? <a href="/commitment-inquiry/" style="color:var(--teal-light);font-weight:500;">Take the 10-minute Commitment Inquiry →</a></p>
       <div class="contact-links">
         <a href="/ideas/" class="btn btn-ghost">Read our Ideas</a>
       </div>
     </div>
     <div class="reveal">
-      <div class="contact-form-card" style="text-align:center;">
-        <h3 style="font-family:var(--font-display);font-weight:600;font-size:1.3rem;color:var(--charcoal);">Start the Commitment Inquiry</h3>
-        <p style="margin-top:10px;font-size:0.85rem;color:var(--text-sec);letter-spacing:0.04em;text-transform:uppercase;">~10 minutes · complimentary · self-guided</p>
-        <ul style="margin-top:26px;text-align:left;display:flex;flex-direction:column;gap:12px;">
-          <li style="font-size:0.92rem;color:#444;line-height:1.6;padding-left:18px;position:relative;"><span style="position:absolute;left:0;top:0.6em;width:6px;height:1.5px;background:var(--teal);"></span>A preliminary Commitment Position Profile</li>
-          <li style="font-size:0.92rem;color:#444;line-height:1.6;padding-left:18px;position:relative;"><span style="position:absolute;left:0;top:0.6em;width:6px;height:1.5px;background:var(--teal);"></span>A plain-language read on what's happening</li>
-          <li style="font-size:0.92rem;color:#444;line-height:1.6;padding-left:18px;position:relative;"><span style="position:absolute;left:0;top:0.6em;width:6px;height:1.5px;background:var(--teal);"></span>A recommended next step</li>
-        </ul>
-        <a href="/commitment-inquiry/" class="btn btn-teal btn-block" style="margin-top:30px;justify-content:center;">Start the Commitment Inquiry</a>
+      <div class="contact-form-card">
+        <form name="homepage-inquiry" id="inquiryForm" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="homepage-inquiry">
+          <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
+          <div class="field-row">
+            <div class="field"><label for="f-name">Name</label><input type="text" id="f-name" name="Name" required></div>
+            <div class="field"><label for="f-role">Role</label><input type="text" id="f-role" name="Role" required></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label for="f-org">Organization</label><input type="text" id="f-org" name="Organization" required></div>
+            <div class="field"><label for="f-email">Company Email</label><input type="email" id="f-email" name="Company Email" required></div>
+          </div>
+          <div class="field"><label for="f-commit">What commitments has your organization made?</label><textarea id="f-commit" name="Commitments" rows="2" required></textarea></div>
+          <div class="field"><label for="f-outcomes">What outcomes are you trying to achieve?</label><textarea id="f-outcomes" name="Outcomes" rows="2"></textarea></div>
+          <div class="field"><label for="f-notworking">What doesn't seem to be working the way you hoped?</label><textarea id="f-notworking" name="Not Working" rows="2"></textarea></div>
+          <div class="field-row">
+            <div class="field"><label for="f-where">Where does the issue seem to be?</label><input type="text" id="f-where" name="Where" placeholder="e.g., culture, brand, transformation"></div>
+            <div class="field"><label for="f-timing">What is your timeline?</label><input type="text" id="f-timing" name="Timeline" placeholder="e.g., this quarter"></div>
+          </div>
+          <button type="submit" class="btn btn-teal btn-block">Start a conversation</button>
+        </form>
+        <div class="success-message" id="formSuccess">
+          <h3>Request received.</h3>
+          <p>Dana will be in touch to schedule a brief conversation about your situation and whether — and where — this is the right next step.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -594,7 +610,7 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
         <div>
           <h4>Connect</h4>
           <ul>
-            <li><a href="/commitment-inquiry/">Start the Commitment Inquiry</a></li>
+            <li><a href="#start">Start a conversation</a></li>
             <li><a href="https://www.linkedin.com/in/danamiddletonkc/" target="_blank" rel="noopener">LinkedIn</a></li>
           </ul>
         </div>
@@ -757,6 +773,17 @@ document.querySelectorAll('.signal-card').forEach(card => {
   });
   const obs = new MutationObserver(() => card.setAttribute('aria-checked', card.classList.contains('selected')));
   obs.observe(card, { attributes: true, attributeFilter: ['class'] });
+});
+
+/* ── NETLIFY FORM SUBMIT ── */
+const form = document.getElementById('inquiryForm');
+const success = document.getElementById('formSuccess');
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  const data = new FormData(form);
+  fetch('/', { method: 'POST', body: new URLSearchParams(data).toString(), headers: { 'Content-Type': 'application/x-www-form-urlencoded' } })
+    .then(() => { form.style.display = 'none'; success.classList.add('show'); })
+    .catch(() => { form.style.display = 'none'; success.classList.add('show'); });
 });
 
 </script>
