@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index, follow">
 <title>Compositions | Structural Communications Firm</title>
-<meta name="description" content="Compositions is a Structural Communications Firm helping organizations define, communicate, operationalize, measure, and govern consequential commitments.">
+<meta name="description" content="Compositions is a Structural Communications Firm specializing in consequential organizational commitments — mission and values, culture and workforce, brand and customer promise, strategic change, and social impact. Led by Dana Middleton.">
 <link rel="canonical" href="https://compositionsadvisory.com/">
 <meta property="og:title" content="Compositions | Structural Communications Firm">
-<meta property="og:description" content="Organizations declare commitments through words. They deliver them through the whole organization. Compositions works across strategy, communication, organizational alignment, research, and measurement to help those commitments hold.">
+<meta property="og:description" content="Every commitment has conditions. It carries terms. It depends on structure. Compositions works with leaders whose culture, brand, transformation, or impact commitments aren't producing the result they expected.">
 <meta property="og:image" content="https://compositionsadvisory.com/assets/og-image.png">
 <meta property="og:url" content="https://compositionsadvisory.com/">
 <meta property="og:type" content="website">
@@ -27,7 +27,7 @@
   "name": "Compositions",
   "description": "Structural Communications Firm specializing in consequential organizational commitments.",
   "url": "https://compositionsadvisory.com/",
-  "founder": { "@type": "Person", "name": "Dana Middleton", "jobTitle": "Structural Advisor & Principal" },
+  "founder": { "@type": "Person", "name": "Dana Middleton", "jobTitle": "Structural Communications Advisor & Principal" },
   "areaServed": "US",
   "sameAs": ["https://www.linkedin.com/in/danamiddletonkc/"]
 }
@@ -119,7 +119,7 @@ section { padding: var(--section-pad); position: relative; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
 
-/* ── INTRO OVERLAY: squares converge into the mark, then resolve to the real logo ── */
+/* ── INTRO OVERLAY: pieces converge into the resolved mark only — no wordmark reveal ── */
 #introOverlay { position: fixed; inset: 0; z-index: 500; background: var(--charcoal); display: flex; flex-direction: column; align-items: center; justify-content: center; transition: opacity 0.55s ease, visibility 0.55s ease; }
 #introOverlay.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
 .intro-stage { position: relative; width: 220px; height: 220px; }
@@ -128,16 +128,15 @@ section { padding: var(--section-pad); position: relative; }
 .intro-stage img.resolved { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 0.6s ease; }
 .intro-stage img.resolved.in { opacity: 1; }
 .intro-stage svg.fade-out { opacity: 0; }
-.intro-wordmark { margin-top: 34px; height: 22px; opacity: 0; transform: translateY(8px); transition: opacity 0.6s ease, transform 0.6s ease; }
-.intro-wordmark.in { opacity: 1; transform: translateY(0); }
 #introOverlay button.skip { position: absolute; bottom: 32px; right: 32px; background: none; border: none; color: rgba(255,255,255,0.3); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; }
 #introOverlay button.skip:hover { color: rgba(255,255,255,0.7); }
 
 /* ── HERO ── */
 .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 160px 32px 100px; }
 .hero-inner { max-width: var(--max-width); margin: 0 auto; width: 100%; }
-.hero h1 { font-size: clamp(2.3rem, 5.4vw, 3.9rem); line-height: 1.16; color: var(--white); max-width: 900px; letter-spacing: -0.01em; }
-.hero .support { font-size: 1.08rem; font-weight: 300; color: rgba(255,255,255,0.68); max-width: 560px; margin-top: 28px; line-height: 1.75; }
+.hero h1 { font-size: clamp(2.2rem, 5.6vw, 4rem); line-height: 1.22; color: var(--white); max-width: 760px; letter-spacing: -0.01em; }
+.hero h1 .accent { color: var(--teal-light); }
+.hero .support { font-size: 1.08rem; font-weight: 300; color: rgba(255,255,255,0.68); max-width: 600px; margin-top: 28px; line-height: 1.8; }
 .hero .cta-row { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 44px; }
 .scroll-cue { position: absolute; bottom: 36px; left: 32px; display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.4); cursor: pointer; transition: color 0.2s ease; }
 .scroll-cue:hover { color: rgba(255,255,255,0.75); }
@@ -147,6 +146,10 @@ section { padding: var(--section-pad); position: relative; }
 .scroll-cue span { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; }
 @media (prefers-reduced-motion: reduce) { .scroll-cue .line::after { animation: none; top: 100%; } }
 
+/* ── TRANSITION LINE ── */
+.transition-line { padding: 76px 32px; text-align: center; }
+.transition-line p { font-family: var(--font-display); font-weight: 500; font-size: clamp(1.2rem, 2.6vw, 1.65rem); color: var(--charcoal); max-width: 760px; margin: 0 auto; line-height: 1.55; }
+
 /* ── RECOGNITION + SIGNALS (one combined movement) ── */
 .recognition { text-align: center; }
 .commitment-words { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5em 0.9em; max-width: 920px; margin: 0 auto; }
@@ -154,9 +157,9 @@ section { padding: var(--section-pad); position: relative; }
 .commitment-words span.lit { opacity: 1; color: var(--teal); }
 
 .signals-block { margin-top: 84px; }
-.signals-head { text-align: center; max-width: 620px; margin: 0 auto 44px; }
+.signals-head { text-align: center; max-width: 640px; margin: 0 auto 44px; }
 .signals-head h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); color: var(--charcoal); line-height: 1.3; }
-.signals-head p { margin-top: 14px; font-size: 0.98rem; color: var(--text-sec); line-height: 1.7; }
+.signals-head p { margin-top: 14px; font-size: 0.98rem; color: var(--text-sec); line-height: 1.75; }
 .signals-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--border); border: 1px solid var(--border); text-align: left; }
 .signal-card { background: var(--white); padding: 32px 30px; cursor: pointer; position: relative; transition: background 0.25s ease; }
 .signal-card:hover { background: #FBFCFC; }
@@ -170,26 +173,7 @@ section { padding: var(--section-pad); position: relative; }
 .signal-card.selected .tag { color: var(--teal-dark); }
 .signals-note { text-align: center; margin-top: 36px; color: var(--text-sec); font-size: 0.95rem; }
 .signals-note a { color: var(--teal-dark); font-weight: 500; }
-
-/* ── SIGNATURE PRINCIPLE ── */
-.signature-block { min-height: 88vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 100px 32px; }
-.sig-line { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.6rem, 4.8vw, 3.1rem); line-height: 1.28; color: rgba(255,255,255,0.28); transition: color 0.7s ease; }
-.sig-line .op { color: rgba(255,255,255,0.28); transition: color 0.7s ease; }
-.sig-line.lit { color: var(--white); }
-.sig-line.lit .op { color: var(--teal); }
-.sig-explainer { max-width: 620px; margin-top: 52px; color: rgba(255,255,255,0.55); font-size: 1rem; line-height: 1.9; opacity: 0; transition: opacity 0.8s ease; }
-.sig-explainer.in { opacity: 1; }
-
-/* ── THE ARRANGEMENT ── */
-.problem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
-.problem-grid h2 { font-size: clamp(1.6rem, 2.8vw, 2.3rem); line-height: 1.3; color: var(--charcoal); }
-.problem-grid .body-copy { margin-top: 22px; font-size: 1rem; line-height: 1.85; color: #444; }
-.stage-list { display: flex; flex-direction: column; gap: 2px; }
-.stage-item { display: flex; align-items: center; justify-content: space-between; background: var(--white); border: 1px solid var(--border); padding: 20px 26px; transition: border-color 0.25s ease, background 0.25s ease; }
-.stage-item .word { font-family: var(--font-display); font-weight: 500; font-size: 1rem; color: var(--charcoal); }
-.stage-item .frag { font-size: 0.84rem; color: var(--text-sec); font-style: italic; }
-.stage-item.active { border-color: var(--teal); background: #EBF6F8; }
-.stage-item.active .word { color: var(--teal-dark); }
+@media (max-width: 900px) { .signals-grid { grid-template-columns: 1fr; } }
 
 /* ── WHAT WE DO ── */
 .service-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; background: var(--border); border: 1px solid var(--border); }
@@ -201,7 +185,7 @@ section { padding: var(--section-pad); position: relative; }
 .service-card .expand { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, margin-top 0.35s ease; margin-top: 0; }
 .service-card.open .expand { max-height: 200px; margin-top: 18px; }
 .service-card .expand p { font-size: 0.88rem; color: var(--text-sec); line-height: 1.7; padding-top: 16px; border-top: 1px solid var(--border); }
-.section-cta { margin-top: 48px; text-align: center; }
+@media (max-width: 900px) { .service-grid { grid-template-columns: 1fr; } }
 
 /* ── HUMAN MOMENT: editorial photography + pull-quote (parallax-ready) ── */
 .human-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 64px; align-items: center; }
@@ -209,12 +193,18 @@ section { padding: var(--section-pad); position: relative; }
 .photo-frame::after { content: "Editorial photography — replace"; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; text-align: center; padding: 24px; font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(0,0,0,0.32); font-family: var(--font-body); pointer-events: none; }
 .photo-frame.has-image::after { display: none; }
 .photo-frame img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transform: scale(1.7); filter: grayscale(1) contrast(1.05); will-change: transform; }
-.photo-frame.small { aspect-ratio: 1; max-width: 180px; }
-.photo-frame.on-dark { background: linear-gradient(150deg, #4a4a48 0%, #2f2f2d 60%, #1c1c1b 100%); }
-.photo-frame.on-dark::after { color: rgba(255,255,255,0.35); }
 .human-copy .human-quote { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.4rem, 2.6vw, 2.1rem); line-height: 1.35; color: var(--charcoal); }
 @media (max-width: 900px) { .human-grid { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { .photo-frame img { transform: none !important; } }
+
+/* ── THE ARRANGEMENT: interactive stage strip beneath the Composition Principle ── */
+.stage-list { display: flex; flex-direction: column; gap: 2px; margin-top: 56px; }
+.stage-item { display: flex; align-items: center; justify-content: space-between; background: var(--off-white); border: 1px solid var(--border); padding: 20px 26px; transition: border-color 0.25s ease, background 0.25s ease; }
+.stage-item .word { font-family: var(--font-display); font-weight: 500; font-size: 1rem; color: var(--charcoal); }
+.stage-item .frag { font-size: 0.84rem; color: var(--text-sec); font-style: italic; text-align: right; }
+.stage-item.active { border-color: var(--teal); background: #EBF6F8; }
+.stage-item.active .word { color: var(--teal-dark); }
+@media (max-width: 560px) { .stage-item { flex-direction: column; align-items: flex-start; gap: 4px; } .stage-item .frag { text-align: left; } }
 
 /* ── COLLAGE STRIP: proof of sensibility, not a client logo wall ── */
 .collage-strip-section { padding: 64px 0; overflow: hidden; }
@@ -241,56 +231,21 @@ section { padding: var(--section-pad); position: relative; }
   .collage-strip-track .collage-set.duplicate { display: none; }
 }
 
-/* ── EXPERTISE (light variant) ── */
-.expertise-list.on-light .expertise-row { border-top-color: var(--border); }
-.expertise-list.on-light .expertise-row:last-child { border-bottom-color: var(--border); }
-.expertise-list.on-light .expertise-row h3 { color: var(--charcoal); }
-.expertise-list.on-light .expertise-row:hover h3 { color: var(--teal-dark); }
-.expertise-list.on-light .expertise-row .q { color: var(--text-sec); }
-
-/* ── EXPERTISE ── */
+/* ── EXPERTISE (secondary weight — smaller type, tighter padding, lives below Work) ── */
+.expertise-section { padding: 88px 32px; }
+.expertise-section .expertise-head h2 { font-size: clamp(1.35rem, 2.2vw, 1.8rem); }
 .expertise-list { display: flex; flex-direction: column; }
-.expertise-row { display: grid; grid-template-columns: 2fr 3fr; gap: 40px; padding: 32px 0; border-top: 1px solid rgba(255,255,255,0.14); align-items: center; cursor: pointer; }
-.expertise-list .expertise-row:last-child { border-bottom: 1px solid rgba(255,255,255,0.14); }
-.expertise-row h3 { font-size: 1.3rem; color: var(--white); font-weight: 500; }
-.expertise-row .q { font-size: 0.96rem; color: rgba(255,255,255,0.6); line-height: 1.7; font-style: italic; }
-.expertise-row:hover h3 { color: var(--teal-light); }
+.expertise-row { display: grid; grid-template-columns: 2fr 3fr; gap: 40px; padding: 24px 0; border-top: 1px solid var(--border); align-items: center; cursor: pointer; }
+.expertise-list .expertise-row:last-child { border-bottom: 1px solid var(--border); }
+.expertise-row h3 { font-size: 1.1rem; color: var(--charcoal); font-weight: 500; }
+.expertise-row .q { font-size: 0.9rem; color: var(--text-sec); line-height: 1.65; font-style: italic; }
+.expertise-row:hover h3 { color: var(--teal-dark); }
+@media (max-width: 900px) { .expertise-row { grid-template-columns: 1fr; gap: 8px; } }
 
-/* ── PORTFOLIO (interactive network: singular commitments, real dependency/tension relationships) ── */
-.portfolio-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 64px; align-items: center; }
-.portfolio-grid h2 { font-size: clamp(1.6rem, 2.8vw, 2.2rem); color: var(--charcoal); line-height: 1.3; }
-.portfolio-grid .body-copy { margin-top: 20px; font-size: 1rem; line-height: 1.85; color: #444; }
-.portfolio-side { text-align: center; }
-.portfolio-hint { font-size: 0.85rem; color: var(--text-sec); margin-bottom: 20px; }
-.portfolio-viz { position: relative; aspect-ratio: 1; max-width: 380px; margin: 0 auto 36px; }
-.portfolio-viz svg.links { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; }
-.rel-line { stroke: var(--border); stroke-width: 1.5; opacity: 1; transition: stroke 0.25s ease, stroke-width 0.25s ease, opacity 0.25s ease; }
-.rel-line.tension { stroke: var(--teal); stroke-width: 2; opacity: 0.55; }
-.rel-line.dim { opacity: 0.1; }
-.rel-line.hot { stroke-width: 3; }
-.rel-line.dependency.hot { stroke: var(--charcoal); opacity: 1; }
-.rel-line.tension.hot { stroke: var(--teal); opacity: 1; }
-.node-wrap { position: absolute; width: 74px; height: 74px; transform: translate(-50%, -50%); z-index: 1; }
-.portfolio-node { width: 100%; height: 100%; border-radius: 50%; background: var(--white); border: 1.5px solid var(--border); display: flex; align-items: center; justify-content: center; text-align: center; font-family: var(--font-display); font-size: 0.66rem; font-weight: 600; letter-spacing: 0.02em; color: var(--charcoal); padding: 6px; line-height: 1.2; cursor: pointer; transition: border-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease; }
-.node-wrap:hover .portfolio-node, .node-wrap:focus-within .portfolio-node, .node-wrap.locked .portfolio-node { border-color: var(--teal); color: var(--teal-dark); box-shadow: 0 8px 22px rgba(22,118,140,0.18); background: #F3FAFB; }
-.node-tag { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 8px; width: 112px; font-size: 0.58rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-sec); line-height: 1.35; text-align: center; }
-.node-tip { position: absolute; bottom: 108%; left: 50%; transform: translateX(-50%) translateY(6px); background: var(--charcoal); color: var(--white); font-size: 0.7rem; line-height: 1.5; padding: 10px 12px; width: 165px; opacity: 0; visibility: hidden; transition: opacity 0.2s ease, transform 0.2s ease; pointer-events: none; z-index: 6; text-align: left; font-family: var(--font-body); font-weight: 400; }
-.node-wrap:hover .node-tip, .node-wrap:focus-within .node-tip { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
-.portfolio-legend { display: flex; gap: 26px; justify-content: center; margin-top: 20px; flex-wrap: wrap; }
-.legend-item { display: flex; align-items: center; gap: 8px; font-size: 0.78rem; color: var(--text-sec); }
-.legend-line { width: 24px; height: 2px; background: var(--border); flex-shrink: 0; }
-.legend-line.hot { background: var(--teal); height: 2.5px; opacity: 0.7; }
-.portfolio-info { margin-top: 24px; min-height: 100px; text-align: left; background: var(--off-white); border: 1px solid var(--border); padding: 20px 24px; }
-.portfolio-info .info-default { font-size: 0.88rem; color: var(--text-sec); font-style: italic; text-align: center; }
-.info-row { display: flex; align-items: flex-start; gap: 10px; font-size: 0.85rem; line-height: 1.6; color: var(--charcoal); padding: 6px 0; }
-.info-row .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--charcoal); flex-shrink: 0; margin-top: 5px; }
-.info-row .dot.tension { background: var(--teal); }
-
-/* ── PROOF ── */
-.proof-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; }
-.proof-col .label { font-weight: 600; font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal); margin-bottom: 18px; display: block; }
-.proof-col p { font-size: 0.98rem; line-height: 1.8; color: #444; }
-.proof-col .stat { font-family: var(--font-display); font-weight: 600; font-size: 2.6rem; color: var(--charcoal); line-height: 1; margin-bottom: 8px; }
+/* ── PORTFOLIO NOTE: single short advanced-capability section ── */
+.portfolio-note { max-width: 760px; margin: 0 auto; text-align: center; }
+.portfolio-note .body-copy { margin-top: 20px; font-size: 1rem; line-height: 1.85; color: #444; }
+.portfolio-note .example-quote { margin-top: 22px; font-size: 0.92rem; color: var(--text-sec); font-style: italic; }
 
 /* ── CONTACT ── */
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
@@ -309,6 +264,7 @@ form input:focus, form select:focus, form textarea:focus { border-color: var(--t
 .success-message.show { display: block; }
 .success-message h3 { font-size: 1.2rem; color: var(--teal-dark); margin-bottom: 12px; }
 .success-message p { color: #555; line-height: 1.7; }
+@media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } }
 
 /* ── FOOTER ── */
 footer { background: var(--charcoal); padding: 72px 32px 32px; }
@@ -328,10 +284,7 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
 .back-to-top:hover { background: var(--teal); }
 
 @media (max-width: 900px) {
-  .problem-grid, .portfolio-grid, .contact-grid, .footer-top { grid-template-columns: 1fr; }
-  .service-grid, .signals-grid { grid-template-columns: 1fr; }
-  .proof-grid { grid-template-columns: 1fr; gap: 40px; }
-  .expertise-row { grid-template-columns: 1fr; gap: 10px; }
+  .footer-top { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) {
   :root { --section-pad: 84px 22px; }
@@ -345,7 +298,7 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
 </head>
 <body>
 
-<!-- INTRO OVERLAY: pieces converge, then resolve into the real mark -->
+<!-- INTRO OVERLAY: pieces converge into the resolved mark, then dismiss — no separate wordmark reveal -->
 <div id="introOverlay" aria-hidden="true">
   <div class="intro-stage">
     <svg id="introMosaic" viewBox="0 0 220 220">
@@ -364,7 +317,6 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
     </svg>
     <img class="resolved" id="introResolved" src="/assets/logo-square-color.png" alt="">
   </div>
-  <img class="intro-wordmark" id="introWordmark" src="/assets/Compositions-Off-White-Horizontal.png" alt="Compositions">
   <button class="skip" id="introSkip">Skip</button>
 </div>
 
@@ -378,7 +330,7 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
     <a href="/expertise/" class="nav-link">Expertise</a>
     <a href="/about/" class="nav-link">About</a>
     <a href="/ideas/" class="nav-link">Ideas</a>
-    <a href="#start" class="btn btn-teal nav-cta">Contact</a>
+    <a href="/commitment-inquiry/" class="btn btn-teal nav-cta">Contact</a>
   </div>
   <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
 </nav>
@@ -388,7 +340,7 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
   <a href="/expertise/">Expertise</a>
   <a href="/about/">About</a>
   <a href="/ideas/">Ideas</a>
-  <a href="#start">Contact</a>
+  <a href="/commitment-inquiry/">Contact</a>
 </div>
 
 <main>
@@ -398,17 +350,24 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
   <div class="hero-bg" aria-hidden="true"><img src="/assets/photography/office-desk.png" alt="" loading="lazy"></div>
   <div class="hero-inner reveal visible">
     <p class="eyebrow on-dark">Structural Communications</p>
-    <h1>Organizations declare commitments through words. They deliver them through the whole organization.</h1>
-    <p class="support">Compositions works across strategy, communication, organizational alignment, research, and measurement to help organizations make important commitments clear, credible, actionable, and real.</p>
+    <h1>Every <span class="accent">commitment</span> has conditions. It carries <span class="accent">terms</span>. It depends on <span class="accent">structure</span>.</h1>
+    <p class="support">Compositions works with leaders responsible for culture, workforce, brand, transformation, mission, values, and social impact commitments that are not producing the credibility, adoption, experience, evidence, or return they expected.</p>
     <div class="cta-row">
-      <a href="/work/" class="btn btn-teal">Explore the work <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <a href="#start" class="btn btn-ghost">Bring us the question</a>
+      <a href="/commitment-inquiry/" class="btn btn-teal">Start the Commitment Inquiry <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="/work/" class="btn btn-ghost">See the work</a>
     </div>
   </div>
   <a href="#explore" class="scroll-cue" aria-label="Scroll to explore"><div class="line"></div><span>Scroll</span></a>
 </section>
 
-<!-- RECOGNITION + SIGNALS (combined — removes the earlier duplicate recognition beat) -->
+<!-- TRANSITION LINE -->
+<section class="bg-white transition-line">
+  <div class="wrap reveal">
+    <p>Organizations declare commitments through words. They deliver them through the whole organization.</p>
+  </div>
+</section>
+
+<!-- RECOGNITION + SIGNALS -->
 <section class="bg-offwhite" id="explore">
   <div class="wrap recognition reveal">
     <p class="eyebrow center">What Organizations Commit To</p>
@@ -419,91 +378,67 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
     <div class="signals-block">
       <div class="signals-head">
         <h2>Does any of this sound familiar?</h2>
-        <p>Select whatever resonates. It's not a diagnosis — it's just a place to start the conversation.</p>
+        <p>These are signals, not diagnoses. Each may indicate that the commitment, the communication, or the organizational support around it needs closer examination.</p>
       </div>
       <div class="signals-grid" id="signalsGrid">
         <div class="signal-card" data-signal="1">
           <div class="signal-check"><svg width="11" height="8" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <p class="quote">We've said this is a priority. Decisions still don't reflect it.</p>
+          <p class="quote">Decisions still do not reflect what leadership called a priority.</p>
           <span class="tag">Mission &amp; Values</span>
         </div>
         <div class="signal-card" data-signal="2">
           <div class="signal-check"><svg width="11" height="8" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <p class="quote">Employees don't quite recognize the experience we describe to candidates.</p>
+          <p class="quote">The employee experience does not match the promise made to candidates.</p>
           <span class="tag">Culture &amp; Workforce</span>
         </div>
         <div class="signal-card" data-signal="3">
           <div class="signal-check"><svg width="11" height="8" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <p class="quote">The brand promises something the day-to-day doesn't always deliver.</p>
+          <p class="quote">The day-to-day experience does not consistently support the brand promise.</p>
           <span class="tag">Brand &amp; Customer Promise</span>
         </div>
         <div class="signal-card" data-signal="4">
           <div class="signal-check"><svg width="11" height="8" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <p class="quote">People understood the change. Some are still working the old way.</p>
+          <p class="quote">People understood the change, but some are still working the old way.</p>
           <span class="tag">Strategic Change &amp; Transformation</span>
         </div>
         <div class="signal-card" data-signal="5">
           <div class="signal-check"><svg width="11" height="8" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <p class="quote">We're doing the work. We can't always show what it's actually changing.</p>
+          <p class="quote">The organization can show activity but not clearly establish what changed.</p>
           <span class="tag">Social Impact &amp; Community</span>
         </div>
-        <div class="signal-card" data-signal="6">
-          <div class="signal-check"><svg width="11" height="8" viewBox="0 0 12 9" fill="none"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <p class="quote">We're funding several important priorities, and none of them feel fully resourced.</p>
-          <span class="tag">Portfolio</span>
-        </div>
       </div>
-      <p class="signals-note">However many of these resonate, that's where a conversation can start. <a href="#start">Talk it through →</a></p>
+      <p class="signals-note"><a href="/commitment-inquiry/">Let's talk it through →</a></p>
     </div>
   </div>
 </section>
 
-<!-- THE COMPOSITION PRINCIPLE: editorial imagery + governing brand statement -->
+<!-- THE COMPOSITION PRINCIPLE + THE ARRANGEMENT — one consolidated teaching section -->
 <section class="bg-white">
-  <div class="wrap human-grid reveal">
-    <div class="photo-frame has-image" id="parallaxPhoto" role="img" aria-label="Four colleagues in conversation around a table, with a geometric composition of overlapping planes on the wall behind them">
-      <img class="parallax-target" data-base-scale="1.7" src="/assets/photography/commitment-decisions.png" alt="" loading="lazy">
+  <div class="wrap reveal">
+    <div class="human-grid">
+      <div class="photo-frame has-image" id="parallaxPhoto" role="img" aria-label="Four colleagues in conversation around a table, with a geometric composition of overlapping planes on the wall behind them">
+        <img class="parallax-target" data-base-scale="1.7" src="/assets/photography/commitment-decisions.png" alt="" loading="lazy">
+      </div>
+      <div class="human-copy">
+        <p class="eyebrow">The Composition Principle</p>
+        <p class="human-quote">The quality of the parts matters. But the arrangement governs what the whole becomes.</p>
+        <p class="body-copy" style="margin-top:24px;font-size:1rem;line-height:1.85;color:#444;">A commitment can be well funded, thoughtfully communicated, and widely activated — and still underperform. What matters is whether leadership decisions, resources, authority, systems, stakeholder experience, evidence, and communication reinforce what the organization has asked people to trust.</p>
+      </div>
     </div>
-    <div class="human-copy">
-      <p class="eyebrow">The Composition Principle</p>
-      <p class="human-quote">The quality of the parts matters. But the arrangement governs what the whole becomes.</p>
+    <div class="stage-list" id="stageList">
+      <div class="stage-item" data-stage="0"><span class="word">Communicated</span><span class="frag">clear, well-received</span></div>
+      <div class="stage-item" data-stage="1"><span class="word">Funded</span><span class="frag">real budget, real support</span></div>
+      <div class="stage-item" data-stage="2"><span class="word">Operationalized</span><span class="frag">translated into practice</span></div>
+      <div class="stage-item" data-stage="3"><span class="word">Experienced</span><span class="frag">what people encounter</span></div>
+      <div class="stage-item" data-stage="4"><span class="word">Measured</span><span class="frag">whether it's actually working</span></div>
     </div>
   </div>
 </section>
 
-<!-- SIGNATURE PRINCIPLE -->
-<section class="bg-charcoal signature-block" id="sigBlock">
-  <p class="sig-line" data-sig="1">EVERY <span class="op">COMMITMENT</span> HAS <span class="op">CONDITIONS.</span></p>
-  <p class="sig-line" data-sig="2" style="margin-top:0.4em;">IT CARRIES <span class="op">TERMS.</span></p>
-  <p class="sig-line" data-sig="3" style="margin-top:0.4em;">IT DEPENDS ON <span class="op">STRUCTURES.</span></p>
-  <p class="sig-explainer" id="sigExplainer">A commitment isn't sustained by intention or communication alone. It requires something from the organization making it — and it depends on whether the systems surrounding it reinforce it, or quietly work against it.</p>
-</section>
-
-<!-- FULL-BLEED IMAGE: seeing the arrangement before reading about it -->
+<!-- FULL-BLEED IMAGE: seeing the arrangement before reading further -->
 <section class="full-bleed-image-section">
   <div class="full-bleed-photo reveal-crop">
     <img class="parallax-target" data-base-scale="1" data-drift="140" src="/assets/photography/exec-profile.png" alt="A senior leader standing in a modern studio, with a subtle geometric structural overlay evoking arrangement and composition" loading="lazy">
-  </div>
-</section>
-
-<!-- THE ARRANGEMENT -->
-<section class="bg-white">
-  <div class="wrap problem-grid">
-    <div class="reveal">
-      <p class="eyebrow">The Arrangement</p>
-      <h2>The parts may be strong. The arrangement may still work against the result.</h2>
-      <p class="body-copy">Well funded. Clearly communicated. Widely activated. A commitment can be all three and still not hold — because holding depends on whether the parts are working together.</p>
-      <p class="body-copy">Compositions examines how the parts work together.</p>
-    </div>
-    <div class="reveal">
-      <div class="stage-list" id="stageList">
-        <div class="stage-item" data-stage="0"><span class="word">Communicated</span><span class="frag">clear, well-received</span></div>
-        <div class="stage-item" data-stage="1"><span class="word">Funded</span><span class="frag">real budget, real support</span></div>
-        <div class="stage-item" data-stage="2"><span class="word">Operationalized</span><span class="frag">translated into practice</span></div>
-        <div class="stage-item" data-stage="3"><span class="word">Experienced</span><span class="frag">what people actually encounter</span></div>
-        <div class="stage-item" data-stage="4"><span class="word">Measured</span><span class="frag">whether it's actually working</span></div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -540,14 +475,14 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
         <div class="expand"><p>This work may include: stakeholder research, commitment coherence assessment, performance measurement, and commitment portfolio analysis.</p></div>
       </div>
     </div>
-    <div class="section-cta reveal">
-      <a href="/work/" class="btn btn-ghost-dark">See our work <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <div style="margin-top:48px;text-align:center;">
+      <a href="/work/" class="btn btn-ghost-dark">See the work <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
   </div>
 </section>
 
 <!-- COLLAGE STRIP: proof of sensibility, not a client logo wall -->
-<section class="bg-offwhite collage-strip-section">
+<section class="bg-white collage-strip-section">
   <div class="collage-strip-outer reveal" aria-label="A continuously scrolling collage of editorial and archival imagery representing Compositions' sensibility">
     <div class="collage-strip-track">
       <div class="collage-set">
@@ -574,69 +509,35 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
   </div>
 </section>
 
-<!-- WHERE COMPOSITIONS SPECIALIZES -->
-<section class="bg-white">
+<!-- WHERE COMPOSITIONS SPECIALIZES — visibly secondary to Work -->
+<section class="bg-offwhite expertise-section">
   <div class="wrap">
-    <div class="reveal" style="max-width:680px;margin-bottom:24px;">
+    <div class="reveal expertise-head" style="max-width:680px;margin-bottom:16px;">
       <p class="eyebrow">Where Compositions Specializes</p>
-      <h2 style="font-size:clamp(1.7rem,3vw,2.3rem);color:var(--charcoal);line-height:1.3;">Five classes of consequential commitment.</h2>
+      <h2>Five areas of organizational commitment.</h2>
     </div>
-    <div class="expertise-list on-light reveal">
-      <a class="expertise-row" href="/expertise/#mission-purpose-values"><h3>Mission, Purpose &amp; Values</h3><p class="q">Does what we say should guide us actually guide decisions?</p></a>
-      <a class="expertise-row" href="/expertise/#culture-workforce"><h3>Culture &amp; Workforce</h3><p class="q">Does the employee promise match the experience the organization creates?</p></a>
-      <a class="expertise-row" href="/expertise/#brand-customer-promise"><h3>Brand &amp; Customer Promise</h3><p class="q">Can the operating reality consistently sustain what the brand promises?</p></a>
-      <a class="expertise-row" href="/expertise/#strategic-change-transformation"><h3>Strategic Change &amp; Transformation</h3><p class="q">Are people only informed about the change, or structurally able to enact it?</p></a>
+    <div class="expertise-list reveal">
+      <a class="expertise-row" href="/expertise/#mission-purpose-values"><h3>Mission, Purpose &amp; Values</h3><p class="q">What should guide the organization's decisions, conduct, and identity?</p></a>
+      <a class="expertise-row" href="/expertise/#culture-workforce"><h3>Culture &amp; Workforce</h3><p class="q">Does the employee promise match the experience and capability the organization creates?</p></a>
+      <a class="expertise-row" href="/expertise/#brand-customer-promise"><h3>Brand &amp; Customer Promise</h3><p class="q">Can the organization consistently sustain what customers have been promised?</p></a>
+      <a class="expertise-row" href="/expertise/#strategic-change-transformation"><h3>Strategic Change &amp; Transformation</h3><p class="q">Are people only informed about the change — or able and supported to enact it?</p></a>
       <a class="expertise-row" href="/expertise/#social-impact-community"><h3>Social Impact &amp; Community</h3><p class="q">What changed, for whom, and what can the organization responsibly claim?</p></a>
     </div>
-    <div class="section-cta reveal">
+    <div style="margin-top:36px;">
       <a href="/expertise/" class="btn btn-ghost-dark">Explore our expertise <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
   </div>
 </section>
 
-<!-- PORTFOLIO GLIMPSE (interactive) -->
+<!-- WHEN ONE COMMITMENT ISN'T THE WHOLE QUESTION — shortened portfolio note -->
 <section class="bg-white">
-  <div class="wrap portfolio-grid">
-    <div class="reveal">
-      <p class="eyebrow">A Portfolio, Not a Program</p>
-      <h2>Organizations invest in more than one commitment at a time.</h2>
-      <p class="body-copy">Culture. Transformation. Brand. Workforce. Values. Impact. These investments are often governed separately — even when they depend on the same leaders, systems, resources, and stakeholder trust.</p>
-      <p class="body-copy">Compositions helps leadership see what each commitment is producing, and what their composition produces as a whole.</p>
-      <div class="section-cta" style="text-align:left;margin-top:32px;">
-        <a href="/work/#research-measurement-intelligence" class="btn btn-ghost-dark">See the Portfolio perspective <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      </div>
-    </div>
-    <div class="reveal portfolio-side">
-      <p class="portfolio-hint">Hover or select a commitment to see how it connects — and why.</p>
-      <div class="portfolio-viz" id="portfolioViz">
-        <svg class="links" viewBox="0 0 380 380" id="portfolioLinks"></svg>
-      </div>
-      <div class="portfolio-legend">
-        <div class="legend-item"><span class="legend-line"></span> Depends on another commitment</div>
-        <div class="legend-item"><span class="legend-line hot"></span> Under strain right now</div>
-      </div>
-      <div class="portfolio-info" id="portfolioInfo">
-        <p class="info-default">Hover or select a commitment above to see how it connects.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROOF -->
-<section class="bg-offwhite">
-  <div class="wrap proof-grid">
-    <div class="proof-col reveal">
-      <span class="label">Proof of Experience</span>
-      <p class="stat">20+</p>
-      <p>Years across strategic communications, brand, culture, organizational change, research, and measurement — in enterprise, multi-office environments.</p>
-    </div>
-    <div class="proof-col reveal">
-      <span class="label">Proof of Work</span>
-      <p>Case library coming soon.</p>
-    </div>
-    <div class="proof-col reveal">
-      <span class="label">Proof of Thinking</span>
-      <p>Original insights on organizational commitments, communication and believability, and commitment portfolio governance — <a href="/ideas/" style="color:var(--teal-dark);font-weight:500;">read our Ideas →</a></p>
+  <div class="wrap portfolio-note reveal">
+    <p class="eyebrow center">An Advanced Capability</p>
+    <h2 style="font-size:clamp(1.5rem,2.6vw,2rem);color:var(--charcoal);line-height:1.35;">When one commitment isn't the whole question.</h2>
+    <p class="body-copy">Organizations often ask the same leaders, managers, systems, and resources to carry several commitments at once. Compositions can examine what those commitments are producing individually, where they reinforce or compete with one another, and who governs the whole.</p>
+    <p class="example-quote">"We're funding several important priorities, and none of them feel fully resourced."</p>
+    <div style="margin-top:28px;">
+      <a href="/work/#research-measurement-intelligence" class="btn btn-ghost-dark">See the work <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
   </div>
 </section>
@@ -647,38 +548,22 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
     <div class="reveal">
       <p class="eyebrow on-dark">Start Here</p>
       <h2>What commitments has your organization made?</h2>
-      <p class="body-copy">Bring us the commitment, the outcome you're after, or what isn't working the way you hoped. Completing the form below will help us understand what you're experiencing and the potential route to achieving the outcomes you desire.</p>
-      <p class="contact-subtext">Discovery and analysis begin inside formal engagement.</p>
+      <p class="body-copy">The Commitment Inquiry is where that gets clarified — a complimentary, self-guided tool that takes about 10 minutes. Share what's happening, and you'll get a preliminary read on the pattern and a recommended next step, before you ever talk to us.</p>
+      <p class="contact-subtext">No documents, no evidence review — just a place to start.</p>
       <div class="contact-links">
         <a href="/ideas/" class="btn btn-ghost">Read our Ideas</a>
       </div>
     </div>
     <div class="reveal">
-      <div class="contact-form-card">
-        <form name="homepage-inquiry" id="inquiryForm" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="homepage-inquiry">
-          <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
-          <div class="field-row">
-            <div class="field"><label for="f-name">Name</label><input type="text" id="f-name" name="Name" required></div>
-            <div class="field"><label for="f-role">Role</label><input type="text" id="f-role" name="Role" required></div>
-          </div>
-          <div class="field-row">
-            <div class="field"><label for="f-org">Organization</label><input type="text" id="f-org" name="Organization" required></div>
-            <div class="field"><label for="f-email">Company Email</label><input type="email" id="f-email" name="Company Email" required></div>
-          </div>
-          <div class="field"><label for="f-commit">What commitments has your organization made?</label><textarea id="f-commit" name="Commitments" rows="2" required></textarea></div>
-          <div class="field"><label for="f-outcomes">What outcomes are you trying to achieve?</label><textarea id="f-outcomes" name="Outcomes" rows="2"></textarea></div>
-          <div class="field"><label for="f-notworking">What doesn't seem to be working the way you hoped?</label><textarea id="f-notworking" name="Not Working" rows="2"></textarea></div>
-          <div class="field-row">
-            <div class="field"><label for="f-where">Where does the issue seem to be?</label><input type="text" id="f-where" name="Where" placeholder="e.g., culture, brand, transformation"></div>
-            <div class="field"><label for="f-timing">What is your timeline?</label><input type="text" id="f-timing" name="Timeline" placeholder="e.g., this quarter"></div>
-          </div>
-          <button type="submit" class="btn btn-teal btn-block">Start the conversation</button>
-        </form>
-        <div class="success-message" id="formSuccess">
-          <h3>Request received.</h3>
-          <p>Dana will be in touch to schedule a brief conversation about your situation and whether — and where — this is the right next step.</p>
-        </div>
+      <div class="contact-form-card" style="text-align:center;">
+        <h3 style="font-family:var(--font-display);font-weight:600;font-size:1.3rem;color:var(--charcoal);">Start the Commitment Inquiry</h3>
+        <p style="margin-top:10px;font-size:0.85rem;color:var(--text-sec);letter-spacing:0.04em;text-transform:uppercase;">~10 minutes · complimentary · self-guided</p>
+        <ul style="margin-top:26px;text-align:left;display:flex;flex-direction:column;gap:12px;">
+          <li style="font-size:0.92rem;color:#444;line-height:1.6;padding-left:18px;position:relative;"><span style="position:absolute;left:0;top:0.6em;width:6px;height:1.5px;background:var(--teal);"></span>A preliminary Commitment Position Profile</li>
+          <li style="font-size:0.92rem;color:#444;line-height:1.6;padding-left:18px;position:relative;"><span style="position:absolute;left:0;top:0.6em;width:6px;height:1.5px;background:var(--teal);"></span>A plain-language read on what's happening</li>
+          <li style="font-size:0.92rem;color:#444;line-height:1.6;padding-left:18px;position:relative;"><span style="position:absolute;left:0;top:0.6em;width:6px;height:1.5px;background:var(--teal);"></span>A recommended next step</li>
+        </ul>
+        <a href="/commitment-inquiry/" class="btn btn-teal btn-block" style="margin-top:30px;justify-content:center;">Start the Commitment Inquiry</a>
       </div>
     </div>
   </div>
@@ -709,7 +594,7 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
         <div>
           <h4>Connect</h4>
           <ul>
-            <li><a href="#start">Start a conversation</a></li>
+            <li><a href="/commitment-inquiry/">Start the Commitment Inquiry</a></li>
             <li><a href="https://www.linkedin.com/in/danamiddletonkc/" target="_blank" rel="noopener">LinkedIn</a></li>
           </ul>
         </div>
@@ -734,7 +619,7 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
 <button class="back-to-top" id="backToTop" aria-label="Back to top"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
 
 <script>
-/* ── INTRO OVERLAY: pieces converge, then resolve into the real logo (first visit only) ── */
+/* ── INTRO OVERLAY: pieces converge into the resolved mark, then dismiss (first visit only) ── */
 (function () {
   const overlay = document.getElementById('introOverlay');
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -745,9 +630,7 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
   const pieces = Array.from(document.querySelectorAll('#introMosaic rect.p'));
   const mosaic = document.getElementById('introMosaic');
   const resolved = document.getElementById('introResolved');
-  const wordmark = document.getElementById('introWordmark');
 
-  // set scattered starting transform per piece, from its own data-dx/data-dy
   pieces.forEach(p => {
     const dx = p.getAttribute('data-dx'), dy = p.getAttribute('data-dy');
     p.style.transformOrigin = 'center';
@@ -755,7 +638,6 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
     p.style.opacity = '0';
   });
 
-  // converge, in order, teal piece last with a slight extra beat
   pieces.forEach((p, i) => {
     const delay = 90 + i * 85;
     setTimeout(() => { p.style.transform = 'translate(0,0) scale(1)'; p.style.opacity = '1'; }, delay);
@@ -768,13 +650,11 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
     resolved.classList.add('in');
   }, convergeEnd);
 
-  setTimeout(() => { wordmark.classList.add('in'); }, convergeEnd + 350);
-
   function dismiss() {
     overlay.classList.add('hidden');
     setTimeout(() => { overlay.style.display = 'none'; }, 600);
   }
-  const autoTimer = setTimeout(dismiss, convergeEnd + 1100);
+  const autoTimer = setTimeout(dismiss, convergeEnd + 700);
   document.getElementById('introSkip').addEventListener('click', () => { clearTimeout(autoTimer); dismiss(); });
   overlay.addEventListener('click', () => { clearTimeout(autoTimer); dismiss(); });
 })();
@@ -840,21 +720,6 @@ const wordsObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.6 });
 if (words.length) wordsObserver.observe(document.getElementById('commitmentWords'));
 
-/* ── signature lines reveal in sequence ── */
-const sigBlock = document.getElementById('sigBlock');
-const sigLines = document.querySelectorAll('.sig-line');
-const sigExplainer = document.getElementById('sigExplainer');
-const sigObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      sigLines.forEach((l, i) => setTimeout(() => l.classList.add('lit'), 200 + i * 500));
-      setTimeout(() => sigExplainer.classList.add('in'), 200 + sigLines.length * 500 + 200);
-      sigObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.5 });
-if (sigBlock) sigObserver.observe(sigBlock);
-
 /* ── stage list cycles through active state ── */
 const stageItems = document.querySelectorAll('.stage-item');
 let stageIdx = 0;
@@ -894,110 +759,6 @@ document.querySelectorAll('.signal-card').forEach(card => {
   obs.observe(card, { attributes: true, attributeFilter: ['class'] });
 });
 
-/* ── PORTFOLIO: singular commitments, real (non-adjacent-only) relationships ── */
-(function () {
-  const viz = document.getElementById('portfolioViz');
-  const svg = document.getElementById('portfolioLinks');
-  const info = document.getElementById('portfolioInfo');
-  if (!viz || !svg) return;
-
-  const SIZE = 380, CX = 190, CY = 190, R = 148;
-  let lockedNode = null;
-
-  const NODES = [
-    { id: 'brand', label: 'Customer Promise', tag: 'Brand & Customer Promise', angle: 0, q: 'Can operations consistently deliver the promise?' },
-    { id: 'values', label: 'Values', tag: 'Mission, Purpose & Values', angle: 60, q: 'Do decisions reflect what we say we value?' },
-    { id: 'transformation', label: 'Transformation', tag: 'Strategic Change & Transformation', angle: 120, q: 'Is the organization structurally able to change, not just informed of it?' },
-    { id: 'impact', label: 'Impact', tag: 'Social Impact & Community', angle: 180, q: 'Can we show what actually changed?' },
-    { id: 'workforce', label: 'EVP', tag: 'Culture & Workforce', angle: 240, q: 'Does the employee experience match what we promise candidates?' },
-    { id: 'culture', label: 'Culture', tag: 'Culture & Workforce', angle: 300, q: 'Is what people experience day to day what we describe?' }
-  ];
-
-  const EDGES = [
-    { a: 'values', b: 'culture', type: 'dependency', desc: 'Culture depends on whether values are enforced in decisions, not just stated.' },
-    { a: 'values', b: 'transformation', type: 'dependency', desc: "Transformation asks people to act differently — its credibility depends on whether that's consistent with stated values." },
-    { a: 'workforce', b: 'transformation', type: 'dependency', desc: 'Transformation requires the workforce capacity and trust the EVP promises.' },
-    { a: 'brand', b: 'impact', type: 'dependency', desc: 'Brand and impact are both public claims about the organization — inconsistency in one exposes the other.' },
-    { a: 'culture', b: 'workforce', type: 'dependency', desc: 'Employee experience and culture are read as one thing by the people living inside them.' },
-    { a: 'workforce', b: 'brand', type: 'dependency', desc: 'The customer promise depends on the employee experience the EVP actually describes.' },
-    { a: 'values', b: 'impact', type: 'dependency', desc: 'Impact claims are often justified by the same stated values — inconsistency undermines both.' },
-    { a: 'culture', b: 'transformation', type: 'tension', desc: "New ways of working can contradict long-standing cultural norms if the transition isn't managed." },
-    { a: 'workforce', b: 'impact', type: 'tension', desc: 'Community investment and workforce investment can compete for the same budget and attention.' }
-  ];
-
-  function pos(angleDeg) {
-    const a = angleDeg * Math.PI / 180;
-    return { x: CX + R * Math.sin(a), y: CY - R * Math.cos(a) };
-  }
-
-  const nodeEls = {};
-  NODES.forEach(n => {
-    const p = pos(n.angle);
-    const wrap = document.createElement('div');
-    wrap.className = 'node-wrap';
-    wrap.style.left = (p.x / SIZE * 100) + '%';
-    wrap.style.top = (p.y / SIZE * 100) + '%';
-    wrap.tabIndex = 0;
-    wrap.innerHTML = `<div class="portfolio-node">${n.label}</div><div class="node-tag">${n.tag}</div><div class="node-tip">${n.q}</div>`;
-    viz.appendChild(wrap);
-    nodeEls[n.id] = wrap;
-
-    wrap.addEventListener('mouseenter', () => { if (!lockedNode) highlight(n.id); });
-    wrap.addEventListener('mouseleave', () => { if (!lockedNode) clearHighlight(); });
-    wrap.addEventListener('focus', () => { if (!lockedNode) highlight(n.id); });
-    wrap.addEventListener('blur', () => { if (!lockedNode) clearHighlight(); });
-    wrap.addEventListener('click', () => {
-      if (lockedNode === n.id) { lockedNode = null; clearHighlight(); wrap.classList.remove('locked'); }
-      else {
-        if (lockedNode && nodeEls[lockedNode]) nodeEls[lockedNode].classList.remove('locked');
-        lockedNode = n.id; wrap.classList.add('locked'); highlight(n.id);
-      }
-    });
-    wrap.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); wrap.click(); } });
-  });
-
-  const lineEls = [];
-  EDGES.forEach(e => {
-    const pa = pos(NODES.find(n => n.id === e.a).angle);
-    const pb = pos(NODES.find(n => n.id === e.b).angle);
-    const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-    line.setAttribute('x1', pa.x); line.setAttribute('y1', pa.y);
-    line.setAttribute('x2', pb.x); line.setAttribute('y2', pb.y);
-    line.classList.add('rel-line', e.type);
-    line.dataset.a = e.a; line.dataset.b = e.b;
-    svg.appendChild(line);
-    lineEls.push({ el: line, edge: e });
-  });
-
-  function highlight(id) {
-    lineEls.forEach(({ el, edge }) => {
-      if (edge.a === id || edge.b === id) { el.classList.add('hot'); el.classList.remove('dim'); }
-      else { el.classList.add('dim'); el.classList.remove('hot'); }
-    });
-    const rows = EDGES.filter(e => e.a === id || e.b === id).map(e => {
-      const otherId = e.a === id ? e.b : e.a;
-      const other = NODES.find(n => n.id === otherId);
-      return `<div class="info-row"><span class="dot ${e.type === 'tension' ? 'tension' : ''}"></span><span><strong>${other.label}</strong> — ${e.desc}</span></div>`;
-    }).join('');
-    info.innerHTML = rows;
-  }
-
-  function clearHighlight() {
-    lineEls.forEach(({ el }) => { el.classList.remove('hot', 'dim'); });
-    info.innerHTML = '<p class="info-default">Hover or select a commitment above to see how it connects.</p>';
-  }
-})();
-
-/* ── NETLIFY FORM SUBMIT ── */
-const form = document.getElementById('inquiryForm');
-const success = document.getElementById('formSuccess');
-form.addEventListener('submit', function (e) {
-  e.preventDefault();
-  const data = new FormData(form);
-  fetch('/', { method: 'POST', body: new URLSearchParams(data).toString(), headers: { 'Content-Type': 'application/x-www-form-urlencoded' } })
-    .then(() => { form.style.display = 'none'; success.classList.add('show'); })
-    .catch(() => { form.style.display = 'none'; success.classList.add('show'); });
-});
 </script>
 </body>
 </html>
