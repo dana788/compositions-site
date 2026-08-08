@@ -2,8 +2,14 @@
   from = "/admin"
   to = "/admin/index.html"
   status = 200
-
 [[redirects]]
   from = "/admin/*"
   to = "/admin/index.html"
   status = 200
+
+# Catch-all: any unmatched path serves the real 404 page with a true 404 status,
+# instead of falling through to another page.
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
