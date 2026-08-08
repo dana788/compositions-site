@@ -5,14 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index, follow">
 <title>Expertise | Compositions — Structural Communications Firm</title>
-<meta name="description" content="Where Compositions specializes: Mission, Purpose & Values; Culture & Workforce; Brand & Customer Promise; Strategic Change & Transformation; Social Impact & Community.">
+<meta name="description" content="See what's at stake in mission and values, culture and workforce, brand and customer promise, strategic change and transformation, and social impact — and what changes for leadership when each is addressed.">
 <link rel="canonical" href="https://compositionsadvisory.com/expertise/">
-<meta property="og:title" content="Expertise | Compositions">
-<meta property="og:description" content="Five classes of consequential organizational commitment.">
+<meta property="og:title" content="Expertise | Compositions — Structural Communications Firm">
+<meta property="og:description" content="Not every organizational problem belongs here. See the five that do, what's typically at stake, and what changes when they're addressed.">
 <meta property="og:image" content="https://compositionsadvisory.com/assets/og-image.png">
 <meta property="og:url" content="https://compositionsadvisory.com/expertise/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Compositions">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" type="image/png" href="/assets/logo-square-color.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,7 +60,7 @@ section { padding: var(--section-pad); position: relative; }
 
 /* NAV */
 .site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 300; display: flex; align-items: center; justify-content: space-between; padding: 20px 32px; background: rgba(248,248,248,0.94); backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--border); }
-.logo-mark img { height: 26px; width: auto; }
+.logo-mark img { height: 28px; width: auto; }
 .nav-links { display: flex; align-items: center; gap: 40px; }
 .nav-link { position: relative; font-weight: 500; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--charcoal); padding-bottom: 6px; }
 .nav-link.active { color: var(--teal-dark); }
@@ -83,18 +84,20 @@ section { padding: var(--section-pad); position: relative; }
 
 .page-hero { padding: 168px 32px 90px; }
 .page-hero h1 { font-size: clamp(2.1rem, 4.6vw, 3.4rem); line-height: 1.18; color: var(--charcoal); max-width: 780px; }
-.page-hero .support { font-size: 1.05rem; color: var(--text-sec); max-width: 620px; margin-top: 24px; line-height: 1.8; }
+.page-hero .support { font-size: 1.05rem; color: var(--text-sec); max-width: 640px; margin-top: 24px; line-height: 1.8; }
 
-.full-bleed-photo { position: relative; height: 56vh; max-height: 480px; overflow: hidden; }
+.full-bleed-photo { position: relative; height: 46vh; max-height: 480px; overflow: hidden; }
+.full-bleed-photo.reveal-crop { clip-path: inset(0 0 26% 0); transition: clip-path 1.1s cubic-bezier(0.16,1,0.3,1); }
+.full-bleed-photo.reveal-crop.visible { clip-path: inset(0 0 0 0); }
 .full-bleed-photo img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.05); }
 @media (max-width: 640px) { .full-bleed-photo { height: 38vh; } }
 
-/* EXPERTISE ACCORDION (same pattern as Work) */
+/* AREAS ACCORDION */
 .service-list { display: flex; flex-direction: column; border-top: 1px solid var(--border); }
 .service-item { border-bottom: 1px solid var(--border); }
-.service-head { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 36px 0; cursor: pointer; }
+.service-head { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 36px 0; cursor: pointer; background: transparent; border: 0; text-align: left; color: inherit; }
 .service-head .num { font-family: var(--font-display); font-weight: 600; font-size: 0.78rem; letter-spacing: 0.1em; color: var(--teal); flex-shrink: 0; width: 40px; }
-.service-head h3 { font-size: 1.4rem; color: var(--charcoal); flex: 1; }
+.service-head .service-title { font-family: var(--font-display); font-weight: 600; font-size: 1.4rem; color: var(--charcoal); flex: 1; }
 .service-head .question { font-size: 0.9rem; color: var(--text-sec); font-style: italic; max-width: 320px; text-align: right; display: none; }
 @media (min-width: 900px) { .service-head .question { display: block; } }
 .service-toggle { width: 30px; height: 30px; border: 1.5px solid var(--border); border-radius: 50%; flex-shrink: 0; position: relative; transition: border-color 0.2s ease, background 0.2s ease; }
@@ -103,18 +106,23 @@ section { padding: var(--section-pad); position: relative; }
 .service-toggle::after { left: 50%; top: 8px; bottom: 8px; width: 1.5px; transform: translateX(-50%); }
 .service-item.open .service-toggle::after { transform: translateX(-50%) rotate(90deg) scaleY(0); }
 .service-item.open .service-toggle { border-color: var(--teal); background: #EBF6F8; }
+
+.question-mobile { display: none; font-size: 0.95rem; color: var(--text-sec); font-style: italic; margin: 0 0 20px; }
+@media (max-width: 899px) { .question-mobile { display: block; } }
+
+.why-matters { padding: 0 0 28px; font-size: 1rem; line-height: 1.85; color: #444; max-width: 760px; }
+
 .service-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
 .service-item.open .service-body { max-height: 1000px; }
 .service-body-inner { padding: 0 0 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-.service-body-inner .question-mobile { display: none; font-size: 0.95rem; color: var(--text-sec); font-style: italic; margin-bottom: 20px; grid-column: 1 / -1; }
-@media (max-width: 899px) { .service-body-inner .question-mobile { display: block; } }
 .service-col h4 { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal-dark); margin-bottom: 16px; }
-.service-col p.desc { font-size: 0.95rem; color: #444; line-height: 1.75; }
 .service-col ul { display: flex; flex-direction: column; gap: 10px; }
 .service-col li { font-size: 0.92rem; color: #444; line-height: 1.6; padding-left: 16px; position: relative; }
 .service-col li::before { content: ""; position: absolute; left: 0; top: 0.6em; width: 6px; height: 1.5px; background: var(--teal); }
 .service-col.situations li { font-style: italic; color: var(--text-sec); padding-left: 0; }
 @media (max-width: 899px) { .service-body-inner { grid-template-columns: 1fr; gap: 24px; } }
+
+.closing-note { max-width: 640px; margin: 0 auto; text-align: center; font-size: 0.95rem; color: var(--text-sec); line-height: 1.8; }
 
 .cta-band { text-align: center; }
 .cta-band h2 { font-size: clamp(1.6rem, 2.8vw, 2.2rem); color: var(--white); max-width: 640px; margin: 0 auto; line-height: 1.35; }
@@ -123,7 +131,7 @@ section { padding: var(--section-pad); position: relative; }
 footer { background: var(--charcoal); padding: 72px 32px 32px; }
 .footer-inner { max-width: var(--max-width); margin: 0 auto; }
 .footer-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,0.1); }
-.footer-brand img { height: 24px; width: auto; }
+.footer-brand img { height: 22px; width: auto; }
 .footer-tag { font-size: 0.85rem; color: rgba(255,255,255,0.4); margin-top: 14px; max-width: 300px; line-height: 1.6; }
 .footer-cols { display: flex; gap: 64px; flex-wrap: wrap; }
 .footer-cols h4 { font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 18px; font-weight: 600; }
@@ -148,7 +156,7 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
     <a href="/expertise/" class="nav-link active">Expertise</a>
     <a href="/about/" class="nav-link">About</a>
     <a href="/ideas/" class="nav-link">Ideas</a>
-    <a href="/#start" class="btn btn-teal nav-cta">Contact</a>
+    <a href="/commitment-inquiry/" class="btn btn-teal nav-cta">Contact</a>
   </div>
   <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
 </nav>
@@ -158,7 +166,7 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
   <a href="/expertise/">Expertise</a>
   <a href="/about/">About</a>
   <a href="/ideas/">Ideas</a>
-  <a href="/#start">Contact</a>
+  <a href="/commitment-inquiry/">Contact</a>
 </div>
 
 <main>
@@ -166,40 +174,46 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
 <section class="bg-white page-hero">
   <div class="wrap reveal visible">
     <p class="eyebrow">Expertise</p>
-    <h1>Five classes of consequential commitment. Not every organizational problem — these.</h1>
-    <p class="support">Compositions specializes in commitments where communication and organizational reality have to work together. Work answers what Compositions does; this answers where.</p>
+    <h1>Not every organizational problem belongs here. These five do.</h1>
+    <p class="support">Compositions works on commitments where communication and organizational reality have to hold together — and where the gap between what's promised and what's delivered carries real consequences. Below is what's typically at stake in each, and what tends to change once it's addressed.</p>
   </div>
 </section>
 
-<section class="full-bleed-photo">
+<section class="full-bleed-photo reveal-crop">
   <img src="/assets/photography/community-circle.png" alt="A diverse group of six seated in conversation in a modern community space" loading="lazy">
 </section>
 
-<!-- FIVE COMMITMENT CLASSES -->
+<!-- FIVE AREAS -->
 <section class="bg-white">
   <div class="wrap">
     <div class="service-list reveal" id="classList">
 
       <div class="service-item open" data-class="1" id="mission-purpose-values">
-        <div class="service-head">
+        <button class="service-head" type="button" aria-expanded="true" aria-controls="class-panel-1">
           <span class="num">01</span>
-          <h3>Mission, Purpose &amp; Values</h3>
-          <p class="question">Does what we say should guide us actually guide decisions?</p>
-          <div class="service-toggle"></div>
-        </div>
-        <div class="service-body">
+          <span class="service-title">Mission, Purpose &amp; Values</span>
+          <span class="question">What should guide the organization's decisions, conduct, and identity?</span>
+          <span class="service-toggle" aria-hidden="true"></span>
+        </button>
+        <p class="question-mobile">What should guide the organization's decisions, conduct, and identity?</p>
+        <p class="why-matters">When values guide decisions in the moments that count — not just the moments people are watching — the organization becomes easier to trust, easier to follow, and easier to hold accountable.</p>
+        <div class="service-body" id="class-panel-1" role="region">
           <div class="service-body-inner">
-            <p class="question-mobile">Does what we say should guide us actually guide decisions?</p>
-            <div class="service-col">
-              <h4>What This Covers</h4>
-              <p class="desc">Defining what the organization stands for — and making it usable in leadership, decisions, communication, and daily work. Mission, purpose, values, organizational and leadership principles, institutional identity.</p>
-            </div>
             <div class="service-col situations">
-              <h4>What Buyers Say</h4>
+              <h4>Signals You May Recognize</h4>
               <ul>
                 <li>"Our values feel generic."</li>
                 <li>"Leadership isn't aligned on what the purpose means."</li>
                 <li>"Employees can name the values, but they don't use them."</li>
+              </ul>
+            </div>
+            <div class="service-col">
+              <h4>What Changes</h4>
+              <ul>
+                <li>Decisions leadership can defend, not just describe</li>
+                <li>A shared standard for judgment calls under pressure</li>
+                <li>Language people actually use, not language they recite</li>
+                <li>A values statement that holds up under a hard decision</li>
               </ul>
             </div>
           </div>
@@ -207,25 +221,31 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
       </div>
 
       <div class="service-item" data-class="2" id="culture-workforce">
-        <div class="service-head">
+        <button class="service-head" type="button" aria-expanded="false" aria-controls="class-panel-2">
           <span class="num">02</span>
-          <h3>Culture &amp; Workforce</h3>
-          <p class="question">Does the employee promise match the experience the organization creates?</p>
-          <div class="service-toggle"></div>
-        </div>
-        <div class="service-body">
+          <span class="service-title">Culture &amp; Workforce</span>
+          <span class="question">Does the employee promise match the experience and capability the organization creates?</span>
+          <span class="service-toggle" aria-hidden="true"></span>
+        </button>
+        <p class="question-mobile">Does the employee promise match the experience and capability the organization creates?</p>
+        <p class="why-matters">When what you promise employees matches what they actually experience, retention, referrals, and manager credibility stop being separate problems you're solving one at a time.</p>
+        <div class="service-body" id="class-panel-2" role="region">
           <div class="service-body-inner">
-            <p class="question-mobile">Does the employee promise match the experience the organization creates?</p>
-            <div class="service-col">
-              <h4>What This Covers</h4>
-              <p class="desc">Shaping what the organization promises employees and ensuring culture, leadership, communications, and workforce experience reinforce it. Culture, EVP, employer brand, workforce promise, leadership experience, wellbeing, belonging, capability.</p>
-            </div>
             <div class="service-col situations">
-              <h4>What Buyers Say</h4>
+              <h4>Signals You May Recognize</h4>
               <ul>
                 <li>"The EVP doesn't sound like the actual experience."</li>
                 <li>"We're asking managers to carry too much."</li>
                 <li>"The same workforce concern keeps appearing in different forms."</li>
+              </ul>
+            </div>
+            <div class="service-col">
+              <h4>What Changes</h4>
+              <ul>
+                <li>A workforce promise the organization can actually keep</li>
+                <li>Managers equipped with authority to match their responsibility</li>
+                <li>Fewer relaunches of the same culture initiative</li>
+                <li>A clearer read on what's actually driving retention and disengagement</li>
               </ul>
             </div>
           </div>
@@ -233,25 +253,31 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
       </div>
 
       <div class="service-item" data-class="3" id="brand-customer-promise">
-        <div class="service-head">
+        <button class="service-head" type="button" aria-expanded="false" aria-controls="class-panel-3">
           <span class="num">03</span>
-          <h3>Brand &amp; Customer Promise</h3>
-          <p class="question">Can the operating reality consistently sustain what the brand promises?</p>
-          <div class="service-toggle"></div>
-        </div>
-        <div class="service-body">
+          <span class="service-title">Brand &amp; Customer Promise</span>
+          <span class="question">Can the organization consistently sustain what customers have been promised?</span>
+          <span class="service-toggle" aria-hidden="true"></span>
+        </button>
+        <p class="question-mobile">Can the organization consistently sustain what customers have been promised?</p>
+        <p class="why-matters">A brand promise the organization can consistently deliver builds pricing power and referrals. One it can't becomes a liability every time a customer notices the gap.</p>
+        <div class="service-body" id="class-panel-3" role="region">
           <div class="service-body-inner">
-            <p class="question-mobile">Can the operating reality consistently sustain what the brand promises?</p>
-            <div class="service-col">
-              <h4>What This Covers</h4>
-              <p class="desc">Connecting the external promise to the internal decisions, behaviors, communications, and capabilities required to deliver it. Brand promise, customer promise, service promise, customer experience, internal/external brand alignment.</p>
-            </div>
             <div class="service-col situations">
-              <h4>What Buyers Say</h4>
+              <h4>Signals You May Recognize</h4>
               <ul>
                 <li>"The campaign is stronger than the experience."</li>
                 <li>"Different parts of the organization deliver the brand differently."</li>
                 <li>"Our external narrative and internal reality are drifting apart."</li>
+              </ul>
+            </div>
+            <div class="service-col">
+              <h4>What Changes</h4>
+              <ul>
+                <li>A promise every function is actually equipped to keep</li>
+                <li>Consistency across the touchpoints customers notice most</li>
+                <li>Marketing and operations working from the same definition of the brand</li>
+                <li>A narrative the organization can stand behind under scrutiny</li>
               </ul>
             </div>
           </div>
@@ -259,25 +285,31 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
       </div>
 
       <div class="service-item" data-class="4" id="strategic-change-transformation">
-        <div class="service-head">
+        <button class="service-head" type="button" aria-expanded="false" aria-controls="class-panel-4">
           <span class="num">04</span>
-          <h3>Strategic Change &amp; Transformation</h3>
-          <p class="question">Are people only informed about the change, or structurally able to enact it?</p>
-          <div class="service-toggle"></div>
-        </div>
-        <div class="service-body">
+          <span class="service-title">Strategic Change &amp; Transformation</span>
+          <span class="question">Are people only informed about the change — or able and supported to enact it?</span>
+          <span class="service-toggle" aria-hidden="true"></span>
+        </button>
+        <p class="question-mobile">Are people only informed about the change — or able and supported to enact it?</p>
+        <p class="why-matters">Adoption that holds — not just a well-attended launch — is what determines whether a transformation investment pays for itself.</p>
+        <div class="service-body" id="class-panel-4" role="region">
           <div class="service-body-inner">
-            <p class="question-mobile">Are people only informed about the change, or structurally able to enact it?</p>
-            <div class="service-col">
-              <h4>What This Covers</h4>
-              <p class="desc">Helping leaders define the future, communicate it clearly, equip people to act, and sustain adoption beyond launch. Strategy activation, change, transformation, merger integration, reorganization, new ways of working.</p>
-            </div>
             <div class="service-col situations">
-              <h4>What Buyers Say</h4>
+              <h4>Signals You May Recognize</h4>
               <ul>
                 <li>"People understand the change, but they're not working differently."</li>
                 <li>"The launch went well, but adoption has stalled."</li>
                 <li>"We keep relaunching the same change."</li>
+              </ul>
+            </div>
+            <div class="service-col">
+              <h4>What Changes</h4>
+              <ul>
+                <li>Adoption that holds after the launch excitement fades</li>
+                <li>Leaders equipped to model the change, not just announce it</li>
+                <li>One relaunch instead of three</li>
+                <li>A clear read on where the change is taking hold and where it isn't</li>
               </ul>
             </div>
           </div>
@@ -285,25 +317,31 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
       </div>
 
       <div class="service-item" data-class="5" id="social-impact-community">
-        <div class="service-head">
+        <button class="service-head" type="button" aria-expanded="false" aria-controls="class-panel-5">
           <span class="num">05</span>
-          <h3>Social Impact &amp; Community</h3>
-          <p class="question">What changed, for whom, and what can the organization responsibly claim?</p>
-          <div class="service-toggle"></div>
-        </div>
-        <div class="service-body">
+          <span class="service-title">Social Impact &amp; Community</span>
+          <span class="question">What changed, for whom, and what can the organization responsibly claim?</span>
+          <span class="service-toggle" aria-hidden="true"></span>
+        </button>
+        <p class="question-mobile">What changed, for whom, and what can the organization responsibly claim?</p>
+        <p class="why-matters">A public commitment you can defend with evidence protects credibility. One you can't becomes the story that gets told about you instead of the one you intended to tell.</p>
+        <div class="service-body" id="class-panel-5" role="region">
           <div class="service-body-inner">
-            <p class="question-mobile">What changed, for whom, and what can the organization responsibly claim?</p>
-            <div class="service-col">
-              <h4>What This Covers</h4>
-              <p class="desc">Turning public commitments into credible strategy, stakeholder communication, evidence, and demonstrable impact. Social impact, community impact, corporate citizenship, health equity, responsible-business commitments.</p>
-            </div>
             <div class="service-col situations">
-              <h4>What Buyers Say</h4>
+              <h4>Signals You May Recognize</h4>
               <ul>
                 <li>"We have a lot of activity but can't clearly explain the impact."</li>
                 <li>"Our public commitment is stronger than our evidence."</li>
                 <li>"The report describes what we did, not what changed."</li>
+              </ul>
+            </div>
+            <div class="service-col">
+              <h4>What Changes</h4>
+              <ul>
+                <li>Claims the organization can defend under scrutiny</li>
+                <li>A clear account of what changed, for whom</li>
+                <li>Impact communication grounded in evidence, not activity counts</li>
+                <li>Stronger footing with funders, partners, and community stakeholders</li>
               </ul>
             </div>
           </div>
@@ -312,7 +350,10 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
 
     </div>
 
-    <div class="section-cta reveal" style="margin-top:48px;text-align:center;">
+    <div class="reveal" style="margin-top:48px;">
+      <p class="closing-note">Whatever the starting point, the response is shaped by what you're facing — not a fixed package.</p>
+    </div>
+    <div class="reveal" style="margin-top:24px;text-align:center;">
       <a href="/work/" class="btn btn-ghost-dark">See how this becomes work <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
   </div>
@@ -324,7 +365,7 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
     <p class="eyebrow on-dark" style="justify-content:center;">Start Here</p>
     <h2>Where does the issue seem to be?</h2>
     <div class="cta-row">
-      <a href="/#start" class="btn btn-teal">Start a conversation <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="/commitment-inquiry/" class="btn btn-teal">Start the Commitment Inquiry <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       <a href="/ideas/" class="btn btn-ghost">Read our Ideas</a>
     </div>
   </div>
@@ -355,7 +396,7 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
         <div>
           <h4>Connect</h4>
           <ul>
-            <li><a href="/#start">Start a conversation</a></li>
+            <li><a href="/commitment-inquiry/">Start the Commitment Inquiry</a></li>
             <li><a href="https://www.linkedin.com/in/danamiddletonkc/" target="_blank" rel="noopener">LinkedIn</a></li>
           </ul>
         </div>
@@ -397,13 +438,14 @@ const revealObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); } });
 }, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+document.querySelectorAll('.reveal-crop').forEach(el => revealObserver.observe(el));
 
-/* CLASS ACCORDION */
+/* CLASS ACCORDION — multiple panels may stay open; semantic buttons with aria-expanded */
 document.querySelectorAll('.service-item').forEach(item => {
-  item.querySelector('.service-head').addEventListener('click', () => {
-    const wasOpen = item.classList.contains('open');
-    document.querySelectorAll('.service-item').forEach(i => i.classList.remove('open'));
-    if (!wasOpen) item.classList.add('open');
+  const trigger = item.querySelector('.service-head');
+  trigger.addEventListener('click', () => {
+    const isOpen = item.classList.toggle('open');
+    trigger.setAttribute('aria-expanded', String(isOpen));
   });
 });
 
@@ -411,8 +453,9 @@ document.querySelectorAll('.service-item').forEach(item => {
 if (window.location.hash) {
   const target = document.querySelector(window.location.hash);
   if (target && target.classList.contains('service-item')) {
-    document.querySelectorAll('.service-item').forEach(i => i.classList.remove('open'));
     target.classList.add('open');
+    const trigger = target.querySelector('.service-head');
+    if (trigger) trigger.setAttribute('aria-expanded', 'true');
     setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
   }
 }
