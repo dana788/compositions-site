@@ -46,6 +46,8 @@ button{cursor:pointer}
 
 /* Email gate */
 #gateScreen{position:fixed;inset:0;z-index:9999;background:var(--charcoal);display:flex;align-items:center;justify-content:center;padding:40px 24px;overflow-y:auto}
+.gate-header{position:absolute;top:32px;left:32px;z-index:2}
+.gate-logo{height:28px;width:auto;display:block}
 .gate-inner{width:100%;max-width:520px}
 .gate-eyebrow{font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--teal-light);margin-bottom:16px}
 .gate-rule{width:40px;height:3px;background:var(--gold);margin-bottom:24px}
@@ -243,6 +245,7 @@ input:focus,textarea:focus,select:focus{border-color:var(--teal);box-shadow:0 0 
  .form-card{padding:30px 20px}.step h2{font-size:28px}.choice-grid{grid-template-columns:1fr}.nav-actions{flex-direction:column-reverse}.btn{width:100%}
  .result-hero{margin:-30px -20px 26px;padding:34px 24px}.result-hero h2{font-size:34px}.footer{flex-direction:column}
  .about-block-inner{padding:26px 22px}.score-block{gap:18px}.score-number{font-size:44px}.contact-fields{grid-template-columns:1fr}
+ .gate-header{top:20px;left:20px}
 }
 @media print{
  @page{margin:.55in;size:letter}.site-header,.hero,.progress-shell,.side-nav,.nav-actions,.footer,.result-actions,#gateScreen,.about-block,.thankyou-banner,.email-results,.contact-box{display:none!important}
@@ -253,6 +256,7 @@ input:focus,textarea:focus,select:focus{border-color:var(--teal);box-shadow:0 0 
 </head>
 <body>
 <div id="gateScreen">
+  <div class="gate-header"><a href="https://compositionsadvisory.com/" aria-label="Compositions home"><img src="/assets/Compositions-Off-White-Horizontal.png" alt="Compositions" class="gate-logo"></a></div>
   <div class="gate-inner">
     <div class="gate-eyebrow">Complimentary Digital Inquiry</div>
     <div class="gate-rule"></div>
@@ -604,7 +608,7 @@ input:focus,textarea:focus,select:focus{border-color:var(--teal);box-shadow:0 0 
   </div>
 </section>
 
-<footer class="footer"><div><img src="/assets/Compositions-Off-White-Horizontal.png" alt="Compositions" class="footer-logo"><br>Coherent by design. Credible over time.</div><div>Structural Communications Firm</div></footer>
+<footer class="footer"><div><img src="/assets/Compositions-Off-White-Horizontal.png" alt="Compositions" class="footer-logo"><br>Coherent by design. Credible over time.</div><div>Structural Communications Firm<br>© 2026 Compositions</div></footer>
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
 <script>
