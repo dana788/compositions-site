@@ -156,7 +156,7 @@ section { padding: var(--section-pad); position: relative; }
 .commitment-words span { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.4rem, 3.2vw, 2.2rem); color: var(--charcoal); opacity: 0.3; transition: opacity 0.6s ease, color 0.6s ease; }
 .commitment-words span.lit { opacity: 1; color: var(--teal); }
 
-.signals-block { margin-top: 84px; }
+.signals-block { margin-top: 48px; }
 .signals-head { text-align: center; max-width: 640px; margin: 0 auto 44px; }
 .signals-head h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); color: var(--charcoal); line-height: 1.3; }
 .signals-head p { margin-top: 14px; font-size: 0.98rem; color: var(--text-sec); line-height: 1.75; }
@@ -370,7 +370,7 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
 </section>
 
 <!-- RECOGNITION + SIGNALS -->
-<section class="bg-offwhite" id="explore">
+<section class="bg-offwhite" id="explore" style="padding-top:72px;">
   <div class="wrap recognition reveal">
     <p class="eyebrow center">What Organizations Commit To</p>
     <div class="commitment-words" id="commitmentWords">
@@ -569,6 +569,17 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
             <div class="field"><label for="f-org">Organization</label><input type="text" id="f-org" name="Organization" required></div>
             <div class="field"><label for="f-email">Company Email</label><input type="email" id="f-email" name="Company Email" required></div>
           </div>
+          <div class="field"><label for="f-interest">What are you exploring?</label>
+            <select id="f-interest" name="Area of Interest" required>
+              <option value="" disabled selected>Select the option closest to your situation</option>
+              <option value="Not sure yet">Not sure yet — I need to talk it through</option>
+              <option value="Strategy & Advisory">Strategy &amp; Advisory — clarifying a commitment or decision</option>
+              <option value="Communications & Activation">Communications &amp; Activation — narrative, messaging, activation</option>
+              <option value="Alignment & Operationalization">Alignment &amp; Operationalization — turning a commitment into practice</option>
+              <option value="Research, Measurement & Intelligence">Research, Measurement &amp; Intelligence — evidence and performance</option>
+              <option value="Believability">Believability — a keynote, executive education, or working session</option>
+            </select>
+          </div>
           <div class="field"><label for="f-commit">What commitments has your organization made?</label><textarea id="f-commit" name="Commitments" rows="2" required></textarea></div>
           <div class="field"><label for="f-outcomes">What outcomes are you trying to achieve?</label><textarea id="f-outcomes" name="Outcomes" rows="2"></textarea></div>
           <div class="field"><label for="f-notworking">What doesn't seem to be working the way you hoped?</label><textarea id="f-notworking" name="Not Working" rows="2"></textarea></div>
@@ -603,8 +614,8 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
           <h4>Firm</h4>
           <ul>
             <li><a href="/work/">Work</a></li>
-            <li><a href="/expertise/">Expertise</a>
-  <a href="/believability/">Believability</a></li>
+            <li><a href="/expertise/">Expertise</a></li>
+            <li><a href="/believability/">Believability</a></li>
             <li><a href="/about/">About</a></li>
             <li><a href="/about/our-commitments/">Our Commitments</a></li>
             <li><a href="/ideas/">Ideas</a></li>
