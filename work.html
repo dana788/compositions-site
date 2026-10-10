@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index, follow">
-<title>Work | Compositions — Structural Communications Firm</title>
-<meta name="description" content="Begin with a complimentary Commitment Inquiry, a bounded Executive Inquiry, or a formal Commitment Coherence Assessment. Compositions scopes strategy, communications, operationalization, research, measurement, and governance around one consequential organizational commitment at a time.">
+<title>Work | Compositions</title>
+<meta name="description" content="Seven ways to work with Compositions, from a single Consult to a Communications Architecture Sprint, a manager toolkit, and reviews of communications, commitments, and claims.">
 <link rel="canonical" href="https://compositionsadvisory.com/work/">
-<meta property="og:title" content="Work | Compositions — Structural Communications Firm">
-<meta property="og:description" content="Begin with the question leadership needs to answer. Compositions scopes focused inquiries, defined services, integrated solutions, and continuing advisory around what the situation requires.">
+<meta property="og:title" content="Work | Compositions">
+<meta property="og:description" content="Seven ways to work with Compositions, from a single Consult to a Communications Architecture Sprint, a manager toolkit, and reviews of communications, commitments, and claims.">
 <meta property="og:image" content="https://compositionsadvisory.com/assets/og-image.png">
 <meta property="og:url" content="https://compositionsadvisory.com/work/">
 <meta property="og:type" content="website">
@@ -16,166 +16,71 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" type="image/png" href="/assets/logo-square-color.png">
+<link rel="apple-touch-icon" href="/assets/logo-square-color.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+
 <style>
-:root {
-  --teal: #16768C; --teal-dark: #144E73; --teal-light: #A3D2D8;
-  --charcoal: #2C2C2C; --off-white: #F8F8F8; --white: #FFFFFF;
-  --text: #1A1A1A; --text-sec: #63615D; --border: #E2E0DA;
-  --font-display: 'Oswald', sans-serif; --font-body: 'Poppins', sans-serif;
-  --max-width: 1160px; --section-pad: 120px 32px;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; font-family: var(--font-body); font-weight: 300; color: var(--text); background: var(--off-white); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-img, svg { max-width: 100%; display: block; }
-a { color: inherit; text-decoration: none; }
-h1, h2, h3 { font-family: var(--font-display); margin: 0; font-weight: 600; }
-p { margin: 0; }
-ul { margin: 0; padding: 0; list-style: none; }
-button { font-family: var(--font-body); cursor: pointer; }
-:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
-.wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 32px; }
-section { padding: var(--section-pad); position: relative; }
-.bg-charcoal { background: var(--charcoal); }
-.bg-white { background: var(--white); }
-.bg-offwhite { background: var(--off-white); }
+.route-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: var(--border); border: 1px solid var(--border); }
+.route-card { background: var(--white); padding: 34px 28px; display: flex; flex-direction: column; }
+.route-card .said { font-family: var(--font-display); font-weight: 500; font-size: 1.12rem; line-height: 1.45; color: var(--charcoal); }
+.route-card .route { margin-top: auto; padding-top: 22px; border-top: 1px solid var(--border); }
+.route-card .route-label { font-size: 0.64rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-sec); margin-bottom: 8px; display: block; }
+.route-card .entry { font-size: 0.92rem; font-weight: 500; color: var(--teal-dark); line-height: 1.55; }
+.route-card .entry a:hover { color: var(--teal); }
+@media (max-width: 1000px) { .route-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .route-grid { grid-template-columns: 1fr; } }
 
-.eyebrow { display: flex; align-items: center; gap: 14px; font-weight: 600; font-size: 0.72rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--teal); margin-bottom: 24px; }
-.eyebrow::before { content: ""; display: inline-block; width: 36px; height: 2px; background: var(--teal); flex-shrink: 0; }
-.eyebrow.on-dark { color: var(--teal-light); }
-.eyebrow.on-dark::before { background: var(--teal-light); }
+.offer-list { border-top: 1px solid var(--border); }
+.offer-item { border-bottom: 1px solid var(--border); scroll-margin-top: 90px; }
+.offer-head { width: 100%; display: flex; align-items: center; gap: 24px; padding: 30px 0; background: transparent; border: 0; text-align: left; color: inherit; cursor: pointer; }
+.offer-head .num { font-family: var(--font-display); font-weight: 600; font-size: 0.78rem; letter-spacing: 0.1em; color: var(--teal); width: 34px; flex-shrink: 0; }
+.offer-head .name { font-family: var(--font-display); font-weight: 600; font-size: 1.35rem; color: var(--charcoal); flex: 1; line-height: 1.3; }
+.offer-head .line { font-size: 0.9rem; color: var(--text-sec); max-width: 360px; text-align: right; display: none; }
+@media (min-width: 900px) { .offer-head .line { display: block; } }
+.offer-toggle { width: 30px; height: 30px; border: 1.5px solid var(--border); border-radius: 50%; flex-shrink: 0; position: relative; transition: border-color 0.2s ease, background 0.2s ease; }
+.offer-toggle::before, .offer-toggle::after { content: ""; position: absolute; background: var(--charcoal); transition: transform 0.25s ease; }
+.offer-toggle::before { top: 50%; left: 8px; right: 8px; height: 1.5px; transform: translateY(-50%); }
+.offer-toggle::after { left: 50%; top: 8px; bottom: 8px; width: 1.5px; transform: translateX(-50%); }
+.offer-item.open .offer-toggle::after { transform: translateX(-50%) rotate(90deg) scaleY(0); }
+.offer-item.open .offer-toggle { border-color: var(--teal); background: #EBF6F8; }
+.offer-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+.offer-item.open .offer-body { max-height: 900px; }
+.offer-inner { padding: 0 0 38px 58px; display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
+.offer-inner h4 { font-family: var(--font-body); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal-dark); margin: 0 0 10px; font-weight: 600; }
+.offer-inner p { font-size: 0.94rem; line-height: 1.75; color: #444; }
+.offer-foot { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 28px; padding-top: 6px; }
+.offer-foot .time { font-size: 0.82rem; color: var(--text-sec); }
+.offer-foot .bound { font-size: 0.82rem; color: var(--text-sec); flex-basis: 100%; line-height: 1.65; }
+@media (max-width: 760px) { .offer-inner { grid-template-columns: 1fr; padding-left: 0; gap: 22px; } .offer-head { gap: 14px; } .offer-head .name { font-size: 1.15rem; } }
 
-.btn { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.04em; padding: 16px 30px; border: 1.5px solid transparent; transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease; }
-.btn-teal { background: var(--teal); color: var(--white); }
-.btn-teal:hover { background: var(--teal-dark); transform: translateY(-1px); }
-.btn-ghost { border-color: rgba(255,255,255,0.45); color: var(--white); }
-.btn-ghost:hover { border-color: var(--white); transform: translateY(-1px); }
-.btn-ghost-dark { border-color: var(--charcoal); color: var(--charcoal); }
-.btn-ghost-dark:hover { background: var(--charcoal); color: var(--white); }
-.btn svg { transition: transform 0.2s ease; }
-.btn:hover svg { transform: translateX(3px); }
+.method-center { text-align: center; max-width: 640px; margin: 0 auto 44px; }
+.method-center .core { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.15rem, 2.2vw, 1.5rem); color: var(--teal-light); }
+.method-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.12); }
+.method-step { background: var(--charcoal); padding: 30px 24px; transition: background 0.35s ease; }
+.method-step .n { font-family: var(--font-display); font-size: 0.74rem; letter-spacing: 0.12em; color: var(--teal-light); }
+.method-step h3 { font-size: 1.2rem; color: var(--white); margin-top: 12px; }
+.method-step p { margin-top: 10px; font-size: 0.88rem; line-height: 1.65; color: rgba(255,255,255,0.62); }
+.method-step.lit { background: #353535; }
+.method-step.lit .n { color: var(--white); }
+.method-rule { text-align: center; margin-top: 36px; color: rgba(255,255,255,0.7); font-size: 0.98rem; }
+@media (max-width: 1000px) { .method-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .method-grid { grid-template-columns: 1fr; } }
 
-/* NAV */
-.site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 300; display: flex; align-items: center; justify-content: space-between; padding: 20px 32px; transition: background 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease; background: rgba(248,248,248,0.94); backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--border); }
-.logo-mark img { height: 28px; width: auto; }
-.logo-mark img.logo-on-dark { display: none; }
-.nav-links { display: flex; align-items: center; gap: 40px; }
-.nav-link { position: relative; font-weight: 500; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--charcoal); padding-bottom: 6px; }
-.nav-link.active { color: var(--teal-dark); }
-.nav-link::after { content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 1.5px; background: var(--teal); transition: width 0.2s ease; }
-.nav-link:hover::after, .nav-link.active::after { width: 100%; }
-.nav-cta { margin-left: 8px; padding: 12px 24px; }
-.hamburger { display: none; background: none; border: none; width: 32px; height: 32px; position: relative; z-index: 310; cursor: pointer; }
-.hamburger span { display: block; position: absolute; left: 4px; right: 4px; height: 2px; background: var(--charcoal); transition: all 0.25s ease; }
-.hamburger span:nth-child(1) { top: 10px; } .hamburger span:nth-child(2) { top: 16px; } .hamburger span:nth-child(3) { top: 22px; }
-.hamburger.open span:nth-child(1) { top: 16px; transform: rotate(45deg); }
-.hamburger.open span:nth-child(2) { opacity: 0; }
-.hamburger.open span:nth-child(3) { top: 16px; transform: rotate(-45deg); }
-.mobile-menu { position: fixed; inset: 0; background: var(--off-white); z-index: 290; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 36px; transform: translateY(-100%); opacity: 0; visibility: hidden; transition: transform 0.35s ease, opacity 0.3s ease, visibility 0.35s; }
-.mobile-menu.open { transform: translateY(0); opacity: 1; visibility: visible; }
-.mobile-menu a { font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; color: var(--charcoal); }
-@media (max-width: 860px) { .nav-links { display: none; } .hamburger { display: block; } }
+.pill-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; justify-content: center; }
+.pill { border: 1px solid var(--border); padding: 12px 22px; font-size: 0.88rem; color: var(--charcoal); background: var(--white); transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease; cursor: default; }
+.pill:hover { transform: translateY(-2px); border-color: var(--teal); box-shadow: 0 6px 18px rgba(22,118,140,0.14); background: #F3FAFB; }
+.pill.lead { border-color: var(--teal); background: #F3FAFB; color: var(--teal-dark); font-weight: 500; }
 
-.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s cubic-bezier(0.2,0.6,0.2,1), transform 0.7s cubic-bezier(0.2,0.6,0.2,1); }
-.reveal.visible { opacity: 1; transform: translateY(0); }
-@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+.area-row { display: grid; grid-template-columns: 2fr 3fr; gap: 40px; padding: 26px 0; border-top: 1px solid var(--border); align-items: baseline; scroll-margin-top: 90px; }
+.area-list .area-row:last-child { border-bottom: 1px solid var(--border); }
+.area-row h3 { font-size: 1.2rem; color: var(--charcoal); font-weight: 500; }
+.area-row .q { font-size: 0.95rem; color: var(--text-sec); line-height: 1.7; }
+.area-row .q em { display: block; margin-top: 6px; color: var(--charcoal); font-style: italic; }
+@media (max-width: 800px) { .area-row { grid-template-columns: 1fr; gap: 8px; } }
 
-/* HERO */
-.page-hero { padding: 168px 32px 90px; }
-.page-hero h1 { font-size: clamp(2.1rem, 4.6vw, 3.4rem); line-height: 1.18; color: var(--charcoal); max-width: 780px; }
-.page-hero .support { font-size: 1.05rem; color: var(--text-sec); max-width: 620px; margin-top: 24px; line-height: 1.8; }
-
-/* FULL-BLEED PHOTO */
-.full-bleed-photo { position: relative; height: 46vh; max-height: 480px; overflow: hidden; }
-.full-bleed-photo.reveal-crop { clip-path: inset(0 0 26% 0); transition: clip-path 1.1s cubic-bezier(0.16,1,0.3,1); }
-.full-bleed-photo.reveal-crop.visible { clip-path: inset(0 0 0 0); }
-.full-bleed-photo img { position: absolute; left: 0; top: -20%; width: 100%; height: 140%; object-fit: cover; filter: grayscale(1) contrast(1.05); will-change: transform; }
-@media (max-width: 640px) { .full-bleed-photo { height: 42vh; } }
-@media (prefers-reduced-motion: reduce) { .full-bleed-photo img { transform: none !important; } }
-
-/* WHERE MOST CONVERSATIONS BEGIN */
-.routing-intro { max-width: 720px; margin-bottom: 40px; }
-.routing-intro h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); color: var(--charcoal); line-height: 1.35; }
-.routing-intro p { margin-top: 16px; font-size: 0.98rem; color: var(--text-sec); line-height: 1.8; }
-.routing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: var(--border); border: 1px solid var(--border); }
-.routing-card { background: var(--white); min-height: 230px; padding: 30px 26px; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease; }
-.routing-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(44,44,44,0.08); background: #FCFFFF; }
-.routing-card .kicker { font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-sec); margin-bottom: 14px; }
-.routing-card .quote { font-size: 0.98rem; line-height: 1.62; color: var(--charcoal); font-style: italic; }
-.routing-card .route { border-top: 1px solid var(--border); padding-top: 18px; margin-top: 24px; }
-.routing-card .route-label { font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-dark); margin-bottom: 8px; }
-.routing-card .entry { font-family: var(--font-display); font-weight: 600; font-size: 1.05rem; color: var(--teal-dark); line-height: 1.3; }
-.routing-hint { text-align: center; margin-top: 22px; font-size: 0.84rem; color: var(--text-sec); line-height: 1.6; }
-@media (max-width: 900px) { .routing-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 560px) { .routing-grid { grid-template-columns: 1fr; } .routing-card { min-height: 0; } }
-
-/* COMMERCIAL ENTRY OFFERINGS */
-.entry-intro { max-width: 760px; margin-bottom: 42px; }
-.entry-intro h2 { font-size: clamp(1.6rem, 2.8vw, 2.2rem); color: var(--charcoal); line-height: 1.35; }
-.entry-intro p { margin-top: 16px; font-size: 0.98rem; color: var(--text-sec); line-height: 1.8; }
-.entry-grid { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--border); background: var(--border); gap: 1px; }
-.entry-card { background: var(--white); padding: 34px 30px; display: flex; flex-direction: column; min-height: 330px; }
-.entry-card .num { font-family: var(--font-display); font-size: 0.78rem; letter-spacing: 0.12em; color: var(--teal); margin-bottom: 24px; }
-.entry-card h3 { font-size: 1.35rem; line-height: 1.3; color: var(--charcoal); }
-.entry-card .tagline { margin-top: 10px; color: var(--teal-dark); font-weight: 500; font-size: 0.92rem; }
-.entry-card .body { margin-top: 20px; color: #444; font-size: 0.92rem; line-height: 1.75; flex: 1; }
-.entry-card .boundary { margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--border); color: var(--text-sec); font-size: 0.8rem; line-height: 1.6; }
-.entry-card .text-link { margin-top: 24px; color: var(--teal-dark); font-weight: 600; font-size: 0.84rem; display: inline-flex; align-items: center; gap: 8px; }
-.entry-card .text-link:hover { color: var(--teal); }
-.entry-note { margin-top: 22px; font-size: 0.86rem; color: var(--text-sec); line-height: 1.7; }
-@media (max-width: 900px) { .entry-grid { grid-template-columns: 1fr; } .entry-card { min-height: 0; } }
-
-/* HOW THE ENGAGEMENT TAKES SHAPE */
-.structure-note { max-width: 820px; }
-.structure-note h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); color: var(--charcoal); line-height: 1.35; }
-.structure-note p { font-size: 0.98rem; line-height: 1.85; color: #444; margin-top: 18px; }
-.structure-note strong { color: var(--charcoal); font-weight: 600; }
-
-
-/* SERVICE CATEGORY ACCORDION */
-.service-list { display: flex; flex-direction: column; border-top: 1px solid var(--border); }
-.service-item { border-bottom: 1px solid var(--border); }
-.service-head { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 36px 0; cursor: pointer; background: transparent; border: 0; text-align: left; color: inherit; }
-.service-head .num { font-family: var(--font-display); font-weight: 600; font-size: 0.78rem; letter-spacing: 0.1em; color: var(--teal); flex-shrink: 0; width: 40px; }
-.service-head .service-title { font-family: var(--font-display); font-weight: 600; font-size: 1.5rem; color: var(--charcoal); flex: 1; }
-.service-head .purpose { font-size: 0.92rem; color: var(--text-sec); max-width: 340px; text-align: right; display: none; }
-@media (min-width: 900px) { .service-head .purpose { display: block; } }
-.service-toggle { width: 30px; height: 30px; border: 1.5px solid var(--border); border-radius: 50%; flex-shrink: 0; position: relative; transition: border-color 0.2s ease, background 0.2s ease; }
-.service-toggle::before, .service-toggle::after { content: ""; position: absolute; background: var(--charcoal); transition: transform 0.25s ease; }
-.service-toggle::before { top: 50%; left: 8px; right: 8px; height: 1.5px; transform: translateY(-50%); }
-.service-toggle::after { left: 50%; top: 8px; bottom: 8px; width: 1.5px; transform: translateX(-50%); }
-.service-item.open .service-toggle::after { transform: translateX(-50%) rotate(90deg) scaleY(0); }
-.service-item.open .service-toggle { border-color: var(--teal); background: #EBF6F8; }
-.service-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
-.service-item.open .service-body { max-height: 1500px; }
-.service-body-inner { padding: 0 0 40px; }
-.purpose-mobile { display: none; font-size: 0.95rem; color: var(--text-sec); margin: 0 0 24px; }
-@media (max-width: 899px) { .purpose-mobile { display: block; } }
-.named-services { padding: 0 0 28px; }
-.named-services h4 { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal-dark); margin-bottom: 14px; }
-.named-pill-row { display: flex; flex-wrap: wrap; gap: 8px; }
-.named-pill { border: 1px solid var(--teal-light); background: #F3FAFB; color: var(--teal-dark); font-size: 0.82rem; font-weight: 500; padding: 8px 16px; }
-.service-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-.service-col h4 { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal-dark); margin-bottom: 16px; }
-.service-col ul { display: flex; flex-direction: column; gap: 10px; }
-.service-col li { font-size: 0.92rem; color: #444; line-height: 1.6; padding-left: 16px; position: relative; }
-.service-col li::before { content: ""; position: absolute; left: 0; top: 0.6em; width: 6px; height: 1.5px; background: var(--teal); }
-
-@media (max-width: 899px) { .service-cols { grid-template-columns: 1fr; gap: 24px; } }
-
-/* SIGNATURE SOLUTIONS / CONTINUING INTELLIGENCE */
-.pill-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; }
-.pill { border: 1px solid var(--border); padding: 10px 20px; font-size: 0.85rem; color: var(--charcoal); background: var(--white); display: inline-block; transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease; cursor: default; }
-.pill:hover { transform: scale(1.045); border-color: var(--teal); box-shadow: 0 6px 18px rgba(22,118,140,0.14); background: #F3FAFB; }
-.pill.on-dark:hover { background: rgba(163,210,216,0.1); border-color: var(--teal-light); box-shadow: 0 6px 18px rgba(163,210,216,0.1); }
-.pill.on-dark { border-color: rgba(255,255,255,0.25); color: rgba(255,255,255,0.85); background: transparent; }
-.section-note { margin-top: 18px; font-size: 0.95rem; color: var(--text-sec); line-height: 1.8; max-width: 680px; }
-.section-note.on-dark { color: rgba(255,255,255,0.55); }
-
-/* PORTFOLIO (interactive network: singular commitments, real dependency/tension relationships) */
 .portfolio-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 64px; align-items: center; }
 .portfolio-grid h2 { font-size: clamp(1.6rem, 2.8vw, 2.2rem); color: var(--charcoal); line-height: 1.3; }
 .portfolio-grid .body-copy { margin-top: 20px; font-size: 1rem; line-height: 1.85; color: #444; }
@@ -193,7 +98,7 @@ section { padding: var(--section-pad); position: relative; }
 .portfolio-node { width: 100%; height: 100%; border-radius: 50%; background: var(--white); border: 1.5px solid var(--border); display: flex; align-items: center; justify-content: center; text-align: center; font-family: var(--font-display); font-size: 0.66rem; font-weight: 600; letter-spacing: 0.02em; color: var(--charcoal); padding: 6px; line-height: 1.2; cursor: pointer; transition: border-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease; }
 .node-wrap:hover .portfolio-node, .node-wrap:focus-within .portfolio-node, .node-wrap.locked .portfolio-node { border-color: var(--teal); color: var(--teal-dark); box-shadow: 0 8px 22px rgba(22,118,140,0.18); background: #F3FAFB; }
 .node-tag { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 8px; width: 112px; font-size: 0.58rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-sec); line-height: 1.35; text-align: center; }
-.node-tip { position: absolute; bottom: 108%; left: 50%; transform: translateX(-50%) translateY(6px); background: var(--charcoal); color: var(--white); font-size: 0.7rem; line-height: 1.5; padding: 10px 12px; width: 165px; opacity: 0; visibility: hidden; transition: opacity 0.2s ease, transform 0.2s ease; pointer-events: none; z-index: 6; text-align: left; font-family: var(--font-body); font-weight: 400; }
+.node-tip { position: absolute; bottom: 108%; left: 50%; transform: translateX(-50%) translateY(6px); background: var(--charcoal); color: var(--white); font-size: 0.7rem; line-height: 1.5; padding: 10px 12px; width: 165px; opacity: 0; visibility: hidden; transition: opacity 0.2s ease, transform 0.2s ease; pointer-events: none; z-index: 6; text-align: left; font-weight: 400; }
 .node-wrap:hover .node-tip, .node-wrap:focus-within .node-tip { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
 .portfolio-legend { display: flex; gap: 26px; justify-content: center; margin-top: 20px; flex-wrap: wrap; }
 .legend-item { display: flex; align-items: center; gap: 8px; font-size: 0.78rem; color: var(--text-sec); }
@@ -204,439 +109,284 @@ section { padding: var(--section-pad); position: relative; }
 .info-row { display: flex; align-items: flex-start; gap: 10px; font-size: 0.85rem; line-height: 1.6; color: var(--charcoal); padding: 6px 0; }
 .info-row .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--charcoal); flex-shrink: 0; margin-top: 5px; }
 .info-row .dot.tension { background: var(--teal); }
-@media (max-width: 900px) { .portfolio-grid { grid-template-columns: 1fr; } }
-
-/* CTA BAND */
-.cta-band { text-align: center; }
-.cta-band h2 { font-size: clamp(1.6rem, 2.8vw, 2.2rem); color: var(--white); max-width: 640px; margin: 0 auto; line-height: 1.35; }
-.cta-band .cta-row { margin-top: 36px; display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; }
-
-/* FOOTER */
-footer { background: var(--charcoal); padding: 72px 32px 32px; }
-.footer-inner { max-width: var(--max-width); margin: 0 auto; }
-.footer-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,0.1); }
-.footer-brand img { height: 22px; width: auto; }
-.footer-tag { font-size: 0.85rem; color: rgba(255,255,255,0.4); margin-top: 14px; max-width: 300px; line-height: 1.6; }
-.footer-cols { display: flex; gap: 64px; flex-wrap: wrap; }
-.footer-cols h4 { font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 18px; font-weight: 600; }
-.footer-cols ul { display: flex; flex-direction: column; gap: 12px; }
-.footer-cols a { color: rgba(255,255,255,0.62); font-size: 0.92rem; }
-.footer-cols a:hover { color: var(--white); }
-.footer-bottom { padding-top: 28px; color: rgba(255,255,255,0.35); font-size: 0.78rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-
-.back-to-top { position: fixed; right: 28px; bottom: 28px; width: 46px; height: 46px; background: var(--charcoal); display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s, background 0.2s; cursor: pointer; border: none; z-index: 99; }
-.back-to-top.visible { opacity: 1; visibility: visible; }
-.back-to-top:hover { background: var(--teal); }
-
-@media (max-width: 900px) { .footer-top { grid-template-columns: 1fr; } }
-@media (max-width: 640px) { :root { --section-pad: 84px 22px; } .page-hero { padding: 140px 22px 70px; } .footer-cols { gap: 40px; } }
+@media (max-width: 900px) { .portfolio-grid { grid-template-columns: 1fr; gap: 40px; } }
 </style>
 </head>
 <body>
-
-<nav class="site-nav">
+<a class="skip-link" href="#main">Skip to content</a>
+<nav class="site-nav solid" id="siteNav" aria-label="Primary">
   <a href="/" class="logo-mark" aria-label="Compositions home">
-    <img src="/assets/Compositions-Accent-Horizontal.png" alt="Compositions">
+    <img src="/assets/Compositions-Off-White-Horizontal.png" alt="Compositions" class="logo-on-dark">
+    <img src="/assets/Compositions-Accent-Horizontal.png" alt="Compositions" class="logo-on-light">
   </a>
   <div class="nav-links">
-    <a href="/work/" class="nav-link active">Work</a>
-    <a href="/expertise/" class="nav-link">Expertise</a>
+    <a href="/work/" class="nav-link active" aria-current="page">Work</a>
     <a href="/believability/" class="nav-link">Believability</a>
-    <a href="/about/" class="nav-link">About</a>
     <a href="/ideas/" class="nav-link">Ideas</a>
-    <a href="/#start" class="btn btn-teal nav-cta">Contact</a>
+    <a href="/about/" class="nav-link">About</a>
+    <a href="/say-do-check/" class="nav-link">Say/Do Check</a>
+    <a href="/#start" class="btn btn-teal nav-cta">Book a Consult</a>
   </div>
   <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
   <a href="/work/">Work</a>
-  <a href="/expertise/">Expertise</a>
   <a href="/believability/">Believability</a>
-  <a href="/about/">About</a>
   <a href="/ideas/">Ideas</a>
-  <a href="/#start">Contact</a>
+  <a href="/about/">About</a>
+  <a href="/say-do-check/">Say/Do Check</a>
+  <a href="/#start">Book a Consult</a>
 </div>
 
-<main>
+<main id="main">
 
-<section class="bg-white page-hero">
-  <div class="wrap reveal visible">
+<section class="page-hero bg-offwhite">
+  <div class="wrap">
     <p class="eyebrow">Work</p>
-    <h1>The right response begins with understanding what kind of problem the organization actually has.</h1>
-    <p class="support">The message may need work. So may the reality the message is describing. Compositions works across strategy, communications, organizational alignment, operationalization, research, measurement, and governance—bringing together only what the situation and the evidence require.</p>
+    <h1>Start with the problem you are trying to solve.</h1>
+    <p class="support">The message may need work. So may the reality it describes. Compositions begins with what you are trying to make clear, possible, or true, and brings in only what the situation requires.</p>
+    <div class="cta-row">
+      <a href="/#start" class="btn btn-teal">Book a Consult <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="/say-do-check/" class="btn btn-ghost-dark">Take the Say/Do Check</a>
+    </div>
   </div>
 </section>
 
-<section class="full-bleed-photo reveal-crop">
-  <img class="parallax-target" src="/assets/photography/dana-collab.png" alt="Dana Middleton, Structural Communications Advisor and Principal of Compositions, collaborating with a colleague over material samples" loading="lazy">
-</section>
-
-<!-- WHERE MOST CONVERSATIONS BEGIN -->
-<section class="bg-offwhite">
-  <div class="wrap reveal">
-    <div class="routing-intro">
-      <p class="eyebrow">Where Most Conversations Begin</p>
-      <h2>What leadership is facing usually points to where the work should begin.</h2>
-      <p>You do not need to diagnose the problem or select a service before contacting Compositions. The first task is to understand the decision, the expectation at stake, and what is preventing progress.</p>
-    </div>
-    <div class="routing-grid">
-      <article class="routing-card">
-        <div>
-          <p class="kicker">When leadership says</p>
-          <p class="quote">“We need to determine what to do.”</p>
-        </div>
-        <div class="route">
-          <p class="route-label">The work may begin with</p>
-          <p class="entry">Strategy &amp; Advisory</p>
-        </div>
-      </article>
-      <article class="routing-card">
-        <div>
-          <p class="kicker">When leadership says</p>
-          <p class="quote">“We know what we are trying to do, but people need to understand and act.”</p>
-        </div>
-        <div class="route">
-          <p class="route-label">The work may begin with</p>
-          <p class="entry">Communications &amp; Activation</p>
-        </div>
-      </article>
-      <article class="routing-card">
-        <div>
-          <p class="kicker">When leadership says</p>
-          <p class="quote">“The commitment exists, but it is not translating into practice.”</p>
-        </div>
-        <div class="route">
-          <p class="route-label">The work may begin with</p>
-          <p class="entry">Alignment &amp; Operationalization</p>
-        </div>
-      </article>
-      <article class="routing-card">
-        <div>
-          <p class="kicker">When leadership says</p>
-          <p class="quote">“We need to know what is happening and whether it is working.”</p>
-        </div>
-        <div class="route">
-          <p class="route-label">The work may begin with</p>
-          <p class="entry">Research, Measurement &amp; Intelligence</p>
-        </div>
-      </article>
-    </div>
-    <p class="routing-hint">Many engagements begin in one area and draw on others when the situation requires it.</p>
-  </div>
-</section>
-
-<!-- THREE WAYS TO BEGIN -->
-<section class="bg-white" id="ways-to-begin">
-  <div class="wrap reveal">
-    <div class="entry-intro">
-      <p class="eyebrow">Three Ways to Begin</p>
-      <h2>Begin with the level of inquiry the situation requires.</h2>
-      <p>Every question does not require the same amount of work. Compositions offers three distinct ways to begin, depending on what leadership needs to determine and how much evidence the situation requires.</p>
-    </div>
-    <div class="entry-grid">
-      <article class="entry-card">
-        <p class="num">01</p>
-        <h3>Commitment Inquiry</h3>
-        <p class="tagline">Determine the responsible path.</p>
-        <p class="body">A complimentary, self-guided tool—about 10 minutes—for leaders responsible for an important promise, priority, initiative, or expectation who want language for what they're seeing and a clearer sense of what the situation may require.</p>
-        <p class="boundary">This is pattern recognition and routing—not a diagnosis, evidence review, or advisory engagement.</p>
-        <a class="text-link" href="/commitment-inquiry/">Start the Commitment Inquiry <span aria-hidden="true">→</span></a>
-      </article>
-      <article class="entry-card">
-        <p class="num">02</p>
-        <h3>Executive Inquiry</h3>
-        <p class="tagline">Answer one consequential leadership question.</p>
-        <p class="body">A bounded advisory engagement for an executive who needs a disciplined, well-supported response before making a decision, advancing an initiative, or committing to broader work.</p>
-        <p class="boundary">The inquiry remains focused on one governing question. Tell us the one initiative you need to address, and we will follow up to scope it. It is not a substitute for a full strategy, research, assessment, or implementation engagement.</p>
-        <a class="text-link" href="/#start">Discuss an Executive Inquiry <span aria-hidden="true">→</span></a>
-      </article>
-      <article class="entry-card">
-        <p class="num">03</p>
-        <h3>Commitment Coherence Assessment</h3>
-        <p class="tagline">Examine what is producing the current result.</p>
-        <p class="body">A formal, evidence-based examination of one consequential organizational commitment—what has been promised, how it has been communicated, how the organization is operating, what stakeholders are experiencing, and what leadership must address next.</p>
-        <p class="boundary">This is the appropriate entry when the organization needs more than interpretation of one question and requires a structured assessment of the arrangement behind the result.</p>
-        <a class="text-link" href="/assets/compositions-engagement-pathways.pdf" target="_blank" rel="noopener">Learn About the Commitment Assessment <span aria-hidden="true">→</span></a>
-      </article>
-    </div>
-    <p class="entry-note">These are different entry paths, not stages every client moves through. The appropriate path depends on the question, the evidence needed, and the decision leadership must make.</p>
-  </div>
-</section>
-
-<!-- HOW THE ENGAGEMENT TAKES SHAPE -->
-<section class="bg-offwhite">
-  <div class="wrap reveal structure-note">
-    <p class="eyebrow">How the Engagement Takes Shape</p>
-    <h2>Begin with the question. Scope only what the situation requires.</h2>
-    <p>Some engagements remain focused on one executive question or one defined area of work. Others require strategy, communications, operationalization, research, or governance to work together around the same organizational commitment.</p>
-    <p>The scope is determined by what leadership needs to decide, what is already known, and what the evidence shows the organization must address. The work can remain focused, expand into an integrated solution, or continue over time when ongoing counsel, measurement, or governance is required.</p>
-  </div>
-</section>
-
-
-<!-- FOUR SERVICE CATEGORIES -->
+<!-- WHERE CONVERSATIONS BEGIN -->
 <section class="bg-white">
   <div class="wrap">
-    <div class="service-list reveal" id="serviceList">
-
-      <div class="service-item open" data-svc="1">
-        <button class="service-head" type="button" aria-expanded="true" aria-controls="service-panel-1">
-          <span class="num">01</span>
-          <span class="service-title">Strategy &amp; Advisory</span>
-          <span class="purpose">Clarifying the commitment, the decision leadership is making, and what success requires.</span>
-          <span class="service-toggle" aria-hidden="true"></span>
-        </button>
-        <p class="purpose-mobile">Clarifying the commitment, the decision leadership is making, and what success requires.</p>
-        <div class="named-services">
-          <h4>Services</h4>
-          <div class="named-pill-row">
-            <span class="named-pill">Commitment Strategy &amp; Advisory</span>
-            <span class="named-pill">Executive &amp; Leadership Advisory</span>
-          </div>
-        </div>
-        <div class="service-body" id="service-panel-1" role="region">
-          <div class="service-body-inner">
-            <div class="service-cols">
-              <div class="service-col">
-                <h4>The Work May Include</h4>
-                <ul>
-                  <li>Commitment definition and issue framing</li>
-                  <li>Leadership inquiry and stakeholder analysis</li>
-                  <li>Mission, values, culture, brand, transformation, and impact strategy</li>
-                  <li>Executive alignment and decision support</li>
-                  <li>Portfolio analysis and governance recommendations</li>
-                  <li>Scope and sequencing</li>
-                </ul>
-              </div>
-              <div class="service-col">
-                <h4>What Leadership Gains</h4>
-                <ul>
-                  <li>A clearer definition of the commitment and the decision at hand</li>
-                  <li>Agreement on what success requires</li>
-                  <li>Clarity about ownership, authority, scope, and sequencing</li>
-                  <li>A responsible path forward grounded in the available evidence</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="service-item" data-svc="2">
-        <button class="service-head" type="button" aria-expanded="false" aria-controls="service-panel-2">
-          <span class="num">02</span>
-          <span class="service-title">Communications &amp; Activation</span>
-          <span class="purpose">Making the commitment clear, meaningful, usable, and actionable.</span>
-          <span class="service-toggle" aria-hidden="true"></span>
-        </button>
-        <p class="purpose-mobile">Making the commitment clear, meaningful, usable, and actionable.</p>
-        <div class="named-services">
-          <h4>Services</h4>
-          <div class="named-pill-row">
-            <span class="named-pill">Integrated Communications &amp; Activation</span>
-            <span class="named-pill">Internal &amp; Employee Communications</span>
-            <span class="named-pill">Executive &amp; Leadership Communications</span>
-            <span class="named-pill">Change Communications</span>
-          </div>
-        </div>
-        <div class="service-body" id="service-panel-2" role="region">
-          <div class="service-body-inner">
-            <div class="service-cols">
-              <div class="service-col">
-                <h4>The Work May Include</h4>
-                <ul>
-                  <li>Narrative development and message architecture</li>
-                  <li>Executive and internal communications</li>
-                  <li>Employee and stakeholder communication</li>
-                  <li>Campaign and activation strategy</li>
-                  <li>Leader and manager communication tools</li>
-                  <li>Launch and reinforcement</li>
-                </ul>
-              </div>
-              <div class="service-col">
-                <h4>What Leadership Gains</h4>
-                <ul>
-                  <li>A clear and usable expression of the commitment</li>
-                  <li>Consistent language leaders and managers can use with confidence</li>
-                  <li>Communication that equips stakeholders to understand, decide, and act</li>
-                  <li>A coordinated approach to launch, activation, and reinforcement</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="service-item" data-svc="3">
-        <button class="service-head" type="button" aria-expanded="false" aria-controls="service-panel-3">
-          <span class="num">03</span>
-          <span class="service-title">Alignment &amp; Operationalization</span>
-          <span class="purpose">Translating the commitment into leadership behavior, decisions, and practice.</span>
-          <span class="service-toggle" aria-hidden="true"></span>
-        </button>
-        <p class="purpose-mobile">Translating the commitment into leadership behavior, decisions, and practice.</p>
-        <div class="named-services">
-          <h4>Services</h4>
-          <div class="named-pill-row">
-            <span class="named-pill">Commitment Operationalization</span>
-            <span class="named-pill">Mission &amp; Values Operationalization</span>
-            <span class="named-pill">Leadership &amp; Cross-Functional Alignment</span>
-            <span class="named-pill">Change &amp; Transformation Operationalization</span>
-          </div>
-        </div>
-        <div class="service-body" id="service-panel-3" role="region">
-          <div class="service-body-inner">
-            <div class="service-cols">
-              <div class="service-col">
-                <h4>The Work May Include</h4>
-                <ul>
-                  <li>Leadership alignment and role clarification</li>
-                  <li>Behavior translation and manager enablement</li>
-                  <li>Operating-practice and decision-rights alignment</li>
-                  <li>Stakeholder-experience design</li>
-                  <li>Implementation planning and support</li>
-                  <li>Cross-functional coordination and governance</li>
-                </ul>
-              </div>
-              <div class="service-col">
-                <h4>What Leadership Gains</h4>
-                <ul>
-                  <li>Clear translation from the commitment to decisions and behavior</li>
-                  <li>Defined roles, authority, and cross-functional responsibilities</li>
-                  <li>Practical tools leaders and managers can use</li>
-                  <li>Stronger alignment between communication and operating practice</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="service-item" data-svc="4" id="research-measurement-intelligence">
-        <button class="service-head" type="button" aria-expanded="false" aria-controls="service-panel-4">
-          <span class="num">04</span>
-          <span class="service-title">Research, Measurement &amp; Intelligence</span>
-          <span class="purpose">Evidence, stakeholder experience, and commitment performance.</span>
-          <span class="service-toggle" aria-hidden="true"></span>
-        </button>
-        <p class="purpose-mobile">Evidence, stakeholder experience, and commitment performance.</p>
-        <div class="named-services">
-          <h4>Services</h4>
-          <div class="named-pill-row">
-            <span class="named-pill">Organizational &amp; Stakeholder Research</span>
-            <span class="named-pill">Commitment Coherence Assessment</span>
-            <span class="named-pill">Commitment Performance Measurement &amp; Intelligence</span>
-            <span class="named-pill">Organizational Commitment Portfolio Analysis</span>
-          </div>
-        </div>
-        <div class="service-body" id="service-panel-4" role="region">
-          <div class="service-body-inner">
-            <div class="service-cols">
-              <div class="service-col">
-                <h4>The Work May Include</h4>
-                <ul>
-                  <li>Qualitative and quantitative stakeholder research</li>
-                  <li>Communication and evidence review</li>
-                  <li>Measurement strategy and outcome frameworks</li>
-                  <li>Commitment-performance assessment</li>
-                  <li>Organizational Commitment Portfolio analysis</li>
-                  <li>Monitoring, reporting, and interpretation</li>
-                </ul>
-              </div>
-              <div class="service-col">
-                <h4>What Leadership Gains</h4>
-                <ul>
-                  <li>A disciplined view of what is happening and why</li>
-                  <li>Measures tied to the performance of the commitment, not activity alone</li>
-                  <li>Evidence leadership can use to decide what to sustain, change, or stop</li>
-                  <li>Ongoing interpretation when conditions and stakeholder experience shift</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+    <div class="section-head reveal">
+      <p class="eyebrow center">Where Most Conversations Begin</p>
+      <h2>What you are hearing in the room points to where the work starts.</h2>
+      <p>You do not need to diagnose the problem or pick a service before reaching out.</p>
     </div>
+    <div class="route-grid reveal">
+      <div class="route-card">
+        <p class="said">&ldquo;We need to determine what to do.&rdquo;</p>
+        <div class="route"><span class="route-label">Often begins with</span><p class="entry"><a href="#consult">Strategic Communications Consult</a></p></div>
+      </div>
+      <div class="route-card">
+        <p class="said">&ldquo;We know what we are doing, but people need to understand and act.&rdquo;</p>
+        <div class="route"><span class="route-label">Often begins with</span><p class="entry"><a href="#sprint">Communications Architecture Sprint</a><br><a href="#studio">Leader &amp; Manager Toolkit Studio</a></p></div>
+      </div>
+      <div class="route-card">
+        <p class="said">&ldquo;The commitment exists, but it is not translating into practice.&rdquo;</p>
+        <div class="route"><span class="route-label">Often begins with</span><p class="entry"><a href="#studio">Leader &amp; Manager Toolkit Studio</a><br><a href="#commitment-review">Commitment Review</a></p></div>
+      </div>
+      <div class="route-card">
+        <p class="said">&ldquo;We need to know what is happening and whether it is working.&rdquo;</p>
+        <div class="route"><span class="route-label">Often begins with</span><p class="entry"><a href="#communications-review">Communications Review</a><br><a href="#claims-evidence-review">Claims &amp; Evidence Review</a></p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFERINGS -->
+<section class="bg-offwhite" id="offerings">
+  <div class="wrap">
+    <div class="section-head left reveal" style="max-width:720px;">
+      <p class="eyebrow">Ways to Work Together</p>
+      <h2>Seven ways in. Most conversations start with the first.</h2>
+      <p>Open any one to see who it is for and what you leave with. Many engagements begin in one place and draw on others as the evidence shows what is needed.</p>
+    </div>
+    <div class="offer-list reveal" id="offerList">
+      <div class="offer-item" id="consult">
+        <button class="offer-head" aria-expanded="false" aria-controls="consult-body"><span class="num">01</span><span class="name">Strategic Communications Consult</span><span class="line">One question. A clear next move.</span><span class="offer-toggle" aria-hidden="true"></span></button>
+        <div class="offer-body" id="consult-body" role="region" aria-label="Strategic Communications Consult">
+          <div class="offer-inner">
+            <div><h4>Who it is for</h4><p>One consequential communications question that needs senior judgment before anyone acts.</p></div>
+            <div><h4>What you leave with</h4><p>A Decision Brief: a clearer view of the problem, what the evidence suggests, and what to do next.</p></div>
+            <div class="offer-foot">
+              <span class="time">3 to 7 business days</span>
+              <a class="text-link" href="/#start">Book a Consult <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+              <span class="bound">Counsel and routing. It does not produce the strategy, the research, or the communications themselves.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="offer-item" id="sprint">
+        <button class="offer-head" aria-expanded="false" aria-controls="sprint-body"><span class="num">02</span><span class="name">Communications Architecture Sprint</span><span class="line">Turn a complex effort into a usable system.</span><span class="offer-toggle" aria-hidden="true"></span></button>
+        <div class="offer-body" id="sprint-body" role="region" aria-label="Communications Architecture Sprint">
+          <div class="offer-inner">
+            <div><h4>Who it is for</h4><p>Knowing what needs to be communicated, without an architecture that holds it together.</p></div>
+            <div><h4>What you leave with</h4><p>A communications architecture: audiences, narrative and messages, messengers, channels, sequence, manager roles, listening, measurement, and an activation roadmap. Narrative &amp; Message Architecture is built in.</p></div>
+            <div class="offer-foot">
+              <span class="time">2 to 4 weeks</span>
+              <a class="text-link" href="/#start">Book a Consult <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+              <span class="bound">The Sprint creates coherence and readiness. It does not execute the communications or guarantee adoption.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="offer-item" id="studio">
+        <button class="offer-head" aria-expanded="false" aria-controls="studio-body"><span class="num">03</span><span class="name">Leader &amp; Manager Communications Toolkit Studio</span><span class="line">Give the people carrying the message what they need.</span><span class="offer-toggle" aria-hidden="true"></span></button>
+        <div class="offer-body" id="studio-body" role="region" aria-label="Leader &amp; Manager Communications Toolkit Studio">
+          <div class="offer-inner">
+            <div><h4>Who it is for</h4><p>Leaders and managers expected to carry a change or priority to their teams, often learning it at the same time as everyone else.</p></div>
+            <div><h4>What you leave with</h4><p>Tools managers will use: a briefing, discussion guide, FAQ with an escalation path, job aids, a cascade plan, and a feedback loop back to leadership. Tested with managers in a working session.</p></div>
+            <div class="offer-foot">
+              <span class="time">Scoped to the populations involved</span>
+              <a class="text-link" href="/#start">Book a Consult <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+              <span class="bound">Built from your own communication and context, not drawn from a toolkit library.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="offer-item" id="communications-review">
+        <button class="offer-head" aria-expanded="false" aria-controls="communications-review-body"><span class="num">04</span><span class="name">Communications Review</span><span class="line">What is working, what is getting in the way, and what should change.</span><span class="offer-toggle" aria-hidden="true"></span></button>
+        <div class="offer-body" id="communications-review-body" role="region" aria-label="Communications Review">
+          <div class="offer-inner">
+            <div><h4>Who it is for</h4><p>Communications already in development or in market that need an honest read.</p></div>
+            <div><h4>What you leave with</h4><p>A review of how the communication is working for its audience and purpose, where the problem actually sits, and a Priority Action Matrix.</p></div>
+            <div class="offer-foot">
+              <span class="time">1 to 2 weeks focused, 3 to 6 weeks full</span>
+              <a class="text-link" href="/#start">Book a Consult <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+              <span class="bound">It identifies where the problem lives. It does not implement the changes.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="offer-item" id="commitment-review">
+        <button class="offer-head" aria-expanded="false" aria-controls="commitment-review-body"><span class="num">05</span><span class="name">Commitment Review</span><span class="line">Does the promise hold up, and what should leadership address next?</span><span class="offer-toggle" aria-hidden="true"></span></button>
+        <div class="offer-body" id="commitment-review-body" role="region" aria-label="Commitment Review">
+          <div class="offer-inner">
+            <div><h4>Who it is for</h4><p>A specific promise people are being asked to rely on, where leadership needs to know whether it is sufficiently supported.</p></div>
+            <div><h4>What you leave with</h4><p>A Commitment Profile, review findings, and a Leadership Decision Agenda that names contradictions, dependencies, and evidence gaps.</p></div>
+            <div class="offer-foot">
+              <span class="time">2 to 4 weeks focused, 5 to 10 weeks full</span>
+              <a class="text-link" href="/#start">Book a Consult <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+              <span class="bound">It clarifies requirements and dependencies. Functional owners deliver specialized conditions.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="offer-item" id="claims-evidence-review">
+        <button class="offer-head" aria-expanded="false" aria-controls="claims-evidence-review-body"><span class="num">06</span><span class="name">Claims &amp; Evidence Review</span><span class="line">What can we responsibly say, given what we can show?</span><span class="offer-toggle" aria-hidden="true"></span></button>
+        <div class="offer-body" id="claims-evidence-review-body" role="region" aria-label="Claims &amp; Evidence Review">
+          <div class="offer-inner">
+            <div><h4>Who it is for</h4><p>Organizations that report, propose, or promote results and need to know what the evidence supports.</p></div>
+            <div><h4>What you leave with</h4><p>A claims and evidence matrix, an evidence gap register, recommended claims language, and a short findings brief.</p></div>
+            <div class="offer-foot">
+              <span class="time">Scoped to the volume of claims</span>
+              <a class="text-link" href="/#start">Book a Consult <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+              <span class="bound">Not legal approval, audit, scientific validation, or regulatory certification.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="offer-item" id="capability-suite">
+        <button class="offer-head" aria-expanded="false" aria-controls="capability-suite-body"><span class="num">07</span><span class="name">Capability Suite</span><span class="line">Carry the work forward with your own people.</span><span class="offer-toggle" aria-hidden="true"></span></button>
+        <div class="offer-body" id="capability-suite-body" role="region" aria-label="Capability Suite">
+          <div class="offer-inner">
+            <div><h4>Who it is for</h4><p>Teams that have seen the work applied and want to sustain it with their own leaders, managers, and practitioners.</p></div>
+            <div><h4>What you leave with</h4><p>Workshops and practice sessions for leaders, managers, and teams, built on the work already done together.</p></div>
+            <div class="offer-foot">
+              <span class="time">Offered after a completed engagement</span>
+              <a class="text-link" href="/#start">Book a Consult <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+              <span class="bound">A continuation of the work, not a stand-alone course.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD -->
+<section class="bg-charcoal" id="method">
+  <div class="wrap">
+    <div class="method-center reveal">
+      <p class="eyebrow on-dark center">How the Work Gets Done</p>
+      <p class="core">The Problem to Solve / Outcome to Enable</p>
+      <p style="margin-top:14px;color:rgba(255,255,255,0.62);line-height:1.8;font-size:0.96rem;">Every engagement starts there, not with a deliverable. Then the work moves through eight stages.</p>
+    </div>
+    <div class="method-grid reveal" id="methodGrid">
+      <div class="method-step"><span class="n">01</span><h3>Frame</h3><p>Define what the communication needs to accomplish before deciding what to make.</p></div>
+      <div class="method-step"><span class="n">02</span><h3>Gather</h3><p>Collect enough evidence to understand what is actually happening.</p></div>
+      <div class="method-step"><span class="n">03</span><h3>Arrange</h3><p>Decide how the communications and what supports them need to work together.</p></div>
+      <div class="method-step"><span class="n">04</span><h3>Compose</h3><p>Create the communications, architecture, and tools within scope.</p></div>
+      <div class="method-step"><span class="n">05</span><h3>Proof</h3><p>Confirm the work is accurate, supportable, and ready to rely on.</p></div>
+      <div class="method-step"><span class="n">06</span><h3>Release</h3><p>Put it where the people who need it have to use it.</p></div>
+      <div class="method-step"><span class="n">07</span><h3>Read</h3><p>Find out what happened, for whom, and what it means.</p></div>
+      <div class="method-step"><span class="n">08</span><h3>Refine</h3><p>Use what was learned to improve, sustain, or start the next round.</p></div>
+    </div>
+    <p class="method-rule reveal">The method stays constant. The depth changes.</p>
   </div>
 </section>
 
 <!-- SIGNATURE SOLUTIONS -->
-<section class="bg-offwhite">
-  <div class="wrap reveal">
-    <p class="eyebrow">Signature Solutions</p>
-    <h2 style="font-size:clamp(1.5rem,2.6vw,2rem);color:var(--charcoal);max-width:680px;line-height:1.35;">When the need crosses more than one service.</h2>
-    <p class="section-note">Some organizational situations cannot be addressed through one discipline alone. Signature Solutions bring together the relevant strategy, communications, operationalization, research, measurement, and governance around a defined commitment or business need. They are configured to the situation rather than sold as fixed packages.</p>
-    <div class="pill-grid">
-      <span class="pill">Mission &amp; Values: From Definition to Operation</span>
-      <span class="pill">Employer Brand &amp; Employee Promise</span>
-      <span class="pill">Culture Strategy &amp; Activation</span>
-      <span class="pill">Brand Promise Alignment</span>
-      <span class="pill">Change &amp; Transformation Activation</span>
-      <span class="pill">Impact Strategy, Evidence &amp; Communications</span>
-      <span class="pill">Commitment Performance &amp; Coherence</span>
-      <span class="pill">Organizational Commitment Portfolio</span>
-    </div>
-  </div>
-</section>
-
-<!-- CONTINUING INTELLIGENCE -->
-<section class="bg-charcoal">
-  <div class="wrap reveal">
-    <p class="eyebrow on-dark">Continuing Intelligence &amp; Advisory</p>
-    <h2 style="font-size:clamp(1.5rem,2.6vw,2rem);color:var(--white);max-width:660px;line-height:1.35;">For commitments that require attention after the initial decision, launch, or engagement.</h2>
-    <p class="section-note on-dark">Compositions can remain involved to interpret emerging evidence, advise leadership, monitor performance, support decisions, and strengthen governance as conditions change.</p>
-    <div class="pill-grid">
-      <span class="pill on-dark">Embedded Executive Advisory</span>
-      <span class="pill on-dark">Commitment Monitoring &amp; Intelligence</span>
-      <span class="pill on-dark">Continuing Measurement &amp; Interpretation</span>
-      <span class="pill on-dark">Portfolio Monitoring &amp; Governance</span>
-    </div>
-  </div>
-</section>
-
-<!-- A PORTFOLIO, NOT A PROGRAM — interactive network graphic -->
 <section class="bg-white">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow center">When the Need Crosses More Than One Service</p>
+      <h2>Five configured solutions for situations leaders recognize.</h2>
+      <p>They are shaped to your situation, not sold as fixed packages.</p>
+    </div>
+    <div class="pill-grid reveal">
+      <span class="pill lead">Culture &amp; Employee Experience</span>
+      <span class="pill lead">Change &amp; Transformation Activation</span>
+      <span class="pill">Mission &amp; Values: From Definition to Operation</span>
+      <span class="pill">Brand Promise Alignment</span>
+      <span class="pill">Impact Strategy, Evidence &amp; Communications</span>
+    </div>
+  </div>
+</section>
+
+<!-- FIVE AREAS -->
+<section class="bg-offwhite expertise-section">
+  <div class="wrap">
+    <div class="reveal" style="max-width:680px;margin-bottom:16px;">
+      <p class="eyebrow">Where Compositions Specializes</p>
+      <h2 style="font-size:clamp(1.5rem,2.6vw,2rem);color:var(--charcoal);line-height:1.3;">Five areas of organizational commitment.</h2>
+    </div>
+    <div class="area-list reveal">
+      <div class="area-row" id="culture-workforce"><h3>Culture &amp; Workforce</h3><p class="q">Does the employee promise match the experience the organization creates?<em>&ldquo;The message reached the office. The people on the floor still haven't heard it.&rdquo;</em></p></div>
+      <div class="area-row" id="strategic-change-transformation"><h3>Strategic Change &amp; Transformation</h3><p class="q">Are people only informed about the change, or able and supported to carry it out?<em>&ldquo;People understood the change, but some are still working the old way.&rdquo;</em></p></div>
+      <div class="area-row" id="brand-customer-promise"><h3>Brand &amp; Customer Promise</h3><p class="q">Can the organization consistently sustain what customers have been promised?</p></div>
+      <div class="area-row" id="mission-purpose-values"><h3>Mission, Purpose &amp; Values</h3><p class="q">What should guide the organization's decisions, conduct, and identity?</p></div>
+      <div class="area-row" id="social-impact-community"><h3>Social Impact &amp; Community</h3><p class="q">What changed, for whom, and what can the organization responsibly claim?</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SEVERAL COMMITMENTS -->
+<section class="bg-white" id="several-commitments">
   <div class="wrap portfolio-grid">
     <div class="reveal">
       <p class="eyebrow">When Several Commitments Interact</p>
-      <h2>Organizations are usually responsible for sustaining more than one consequential commitment at a time.</h2>
-      <p class="body-copy">An organizational commitment portfolio is simply the full set of these commitments an organization is responsible for sustaining at the same time.</p>
-      <p class="body-copy">Culture, transformation, brand, workforce, values, customer experience, and social impact may be managed separately. In practice, they often depend on the same leaders, authority, resources, systems, capabilities, and stakeholder trust.</p>
-      <p class="body-copy">Compositions examines what each commitment is producing, how the commitments reinforce, compete with, or contradict one another, and what their arrangement produces for the organization as a whole.</p>
+      <h2>Organizations rarely carry just one commitment at a time.</h2>
+      <p class="body-copy">Culture, transformation, brand, workforce, values, and social impact may be managed separately. In practice, they often depend on the same leaders, authority, resources, systems, and stakeholder trust.</p>
+      <p class="body-copy">It helps to see what each is producing, how they reinforce or compete with one another, and what the arrangement produces as a whole. A portfolio-level look at this is planned as a later offering, Change Load Review, and is scoped separately.</p>
     </div>
     <div class="reveal portfolio-side">
-      <p class="portfolio-hint">Hover or select a commitment to see how it connects — and why.</p>
+      <p class="portfolio-hint">Hover or select a commitment to see how it connects, and why.</p>
       <div class="portfolio-viz" id="portfolioViz">
-        <svg class="links" viewBox="0 0 380 380" id="portfolioLinks"></svg>
+        <svg class="links" viewBox="0 0 380 380" id="portfolioLinks" aria-hidden="true"></svg>
       </div>
       <div class="portfolio-legend">
         <div class="legend-item"><span class="legend-line"></span> Depends on another commitment</div>
-        <div class="legend-item"><span class="legend-line hot"></span> Under strain right now</div>
+        <div class="legend-item"><span class="legend-line hot"></span> Can pull against another</div>
       </div>
-      <div class="portfolio-info" id="portfolioInfo">
+      <div class="portfolio-info" id="portfolioInfo" aria-live="polite">
         <p class="info-default">Hover or select a commitment above to see how it connects.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
 <section class="bg-charcoal cta-band">
   <div class="wrap reveal">
-    <p class="eyebrow on-dark" style="justify-content:center;">Start Here</p>
-    <h2>Start with the decision in front of you.</h2>
-    <p class="section-note on-dark" style="margin-left:auto;margin-right:auto;text-align:center;max-width:650px;">Share what leadership is considering, what the organization has already done, and what remains unresolved. A Commitment Inquiry will help determine whether Compositions is the right fit and what path may be appropriate.</p>
+    <p class="eyebrow on-dark center">Book a Consult</p>
+    <h2>Bring one question. Leave with a clearer next move.</h2>
     <div class="cta-row">
-      <a href="/commitment-inquiry/" class="btn btn-teal">Start the Commitment Inquiry <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <a href="/expertise/" class="btn btn-ghost">Explore Areas of Expertise</a>
+      <a href="/#start" class="btn btn-teal">Book a Consult <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="/say-do-check/" class="btn btn-ghost">Take the Say/Do Check</a>
     </div>
   </div>
 </section>
 
 </main>
-
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
@@ -644,24 +394,25 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
         <a href="/" class="footer-brand" aria-label="Compositions home">
           <img src="/assets/Compositions-Off-White-Horizontal.png" alt="Compositions">
         </a>
-        <p class="footer-tag">A Structural Communications Firm specializing in consequential organizational commitments.</p>
+        <p class="footer-sign">Words. Made True.</p>
+        <p class="footer-tag">A Strategic Communications Firm for consequential organizational commitments.</p>
       </div>
       <div class="footer-cols">
         <div>
-          <h4>Firm</h4>
+          <h4>Explore</h4>
           <ul>
             <li><a href="/work/">Work</a></li>
-            <li><a href="/expertise/">Expertise</a></li>
             <li><a href="/believability/">Believability</a></li>
-            <li><a href="/about/">About</a></li>
-            <li><a href="/about/our-commitments/">Our Commitments</a></li>
             <li><a href="/ideas/">Ideas</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/say-do-check/">Say/Do Check</a></li>
           </ul>
         </div>
         <div>
           <h4>Connect</h4>
           <ul>
-            <li><a href="/#start">Start a conversation</a></li>
+            <li><a href="/#start">Book a Consult</a></li>
+            <li><a href="/portfolio-request/">Request Dana's portfolio</a></li>
             <li><a href="https://www.linkedin.com/in/danamiddletonkc/" target="_blank" rel="noopener">LinkedIn</a></li>
           </ul>
         </div>
@@ -677,169 +428,132 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
       </div>
     </div>
     <div class="footer-bottom">
-      <span>Compositions | Structural Communications Firm</span>
+      <span>Compositions | Strategic Communications Firm</span>
       <span>&copy; 2026 Compositions. All rights reserved.</span>
     </div>
   </div>
 </footer>
 
-<button class="back-to-top" id="backToTop" aria-label="Back to top"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+<script src="/assets/site.js"></script>
 
 <script>
-/* PARALLAX */
+/* Offerings accordion, with hash links that open the matching item */
 (function () {
-  const targets = document.querySelectorAll('.parallax-target');
-  if (!targets.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  let ticking = false;
-  function update() {
-    targets.forEach(img => {
-      const container = img.closest('.full-bleed-photo');
-      if (!container) return;
-      const rect = container.getBoundingClientRect();
-      const vh = window.innerHeight || document.documentElement.clientHeight;
-      if (rect.bottom > 0 && rect.top < vh) {
-        const progress = (rect.top - vh) / (vh + rect.height);
-        img.style.transform = `translateY(${progress * 140}px)`;
-      }
-    });
-    ticking = false;
+  var items = document.querySelectorAll('.offer-item');
+  function setOpen(item, open) {
+    item.classList.toggle('open', open);
+    item.querySelector('.offer-head').setAttribute('aria-expanded', String(open));
   }
-  window.addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(update); ticking = true; } }, { passive: true });
-  update();
+  items.forEach(function (item) {
+    item.querySelector('.offer-head').addEventListener('click', function () { setOpen(item, !item.classList.contains('open')); });
+  });
+  function openFromHash() {
+    if (!location.hash) return;
+    var t = document.querySelector(location.hash);
+    if (t && t.classList.contains('offer-item')) {
+      setOpen(t, true);
+      setTimeout(function () { t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 120);
+    }
+  }
+  window.addEventListener('hashchange', openFromHash);
+  openFromHash();
+  if (!location.hash && items[0]) setOpen(items[0], true);
 })();
 
-/* NAV / BACK TO TOP */
-const backToTop = document.getElementById('backToTop');
-window.addEventListener('scroll', () => backToTop.classList.toggle('visible', window.scrollY > 500));
-backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobileMenu');
-hamburger.addEventListener('click', () => {
-  const open = mobileMenu.classList.toggle('open');
-  hamburger.classList.toggle('open', open);
-  hamburger.setAttribute('aria-expanded', open);
-});
-mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-  mobileMenu.classList.remove('open'); hamburger.classList.remove('open'); hamburger.setAttribute('aria-expanded', false);
-}));
-
-/* REVEAL ON SCROLL */
-const revealObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); } });
-}, { threshold: 0.12 });
-document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-document.querySelectorAll('.reveal-crop').forEach(el => revealObserver.observe(el));
-
-/* SERVICE ACCORDION */
-document.querySelectorAll('.service-item').forEach(item => {
-  const trigger = item.querySelector('.service-head');
-  trigger.addEventListener('click', () => {
-    const isOpen = item.classList.toggle('open');
-    trigger.setAttribute('aria-expanded', String(isOpen));
-  });
-});
-
-/* OPEN + SCROLL TO TARGET SECTION IF ARRIVING VIA HASH LINK */
-if (window.location.hash) {
-  const target = document.querySelector(window.location.hash);
-  if (target && target.classList.contains('service-item')) {
-    target.classList.add('open');
-    const trigger = target.querySelector('.service-head');
-    if (trigger) trigger.setAttribute('aria-expanded', 'true');
-    setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
-  }
-}
-
-/* ── PORTFOLIO: singular commitments, real (non-adjacent-only) relationships ── */
+/* Method stages light up in sequence when they come into view */
 (function () {
-  const viz = document.getElementById('portfolioViz');
-  const svg = document.getElementById('portfolioLinks');
-  const info = document.getElementById('portfolioInfo');
+  var steps = document.querySelectorAll('.method-step');
+  var grid = document.getElementById('methodGrid');
+  if (!grid || !('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var o = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (e.isIntersecting) {
+        steps.forEach(function (s, i) {
+          setTimeout(function () { s.classList.add('lit'); setTimeout(function () { s.classList.remove('lit'); }, 700); }, i * 260);
+        });
+        o.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  o.observe(grid);
+})();
+
+/* Commitments network: singular commitments, real dependency and tension relationships */
+(function () {
+  var viz = document.getElementById('portfolioViz');
+  var svg = document.getElementById('portfolioLinks');
+  var info = document.getElementById('portfolioInfo');
   if (!viz || !svg) return;
-
-  const SIZE = 380, CX = 190, CY = 190, R = 148;
-  let lockedNode = null;
-
-  const NODES = [
+  var SIZE = 380, CX = 190, CY = 190, R = 148;
+  var lockedNode = null;
+  var NODES = [
     { id: 'brand', label: 'Customer Promise', tag: 'Brand & Customer Promise', angle: 0, q: 'Can operations consistently deliver the promise?' },
     { id: 'values', label: 'Values', tag: 'Mission, Purpose & Values', angle: 60, q: 'Do decisions reflect what we say we value?' },
-    { id: 'transformation', label: 'Transformation', tag: 'Strategic Change & Transformation', angle: 120, q: 'Is the organization structurally able to change, not just informed of it?' },
+    { id: 'transformation', label: 'Transformation', tag: 'Strategic Change & Transformation', angle: 120, q: 'Is the organization able to change, not just informed of it?' },
     { id: 'impact', label: 'Impact', tag: 'Social Impact & Community', angle: 180, q: 'Can we show what actually changed?' },
     { id: 'workforce', label: 'EVP', tag: 'Culture & Workforce', angle: 240, q: 'Does the employee experience match what we promise candidates?' },
     { id: 'culture', label: 'Culture', tag: 'Culture & Workforce', angle: 300, q: 'Is what people experience day to day what we describe?' }
   ];
-
-  const EDGES = [
-    { a: 'values', b: 'culture', type: 'dependency', desc: 'Culture depends on whether values are enforced in decisions, not just stated.' },
-    { a: 'values', b: 'transformation', type: 'dependency', desc: "Transformation asks people to act differently — its credibility depends on whether that's consistent with stated values." },
+  var EDGES = [
+    { a: 'values', b: 'culture', type: 'dependency', desc: 'Culture depends on whether values are applied in decisions, not just stated.' },
+    { a: 'values', b: 'transformation', type: 'dependency', desc: 'Transformation asks people to act differently, and its credibility depends on whether that fits the stated values.' },
     { a: 'workforce', b: 'transformation', type: 'dependency', desc: 'Transformation requires the workforce capacity and trust the EVP promises.' },
-    { a: 'brand', b: 'impact', type: 'dependency', desc: 'Brand and impact are both public claims about the organization — inconsistency in one exposes the other.' },
+    { a: 'brand', b: 'impact', type: 'dependency', desc: 'Brand and impact are both public claims about the organization. Inconsistency in one exposes the other.' },
     { a: 'culture', b: 'workforce', type: 'dependency', desc: 'Employee experience and culture are read as one thing by the people living inside them.' },
     { a: 'workforce', b: 'brand', type: 'dependency', desc: 'The customer promise depends on the employee experience the EVP actually describes.' },
-    { a: 'values', b: 'impact', type: 'dependency', desc: 'Impact claims are often justified by the same stated values — inconsistency undermines both.' },
-    { a: 'culture', b: 'transformation', type: 'tension', desc: "New ways of working can contradict long-standing cultural norms if the transition isn't managed." },
+    { a: 'values', b: 'impact', type: 'dependency', desc: 'Impact claims are often justified by the same stated values. Inconsistency undermines both.' },
+    { a: 'culture', b: 'transformation', type: 'tension', desc: 'New ways of working can contradict long-standing cultural norms if the transition is not managed.' },
     { a: 'workforce', b: 'impact', type: 'tension', desc: 'Community investment and workforce investment can compete for the same budget and attention.' }
   ];
-
-  function pos(angleDeg) {
-    const a = angleDeg * Math.PI / 180;
-    return { x: CX + R * Math.sin(a), y: CY - R * Math.cos(a) };
-  }
-
-  const nodeEls = {};
-  NODES.forEach(n => {
-    const p = pos(n.angle);
-    const wrap = document.createElement('div');
-    wrap.className = 'node-wrap';
-    wrap.style.left = (p.x / SIZE * 100) + '%';
-    wrap.style.top = (p.y / SIZE * 100) + '%';
-    wrap.tabIndex = 0;
-    wrap.innerHTML = `<div class="portfolio-node">${n.label}</div><div class="node-tag">${n.tag}</div><div class="node-tip">${n.q}</div>`;
-    viz.appendChild(wrap);
-    nodeEls[n.id] = wrap;
-
-    wrap.addEventListener('mouseenter', () => { if (!lockedNode) highlight(n.id); });
-    wrap.addEventListener('mouseleave', () => { if (!lockedNode) clearHighlight(); });
-    wrap.addEventListener('focus', () => { if (!lockedNode) highlight(n.id); });
-    wrap.addEventListener('blur', () => { if (!lockedNode) clearHighlight(); });
-    wrap.addEventListener('click', () => {
-      if (lockedNode === n.id) { lockedNode = null; clearHighlight(); wrap.classList.remove('locked'); }
+  function pos(deg) { var a = deg * Math.PI / 180; return { x: CX + R * Math.sin(a), y: CY - R * Math.cos(a) }; }
+  function byId(id) { return NODES.filter(function (n) { return n.id === id; })[0]; }
+  var nodeEls = {};
+  NODES.forEach(function (n) {
+    var p = pos(n.angle);
+    var w = document.createElement('div');
+    w.className = 'node-wrap';
+    w.style.left = (p.x / SIZE * 100) + '%';
+    w.style.top = (p.y / SIZE * 100) + '%';
+    w.tabIndex = 0;
+    w.setAttribute('role', 'button');
+    w.innerHTML = '<div class="portfolio-node">' + n.label + '</div><div class="node-tag">' + n.tag + '</div><div class="node-tip">' + n.q + '</div>';
+    viz.appendChild(w);
+    nodeEls[n.id] = w;
+    w.addEventListener('mouseenter', function () { if (!lockedNode) highlight(n.id); });
+    w.addEventListener('mouseleave', function () { if (!lockedNode) clearHighlight(); });
+    w.addEventListener('focus', function () { if (!lockedNode) highlight(n.id); });
+    w.addEventListener('blur', function () { if (!lockedNode) clearHighlight(); });
+    w.addEventListener('click', function () {
+      if (lockedNode === n.id) { lockedNode = null; clearHighlight(); w.classList.remove('locked'); }
       else {
         if (lockedNode && nodeEls[lockedNode]) nodeEls[lockedNode].classList.remove('locked');
-        lockedNode = n.id; wrap.classList.add('locked'); highlight(n.id);
+        lockedNode = n.id; w.classList.add('locked'); highlight(n.id);
       }
     });
-    wrap.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); wrap.click(); } });
+    w.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); w.click(); } });
   });
-
-  const lineEls = [];
-  EDGES.forEach(e => {
-    const pa = pos(NODES.find(n => n.id === e.a).angle);
-    const pb = pos(NODES.find(n => n.id === e.b).angle);
-    const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-    line.setAttribute('x1', pa.x); line.setAttribute('y1', pa.y);
-    line.setAttribute('x2', pb.x); line.setAttribute('y2', pb.y);
-    line.classList.add('rel-line', e.type);
-    line.dataset.a = e.a; line.dataset.b = e.b;
-    svg.appendChild(line);
-    lineEls.push({ el: line, edge: e });
+  var lines = [];
+  EDGES.forEach(function (e) {
+    var pa = pos(byId(e.a).angle), pb = pos(byId(e.b).angle);
+    var l = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+    l.setAttribute('x1', pa.x); l.setAttribute('y1', pa.y); l.setAttribute('x2', pb.x); l.setAttribute('y2', pb.y);
+    l.classList.add('rel-line', e.type);
+    svg.appendChild(l);
+    lines.push({ el: l, edge: e });
   });
-
   function highlight(id) {
-    lineEls.forEach(({ el, edge }) => {
-      if (edge.a === id || edge.b === id) { el.classList.add('hot'); el.classList.remove('dim'); }
-      else { el.classList.add('dim'); el.classList.remove('hot'); }
+    lines.forEach(function (o) {
+      if (o.edge.a === id || o.edge.b === id) { o.el.classList.add('hot'); o.el.classList.remove('dim'); }
+      else { o.el.classList.add('dim'); o.el.classList.remove('hot'); }
     });
-    const rows = EDGES.filter(e => e.a === id || e.b === id).map(e => {
-      const otherId = e.a === id ? e.b : e.a;
-      const other = NODES.find(n => n.id === otherId);
-      return `<div class="info-row"><span class="dot ${e.type === 'tension' ? 'tension' : ''}"></span><span><strong>${other.label}</strong> — ${e.desc}</span></div>`;
+    info.innerHTML = EDGES.filter(function (e) { return e.a === id || e.b === id; }).map(function (e) {
+      var other = byId(e.a === id ? e.b : e.a);
+      return '<div class="info-row"><span class="dot ' + (e.type === 'tension' ? 'tension' : '') + '"></span><span><strong>' + other.label + '</strong>: ' + e.desc + '</span></div>';
     }).join('');
-    info.innerHTML = rows;
   }
-
   function clearHighlight() {
-    lineEls.forEach(({ el }) => { el.classList.remove('hot', 'dim'); });
+    lines.forEach(function (o) { o.el.classList.remove('hot', 'dim'); });
     info.innerHTML = '<p class="info-default">Hover or select a commitment above to see how it connects.</p>';
   }
 })();
