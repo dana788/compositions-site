@@ -7,133 +7,77 @@
 <title>Disclaimer | Compositions</title>
 <meta name="description" content="Important context for interpreting the content on this site.">
 <link rel="canonical" href="https://compositionsadvisory.com/disclaimer/">
+<meta property="og:title" content="Disclaimer | Compositions">
+<meta property="og:description" content="Important context for interpreting the content on this site.">
+<meta property="og:image" content="https://compositionsadvisory.com/assets/og-image.png">
+<meta property="og:url" content="https://compositionsadvisory.com/disclaimer/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Compositions">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" type="image/png" href="/assets/logo-square-color.png">
+<link rel="apple-touch-icon" href="/assets/logo-square-color.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-:root {
-  --teal: #16768C; --teal-dark: #144E73;
-  --charcoal: #2C2C2C; --off-white: #F8F8F8; --white: #FFFFFF;
-  --text: #1A1A1A; --text-sec: #63615D; --border: #E2E0DA;
-  --font-display: 'Oswald', sans-serif; --font-body: 'Poppins', sans-serif;
-  --max-width: 1160px; --content-width: 700px;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; font-family: var(--font-body); font-weight: 300; color: var(--text); background: var(--off-white); -webkit-font-smoothing: antialiased; }
-img, svg { max-width: 100%; display: block; }
-a { color: inherit; text-decoration: none; }
-h1, h2 { font-family: var(--font-display); margin: 0; font-weight: 600; }
-p { margin: 0; }
-ul { margin: 0; padding: 0; list-style: none; }
-:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
-.wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 32px; }
-.btn { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.04em; padding: 16px 30px; border: 1.5px solid transparent; }
-.btn-teal { background: var(--teal); color: var(--white); }
-.btn-teal:hover { background: var(--teal-dark); }
+<link rel="stylesheet" href="/assets/site.css">
 
-.site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 300; display: flex; align-items: center; justify-content: space-between; padding: 20px 32px; background: rgba(248,248,248,0.94); backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--border); }
-.logo-mark img { height: 28px; width: auto; }
-.nav-links { display: flex; align-items: center; gap: 40px; }
-.nav-link { font-weight: 500; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--charcoal); }
-.nav-cta { margin-left: 8px; padding: 12px 24px; }
-.hamburger { display: none; background: none; border: none; width: 32px; height: 32px; position: relative; z-index: 310; cursor: pointer; }
-.hamburger span { display: block; position: absolute; left: 4px; right: 4px; height: 2px; background: var(--charcoal); }
-.hamburger span:nth-child(1) { top: 10px; } .hamburger span:nth-child(2) { top: 16px; } .hamburger span:nth-child(3) { top: 22px; }
-.hamburger.open span:nth-child(1) { top: 16px; transform: rotate(45deg); }
-.hamburger.open span:nth-child(2) { opacity: 0; }
-.hamburger.open span:nth-child(3) { top: 16px; transform: rotate(-45deg); }
-.mobile-menu { position: fixed; inset: 0; background: var(--off-white); z-index: 290; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 32px; transform: translateY(-100%); opacity: 0; visibility: hidden; transition: transform 0.35s ease, opacity 0.3s ease, visibility 0.35s; }
-.mobile-menu.open { transform: translateY(0); opacity: 1; visibility: visible; }
-.mobile-menu a { font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; color: var(--charcoal); }
-@media (max-width: 860px) { .nav-links { display: none; } .hamburger { display: block; } }
 
-.page-body { padding: 156px 32px 100px; }
-.content { max-width: var(--content-width); margin: 0 auto; }
-.content .eyebrow { font-weight: 600; font-size: 0.72rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--teal); margin-bottom: 20px; }
-.content h1 { font-size: clamp(1.8rem, 3.4vw, 2.4rem); color: var(--charcoal); line-height: 1.25; }
-.content .updated { font-size: 0.85rem; color: var(--text-sec); margin-top: 16px; }
-.content p.lede { font-size: 1.05rem; color: #444; line-height: 1.85; margin-top: 32px; }
-.content h2 { font-size: 1.2rem; color: var(--charcoal); margin-top: 2.2em; margin-bottom: 0.7em; }
-.content p { font-size: 0.96rem; color: #444; line-height: 1.85; margin-bottom: 1.1em; }
-.content ul { margin: 1.1em 0; display: flex; flex-direction: column; gap: 10px; }
-.content li { font-size: 0.96rem; color: #444; line-height: 1.75; padding-left: 20px; position: relative; }
-.content li::before { content: ""; position: absolute; left: 0; top: 0.65em; width: 8px; height: 1.5px; background: var(--teal); }
-.contact-block { margin-top: 2.2em; padding: 26px 28px; background: var(--white); border: 1px solid var(--border); }
-.contact-block p { margin-bottom: 6px; }
-.contact-block a { color: var(--teal-dark); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
-
-footer { background: var(--charcoal); padding: 72px 32px 32px; }
-.footer-inner { max-width: var(--max-width); margin: 0 auto; }
-.footer-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,0.1); }
-.footer-brand img { height: 22px; width: auto; }
-.footer-tag { font-size: 0.85rem; color: rgba(255,255,255,0.4); margin-top: 14px; max-width: 300px; line-height: 1.6; }
-.footer-cols { display: flex; gap: 64px; flex-wrap: wrap; }
-.footer-cols h4 { font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 18px; font-weight: 600; }
-.footer-cols ul { display: flex; flex-direction: column; gap: 12px; }
-.footer-cols a { color: rgba(255,255,255,0.62); font-size: 0.92rem; }
-.footer-cols a:hover { color: var(--white); }
-.footer-bottom { padding-top: 28px; color: rgba(255,255,255,0.35); font-size: 0.78rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-@media (max-width: 900px) { .footer-top { flex-direction: column; } }
-@media (max-width: 640px) { .page-body { padding: 132px 22px 72px; } .footer-cols { gap: 40px; } }
-</style>
 </head>
 <body>
-
-<nav class="site-nav">
+<a class="skip-link" href="#main">Skip to content</a>
+<nav class="site-nav solid" id="siteNav" aria-label="Primary">
   <a href="/" class="logo-mark" aria-label="Compositions home">
-    <img src="/assets/Compositions-Accent-Horizontal.png" alt="Compositions">
+    <img src="/assets/Compositions-Off-White-Horizontal.png" alt="Compositions" class="logo-on-dark">
+    <img src="/assets/Compositions-Accent-Horizontal.png" alt="Compositions" class="logo-on-light">
   </a>
   <div class="nav-links">
     <a href="/work/" class="nav-link">Work</a>
-    <a href="/expertise/" class="nav-link">Expertise</a>
-    <a href="/about/" class="nav-link">About</a>
+    <a href="/believability/" class="nav-link">Believability</a>
     <a href="/ideas/" class="nav-link">Ideas</a>
-    <a href="/#start" class="btn btn-teal nav-cta">Contact</a>
+    <a href="/about/" class="nav-link">About</a>
+    <a href="/say-do-check/" class="nav-link">Say/Do Check</a>
+    <a href="/#start" class="btn btn-teal nav-cta">Book a Consult</a>
   </div>
   <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
   <a href="/work/">Work</a>
-  <a href="/expertise/">Expertise</a>
-  <a href="/about/">About</a>
+  <a href="/believability/">Believability</a>
   <a href="/ideas/">Ideas</a>
-  <a href="/#start">Contact</a>
+  <a href="/about/">About</a>
+  <a href="/say-do-check/">Say/Do Check</a>
+  <a href="/#start">Book a Consult</a>
 </div>
 
-<main class="page-body">
+<main class="page-body" id="main">
   <div class="content">
     <p class="eyebrow">Disclaimer</p>
     <h1>Important context for interpreting this site.</h1>
-    <p class="updated">Last updated: July 2026</p>
-
-    <p class="lede">This page explains what the content on this site is — and isn't — intended to be.</p>
+    <p class="updated">Last updated: October 2026</p>
+    <p class="lede">This page explains what the content on this site is, and is not, intended to be.</p>
 
     <h2>General information, not tailored advice</h2>
-    <p>Content on this site, including material published under Ideas, reflects general thinking on organizational commitments, communication, and structural coherence. It's written to be useful broadly, not as advice tailored to any specific organization's facts and circumstances. Reading it is not a substitute for an actual engagement, in which recommendations are grounded in your organization's specific situation and evidence.</p>
+    <p>Content on this site, including material published under Ideas, reflects general thinking on organizational commitments, communication, and the conditions around them. It is written to be useful broadly, not as advice tailored to any specific organization's facts and circumstances. Reading it is not a substitute for an actual engagement, in which recommendations are grounded in your organization's specific situation and evidence.</p>
+
+    <h2>Recognition tools, not assessments</h2>
+    <p>The Say/Do Check and the 10 Signals Field Guide are self-guided recognition tools. They help you notice patterns worth a closer look. They do not diagnose, score, establish causes, or recommend an intervention, and their results are not findings about your organization.</p>
 
     <h2>No advisory relationship</h2>
-    <p>Browsing this site, reading its content, or submitting an inquiry through the contact form does not create an advisory, consulting, or any other professional relationship with Compositions. That relationship begins only once both parties have agreed to the terms of a specific engagement.</p>
+    <p>Browsing this site, reading its content, using its tools, or submitting a request through any form does not create an advisory, consulting, or any other professional relationship with Compositions. That relationship begins only once both parties have agreed to the terms of a specific engagement.</p>
 
     <h2>No guarantee of outcomes</h2>
-    <p>Any discussion of past approaches, frameworks, or patterns on this site is offered for illustrative and educational purposes. It is not a promise or guarantee that similar approaches will produce similar results for any other organization — outcomes depend heavily on facts specific to each situation.</p>
+    <p>Any discussion of past approaches, examples, or patterns on this site is offered for illustrative and educational purposes. Examples are anonymized and carry an evidence label showing what they can and cannot support. They are not a promise or guarantee that similar approaches will produce similar results for any other organization. Outcomes depend heavily on facts specific to each situation.</p>
 
     <h2>Third-party references</h2>
     <p>Where this site references external research, trends, or news, that reference is for informational and contextual purposes only. It does not imply endorsement by, or affiliation with, the referenced source, and Compositions is not responsible for the accuracy of third-party material it cites or links to.</p>
 
     <h2>Accuracy</h2>
     <p>We make reasonable efforts to keep the information on this site accurate and current, but we do not warrant its completeness or that it reflects the most recent developments in any given field at the time you read it.</p>
-
-    <div class="contact-block">
-      <p><strong>Questions about this disclaimer?</strong></p>
-      <p><a href="mailto:hello@compositionsadvisory.com">hello@compositionsadvisory.com</a></p>
-    </div>
+    <div class="contact-block"><p><strong>Questions about this disclaimer?</strong></p><p><a href="mailto:hello@compositionsadvisory.com">hello@compositionsadvisory.com</a></p></div>
   </div>
 </main>
-
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
@@ -141,23 +85,25 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
         <a href="/" class="footer-brand" aria-label="Compositions home">
           <img src="/assets/Compositions-Off-White-Horizontal.png" alt="Compositions">
         </a>
-        <p class="footer-tag">A Structural Communications Firm specializing in consequential organizational commitments.</p>
+        <p class="footer-sign">Words. Made True.</p>
+        <p class="footer-tag">A Strategic Communications Firm for consequential organizational commitments.</p>
       </div>
       <div class="footer-cols">
         <div>
-          <h4>Firm</h4>
+          <h4>Explore</h4>
           <ul>
             <li><a href="/work/">Work</a></li>
-            <li><a href="/expertise/">Expertise</a></li>
-            <li><a href="/about/">About</a></li>
-            <li><a href="/about/our-commitments/">Our Commitments</a></li>
+            <li><a href="/believability/">Believability</a></li>
             <li><a href="/ideas/">Ideas</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/say-do-check/">Say/Do Check</a></li>
           </ul>
         </div>
         <div>
           <h4>Connect</h4>
           <ul>
-            <li><a href="/#start">Start a conversation</a></li>
+            <li><a href="/#start">Book a Consult</a></li>
+            <li><a href="/portfolio-request/">Request Dana's portfolio</a></li>
             <li><a href="https://www.linkedin.com/in/danamiddletonkc/" target="_blank" rel="noopener">LinkedIn</a></li>
           </ul>
         </div>
@@ -173,23 +119,13 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
       </div>
     </div>
     <div class="footer-bottom">
-      <span>Compositions | Structural Communications Firm</span>
+      <span>Compositions | Strategic Communications Firm</span>
       <span>&copy; 2026 Compositions. All rights reserved.</span>
     </div>
   </div>
 </footer>
 
-<script>
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobileMenu');
-hamburger.addEventListener('click', () => {
-  const open = mobileMenu.classList.toggle('open');
-  hamburger.classList.toggle('open', open);
-  hamburger.setAttribute('aria-expanded', open);
-});
-mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-  mobileMenu.classList.remove('open'); hamburger.classList.remove('open'); hamburger.setAttribute('aria-expanded', false);
-}));
-</script>
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+<script src="/assets/site.js"></script>
 </body>
 </html>
