@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index, follow">
-<title>About | Compositions — Structural Communications Firm</title>
-<meta name="description" content="Compositions is a Structural Communications Firm specializing in consequential organizational commitments — built so leaders can deliver on what they've promised, with measurable outcomes and evidence, not just good intentions. Led by Dana Middleton.">
+<title>About | Compositions</title>
+<meta name="description" content="Compositions is a Strategic Communications Firm for consequential organizational commitments, led by Dana Middleton.">
 <link rel="canonical" href="https://compositionsadvisory.com/about/">
-<meta property="og:title" content="About | Compositions — Structural Communications Firm">
-<meta property="og:description" content="Compositions exists because well-intentioned organizations still struggle to deliver on their commitments — and the cost of that gap is measurable. Here's how the firm addresses it, and who leads the work.">
+<meta property="og:title" content="About | Compositions">
+<meta property="og:description" content="Compositions is a Strategic Communications Firm for consequential organizational commitments, led by Dana Middleton.">
 <meta property="og:image" content="https://compositionsadvisory.com/assets/og-image.png">
 <meta property="og:url" content="https://compositionsadvisory.com/about/">
 <meta property="og:type" content="website">
@@ -16,292 +16,195 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" type="image/png" href="/assets/logo-square-color.png">
+<link rel="apple-touch-icon" href="/assets/logo-square-color.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+
 <style>
-:root {
-  --teal: #16768C; --teal-dark: #144E73; --teal-light: #A3D2D8;
-  --charcoal: #2C2C2C; --off-white: #F8F8F8; --white: #FFFFFF;
-  --text: #1A1A1A; --text-sec: #63615D; --border: #E2E0DA;
-  --font-display: 'Oswald', sans-serif; --font-body: 'Poppins', sans-serif;
-  --max-width: 1160px; --section-pad: 120px 32px;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; font-family: var(--font-body); font-weight: 300; color: var(--text); background: var(--off-white); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-img, svg { max-width: 100%; display: block; }
-a { color: inherit; text-decoration: none; }
-h1, h2, h3 { font-family: var(--font-display); margin: 0; font-weight: 600; }
-p { margin: 0; }
-ul { margin: 0; padding: 0; list-style: none; }
-button { font-family: var(--font-body); cursor: pointer; }
-:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
-.wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 32px; }
-section { padding: var(--section-pad); position: relative; }
-.bg-charcoal { background: var(--charcoal); }
-.bg-white { background: var(--white); }
-.bg-offwhite { background: var(--off-white); }
+.name-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.name-grid .photo-frame { aspect-ratio: 4 / 5; }
+.name-def { margin-top: 8px; }
+.name-def p { font-size: 1.02rem; line-height: 1.85; color: #444; padding: 18px 0; border-top: 1px solid var(--border); }
+.name-def p:last-child { border-bottom: 1px solid var(--border); }
+.name-def b { font-family: var(--font-display); font-weight: 600; color: var(--charcoal); }
+.teach-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--border); border: 1px solid var(--border); margin-top: 56px; }
+.teach-card { background: var(--white); padding: 30px 28px; }
+.teach-card h3 { font-size: 1.1rem; color: var(--charcoal); line-height: 1.4; }
+.teach-card p { margin-top: 10px; font-size: 0.9rem; line-height: 1.7; color: var(--text-sec); }
+.wmt { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--border); border: 1px solid var(--border); margin-top: 2px; }
+.wmt > div { background: var(--white); padding: 28px; }
+.wmt h3 { font-size: 1.5rem; color: var(--charcoal); }
+.wmt p { margin-top: 10px; font-size: 0.92rem; line-height: 1.7; color: var(--text-sec); }
+@media (max-width: 900px) { .name-grid { grid-template-columns: 1fr; gap: 36px; } .teach-grid { grid-template-columns: 1fr; } .wmt { grid-template-columns: 1fr; } }
 
-.eyebrow { display: flex; align-items: center; gap: 14px; font-weight: 600; font-size: 0.72rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--teal); margin-bottom: 24px; }
-.eyebrow::before { content: ""; display: inline-block; width: 36px; height: 2px; background: var(--teal); flex-shrink: 0; }
-.eyebrow.on-dark { color: var(--teal-light); }
-.eyebrow.on-dark::before { background: var(--teal-light); }
+.method-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 6px; align-items: center; margin-top: 8px; }
+.method-row span { font-family: var(--font-display); font-weight: 500; font-size: clamp(1rem, 2vw, 1.3rem); color: rgba(255,255,255,0.35); transition: color 0.5s ease; }
+.method-row span.lit { color: var(--teal-light); }
+.method-row i { font-style: normal; color: rgba(255,255,255,0.2); }
 
-.btn { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.04em; padding: 16px 30px; border: 1.5px solid transparent; transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease; }
-.btn-teal { background: var(--teal); color: var(--white); }
-.btn-teal:hover { background: var(--teal-dark); transform: translateY(-1px); }
-.btn-ghost { border-color: rgba(255,255,255,0.45); color: var(--white); }
-.btn-ghost:hover { border-color: var(--white); transform: translateY(-1px); }
-.btn-ghost-dark { border-color: var(--charcoal); color: var(--charcoal); }
-.btn-ghost-dark:hover { background: var(--charcoal); color: var(--white); }
-.btn svg { transition: transform 0.2s ease; }
-.btn:hover svg { transform: translateX(3px); }
-
-/* NAV */
-.site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 300; display: flex; align-items: center; justify-content: space-between; padding: 20px 32px; background: rgba(248,248,248,0.94); backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--border); }
-.logo-mark img { height: 28px; width: auto; }
-.nav-links { display: flex; align-items: center; gap: 40px; }
-.nav-link { position: relative; font-weight: 500; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--charcoal); padding-bottom: 6px; }
-.nav-link.active { color: var(--teal-dark); }
-.nav-link::after { content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 1.5px; background: var(--teal); transition: width 0.2s ease; }
-.nav-link:hover::after, .nav-link.active::after { width: 100%; }
-.nav-cta { margin-left: 8px; padding: 12px 24px; }
-.hamburger { display: none; background: none; border: none; width: 32px; height: 32px; position: relative; z-index: 310; cursor: pointer; }
-.hamburger span { display: block; position: absolute; left: 4px; right: 4px; height: 2px; background: var(--charcoal); transition: all 0.25s ease; }
-.hamburger span:nth-child(1) { top: 10px; } .hamburger span:nth-child(2) { top: 16px; } .hamburger span:nth-child(3) { top: 22px; }
-.hamburger.open span:nth-child(1) { top: 16px; transform: rotate(45deg); }
-.hamburger.open span:nth-child(2) { opacity: 0; }
-.hamburger.open span:nth-child(3) { top: 16px; transform: rotate(-45deg); }
-.mobile-menu { position: fixed; inset: 0; background: var(--off-white); z-index: 290; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 36px; transform: translateY(-100%); opacity: 0; visibility: hidden; transition: transform 0.35s ease, opacity 0.3s ease, visibility 0.35s; }
-.mobile-menu.open { transform: translateY(0); opacity: 1; visibility: visible; }
-.mobile-menu a { font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; color: var(--charcoal); }
-@media (max-width: 860px) { .nav-links { display: none; } .hamburger { display: block; } }
-
-.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s cubic-bezier(0.2,0.6,0.2,1), transform 0.7s cubic-bezier(0.2,0.6,0.2,1); }
-.reveal.visible { opacity: 1; transform: translateY(0); }
-@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
-
-.page-hero { padding: 168px 32px 90px; }
-.page-hero h1 { font-size: clamp(2.1rem, 4.6vw, 3.4rem); line-height: 1.18; color: var(--charcoal); max-width: 780px; }
-.page-hero .support { font-size: 1.05rem; color: var(--text-sec); max-width: 660px; margin-top: 24px; line-height: 1.8; }
-
-/* THE FIRM: photo + copy */
-.firm-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 64px; align-items: center; }
-.firm-photo { position: relative; aspect-ratio: 4/5; overflow: hidden; }
-.firm-photo img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.05); }
-.firm-copy h2.tagline { font-size: clamp(1.5rem,2.6vw,2.1rem); color: var(--charcoal); line-height: 1.35; }
-.firm-copy p.body-copy { font-size: 1.02rem; line-height: 1.85; color: #444; margin-top: 20px; }
-@media (max-width: 900px) { .firm-grid { grid-template-columns: 1fr; } }
-
-/* THE NAME — rhythm via line breaks, not bold weight */
-.name-block { max-width: 700px; }
-.name-block .verse { font-size: 1.08rem; line-height: 1.9; color: var(--charcoal); }
-.name-block .verse span { display: block; }
-.name-block .verse span + span { margin-top: 4px; }
-.name-block p.body-copy { font-size: 1.02rem; line-height: 1.9; color: #444; margin-top: 26px; }
-.name-block .sub-label { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal-dark); margin-top: 40px; margin-bottom: 4px; }
-.name-block .payoff { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.35rem, 2.5vw, 1.9rem); line-height: 1.5; color: var(--charcoal); margin-top: 30px; }
-.name-block .payoff span { display: block; }
-
-/* METHOD STRIP — interactive hover-lift cards */
-.method-strip { display: flex; flex-wrap: wrap; gap: 2px; background: var(--border); border: 1px solid var(--border); margin-top: 40px; }
-.method-step { flex: 1 1 220px; background: var(--white); padding: 32px 28px; transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease; }
-.method-step:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(44,44,44,0.08); background: #FCFFFF; }
-.method-step .step-num { font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; color: var(--teal); }
-.method-step .step-gloss { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-sec); margin-top: 8px; display: block; }
-.method-step p { font-size: 0.9rem; color: var(--text-sec); line-height: 1.7; margin-top: 14px; }
-
-/* DANA — narrative bio + credential rail */
-.dana-block { max-width: 780px; }
-.dana-block .lede { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.3rem, 2.4vw, 1.8rem); line-height: 1.45; color: var(--charcoal); }
-.dana-block .body-copy { font-size: 1.02rem; line-height: 1.9; color: #444; margin-top: 24px; }
-.dana-block .body-copy + .body-copy { margin-top: 18px; }
-.dana-block .facts { font-size: 0.92rem; line-height: 1.8; color: var(--text-sec); margin-top: 26px; }
-.credential-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
-.credential-pill { border: 1px solid var(--border); padding: 9px 18px; font-size: 0.82rem; color: var(--charcoal); background: var(--white); }
-
-/* INTERDISCIPLINARY LENS — one integrated cluster, not seven separate rows */
-.lens-intro { max-width: 720px; }
-.lens-intro h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); color: var(--white); line-height: 1.35; }
-.lens-intro p { margin-top: 18px; font-size: 0.98rem; color: rgba(255,255,255,0.6); line-height: 1.85; }
-.pill-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 36px; }
-.pill { border: 1px solid var(--border); padding: 10px 20px; font-size: 0.85rem; color: var(--charcoal); background: var(--white); display: inline-block; transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease; cursor: default; }
-.pill:hover { transform: scale(1.045); border-color: var(--teal); box-shadow: 0 6px 18px rgba(22,118,140,0.14); background: #F3FAFB; }
-.pill.on-dark { border-color: rgba(255,255,255,0.25); color: rgba(255,255,255,0.85); background: transparent; }
-.pill.on-dark:hover { background: rgba(163,210,216,0.1); border-color: var(--teal-light); box-shadow: 0 6px 18px rgba(163,210,216,0.1); }
-
-.cta-band { text-align: center; }
-.cta-band h2 { font-size: clamp(1.6rem, 2.8vw, 2.2rem); color: var(--white); max-width: 640px; margin: 0 auto; line-height: 1.35; }
-.cta-band .cta-row { margin-top: 36px; display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; }
-
-footer { background: var(--charcoal); padding: 72px 32px 32px; }
-.footer-inner { max-width: var(--max-width); margin: 0 auto; }
-.footer-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,0.1); }
-.footer-brand img { height: 22px; width: auto; }
-.footer-tag { font-size: 0.85rem; color: rgba(255,255,255,0.4); margin-top: 14px; max-width: 300px; line-height: 1.6; }
-.footer-cols { display: flex; gap: 64px; flex-wrap: wrap; }
-.footer-cols h4 { font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 18px; font-weight: 600; }
-.footer-cols ul { display: flex; flex-direction: column; gap: 12px; }
-.footer-cols a { color: rgba(255,255,255,0.62); font-size: 0.92rem; }
-.footer-cols a:hover { color: var(--white); }
-.footer-bottom { padding-top: 28px; color: rgba(255,255,255,0.35); font-size: 0.78rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-.back-to-top { position: fixed; right: 28px; bottom: 28px; width: 46px; height: 46px; background: var(--charcoal); display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s, background 0.2s; cursor: pointer; border: none; z-index: 99; }
-.back-to-top.visible { opacity: 1; visibility: visible; }
-.back-to-top:hover { background: var(--teal); }
-@media (max-width: 640px) { :root { --section-pad: 84px 22px; } .page-hero { padding: 140px 22px 70px; } }
+.dana-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 64px; align-items: start; }
+.dana-grid h2 { font-size: clamp(1.6rem, 2.8vw, 2.2rem); color: var(--charcoal); line-height: 1.3; }
+.dana-title { margin-top: 14px; font-size: 0.82rem; letter-spacing: 0.04em; color: var(--text-sec); line-height: 1.7; }
+.cred-list { margin-top: 28px; display: flex; flex-direction: column; gap: 10px; }
+.cred-list li { font-size: 0.9rem; color: var(--charcoal); padding-left: 18px; position: relative; }
+.cred-list li::before { content: ""; position: absolute; left: 0; top: 0.7em; width: 8px; height: 1.5px; background: var(--teal); }
+.dana-copy p { font-size: 1.02rem; line-height: 1.85; color: #444; }
+.dana-copy p + p { margin-top: 20px; }
+.dana-copy .pull { font-family: var(--font-display); font-weight: 500; font-size: 1.25rem; line-height: 1.5; color: var(--charcoal); }
+@media (max-width: 900px) { .dana-grid { grid-template-columns: 1fr; gap: 32px; } }
+.lens-pills { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 8px; }
+.lens-pills span { border: 1px solid var(--border); background: var(--white); padding: 11px 20px; font-size: 0.86rem; color: var(--charcoal); transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease; cursor: default; }
+.lens-pills span:hover { transform: translateY(-2px); border-color: var(--teal); background: #F3FAFB; }
+.portfolio-link { max-width: 640px; margin: 0 auto; text-align: center; }
+.portfolio-link p { margin-top: 14px; color: var(--text-sec); line-height: 1.8; font-size: 0.98rem; }
 </style>
 </head>
 <body>
-
-<nav class="site-nav">
+<a class="skip-link" href="#main">Skip to content</a>
+<nav class="site-nav solid" id="siteNav" aria-label="Primary">
   <a href="/" class="logo-mark" aria-label="Compositions home">
-    <img src="/assets/Compositions-Accent-Horizontal.png" alt="Compositions">
+    <img src="/assets/Compositions-Off-White-Horizontal.png" alt="Compositions" class="logo-on-dark">
+    <img src="/assets/Compositions-Accent-Horizontal.png" alt="Compositions" class="logo-on-light">
   </a>
   <div class="nav-links">
     <a href="/work/" class="nav-link">Work</a>
-    <a href="/expertise/" class="nav-link">Expertise</a>
     <a href="/believability/" class="nav-link">Believability</a>
-    <a href="/about/" class="nav-link active">About</a>
     <a href="/ideas/" class="nav-link">Ideas</a>
-    <a href="/#start" class="btn btn-teal nav-cta">Contact</a>
+    <a href="/about/" class="nav-link active" aria-current="page">About</a>
+    <a href="/say-do-check/" class="nav-link">Say/Do Check</a>
+    <a href="/#start" class="btn btn-teal nav-cta">Book a Consult</a>
   </div>
   <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
   <a href="/work/">Work</a>
-  <a href="/expertise/">Expertise</a>
   <a href="/believability/">Believability</a>
-  <a href="/about/">About</a>
   <a href="/ideas/">Ideas</a>
-  <a href="/#start">Contact</a>
+  <a href="/about/">About</a>
+  <a href="/say-do-check/">Say/Do Check</a>
+  <a href="/#start">Book a Consult</a>
 </div>
 
-<main>
+<main id="main">
 
-<section class="bg-white page-hero">
-  <div class="wrap reveal visible">
+<section class="page-hero bg-offwhite">
+  <div class="wrap">
     <p class="eyebrow">About</p>
-    <h1>Compositions is a Structural Communications Firm.</h1>
-    <p class="support">The firm specializes in consequential organizational commitments — mission and values, culture and workforce, brand and customer promise, strategic change and transformation, and social impact — areas where communication is central, but where the outcome also depends on structures and conditions like leadership, operating practice, stakeholder experience, and evidence.</p>
-  </div>
-</section>
-
-<!-- THE FIRM -->
-<section class="bg-offwhite">
-  <div class="wrap firm-grid reveal">
-    <div class="firm-photo">
-      <img src="/assets/photography/graphic-geometry.png" alt="An abstract still-life arrangement of stone, glass, and paper forms with a subtle geometric overlay, illustrating how distinct parts compose into a whole" loading="lazy">
-    </div>
-    <div class="firm-copy">
-      <p class="eyebrow">The Firm</p>
-      <h2 class="tagline">Editorial on the surface. Structural underneath. Human throughout.</h2>
-      <p class="body-copy">Compositions brings those dimensions together so an important promise or priority can be clearly defined, credibly communicated, put into practice, measured, and governed over time.</p>
-      <p class="body-copy">When you work with Compositions, you're working directly with the person who diagnoses the situation, shapes the strategy, and stands behind the recommendation — not handed off to a rotating team once the engagement begins.</p>
-    </div>
+    <h1>Compositions is a Strategic Communications Firm.</h1>
+    <p class="support">The firm specializes in consequential organizational commitments: mission and values, culture and workforce, brand and customer promise, strategic change and transformation, and social impact. Communication is central in each. The outcome also depends on the conditions around it, like leadership, day-to-day practice, what people experience, and the evidence.</p>
   </div>
 </section>
 
 <!-- THE NAME -->
 <section class="bg-white">
-  <div class="wrap reveal">
-    <p class="eyebrow">The Name</p>
-    <div class="name-block">
-      <p class="verse">
-        <span>A portfolio is a composition of assets.</span>
-        <span>An organization is a composition of commitments, decisions, and stakeholder experience.</span>
-        <span>Meaning itself is composed — through words, sequence, and context.</span>
-      </p>
-      <p class="sub-label">The Meaning of Composition</p>
-      <p class="body-copy">Composition is the intentional arrangement of distinct elements into a unified whole. In writing, individual sentences may all be accurate yet fail to produce a coherent argument. In design, every image, color, and type choice may be strong yet compete for attention rather than create meaning. In music, each instrument may be played well yet fail to produce harmony.</p>
-      <p class="body-copy">Applied to organizations, composition is the relationship among what the organization says, what it funds, what it governs, what it rewards, how it makes decisions, how it operates, what stakeholders experience, and what the available evidence can confirm.</p>
-      <p class="payoff">
-        <span>The quality of the parts matters.</span>
-        <span>But the arrangement governs what the whole becomes.</span>
-      </p>
+  <div class="wrap">
+    <div class="name-grid reveal">
+      <div class="photo-frame has-image" role="img" aria-label="An abstract still-life arrangement of stone, glass, and paper forms with a subtle geometric overlay, showing how distinct parts compose into a whole">
+        <img class="parallax-target" data-base-scale="1.5" src="/assets/photography/graphic-geometry.png" alt="" loading="lazy">
+      </div>
+      <div>
+        <p class="eyebrow">The Name</p>
+        <h2 style="font-size:clamp(1.6rem,2.8vw,2.2rem);color:var(--charcoal);line-height:1.3;">A composition is a piece of writing. It is also an arrangement of parts into a whole.</h2>
+        <div class="name-def" style="margin-top:28px;">
+          <p><b>Words.</b> What an organization says, promises, and commits to.</p>
+          <p><b>Made True.</b> The arrangement of decisions, resources, authority, and day-to-day practice that decides whether those words become fact.</p>
+        </div>
+        <p style="margin-top:22px;font-size:0.98rem;line-height:1.85;color:#444;">Compositions treats these as one discipline. A promise is not made true by being well written. It is made true by what surrounds it.</p>
+      </div>
+    </div>
+    <div class="teach-grid reveal">
+      <div class="teach-card"><h3>Distinct does not mean disconnected.</h3><p>Culture, brand, leadership, and measurement each keep their own boundaries. The work is governing how a decision in one affects a commitment carried in another.</p></div>
+      <div class="teach-card"><h3>Good parts do not guarantee a coherent whole.</h3><p>Every function can be competent and the organization can still contradict itself when those parts are managed independently.</p></div>
+      <div class="teach-card"><h3>Boundaries create clarity.</h3><p>Healthy lines clarify who is responsible. The problem is rarely that boundaries exist. It is that no one is looking across them.</p></div>
+    </div>
+    <div class="human-copy reveal" style="text-align:center;margin-top:64px;">
+      <p class="eyebrow center">The Composition Principle</p>
+      <p class="human-quote" style="max-width:760px;margin:0 auto;">The quality of the parts matters. But the arrangement governs what the whole becomes.</p>
     </div>
   </div>
 </section>
 
-<!-- THE METHOD — interactive hover-lift, matching the Work page's routing cards -->
-<section class="bg-offwhite">
-  <div class="wrap reveal">
-    <p class="eyebrow">The Method</p>
-    <h2 style="font-size:clamp(1.5rem,2.6vw,2rem);color:var(--charcoal);max-width:620px;line-height:1.35;">Reveal. Architect. Govern.</h2>
-    <div class="method-strip">
-      <div class="method-step">
-        <span class="step-num">Reveal</span>
-        <span class="step-gloss">Clarify</span>
-        <p>What the organization is committing to, what's happening, what stakeholders are experiencing, and what the evidence actually supports.</p>
-      </div>
-      <div class="method-step">
-        <span class="step-num">Architect</span>
-        <span class="step-gloss">Design</span>
-        <p>What the commitment requires across strategy, narrative, communication, activation, alignment, implementation, and measurement.</p>
-      </div>
-      <div class="method-step">
-        <span class="step-num">Govern</span>
-        <span class="step-gloss">Sustain</span>
-        <p>How leadership will own, decide, reinforce, monitor, and adapt the commitment over time.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- DANA MIDDLETON — narrative bio -->
-<section class="bg-white">
-  <div class="wrap reveal">
-    <p class="eyebrow">Dana Middleton</p>
-    <div class="dana-block">
-      <p class="lede">Structural Communications Advisor and Principal, Compositions.</p>
-      <p class="body-copy">Dana has spent two decades watching the same pattern repeat inside organizations of every size: leadership makes a promise in good faith, funds it seriously, communicates it well — and the organization still can't deliver on it. Culture initiatives that never fully land. Brand promises the front line can't keep. Transformations that get announced twice. She kept noticing that the fix everyone reached for was more communication, and that it was rarely the whole answer.</p>
-      <p class="body-copy">That pattern is what pulled her across disciplines most organizations keep separate. Strategic communications and brand architecture remain her deepest expertise — sharpened by years in organizational development, culture integration, impact measurement, instructional design, and, perhaps most unexpectedly, social epidemiology: the study of how the conditions surrounding a population shape what happens to it. Applied to an organization instead of a public health crisis, the same discipline asks a useful question — what are the conditions around this commitment, and are they helping it perform, or quietly working against it?</p>
-      <p class="body-copy">It's an unusual combination. It's also why Compositions exists.</p>
-      <p class="facts">Twenty-plus years across strategic communications, brand architecture, culture integration, organizational development, impact measurement, and instructional design — including global enterprise leadership and roles within marketing agency and health-system organizations.</p>
-      <div class="credential-row">
-        <span class="credential-pill">Master's, Instructional Design</span>
-        <span class="credential-pill">PCM, American Marketing Association</span>
-        <span class="credential-pill">Level C Brand Strategist</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- THE INTERDISCIPLINARY LENS — one integrated cluster -->
+<!-- THE METHOD -->
 <section class="bg-charcoal">
-  <div class="wrap reveal">
-    <div class="lens-intro">
-      <p class="eyebrow on-dark">The Interdisciplinary Lens</p>
-      <h2>One lens, built from seven disciplines organizations usually keep separate.</h2>
-      <p>Compositions doesn't rotate between these disciplines depending on the question. She reads every commitment through all seven — which is what makes it possible to see a problem most single-discipline advisors would only see part of.</p>
+  <div class="wrap" style="text-align:center;max-width:900px;">
+    <div class="reveal">
+      <p class="eyebrow on-dark center">The Method</p>
+      <h2 style="color:var(--white);font-size:clamp(1.5rem,2.8vw,2.1rem);line-height:1.35;">The Composition Method begins with the problem to solve, not a deliverable.</h2>
+      <p style="margin-top:18px;color:rgba(255,255,255,0.62);line-height:1.85;">Every engagement moves through the same eight stages. The method stays constant. The depth changes.</p>
     </div>
-    <div class="pill-grid">
-      <span class="pill on-dark">Strategic &amp; Integrated Communications</span>
-      <span class="pill on-dark">Brand Strategy &amp; Brand Architecture</span>
-      <span class="pill on-dark">Organizational Development</span>
-      <span class="pill on-dark">Culture Integration</span>
-      <span class="pill on-dark">Impact &amp; Outcomes Measurement</span>
-      <span class="pill on-dark">Social Epidemiology &amp; Structural-Determinant Thinking</span>
-      <span class="pill on-dark">Instructional Design &amp; Capability Development</span>
+    <div class="method-row reveal" id="methodRow" style="margin-top:40px;"><span>Frame</span><i>&rarr;</i><span>Gather</span><i>&rarr;</i><span>Arrange</span><i>&rarr;</i><span>Compose</span><i>&rarr;</i><span>Proof</span><i>&rarr;</i><span>Release</span><i>&rarr;</i><span>Read</span><i>&rarr;</i><span>Refine</span></div>
+    <div class="reveal" style="margin-top:40px;"><a href="/work/#method" class="btn btn-ghost">See each stage <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+  </div>
+</section>
+
+<!-- DANA -->
+<section class="bg-offwhite">
+  <div class="wrap dana-grid reveal">
+    <div>
+      <p class="eyebrow">Dana Middleton</p>
+      <h2>The person who frames the problem, shapes the strategy, and stands behind the recommendation.</h2>
+      <p class="dana-title">Dana Middleton, Strategic Communications Advisor &amp; Principal, Compositions</p>
+      <ul class="cred-list">
+        <li>20+ years in strategic communications, brand architecture, culture, and impact measurement</li>
+        <li>Global enterprise leadership, with roles in marketing agency and health-system organizations</li>
+        <li>Master's, Instructional Design</li>
+        <li>PCM, American Marketing Association</li>
+        <li>Level C Brand Strategist</li>
+      </ul>
+    </div>
+    <div class="dana-copy">
+      <p class="pull">Dana helps organizations communicate through complexity and operationalize what they promise. Her work is more than campaigns. It is words made true.</p>
+      <p>When you work with Compositions, you work directly with her, not a rotating team once the engagement begins.</p>
+      <p>She has spent two decades watching the same pattern repeat: leadership makes a promise in good faith, funds it seriously, communicates it well, and the organization still cannot deliver on it. Culture initiatives that never fully land. Brand promises the front line cannot keep. Transformations announced twice. The fix everyone reached for was more communication, and it was rarely the whole answer.</p>
+      <p>That pattern pulled her across disciplines most organizations keep separate. Strategic communications and brand architecture remain her deepest expertise, sharpened by organizational development, culture integration, impact measurement, instructional design, and social epidemiology, the study of how the conditions around a population shape what happens to it. Applied to an organization, it asks a useful question: what are the conditions around this commitment, and are they helping it perform?</p>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
+<!-- LENS -->
+<section class="bg-white" style="padding:84px 32px;">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin-bottom:36px;">
+      <p class="eyebrow center">The Interdisciplinary Lens</p>
+      <h2>One lens, built from seven disciplines organizations usually keep apart.</h2>
+    </div>
+    <div class="lens-pills reveal">
+      <span>Strategic &amp; Integrated Communications</span>
+      <span>Brand Strategy &amp; Architecture</span>
+      <span>Organizational Development</span>
+      <span>Culture Integration</span>
+      <span>Impact &amp; Outcomes Measurement</span>
+      <span>Social Epidemiology</span>
+      <span>Instructional Design &amp; Capability Development</span>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="bg-offwhite" style="padding:88px 32px;">
+  <div class="wrap portfolio-link reveal">
+    <p class="eyebrow center">Want the Longer View?</p>
+    <h2 style="font-size:clamp(1.4rem,2.5vw,1.9rem);color:var(--charcoal);line-height:1.35;">Dana's portfolio is available on request.</h2>
+    <p>Share your name, email, and organization. Dana reviews each request and sends access personally.</p>
+    <div style="margin-top:26px;"><a href="/portfolio-request/" class="btn btn-ghost-dark">Request the portfolio <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+  </div>
+</section>
+
 <section class="bg-charcoal cta-band">
   <div class="wrap reveal">
-    <p class="eyebrow on-dark" style="justify-content:center;">Start Here</p>
-    <h2>Bring us the commitment that isn't performing the way you expected.</h2>
+    <p class="eyebrow on-dark center">Book a Consult</p>
+    <h2>Bring the commitment that is not landing the way you expected.</h2>
     <div class="cta-row">
-      <a href="/#start" class="btn btn-teal">Start a conversation <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <a href="/work/" class="btn btn-ghost">See the work</a>
+      <a href="/#start" class="btn btn-teal">Book a Consult <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="/say-do-check/" class="btn btn-ghost">Take the Say/Do Check</a>
     </div>
   </div>
 </section>
 
 </main>
-
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
@@ -309,24 +212,25 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
         <a href="/" class="footer-brand" aria-label="Compositions home">
           <img src="/assets/Compositions-Off-White-Horizontal.png" alt="Compositions">
         </a>
-        <p class="footer-tag">A Structural Communications Firm specializing in consequential organizational commitments.</p>
+        <p class="footer-sign">Words. Made True.</p>
+        <p class="footer-tag">A Strategic Communications Firm for consequential organizational commitments.</p>
       </div>
       <div class="footer-cols">
         <div>
-          <h4>Firm</h4>
+          <h4>Explore</h4>
           <ul>
             <li><a href="/work/">Work</a></li>
-            <li><a href="/expertise/">Expertise</a></li>
             <li><a href="/believability/">Believability</a></li>
-            <li><a href="/about/">About</a></li>
-            <li><a href="/about/our-commitments/">Our Commitments</a></li>
             <li><a href="/ideas/">Ideas</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/say-do-check/">Say/Do Check</a></li>
           </ul>
         </div>
         <div>
           <h4>Connect</h4>
           <ul>
-            <li><a href="/#start">Start a conversation</a></li>
+            <li><a href="/#start">Book a Consult</a></li>
+            <li><a href="/portfolio-request/">Request Dana's portfolio</a></li>
             <li><a href="https://www.linkedin.com/in/danamiddletonkc/" target="_blank" rel="noopener">LinkedIn</a></li>
           </ul>
         </div>
@@ -342,32 +246,28 @@ footer { background: var(--charcoal); padding: 72px 32px 32px; }
       </div>
     </div>
     <div class="footer-bottom">
-      <span>Compositions | Structural Communications Firm</span>
+      <span>Compositions | Strategic Communications Firm</span>
       <span>&copy; 2026 Compositions. All rights reserved.</span>
     </div>
   </div>
 </footer>
 
-<button class="back-to-top" id="backToTop" aria-label="Back to top"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+<script src="/assets/site.js"></script>
 
 <script>
-const backToTop = document.getElementById('backToTop');
-window.addEventListener('scroll', () => backToTop.classList.toggle('visible', window.scrollY > 500));
-backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobileMenu');
-hamburger.addEventListener('click', () => {
-  const open = mobileMenu.classList.toggle('open');
-  hamburger.classList.toggle('open', open);
-  hamburger.setAttribute('aria-expanded', open);
-});
-mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-  mobileMenu.classList.remove('open'); hamburger.classList.remove('open'); hamburger.setAttribute('aria-expanded', false);
-}));
-const revealObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); } });
-}, { threshold: 0.12 });
-document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+(function () {
+  var row = document.getElementById('methodRow');
+  var spans = document.querySelectorAll('#methodRow span');
+  if (!row) return;
+  if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) { spans.forEach(function (s) { s.classList.add('lit'); }); return; }
+  var o = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (e.isIntersecting) { spans.forEach(function (s, i) { setTimeout(function () { s.classList.add('lit'); }, i * 220); }); o.unobserve(e.target); }
+    });
+  }, { threshold: 0.6 });
+  o.observe(row);
+})();
 </script>
 </body>
 </html>
