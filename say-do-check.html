@@ -114,7 +114,7 @@
 
       <div class="check-step" id="stepGate" hidden>
         <h2>Your read is ready.</h2>
-        <p class="lede">Tell us where to send it. You will see your results here right away, and the Field Guide link comes with them.</p>
+        <p class="lede">Tell us where to send it. You will see your results here right away, and the Field Guide opens up with them.</p>
         <div class="gate-card">
           <form name="say-do-check" id="gateForm" method="POST" data-netlify="true" netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="say-do-check">
@@ -147,7 +147,7 @@
           <div>
             <h3>The 10 Signals Field Guide</h3>
             <p>Ten signs that what an organization says and what it does are pulling apart, and what to look at for each.</p>
-            <a class="btn btn-teal" href="/assets/downloads/10-signals-field-guide.pdf" download>Download the guide</a>
+            <a class="btn btn-teal" href="/field-guide/">Open the guide</a>
           </div>
           <div>
             <h3>Talk it through</h3>
@@ -155,6 +155,7 @@
             <a class="btn btn-ghost-dark" href="/#start">Book a Consult</a>
           </div>
         </div>
+        <button type="button" class="btn btn-ghost-dark" id="savePdf" style="margin-top:28px;">Save a one-page summary</button>
         <button type="button" class="retake" id="retake">Take it again for a different commitment</button>
       </div>
 
@@ -308,12 +309,18 @@
     var reads = results();
     $('clusterRead').value = reads.map(function (r) { return CLUSTERS[r.i].name + ': ' + LABEL[r.state]; }).join(' | ');
     $('answersField').value = answersString();
+    try { localStorage.setItem('cmp_guide_access', '1'); } catch (x) {}
     var name = $('g-name').value.trim();
     $('resultsTitle').textContent = name ? name + ', here is your read.' : 'Your read';
     var data = new FormData(form);
     function reveal() { hide($('stepGate')); show($('stepResults')); focusHeading($('stepResults')); scrollTop(); }
     fetch('/', { method: 'POST', body: new URLSearchParams(data).toString(), headers: { 'Content-Type': 'application/x-www-form-urlencoded' } })
       .then(reveal, reveal);
+  });
+
+  $('savePdf').addEventListener('click', function () {
+    document.body.classList.add('print-saydo'); window.print();
+    setTimeout(function () { document.body.classList.remove('print-saydo'); }, 500);
   });
 
   $('retake').addEventListener('click', function () {
